@@ -1,2 +1,2 @@
-# dpr
-Paper on DS packets for real groups (joint with T. Kaletha)
+Paper on Discrete Series L-Packets for Real Reductive Groups by J. Adams and T. Kaletha
+
