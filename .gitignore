@@ -1,0 +1,27 @@
+*DS_Store
+*.fdb_latexmk
+*.synctex
+*.synctex.gz
+*.aux
+*.fls
+*.log
+*.toc
+*.blg
+*.bbl
+*.xyc
+*.idx
+*.ilg
+*.ind
+*.lof
+*.lot
+*.out
+*.nav
+*.snm
+My\ Texts/FKS1
+My\ Talks/2207\ -\ IHES\ Summer\ school-1
+My Texts/grivsbg1/
+git-sync
+git-sync-on-inotify
+modd.conf
+git-commit-repos.sh
+git-commit-unattended.sh
