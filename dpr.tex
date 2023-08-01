@@ -73,7 +73,7 @@
 
 \section{Recollections}
 
-\subsection{The $L$-group}
+\subsection{The $L$-group} \label{sub:lgroup}
 
 We review the $L$-group of a connected reductive group following \cite[\S2]{Vog93}.
 
@@ -85,14 +85,22 @@ Consider now a general field $F$, let $F^s$ a separable closure, $\Gamma=\tx{Gal
 
 Given a based root datum $(X,\Delta,Y,\Delta^\vee)$ over $F$, its dual $(Y,\Delta^\vee,X,\Delta)$ is also a based rood datum over $F$. If $G$ is a connected reductive $F$-group with based root datum $(X,\Delta,Y,\Delta^\vee)$, its dual $\hat G$ is the unique split connected reductive group defined over a chosen base field (we will work with $\C$) with based root datum $(Y,\Delta^\vee,X,\Delta)$. Thus, given a Borel pair $(\hat T,\hat B)$ of $\hat G$ and a Borel pair $(T,B)$ of $G_{F^s}$, one is given an identification $X_*(\hat T)=X^*(T)$ that identifies the Weyl chambers associated to $\hat B$ and $B$.
 
-To form the $L$-group, one chooses a pinning $(\hat T,\hat B,\{Y_\alpha\})$ of $\hat G$. The group of automorphisms of $\hat G$ that preserve this pinning is in natural isomorphism with the group of automorphisms of $\tx{brd}(\hat G)$, hence with that of $\tx{brd}(G)$. The $\Gamma$-action on $\tx{brd}(G)$ then lifts to an action on $\hat G$ by algebraic automorphisms, and $^LG=\hat G \rtimes \Gamma$.
+To form the $L$-group, one chooses a pinning $(\hat T,\hat B,\{Y_\alpha\})$ of $\hat G$. The group of automorphisms of $\hat G$ that preserve this pinning is in natural isomorphism with the group of automorphisms of $\tx{brd}(\hat G)$, hence with that of $\tx{brd}(G)$. The $\Gamma$-action on $\tx{brd}(G)$ then lifts to an action on $\hat G$ by algebraic automorphisms, and $^LG=\hat G \rtimes \Gamma$. By construction, the pinning $(\hat T,\hat B,\{Y_\alpha\})$ is stable under the action of $\Gamma$. Such a pinning will be called a $\Gamma$-pinning. Any two $\Gamma$-pinnings of $\hat G$ are conjugate under $\hat G^\Gamma$, cf. \cite[Corollary 1.7]{Kot84}. Therefore, for most purposes, we can forget the pinning $(\hat T,\hat B,\{Y_\alpha\})$.
+
+One of the basic properties of the $L$-group is the following: If $(T,B)$ is a Borel pair in $G$ and $(\hat T,\hat B)$ is a Borel pair  in $\hat G$, then there is a unique isomorphism $X_*(T) \cong X^*(\hat T)$ which identifies the set of $B$-simple coroots of $G$ with the set of $\hat B$-simple roots of $\hat G$, and the Weyl group $\Omega(T,G)$ with the Weyl group $\Omega(\hat T,\hat G)$ Moreover, if $(T,B)$ is defined over $F$ (which implies that $G$ is quasi-split) and $(\hat T,\hat B)$ is $\Gamma$-stable, then the isomorphisms $X_*(T) \cong X^*(\hat T)$ and $\Omega(T,G) \cong \Omega(\hat T,\hat G)$ are $\Gamma$-stable.
 
 
 \subsection{Pure and rigid inner forms}
 
-Let $G_0$ be a quasi-split reductive $\R$-group. Following Vogan \cite{Vog93}, a pure inner twist of $G_0$ is a triple $(G,\xi,z)$, where $G$ is a connected reductive $\R$-group, $\xi : G_{0,\C} \to G_\C$ is an isomorphism and $z \in Z^1(\Gamma,G_0)$, subject to $\xi^{-1}\sigma(\xi)=\tx{Ad}(\bar z_\sigma)$. An isomorphism of pure inner twists $(G_1,\xi_1,z_1) \to (G_2,\xi_2,z_2)$ is a pair $(f,g)$ consisting of an isomorphism $f : G_1 \to G_2$ of $\R$-groups and $g \in G_0(\C)$ such that
+Let $G$ be a connected reductive $\R$-group. There exists a connected reductive quasi-split $\R$-group $G_0$ and an isomorphism $\xi : (G_0)_\C \to G_\C$ of connected reductive $\C$-groups such that the automorphism $\xi^{-1}\sigma(\xi):=\xi^{-1}\circ \sigma \circ \xi \circ \sigma^{-1}$ of $G_0$ is inner, where $\sigma$ denotes the action of complex conjugation on the group $G_0$ and $G$, respectively. The group $G_0$ is unique up to isomorphism, $G$ is called an inner form of $G_0$, and $f$ is called an inner twist. The datum of $f$ produces an isomorphism $^LG \to {^LG_0}$.
 
-\textcolor{red}{finish}
+As explained in \cite{Vog93} and carried out in \cite{ABV92}, for the purpose of formulating a refined local Langlands correspondence it is advantageous to consider at once all inner forms of a fixed quasi-split group. Moreover, it is explained that one needs to refine the notion of an inner form.
+
+Let $G_0$ be a quasi-split reductive $\R$-group. Following Vogan \cite{Vog93}, a pure inner twist of $G_0$ is a triple $(G,\xi,z)$, where $f : (G_0)_\C \to G_\C$ is an inner twist and $z \in Z^1(\Gamma,G_0)$, subject to $\xi^{-1}\sigma(\xi)=\tx{Ad}(\bar z_\sigma)$. An isomorphism of pure inner twists $(G_1,\xi_1,z_1) \to (G_2,\xi_2,z_2)$ is a pair $(f,g)$ consisting of an isomorphism $f : G_1 \to G_2$ of $\R$-groups and $g \in G_0(\C)$ such that $f \circ \xi_1 = \xi_2\circ\tx{Ad}(g)$ and $z_1(\sigma) = g^{-1}z_2(\sigma)\sigma(g)$. A representation of a pure inner twist is a tuple $(G,\xi,z,\pi)$, where $(G,\xi,z)$ is a pure inner twist and $\pi$ is a representation of $G(\R)$. An isomorphism of representations of pure inner twists $(G_1,\xi_1,z_1,\pi_1) \to (G_2,\xi_2,z_2,\pi_2)$ is a triple $(f,g,h)$ consisting of an isomorphism $(f,g) : (G_1,\xi_1,z_1) \to (G_2,\xi_2,z_2)$ of pure inner twists and an isomorphism  $h : \pi_1 \to \pi_2\circ f$ of representations of $G_1(\R)$. These definitions produce a category of representations of pure inner twists of $G_0$.
+
+Since not all inner twists can be endowed with the structure of a pure inner twist, the following generalization is introduced in \cite{Vog93} and \cite{ABV92}. An element $c \in C^1(\Gamma,G_0)$ lies in $Z^1(\Gamma,G_0)$ if and only if $c(\sigma) \cdot \sigma(c(\sigma))=1$. A weaker condition is that $c(\sigma) \cdot \sigma(c(\sigma))$ is a finite-order element of $Z(G_0)(\C)$. Note that, if we identify $c \in C^1(\Gamma,G_0)$ with the element $\delta := c(\sigma) \rtimes \sigma \in G_0(\C) \rtimes \Gamma$, then $c(\sigma) \cdot \sigma(c(\sigma))=\delta^2$, and this is the language used in loc. cit. One can now repeat all of the above definitions and replace elements of $Z^1(\Gamma,G_0)$ with elements of $C^1(\Gamma,G_0)$ that satisfy this weaker condition. The resulting triples $(G,\xi,c)$ are then call \emph{strong rational forms} in \cite{ABV92}. 
+
+While this definition does not seem to have a cohomological interpretation, it is shown in \cite[\S5.2]{KalRI} that it does, namely it is equivalent to taking 1-cocycles valued in $G_0$ of a certain Galois gerbe, and moreover this gerbe can be defined over any local field (for local fields of positive characteristic, see \cite{Dillery20}).
 
 \subsection{Weyl denominators} \label{sub:weyldenom}
 
@@ -379,7 +387,7 @@ Let $G_0$ be a quasi-split connected reductive $\R$-group with dual group $\hat 
 %We choose an $\R$-pinning $(T,B,\{X_\alpha\})$ of $G$ and a non-trivial additive character $\psi : \R \to \C^\times$ and denote by $\mf{w}$ the resulting Whittaker datum, as in \S\ref{sec:whit}.
 Let $\varphi : W_\R \to {^LG}$ be a discrete Langlands parameter, given up to conjugation by $\hat G$.
 
-\subsection{Factorization of a parameter }
+\subsection{Factorization of a parameter} \label{sub:factor}
 
 
 We choose a $\Gamma$-invariant Borel pair $(\hat T,\hat B)$ of $\hat G$. Conjugating by $\hat G$ we arrange that $\varphi(z) \in \hat T$ for all $z \in \C^\times$. Thus, $\varphi|_{\C^\times}$ is a continuous group homomorphism $\C^\times \to \hat T$. Every continuous group homomorphism $\C^\times \to \C^\times$ is of the form $z^a\bar z^b = |z|^{a+b}\tx{arg}(z)^{a-b}$ for some $a,b \in \C$ with $a-b \in \Z$. Thus there exist $\lambda,\mu \in X_*(\hat T)\otimes_\Z\C$ with $\lambda-\mu \in X_*(\hat T)$ such that
@@ -412,7 +420,7 @@ Let $S(\R)_G$ be the double cover of $S(\R)$ reviewed in \S\ref{sub:covtori}, as
 
 The construction of $(S,\tau)$ depended on the choice of $\hat T$.
 
-\begin{lem}
+\begin{lem} \label{lem:i1}
 If $(S_1,\tau_1)$ and $(S_2,\tau_2)$ are two pairs obtained from two different choices of $\hat T$, there exists $g \in \hat G^\Gamma$ such that $\tx{Ad}(g)\hat S_1 = \hat S_2$, $\tx{Ad}(g) : \hat S_1 \to \hat S_2$ is $\Gamma$-equivariant, and its dual isomorphism $S_2 \to S_1$ identifies $\tau_2$ with $\tau_1$.
 \end{lem}
 \begin{proof}
@@ -428,7 +436,9 @@ If $(S_1,\tau_1)$ and $(S_2,\tau_2)$ are two pairs obtained from two different c
 % We will use it to specify the elements of the $L$-packet associated to $\varphi$.
 
 \begin{cns} \label{cns:stj}
-Let $(G,\xi,z)$ be a pure (or rigid) inner form of $G_0$. We construct a natural stable class $J_\xi$ of embeddings $j : S \to G$. \warn{TODO}
+Let $(G,\xi,z)$ be a pure (or rigid) inner form of $G_0$. We construct a natural stable class $J_\xi$ of embeddings $j : S \to G$. For this, consider first the trivial twist $(G_0,\tx{id},1)$. Thus we want to construct a stable class of embeddings $S \to G_0$. In \S\ref{sub:factor} a $\Gamma$-stable Borel pair $(\hat T,\hat B)$ of $\hat G$ was chosen. We choose in addition an $F$-Borel pair $(T,B)$ of $G_0$. As discussed in \S\ref{sub:lgroup} this determines $\Gamma$-equivariant isomorphisms $X_*(T) \cong X^*(\hat T)$ and $\Omega(T,G) \cong \Omega(\hat T,\hat G)$. We have the $\Gamma$-equivariant identification $X_*(S)=X^*(\hat S)$ and the identification $X^*(\hat S)=X^*(\hat T)$ which is not $\Gamma$-equivariant, but rather the $\Gamma$-action on the left is a twist of the $\Gamma$-action on the right by an element of $Z^1(\Gamma,\Omega(\hat T,\hat G))$. Altogether we obtain the isomorphism $S \to T$ which transports the $\R$-structre on $S$ to a twist of the $\R$-structure on $T$ by an element of $Z^1(\Gamma,\Omega(T,G))$.
+
+\warn{TODO}
 \end{cns}
 
 
