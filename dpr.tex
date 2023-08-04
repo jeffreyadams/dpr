@@ -69,7 +69,7 @@
 \newcommand{\Cone}{\mathrm{Cone}}
 \newcommand{\AC}{\mathrm{AC}}
 \newcommand{\SL}{\mathrm{SL}}
-
+\newcommand{\ch}[1]{\negthinspace\negthinspace\negthinspace\phantom{a}^\vee\negthinspace #1}
 
 \begin{document}
 
@@ -277,7 +277,8 @@ $\pi(X)(v)=\eta(v)$ for all $x\in \n(\R)$. We say $\pi$ is generic if it is $\w$
 
 
 
-Let $\kappa$ be the Killing form. Given $B,N,T$ as above let $\overline N$ be the opposite nilradical with respect to $T$. 
+Let $\kappa$ be any non-degenerate extension of the Killing form on the derived Lie algebra to all of $\g$.
+Given $B,N,T$ as above let $\overline N$ be the opposite nilradical with respect to $T$. 
 Suppose $X\in i\overline\n(\R)$.
 Then
 $$
@@ -302,7 +303,7 @@ on the $G(\R)$-conjugacy class of $X$.
 \begin{dfn}
 Suppose $\pi$ is a  discrete series representation. (cf. Section \ref{sub:essds}).
 Write $\pi=\pi(S,\tau)$ as in Section  \ref{sub:essds}.
-Let $H_\pi$ be the element of $i\s(\R)$ corresponding to $d\tau$ via the Killing form.
+Let $H_\pi$ be the element of $i\s(\R)$ corresponding to $d\tau$ via $\kappa$.
 The $G(\R)$-conjugacy class of $H_\pi$ is well defined.
 \end{dfn}
 
@@ -354,11 +355,26 @@ But $tX$ is $G(\R)$-conjugate to $X$ so $\O_\R\cap \K(X)$ is also non-empty.
 \end{proof}
 
 Returning to the proof of the Proposition, suppose $\pi$ is $\w_X$-generic.
-By \cite[Theorem A]{matumoto} $X\in \WF(\pi)$. By \cite{harris} $\WF(\pi)=\AC(G(\R)\cdot H_\pi)$.
+By \cite[Theorem A]{matumoto} $X\in \WF(\pi)$. By \cite[Theorem 1.2]{harris} $\WF(\pi)=\AC(G(\R)\cdot H_\pi)$.
 The proposition then follows from the Lemma (applied with $i\g(\R)$ in place of $\g(\R))$.
 \end{proof}
 
 
+\begin{rem}
+  The maps $\pi\rightarrow H_\pi$ and $\w\rightarrow X$ both depend on the choice of $\kappa$.
+  This dependence is very minor (only on the center), and in any event these two choices cancel so the statement of the Proposition
+  is independent of the choice of $\kappa$.
+\end{rem}
+
+Here is an alternative formulation.
+\begin{pro}
+\label{p:whittakeralt}
+Suppose $\pi$ is a generic discrete series representation. Then $\pi$ is $\w$-generic
+for a unique Whittaker datum $\w$.
+Write $\pi=\pi(S,\tau)$, and let $\ch\rho=\frac12\sum_{\langle d\tau,\ch\alpha\rangle>0}\ch\alpha$. 
+Write $\w=\w_X$ for some regular nilpotent element $X\in i\g(\R)$.
+Then $\ch\rho(i)\in\s(\R)$ is $G(\R)$-conjugate to the Kostant section of $iX\in \g(\R)$.
+\end{pro}
   
 
 {\it The previous statement:}
@@ -376,26 +392,29 @@ Note that $X=\rho^\vee(-i) \in \tx{Lie}(S_\tx{sc})$ is Galois-fixed and thus lie
 
 {\it This section is not intended for publication.}
 
-Set $G=\SL(2,\R)$. Let $\s(\R)=\{t_x\mid x\in\R\}$ where
+Set $G=\SL(2,\R)$. Let $\s(\C)=\{t_z\mid z\in\C\}$ where
 $$
-t_x=\begin{pmatrix}0&x\\-x&0
+t_z=\begin{pmatrix}0&z\\-z&0
+\end{pmatrix}
+$$
+Then $\s(\R)=\{t_x\mid x\in\R\}$.
+
+For $z\in \C$ define $\lambda_z\in \s(\C)^*$ by $\lambda_z(t_x)=xz$.
+The positive root is  $\alpha(t_z)=2iz$, i.e.
+$$
+\alpha=\lambda_{2i},\quad \rho=\lambda_i.
+$$
+and
+$$
+\ch\alpha=t_{-i}, \quad \ch\rho=t_{-i/2}
+$$
+In particular
+$$
+\ch\rho(-i)=t_{-\frac 12}=\begin{pmatrix}0&-\frac 12\\\frac 12&0
 \end{pmatrix}
 $$
 
-Then $\alpha(t_x)=2ix$ is the positive root, and
-$$
-X_\alpha=\frac12\begin{pmatrix}1&i\\i&-1
-\end{pmatrix}
-$$
-Then $X_{-\alpha}=\overline{X_\alpha}$, and $[X_\alpha,X_{-\alpha}]=t_{-i}$.
-The Killing form satisfies
-$$
-\kappa(t_x,t_y)=-8xy.
-$$
-For $z\in \C$ define $\lambda_z\in \s^*$ by $\lambda_z(t_x)=xz$.
-Then $\lambda_{ik}$ is the Harish-Chandra parameter of a discrete series $\pi(\lambda_{ik})$ for $k\ne 0$.
-
-Define $H_{\lambda}\in \s^*$ so that $\kappa(H_\lambda,t_x)=\lambda(t_x)$. Then $H_{\lambda_z}=t_{-\frac z8}$:
+Define $H_{\lambda}\in \s(\C)$ so that $\kappa(H_\lambda,t_x)=\lambda(t_x)$. Then $H_{\lambda_z}=t_{-\frac z8}$:
 $$
 H_{\lambda_z}=t_{\frac{-z}8}=
 \begin{pmatrix}0&-\frac{z}8\\\frac{z}8&0
@@ -407,6 +426,21 @@ H_{\lambda_{ik}}=
 \begin{pmatrix}0&-\frac{ik}8\\\frac{-ik}8&0
 \end{pmatrix}
 $$
+
+Let $\pi(\lambda_{ik})$ be the discrete series representation with Harish-Chandra parameter $\lambda_{ik}$ $(k\in \Z_{\ne 0})$.
+If $\pi=\pi(\lambda)$ let $H_\pi=H_\lambda\in i\s(\R)^*$.
+
+For an $SL(2)$-triple we can take $\{X_\alpha,X_{-\alpha},t_{-i}\}$ where
+$$
+X_\alpha=\frac12\begin{pmatrix}1&i\\i&-1
+\end{pmatrix}, \quad X_{-\alpha}=\overline{X_\alpha}.
+$$
+The Killing form satisfies
+$$
+\kappa(t_x,t_y)=-8xy.
+$$
+
+
 
 Conjugating this by $\mathrm{diag}(x,\frac 1x)$ takes it to
 $\begin{pmatrix}0&-x^2\frac{ik}8\\\frac{ik}{x^2}&0
@@ -437,32 +471,54 @@ Note that
 $$
 \K
 \begin{pmatrix}0&-i\\0&0
-\end{pmatrix}=\{\begin{pmatrix}0&i\\iy&0
+\end{pmatrix}=\{\begin{pmatrix}0&-i\\z&0
+\end{pmatrix}\mid z\in\C\}
+$$
+and
+$$
+\K\cap i\g(\R)=
+\{\begin{pmatrix}0&-i\\iy&0
 \end{pmatrix}\mid y\in\R\}
 $$
 In particular
-$
-\K\begin{pmatrix}0&-i\\0&0\end{pmatrix}
-$
-meets
-$
-G(\R)H_{\lambda_{ik}}=
-\begin{pmatrix}0&-\frac{ik}8\\\frac{ik}8&0\end{pmatrix}
-$
-for $k>0$ as required by Proposition \ref{p:whittaker}
+$$
+\K\begin{pmatrix}0&-i\\0&0\end{pmatrix}\cap i\g(\R)\ni H_\pi=\begin{pmatrix}0&-\frac{ik}8\\\frac{ik}8&0\end{pmatrix}\quad (k>0)
+$$
+as required by Proposition \ref{p:whittaker}.
 Similarly
-$
-\K\begin{pmatrix}0&i\\0&0\end{pmatrix}
-$
-meets
-$
-G(\R)H_{\lambda_{ik}}=
-\begin{pmatrix}0&-\frac{ik}8\\\frac{ik}8&0\end{pmatrix}
-$
-for $k<0$.
+$$
+\K\begin{pmatrix}0&i\\0&0\end{pmatrix}\cap i\g(\R)\ni H_\pi=\begin{pmatrix}0&-\frac{ik}8\\\frac{ik}8&0\end{pmatrix}\quad (k<0).
+$$
 
+In this case Proposition \ref{p:whittakeralt} amounts to 
+$$
+\K(-iX)=\K\begin{pmatrix}0&-1\\0&0
+\end{pmatrix}\ni \ch\rho(-i)=
+\begin{pmatrix}
+  0&-\frac 12\\\frac 12&0
+\end{pmatrix}\quad (k>0)
+$$
+and
+$$
+\K(-iX)=\K\begin{pmatrix}0&1\\0&0
+\end{pmatrix}\ni \ch\rho(-i)=
+\begin{pmatrix}
+  0&\frac 12\\-\frac 12&0
+\end{pmatrix}\quad (k<0)
+$$
 
-
+Note that the coroot $\ch\alpha:\C^\times \rightarrow S$ is given by
+$$
+\ch\alpha(e^z)=\begin{pmatrix}\cos(z)&\sin(z)\\-\sin(z)&\cos(z)
+\end{pmatrix}
+$$
+or more algebraically
+$$
+\ch\alpha(z)=\begin{pmatrix}
+\frac{z+\frac 1z}2&\frac{z-\frac 1z}{2i}\\
+-\frac{z-\frac 1z}{2i}&\frac{z+\frac 1z}2
+\end{pmatrix}
+$$
 
 \section{Construction of $L$-packet and internal structure}
 
