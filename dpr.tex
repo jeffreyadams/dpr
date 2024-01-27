@@ -94,12 +94,75 @@ Given a based root datum $(X,\Delta,Y,\Delta^\vee)$ over $F$, its dual $(Y,\Delt
 
 To form the $L$-group, one chooses a pinning $(\hat T,\hat B,\{Y_\alpha\})$ of $\hat G$. The group of automorphisms of $\hat G$ that preserve this pinning is in natural isomorphism with the group of automorphisms of $\tx{brd}(\hat G)$, hence with that of $\tx{brd}(G)$. The $\Gamma$-action on $\tx{brd}(G)$ then lifts to an action on $\hat G$ by algebraic automorphisms, and $^LG=\hat G \rtimes \Gamma$.
 
+When $G$ is quasi-split, $(T,B)$ is an $F$-Borel pair, and $(\hat T,\hat B)$ is a $\Gamma$-stable Borel pair of $\hat G$, then the identification $X_*(T)=X^*(\hat T)$ is $\Gamma$-equivariant.
 
-\subsection{Pure and rigid inner forms}
+\subsection{Inner forms}
 
-Let $G_0$ be a quasi-split reductive $\R$-group. Following Vogan \cite{Vog93}, a pure inner twist of $G_0$ is a triple $(G,\xi,z)$, where $G$ is a connected reductive $\R$-group, $\xi : G_{0,\C} \to G_\C$ is an isomorphism and $z \in Z^1(\Gamma,G_0)$, subject to $\xi^{-1}\sigma(\xi)=\tx{Ad}(\bar z_\sigma)$. An isomorphism of pure inner twists $(G_1,\xi_1,z_1) \to (G_2,\xi_2,z_2)$ is a pair $(f,g)$ consisting of an isomorphism $f : G_1 \to G_2$ of $\R$-groups and $g \in G_0(\C)$ such that
+Let $G$ be a connected reductive $F$-group. An \emph{inner twist} of $G$ is a pair $(G_1,\xi)$ where $G_1$ is a connected reductive $F$-group and $\xi : G_{F^s} \to G_{1,F^s}$ is an isomorphism, such that for each $\sigma \in \Gamma$ the automorphism $\xi^{-1}\sigma(\xi) = \xi^{-1}\circ\sigma\circ\xi\circ\sigma^{-1}$ of $G_{F^s}$ is inner. An isomorphism of inner twists $(G_1,\xi_1) \to (G_2,\xi_2)$ is a homomorphism $f : G_1 \to G_2$ of $F$-groups such that $\xi_2^{-1}\circ f \circ \xi_1$ is an inner automorphism of $G_{F^s}$. From an inner twist $(G_1,\xi)$ we obtain the function $\Gamma \to G/Z(G)$ given by $\sigma \mapsto \xi^{-1}\sigma(x)$. It is an element of $Z^1(F,G/Z(G))$, whose cohomology class depends only on the isomorphism class of $(G_1,\xi)$. In this way the set of isomorphism classes of inner twists is in bijection with $H^1(F,G/Z(G))$.
 
-\textcolor{red}{finish}
+
+
+Following Vogan \cite{Vog93}, a \emph{pure inner twist} of $G$ is a triple $(G_1,\xi,z)$, where $G_1$ is a connected reductive $F$-group, $\xi : G_{F^s} \to G_{1,F^s}$ is an isomorphism and $z \in Z^1(\Gamma,G)$, subject to $\xi^{-1}\sigma(\xi)=\tx{Ad}(\bar z_\sigma)$, where $\bar z \in Z^1(F,G/Z(G))$ is the image of $z$ under the natural projection $G \to G/Z(G)$. An isomorphism of pure inner twists $(G_1,\xi_1,z_1) \to (G_2,\xi_2,z_2)$ is a pair $(f,g)$ consisting of an isomorphism $f : G_1 \to G_2$ of $F$-groups and $g \in G_0(F^s)$ such that $\xi_2^{-1}\circ f \circ \xi_1=\tx{Ad}(g)$ and $z_2(\sigma)=gz_1(\sigma)\sigma(g)^{-1}$ for all $\sigma \in \Gamma$. The map $(G_1,\xi,z) \mapsto z$ induces a bijection from the set of isomorphism classes of pure inner twists to $H^1(F,G)$.
+
+There is a lighter notation in which inner twists and pure inner twists can be recorded. It is grounded on the fact that, if $(G_1,\xi)$ is an inner twist of $G$, with $\bar z \in Z^1(F,G/Z(G))$ given by $\bar z(\sigma)=\xi^{-1}\sigma(\xi)$, and we let $G_{\bar z}$ be the algebraic $F$-group obtained from $G$ by twisting the $F$-structure by $\bar z$, then $\xi$ becomes an isomorphism of $F$-groups $G_{\bar z} \to G_1$, in fact an isomorphism of inner twists $(G_{\bar z},\tx{id}) \to (G_1,\xi)$. Therefore the map $\bar z \mapsto (G_{\bar z},\tx{id})$ induces an injection from $Z^1(F,G/Z(G))$ into the class of all inner twists of $G$ which meets every isomorphism class. Two elements of $Z^1(F,G/Z(G))$ map into the same isomorphism class if and only if they lie in the same orbit for the action of $G(F^s)$ on $Z^1(F,G/Z(G))$ given by $(g \cdot z)(\sigma) = gz(\sigma)\sigma(g)^{-1}$. The orbits space for this action is $H^1(F,G/Z(G))$, and this gives the same identification between that orbit space and the set of isomorphism classes of inner twists as above.
+
+The same simplification applies to the notion of pure inner twist. There we work with the set $Z^1(F,G)$ and obtain the embedding $z \mapsto (G_z,\tx{id},z)$ from that set into the class of pure inner twists of $G$. Again the orbit space for the action of $G(F^s)$ on $Z^1(F,G)$ by $(g\cdot z)(\sigma)=gz(\sigma)\sigma(g)^{-1}$ equals $H^1(F,G)$ and is identified with the set of isomorphism classes of pure inner twists.
+
+We now take $F=\R$, hence $F^s=\C$. Then $\Gamma=\{1,c\}$, where $c$ is complex conjugation. An element of $Z^1(F,G)$ can be identified with the image of $c$, which is an element of $G(\C)$. We can also think of this as an element of the coset $G(\C) \rtimes c \subset G(\C) \rtimes \Gamma$. The elements of $Z^1(F,G)$ correspond precisely to the elements of $G(\C) \rtimes c$ of order $2$.
+
+In \cite{ABV92} the notion of strong real form was introduced. This is an element $\delta \in G(\C) \rtimes c$, such that $\delta^2$ is a finite order element of $Z(G)(\C)$. In \cite{KalRI} this notion was given a cohomological interpretation and was extended to non-archimedean local fields. Following the latter reference, a \emph{rigid inner twist} of $G$ is a triple $(G_1,\xi,z)$, where $G_1$ is a connected reductive $\R$-group, $\xi : G_\C \to G_{1,\C}$ is an isomorphism and $z \in Z^1_\tx{bas}(\mc{E}_R,G)$, subject to $\xi^{-1}\sigma(\xi)=\tx{Ad}(\bar z_\sigma)$. Here $1 \to u_{\R}(\C) \to \mc{E}_R \to \Gamma \to 1$ is a certain extension of the Galois group, $Z^1_\tx{bas}(\mc{E}_\R,G)$ denotes the group of continuous 1-cocycles $\mc{E}_\R \to G(\C)$ whose restriction to $u_\R(\C)$ takes values in $Z(G)(\C)$, and $\bar z$ is again the image of $z$ under the natural projection map $G \to G/Z(G)$; it factors through the quotient $\mc{E}_\R \to \Gamma$. An isomorphism of pure inner twists $(G_1,\xi_1,z_1) \to (G_2,\xi_2,z_2)$ is a pair $(f,g)$ consisting of an isomorphism $f : G_1 \to G_2$ of $\R$-groups and $g \in G_0(\C)$ such that $\xi_2^{-1}\circ f \circ \xi_1=\tx{Ad}(g)$ and $z_2(e)=gz_1(e)\sigma_e(g)^{-1}$ for all $e \in \mc{E}_\R$, where $\sigma_e \in \Gamma$ is the image of $e$. The set of isomorphism classes of rigid inner twists is in bijection with $H^1_\tx{bas}(\mc{E}_\R,G)$. The equivalence between the cohomology classes in $H^1_\tx{bas}(\mc{E}_\R,G)$ and the elements $G(\C) \rtimes c$ whose square is a finite order element of $Z(G)(\C)$ is less obvious than in the Galois case, and is discussed in \cite[\S5.2]{KalRI}.
+
+Each of these three notions partitions the set of isomorphism classes of connected reductive $\R$-groups into equivalence classes. The notion of inner twist is the most classical, stemming from the classification of reductive groups, and each equivalence class has exactly one quasi-split member. Unfortunately, this notion is not rigid enough for representation theory -- the group of automorphisms of an inner twist $(G_1,\xi)$ is $(G_1/Z(G_1))(\R)$, and the conjugation by such an element can be an outer automorphism of the Lie group $G_1(\R)$.
+
+The notion of pure inner twist is sufficiently rigid -- the group of automorphisms of a pure inner twist $(G_1,\xi,z)$ is $G_1(\R)$, hence acts by inner automorphisms of $G_1(\R)$. Unfortunately, the equivalence classes induced by this notion are generally smaller, and not all of them contain a quasi-split member.
+
+The notion of a rigid inner twist is again sufficiently rigid, and in addition the equivalence classes in induces coincide with those induced by the notion of inner twist. This will be the notion that we will use.
+
+For further discussion of this topic we refer the reader to \cite{Vog93} and \cite{KalSimons}.
+
+Given an inner twist $\xi : G \to G_1$, the isomorphism $\xi$ induces an isomorphism $\tx{brd}(G) \to \tx{brd}(G_1)$, which is $\Gamma$-equivariant, even though $\xi$ itself is not. This leads to an identification of dual groups $\hat G = \hat G_1$ and $L$-groups $^LG = {^LG}_1$.
+
+
+\subsection{Admissible embeddings of tori} \label{sub:adm}
+
+Let $F$ be a field and let $G$ be a connected reductive $F$-group. Let $\hat G$ be its dual group, defined over any base field, which we take to be $\C$, equipped with a $\Gamma$-action.
+
+Let $S$ be an $F$-torus. We recall from \cite[\S5.1]{KalRSP} that, given a $\Gamma$-stable $\hat G$-conjugacy class $\hat J$ of embeddings $\hat S \to \hat G$ whose images are maximal tori, there is an associated $\Gamma$-stable $G(F^s)$-conjugacy class $J$ of embeddings $S \to G$. To obtain $J$, we first assume that $G$ is quasi-splut. Fix $\Gamma$-stable Borel pairs $(\hat T,\hat B)$ and $(T,B)$ in $\hat G$ and $G$, respectively. Thus we have the identifications $X_*(T)=X^*(\hat T)$ and $\Omega(T,G)=\Omega(\hat T,\hat G)$ as $\Gamma$-modules. There is $\hat\jmath \in \hat J$ with image $\hat T$ and we obtain the isomorphism $X_*(T)=X^*(\hat T) \to X^*(\hat S)=X_*(S)$, hence an isomorphism $j : S_{F^s} \to T_{F^s}$. We let $J$ be the $G(F^s)$-conjugacy class of the composition of $j$ with the inclusion $T \to G$.
+
+For $\sigma \in \Gamma$ the embedding $\sigma(\hat\jmath)=\sigma_{\hat G}\circ \hat\jmath \circ \sigma_{\hat S}$ is $\hat G$-conjugate to $\hat\jmath$, but has the same image because $\hat T$ is $\Gamma$-stable, so there exists $w \in \Omega(\hat T,\hat G)$ such that $\sigma(\hat\jmath)=w\circ\hat\jmath$. By construction of $j$ we have $\sigma(j)=w\circ j$, using $\Omega(T,G)=\Omega(\hat T,\hat G)$, and conclude that $J$ is $\Gamma$-stable. Since all $\Gamma$-stable Borel pairs of $\hat G$ are conjugate under $\hat G^\Gamma$, and all $\Gamma$-stable Borel pairs of $G$ are conjugate under $G(F)$, the construction of $J$ does not depend on the choices of Borel pairs.
+
+Now drop the assumption that $G$ is quasi-split. We consider an inner twist $\xi : G_0 \to G$ with $G_0$ quasi-split. It gives an identification $\hat G_0=\hat G$ and we obtain from $\hat J$ a $\Gamma$-stable $G_0(F^s)$-conjugacy class $J_0$ of embeddings $S \to G_0$. Composing with $\xi$ we obtain the desired $G(F^s)$-conjugacy class $J$ of embeddings $S \to G$. It is $\Gamma$-stable, because the $G(F^s)$-conjugacy class of $\xi$ is.
+
+This completes the construction of $J$. We will refer to it as the set of \emph{admissible} embeddings $S \to G$. If we want to record the group $G$ we will write $J^G$.
+
+Write $J(F)$ for the set of $\Gamma$-fixed points in $J$, i.e. the set of embeddings $S \to G$ defined over $F$. When $G=G_0$ is quasi-split, a result of Kottwitz \cite[Corollary 2.2]{Kot82} guarantees that this set is non-empty. For a general $G$ this set may be empty. The group $G(F)$ acts on $J(F)$ by conjugation and we will write $J(F)/G(F)$ for the set of orbits under this action.
+
+Given any two elements $j_1,j_2 \in J(F)$ there exists $g \in G(F^s)$ such that $j_2 = \tx{Ad}(g)\circ j_1$. The map $\sigma \mapsto j_1^{-1}(g^{-1}\sigma(g))$ is a 1-cocycle of $\Gamma$ valued in $S(F^s)$. Its class is independent of $g$ and will be denoted by $\tx{inv}(j_1,j_2)$. For a fixed $j \in J(F)$ the map $j_2 \mapsto \tx{inv}(j_1,j_2)$ is a bijection between $J(F)/G(F)$ and $\tx{ker}(H^1(j_1) : H^1(F,S) \to H^1(F,G))$.
+
+One can combine multiple inner forms in this discussion to obtain a more uniform picture. This requires the use of pure or rigid inner twists. Fix a quasi-split group $G_0$. We start with the case of pure inner twists and consider tuples $(G,\xi,z,j)$, where $(G,\xi,z)$ is a pure inner twist of $G_0$ and $j \in J^G(F)$. An isomorphism $(G_1,\xi_1,z_1,j_1) \to (G_2,\xi_2,z_2,j_2)$ between such tuples is an isomorphism $(f,g) : (G_1,\xi_1,z_1) \to (G_2,\xi_2,z_2)$ of inner twists that satisfies $j_2=f\circ j_1$. Let $\mc{J}(F)$ be the category whose objects are these tuples and whose morphisms are these isomorphisms. Given two tuples as above there exists $g \in G_0(F^s)$ such that $j_2 = \xi_2 \circ \tx{Ad}(g)\circ\xi_1^{-1}\circ j_1$. The map $\sigma \mapsto j_1^{-1}(g^{-1}z_2(\sigma)\sigma(g)z_1(\sigma)^{-1})$ \textcolor{red}{which side should $z_1$ be on?} is a 1-cocycle $\Gamma \to S(F^s)$ whose class $\tx{inv}(j_2,j_1)$ depends only on the isomorphism classes of the tuples. Fixing the tuple $(G_1,\xi_1,z_1,j_1)$, the map $(G_2,\xi_2,z_2,j_2) \mapsto \tx{inv}(j_1,j_2)$ induces a bijection from the set of isomorphism classes $[\mc{J}(F)]$ to $H^1(F,S)$.
+
+
+The individual groups can be extracted from the combined picture as follows. For a fixed $(G,\xi,z)$ we can view the set $J^G(F)$ as the set of objects in a category, with set of morphisms $j_1 \to j_2$ given by $\{g \in G(F)|j_2=\tx{Ad}(g)\circ j_1\}$. Then we obtain an embedding (fully faithful functor) from $J^G(F)$ to $\mc{J}(F)$. The category $\mc{J}(F)$ decomposes into blocks, indexed by $H^1(F,G_0)$, and each block is equivalent to $J^G(F)$ for some $(G,\xi,z)$. In particular, the set of isomorphism classes $[\mc{J}(F)]$ is the disjoint union $\bigcup_{H^1(F,G_0)} (J^G(F)/G(F))$. If we choose $j_0 \in J^{G_0}(F)$, then under the bijection $[\mc{J}(F)] \to H^1(F,S)$ given by $(G,\xi,z,j) \mapsto \tx{inv}(j,j_0)$, an individual $J^G(F)/G(F)$ coming from $(G,\xi,z)$ is mapped bijectively onto the fiber of $H^1(j_0) : H^1(F,S) \to H^1(F,G)$ over the class of $z$.
+
+The bijection $[\mc{J}(F)] \to H^1(F,S)$ coming from fixing $(G,\xi,z,j)$ can be understood as the orbit map for a natural action of $H^1(F,S)$ on $[\mc{J}(F)]$ that does not depend on any choices. To see this action it is easier to consider the simplified notation, where a pure inner twist of $G_0$ is understood simply as an element $z \in Z^1(F,G_0)$, in the sense that it corresponds to $(G_z,\tx{id},z)$, where $G_z$ is the $F$-group obtained by twisting the rational structure of $G_0$ by $z$. Then $\mc{J}$ consists of pairs $(z,j)$, where $z \in Z^1(F,G_0)$ and $j \in J^{G_0}$. Such a pair lies in $\mc{J}(F)$ if and only if $j \in J^{G_z}(F)$, which is explicitly given as $\tx{Ad}(z(\sigma))\sigma_{G_0} \circ j \circ \sigma_S^{-1}=j$. The group $G_0(F^s)$ acts on $\mc{J}$ by $g \cdot (z,j) = (gz(\sigma)\sigma(g)^{-1},\tx{Ad}(g)\circ j)$. This action preserves $\mc{J}(F)$ and the orbit space is $[\mc{J}(F)]$. We introduce the action of $Z^1(F,S)$ on $\mc{J}(F)$ as $x \cdot (z,j) = (j(x) \cdot z,j)$ for $x \in Z^1(F,S)$ and $(z,j) \in \mc{J}(F)$. One checks directly that the actions of $Z^1(F,S)$ and $G(F^s)$ on $\mc{J}(F)$ commute and that the action of $S(F^s)$ on $Z^1(F,S)$ is compatible with the action of $Z^1(F,S)$ on $\mc{J}(F)$ in the sense that $(s\cdot x) \cdot (z,j) = j(s) \cdot (x \cdot (z,j))$. Thus we obtain an action of $H^1(F,S)$ on $[\mc{J}(F)]$. 
+\begin{lem} \label{lem:simtrans}
+The above action is simply transitive.
+\end{lem}
+\begin{proof}
+For simplicity, let $x \in Z^1(F,S)$, $g \in G_0(F^s)$, and $(z,j) \in \mc{J}(F)$ be such that $g \cdot (z,j)=x\cdot (z,j)$. Then $j=\tx{Ad}(g)\circ j$ from which we see that $g=j(s)$ for some $s \in S(F^s)$. We also have $j(s)z(\sigma)\sigma_{G_0}(j(s))^{-1}=j(x(\sigma))\cdot z(\sigma)$ and multiplying on the right by $z(\sigma)^{-1}$ and using that $(z,j) \in \mc{J}(F)$ we conclude $j(s \cdot \sigma_S(s)^{-1})=j(x(\sigma))$, thus $[x]=1$ in $H^1(F,S)$, as desired.
+
+For transitivity, we need to show that any two elements of $[\mc{J}(F)]$ are in the same $H^1(F,S)$ orbit. Since the members of $J^{G_0}$ are all conjugate under $G_0(F^s)$ we may represent the two elements of $[\mc{J}(F)]$ by $(z_1,j)$ and $(z_2,j)$ with the same $j$. The fact that both lie in $\mc{J}(F)$ implies that $\tx{Ad}(z_1(\sigma))\circ\sigma_{G_0}\circ j = \tx{Ad}(z_2(\sigma))\circ\sigma_{G_0}\circ j$. It follows that $\sigma_{G_0}^{-1}(z_2(\sigma)^{-1}z_1(\sigma))$ lies in the image of $j$, and we write it as $j(\sigma_S^{-1}(x(\sigma)))$ for some $x(\sigma) \in S(F^s)$. Using that $(z_1,j),(z_2,j) \in \mc{J}(F)$ we see that $j(x(\sigma))=z_1(\sigma)z_2(\sigma)^{-1}$. From this one easily checks that $x \in Z^1(F,S)$ and concludes $(z_1,j)=x\cdot (z_2,j)$, as desired.
+\end{proof}
+
+
+
+The same discussion applies to the setting of rigid inner forms when the base field is local. One should only replace $H^1(F,-)$ with $H^1(u_F \to \mc{E}_F,Z(G) \to -)$.
+
+\subsection{Representations and elements in inner forms} \label{sub:across}
+
+In \S\ref{sub:adm} we reviewed the idea of grouping the various admissible embeddings of a torus $S$ into the different inner forms of a fixed group $G_0$, thereby obtaining a set $\mc{J}(F)$ with an action of $G_0(F^s)$ on it. Here we follow the same idea, but group elements or representations. 
+
+We focus on $F=\R$, although the same procedure applies for any $F$ of interest. Let $\tilde\Pi$ be the set of pairs $(z,\pi)$, where $z \in Z^1(F,G_0)$ and $\pi$ is an isomorphism class of irreducible admissible representations of $G_z(F)$, where $G_z$ is again the $\R$-group obtained by twisting the $\R$-structure of $G_0$ by $z$. The group $G_0(\C)$ acts on this set by $g\cdot (z,\pi) = (gz(\sigma)\sigma(g)^{-1},\pi \circ\tx{Ad}(g)^{-1})$. Note that $\tx{Ad}(g) : G_z \to G_{gz(\sigma)\sigma(g)^{-1}}$ is an isomorphism of algebraic $\R$-groups. Let $\Pi=\tilde\Pi/G_0(\C)$. This is the set of isomorphism classes of irreducible admissible representations of pure inner forms of $G_0$. The pairs $(z,\pi) \in \tilde\Pi$ with a fixed $z$ correspond to all isomorphism classes of representations of $G_z(\R)$.
 
 \subsection{Weyl denominators} \label{sub:weyldenom}
 
@@ -236,7 +299,7 @@ In both cases $\delta$ runs over the set of $G(\R)$-conjugacy classes in $G(\R)^
 The functions $f$ and $f^{H_\pm}$ are called \emph{matching}. The functions $f$ and $f^{H_1}$ are called \emph{matching}.
 \end{dfn}
 
-For the computations of this paper it would be useful to review the factor $\epsilon$ and compute it in the case of the base field $\R$, where the computation is rather straightforward. Consider the universal maximal torus $T_0^G$ of $G$ and $T_0^H$ of $H$. The complexified character modules $V_G := X^*(T_0^G)\otimes_\Z\C$ and $V_H := X^*(T_0^H)\otimes_\Z\C$ are self-dual Artin representations of the same dimension. Choose a pinning of the quasi-split form $G_0$ of $G$ and a non-trivial additive character $\Lambda : \R \to \C$, which combine to the Whittaker datum fixed for $G_0$. Then
+For the computations of this paper it would be useful to review the factor $\epsilon$ and compute it in the case of the base field $\R$, where the computation is rather straightforward. Consider the universal maximal torus $T_0^G$ of $G$ and $T_0^H$ of $H$. The complexified character modules $V_G := X^*(T_0^G)\otimes_\Z\C$ and $V_H := X^*(T_0^H)\otimes_\Z\C$ are self-dual Artin representations of the same dimension. Choose an $\R$-pinning of the quasi-split form $G_0$ of $G$ and a non-trivial additive character $\Lambda : \R \to \C$, which combine to the Whittaker datum fixed for $G_0$. Then
 \[ \epsilon = \epsilon(1/2,V_G-V_H,\Lambda), \]
 where we have use Langlands' convention \cite[(3.6.4)]{TateCor} for the $\epsilon$-factor. The pinning is used in the construction of $G_0$. \warn{May be better to review the construction of $\Delta_I$ and $\Delta_{III}$ here.}
 
@@ -259,9 +322,9 @@ The Iwasawa decomposition $\tx{Lie}(G_0)=\mf{a} \oplus\mf{n} \oplus \mf{k}$ show
 
 \subsection{Whittaker data and Kostant sections} \label{sub:whit}
 
-Suppose $B$ is a Borel $\R$-subgroup of $G$, $N$ its unipotent radical, and $\n=\mathrm{Lie}(N)$. Since $N(\R)$ is a connected Lie group, any character $\eta : N(\R) \to \C^\times$ is determined by its differential $d\eta : \n(\R) \to \C$, which is an $\R$-linear form. We have $\eta(\exp(Y))=e^{\<d\eta,Y\>}$ for $Y \in \n(\R)$. In fact, the real Lie group $N(\R)$ is connected, nilpotent, and simply connected (see \cite[Theorem 6.46]{KnappLie}, where the assumption that $G$ is semi-simple is unnecessary) and  hence the exponential map $\exp : \n(\R) \to N(\R)$ is a diffeomorphism by \cite[Theorem 1.127]{KnappLie}.
+We assume that $G$ is a quasi-split connected reductive $\R$-group. Suppose $B$ is a Borel $\R$-subgroup of $G$, $N$ its unipotent radical, and $\n=\mathrm{Lie}(N)$. Since $N(\R)$ is a connected Lie group, any character $\eta : N(\R) \to \C^\times$ is determined by its differential $d\eta : \n(\R) \to \C$, which is an $\R$-linear form. We have $\eta(\exp(Y))=e^{\<d\eta,Y\>}$ for $Y \in \n(\R)$. In fact, the real Lie group $N(\R)$ is connected, nilpotent, and simply connected (see \cite[Theorem 6.46]{KnappLie}, where the assumption that $G$ is semi-simple is unnecessary) and  hence the exponential map $\exp : \n(\R) \to N(\R)$ is a diffeomorphism by \cite[Theorem 1.127]{KnappLie}.
 
-An $\R$-linear form $\n(\R) \to \C$ can be obtained as the restriction of a $\C$-linear form $\n(\C) \to \C$. Let $\bar N$ be the unipotent radical of $B$ that is $T$-opposite to $N$. Since the Killing form $\kappa$ induces a non-degenerate $\C$-linear pairing $\n \times \bar\n \to \C$, such forms are in 1-1 correspondence with elements of $\bar\n(\C)$. Given $X \in \bar\n(\C)$ we thus obtain the character $\eta_X(\exp(Y))=e^{\kappa(X,Y)}$. It is unitary if and only if $X \in i\bar\n(\R)$. \textcolor{red}{Jeff, I don't think we need to extend the Killing form to all of $\mf{g}$, since the nilradicals already live in the derived subalgebra.}
+An $\R$-linear form $\n(\R) \to \C$ can be obtained as the restriction of a $\C$-linear form $\n(\C) \to \C$. Let $\bar N$ be the unipotent radical of $B$ that is $T$-opposite to $N$. Since the Killing form $\kappa$ induces a non-degenerate $\C$-linear pairing $\n \times \bar\n \to \C$, such forms are in 1-1 correspondence with elements of $\bar\n(\C)$. Given $X \in \bar\n(\C)$ we thus obtain the character $\eta_X(\exp(Y))=e^{\kappa(X,Y)}$. It is unitary if and only if $X \in i\bar\n(\R)$. 
 
 
 Given a maximal torus $T\subset B$ defined over $\R$, the space $\n(\R)$ decomposes as the direct sum of relative root spaces, with respect to the action of the split part of $T$. We say a character $\eta: N(\R) \to \C^\times$ is \emph{non-degenerate} if its differential $d\eta$ restricts non-trivially to any relative root space in $\n(\R)$. Since all choices of $T$ are conjugate under $N(\R)$, this condition is independent of $T$. For $\eta_X$ with $X \in i\bar\n(\R)$ we can write $X=\sum_\alpha X_{-\alpha}$ where the sum runs over the set of absolute positive roots and $X_{-\alpha} \in \mf{g}_{-\alpha}$. Then $\eta_X$ is non-degenerat if and only if $X_{-\alpha} \neq 0$ for all simple roots $\alpha$, i.e. if and only if $X$ is a regular nilpotent element.
@@ -279,10 +342,26 @@ containing $X$. Then $\overline B$ is defined over $\R$. Let $B$ be an $\R$-Bore
 The choice of $B$ is equivalent to a choice of a maximal torus $T \subset \bar B$ defined over $\R$, because $T$ is determined by $B$ as $T=B \cap \bar B$ and $B$ is determined by $T$ as the unique $T$-opposite of $\bar B$. But all maximal $\R$-tori in $\bar B$ are conjugate under $\bar B(\R)$ by \cite[Theorem 19.2]{Bor91}.
 \end{proof}
 
+There is a similar but slightly different way to obtain a Whittaker datum. Let $(T,B,\{X_\alpha\})$ be an $\R$-pinning of $G$ and let $\Lambda : \R \to \C^\times$ be a non-trivial unitary character. The element $X_\alpha$ specifies an isomorphism $u_\alpha$ from $\mb{G}_a$ to the root group $U_\alpha$ of $G$ associated to the absolute root $\alpha$, namely the unique isomorphism whose differential maps $1$ to $X_\alpha$. If $N$ is the unipotent radical of $B$ then the composition $\prod_{\alpha \in \Delta} U_\alpha \to N \to N/[N,N]$ is an isomorphism of complex algebraic groups, which we compose with $(u_\alpha)$. The inverse of the result, composed with the product map $\prod_\alpha \mb{G}_a \to \mb{G}_a$, becomes a homomorphism of algebraic groups $N/[N,N] \to \mb{G}_a$ defined over $\R$, which leads to a homomorphism $N(\R) \to \R$. Composing that with the character $\Lambda$ provides a non-degenerate unitary character $\psi : N(\R) \to \C^\times$. The $G(\R)$-conjugacy class of the pair $(B,\psi)$ is a Whittaker datum and depends only on the $G(\R)$-conjugacy class of the pinning $(T,B,\{X_\alpha\})$.
+
+\begin{lem} \label{lem:w1}
+Let $(T,B,\{X_\alpha\})$ be an $\R$-pinning of $G$ and let $\Lambda(x)=e^{2\pi i x}$. Then the Whittaker datum associated to this pinning and character by the above procedure is equal to the Whittaker datum $\w_{\bar X}$, where $\bar X=2\pi i\sum_{\alpha \in \Delta} X_{-\alpha}$, where $X_{-\alpha} \in \mf{g}_{-\alpha}$ is determined by the rule $[X_\alpha,X_{-\alpha}]=H_\alpha$. 
+\end{lem}
+\begin{proof}
+Set $X_-=\sum_{\alpha \in \Delta} X_{-\alpha}$. Then $X_-$ is a regular nilpotent element of the Lie algebra of $G$ and is fixed by the Galois action, hence an $\R$-point. It lies in $\bar\n$, the Lie algebra of the unipotent radical of the Borel subgroup $T$-opposite to $B$. Thus $\bar X \in i\bar\n(\R)$ is also regular nilpotent. 
+
+Given $Y \in \n(\R)$ write it as $\sum_{\alpha \in \Delta} y_\alpha \cdot X_\alpha + Y'$ with $Y' \in [\n,\n](\R)$. Then
+we have
+\[ \kappa(Y, X_-)= \sum_{\alpha \in \Delta} y_\alpha \kappa(X_\alpha,X_{-\alpha}) =\sum_{\alpha \in \Delta} y_\alpha, \]
+therefore
+\[ \psi_{\bar X}(\exp(Y)) = e^{\kappa(Y,\bar X)}=e^{2\pi i \kappa(Y,X_-)} = \Lambda(\sum_{\alpha \in\Delta}y_\alpha) = \psi(\exp(Y)), \]
+where $\psi : N(\R) \to \C^\times$ is constructed from the pinning and $\Lambda$ as above.
+\end{proof}
+
 Suppose $X\in\g$ is a regular nilpotent element. Choose an
 $SL(2)$-triple $[X,H,Y]$ [reference].  The {\it Kostant Section} $\K(X)$ of
 $X$ is the affine space $X+\Cent_\g(Y)$.
-Kostant showed \cite{kostant} that the Kostant section meets every regular orbit in a unique point. If the tripple lies in $\g(\R)$, then $\K(X)$ is Galois stable. The Kostant section $\K(X)$ depends on a choice of
+Kostant showed \cite{Kos63} that the Kostant section meets every regular orbit in a unique point. If the tripple lies in $\g(\R)$, then $\K(X)$ is Galois stable. The Kostant section $\K(X)$ depends on a choice of
 triple, but any two such choices that lie in $\g(\R)$ are $G(\R)$-conjugate, and the $G(\R)$-conjugacy class of $\K(X)$ only depends on the $G(\R)$-conjugacy class of $X$.
 
 Suppose $X\in \g(\R)$ and $\O$ is a regular orbit which is defined over $\R$.
@@ -345,32 +424,28 @@ The proposition then follows from the Lemma (applied with $i\g(\R)$ in place of 
   is independent of the choice of $\kappa$.
 \end{rem}
 
-Here is an alternative formulation.
-\begin{pro}
-\label{p:whittakeralt}
-Suppose $\pi$ is a generic discrete series representation. Then $\pi$ is $\w$-generic
-for a unique Whittaker datum $\w$.
-Write $\pi=\pi(S,\tau)$, and let $\ch\rho=\frac12\sum_{\langle d\tau,\ch\alpha\rangle>0}\ch\alpha$. 
-Write $\w=\w_X$ for some regular nilpotent element $X\in i\g(\R)$.
-Then $\ch\rho(i)\in\s(\R)$ is $G(\R)$-conjugate to the Kostant section of $iX\in \g(\R)$.
-\end{pro}
+% Here is an alternative formulation.
+% \begin{pro}
+% \label{p:whittakeralt}
+% Suppose $\pi$ is a generic discrete series representation. Then $\pi$ is $\w$-generic
+% for a unique Whittaker datum $\w$.
+% Write $\pi=\pi(S,\tau)$, and let $\ch\rho=\frac12\sum_{\langle d\tau,\ch\alpha\rangle>0}\ch\alpha$. 
+% Write $\w=\w_X$ for some regular nilpotent element $X\in i\g(\R)$.
+% Then $\ch\rho(i)\in\s(\R)$ is $G(\R)$-conjugate to the Kostant section of $iX\in \g(\R)$.
+% \end{pro}
   
-
-{\it The previous statement:}
-
-
-\begin{pro} \label{pro:gen}
+\begin{cor} \label{cor:gen}
 Let $S \subset G_0$ be an elliptic maximal torus, $\rho$ a Weyl chamber in $X^*(S/Z_{G_0})$, and $\tau_0$ a character of $S(\R)$ whose differential is $\rho$-dominant and $\rho$-integral. Let $(T_0,B_0,\{X_\alpha\})$ be a pinning of $G_0$ and $\Lambda(x)=e^{2\pi ix}$. If the discrete series representation associated to $(S,\rho,\tau_0)$ is generic with respect to the Whittaker datum associated to the pinning and $\Lambda$, then the element $\rho^\vee(-i) \in \tx{Lie}(S_\tx{sc})(\R)$ is $G_0(\R)$-conjugate to the Kostant section associated to the pinning.
-\end{pro}
+\end{cor}
 \begin{proof}
-Note that $X=\rho^\vee(-i) \in \tx{Lie}(S_\tx{sc})$ is Galois-fixed and thus lies in $\tx{Lie}(S_\tx{sc})(\R)$.
-\textcolor{red}{TODO}
+Let $\pi$ be the essentially discrete series representation associated to $(S,\rho,\tau_0)$ and let $H_\pi \in i\tx{Lie}(S)(\R)$ be the associated element, determined by $d\tau(Z)=\kappa(H_\pi,Z)$. 
+
+Let $X_-=\sum_{\alpha \in \Delta} X_{-\alpha}$ and let $\bar X=2\pi i X_-$. According to Lemma \ref{lem:w1}, being generic with respect to the pinning and $\Lambda$ is equivalent to being generic with respect to $\w_{\bar X}$, and Proposition \ref{p:whittaker} implies that $H_\pi$ is $G(\R)$-conjugate to the Kostant section $K(\bar X)$.
+
+Let $H=\rho^\vee(i) \in \tx{Lie}(S_\tx{sc})$. This element is Galois-fixed and thus lies in $\tx{Lie}(S_\tx{sc})(\R)$. \textcolor{red}{Argue from above statement to the fact that $H$ is $G(\R)$-conjugate to the Kostant section $K(i\bar X)$.} But $K(i\bar X)=K(-2\pi X_-)$ and we conclude that $\rho^\vee(-i)$ is $G(\R)$-conjugate to $K(2\pi X_-)$.
 \end{proof}
 
-\section{Example}
-
-{\it This section is not intended for publication.}
-
+\begin{exa}
 Set $G=\SL(2,\R)$. Let $\s(\C)=\{t_z\mid z\in\C\}$ where
 $$
 t_z=\begin{pmatrix}0&z\\-z&0
@@ -496,8 +571,9 @@ $$
 \ch\alpha(z)=\begin{pmatrix}
 \frac{z+\frac 1z}2&\frac{z-\frac 1z}{2i}\\
 -\frac{z-\frac 1z}{2i}&\frac{z+\frac 1z}2
-\end{pmatrix}
+\end{pmatrix}.
 $$
+\end{exa}
 
 \section{Construction of $L$-packet and internal structure}
 
@@ -505,7 +581,7 @@ Let $G_0$ be a quasi-split connected reductive $\R$-group with dual group $\hat 
 %We choose an $\R$-pinning $(T,B,\{X_\alpha\})$ of $G$ and a non-trivial additive character $\psi : \R \to \C^\times$ and denote by $\mf{w}$ the resulting Whittaker datum, as in \S\ref{sec:whit}.
 Let $\varphi : W_\R \to {^LG}$ be a discrete Langlands parameter, given up to conjugation by $\hat G$.
 
-\subsection{Factorization of a parameter }
+\subsection{Factorization of a parameter}
 
 
 We choose a $\Gamma$-invariant Borel pair $(\hat T,\hat B)$ of $\hat G$. Conjugating by $\hat G$ we arrange that $\varphi(z) \in \hat T$ for all $z \in \C^\times$. Thus, $\varphi|_{\C^\times}$ is a continuous group homomorphism $\C^\times \to \hat T$. Every continuous group homomorphism $\C^\times \to \C^\times$ is of the form $z^a\bar z^b = |z|^{a+b}\tx{arg}(z)^{a-b}$ for some $a,b \in \C$ with $a-b \in \Z$. Thus there exist $\lambda,\mu \in X_*(\hat T)\otimes_\Z\C$ with $\lambda-\mu \in X_*(\hat T)$ such that
@@ -545,6 +621,11 @@ If $(S_1,\tau_1)$ and $(S_2,\tau_2)$ are two pairs obtained from two different c
 	\warn{TODO}
 \end{proof}
 
+% \begin{cns} \label{cns:stj}
+% 	Let $(G,\xi)$ be an inner twist of $G_0$. We construct a natural stable class $J_\xi$ of embeddings $j : S \to G$. \warn{TODO} Choose, in addition to the $\Gamma$-stable Borel pair $(\hat T,\hat B)$ of $\hat G$, an $F$-Borel pair $(T_0,B_0)$ of $G_0$. The resulting identification $X_*(T_0)=X^*(\hat T)$ induces a $\Gamma$-equivariant identification of Weyl groups $\Omega(\hat T,\hat G) = \Omega(T_0,G_0)$, and we obtain the homomorphism $\xi : \Gamma \to \Omega(T,G) \rtimes \Gamma$.
+% \end{cns}
+	
+
 \subsection{Construction of the $L$-packet}
 
 % Recall that $\theta$ has regular differential. It determines a choice of positive roots in $R(S,G)$, which we denote by $\alpha>0$. The function
@@ -553,56 +634,50 @@ If $(S_1,\tau_1)$ and $(S_2,\tau_2)$ are two pairs obtained from two different c
 % \[ \Theta(x) = \frac{\theta'(x)}{\prod_{\alpha>0}(1-\alpha^{-1}(x))}.\]
 % We will use it to specify the elements of the $L$-packet associated to $\varphi$.
 
-\begin{cns} \label{cns:stj}
-Let $(G,\xi,z)$ be a pure (or rigid) inner form of $G_0$. We construct a natural stable class $J_\xi$ of embeddings $j : S \to G$. \warn{TODO}
-\end{cns}
+The natural embedding $\hat S \to \hat G$ is not $\Gamma$-equivariant, but its $\hat G$-conjugacy class is. From \S\ref{sub:adm} we obtain the category $\mc{J}$ of embeddings of $S$ into all pure (or rigid) inner forms of $G_0$.
 
-
-Consider $j \in J_\xi$ and use it to identify $S$ with its image, an elliptic maximal torus of $G$. As discussed in \S\ref{sub:essds}, there exists a unique essentially discrete series representation $\pi_j$ of $G(\R)$ associated to the pair $(S,\tau)$, transported to $G$ via $j$.
+Consider $(G,\xi,z,j) \in \mc{J}(F)$. As discussed in \S\ref{sub:essds}, there exists a unique essentially discrete series representation $\pi_j$ of $G(\R)$ associated to the pair $(S,\tau)$, transported to $G$ via $j$.
 
 
 % The images of all elements of $J_\xi$ are elliptic maximal tori in $G$. According to \warn{ref}, these are conjugate to each other under $G(\R)$. To simplify notation we fix one elliptic maximal torus $S' \subset G$ and we write $J_\xi'$ for the subset of $J_\xi$ consisting of all elements with image $S'$. Then $J_\xi'$ is a torsor under $\Omega(S',G)(\R)$.
 
 
 \begin{dfn}
-\[ \Pi_\varphi((G,\xi,z)) = \{\pi_j|j \in J_\xi\}. \]
 We define the pure (resp rigid) compound $L$-packet
-\[ \Pi_\varphi = \{(G,\xi,z,\pi)|(G,\xi,z) \in \mc{I}, \pi \in \Pi(G,\xi,z)\}, \]
-where $\mc{I}$ is the category of pure (resp. rigid) inner forms of $G_0$.
+\[ \tilde\Pi_\varphi = \{(G,\xi,z,\pi_j)|(G,\xi,z,j) \in \mc{J}(F)\} \subset \tilde\Pi, \]
+\[ \Pi_\varphi=\tilde\Pi_\varphi/G_0(\C) \subset \Pi. \]
+For each pure (or rigid) inner twist $(G,\xi,z)$ of $G_0$, we define
+\[ \Pi_\varphi(G,\xi,z)=\{\pi | (G,\xi,z,\pi) \in \tilde\Pi_\varphi\}. \]
 \end{dfn}
 
 \begin{lem}
-The set of representations $\Pi_\varphi((G,\xi,z))$ is independent of $z$ and coincides with the set $\Pi_\varphi(G)$ constructed by Langlands in \cite[\S3]{Lan89}.
+The set of representations $\Pi_\varphi((G,\xi,z))$ equals $\{\pi_j|j \in J^G(\R)/G(\R))\}$. In particular, it is independent of $z$. It coincides with the set $\Pi_\varphi(G)$ constructed by Langlands in \cite[\S3]{Lan89}.
 \end{lem}
 \begin{proof}
-\warn{TODO}
+	As discussed in \S\ref{sub:adm}, the set of $(G,\xi,z,j) \in \mc{J}(\R)$ with fixed triple $(G,\xi,z)$ corresponds to $J^G(\R)$, in particular is independent of $z$. Since the images of the members of $J^G(\R)$ are elliptic maximal tori, and all such are conjugate under $G(\R)$, we can choose representatives of $J^G(\R)/G(\R)$ that all have the same image, call it $S' \subset G$. Then these representatives are a single orbit under $\Omega(S',G)$. In other words, if $\tau'$ is the transport of $\tau$ under one admissible embedding $j : S \to G$ with image $S'$, then all others make out the $\Omega(S',G)$-orbit of $\tau'$. Since we have specified the representations $\pi_j$ by their character values on regular elements of $S'(\R)$ in the same way as in \cite[\S3]{Lan89} or \cite[\S4]{AV16}.
 \end{proof}
 
 \subsection{Internal structure of the compound packet} \label{sub:intstr}
 
-Let $\mc{J}$ be the category of quadruples $(G,\xi,z,j)$, where $(G,\xi,z)$ is a pure (resp. rigid) inner form of $G_0$ and $j \in J_\xi$. By construction we have a functor $\mc{J} \to \Pi_\varphi$.
 
-\begin{lem} \label{lem:intstr}
-The functor $\mc{J} \to \Pi_\varphi$ is an equivalence.
-\end{lem}
-\begin{proof}
-\warn{TODO}
-\end{proof}
-
-Recall from \warn{ref} that the abelian group $H^1(\Gamma,S)$ in the pure case (resp. $H^1(u \to W,Z(G_0) \to S)$ in the rigid case) acts simply transitively on the set of isomorphism classes of $\mc{J}$, hence according to Lemma \ref{lem:intstr} also on the set of isomorphism classes of $\Pi_\varphi$. At the same time, Lemma \ref{lem:icreg} provides an identification $S_\varphi = \hat S^\Gamma$, hence by Tate-Nakayama duality $\pi_0(S_\varphi)^*=\pi_0(\hat S^\Gamma)^*=H^1(\Gamma,S)$. Analogously, in the rigid setting we obtain $\pi_0(S_\varphi^+)^*=H^1(u \to W,Z(G_0) \to S)$. This provides a simply transitive action of the abelian group $\pi_0(S_\varphi)^*$ in the pure setting, and $\pi_0(S_\varphi^+)^*$ in the rigid setting, on the set of isomorphism classes in $\Pi_\varphi$.
+Recall from Lemma \ref{lem:simtrans} that the abelian group $H^1(\Gamma,S)$ in the pure case (resp. $H^1(u \to W,Z(G_0) \to S)$ in the rigid case) acts simply transitively on the set $\mc{J}(\R)/G_0(\C)$. By construction we have a bijection $\mc{J}(\R)/G_0(\C) \to \Pi_\varphi$. At the same time, Lemma \ref{lem:icreg} provides an identification $S_\varphi = \hat S^\Gamma$, hence by Tate-Nakayama duality $\pi_0(S_\varphi)^*=\pi_0(\hat S^\Gamma)^*=H^1(\Gamma,S)$. Analogously, in the rigid setting we obtain $\pi_0(S_\varphi^+)^*=H^1(u \to W,Z(G_0) \to S)$. This provides a simply transitive action of the abelian group $\pi_0(S_\varphi)^*$ in the pure setting, and $\pi_0(S_\varphi^+)^*$ in the rigid setting, on the set $\Pi_\varphi$.
 
 \begin{lem} \label{lem:uniqgen}
-The set $\Pi((G_0,1,1))$ contains a unique $\mf{w}$-generic member.
+The set $\Pi_\varphi((G_0,1,1))$ contains a unique $\mf{w}$-generic member.
 \end{lem}
 \begin{proof}
-\warn{TODO}
+Choose a $G_0$-equivariant extension $\kappa$ to $\mf{g}$ of the Killing form on $[\mf{g},\mf{g}]$. Its pull-back to $\mf{s}$ along any embedding $j \in J^{G_0}$ is the same, since all these embeddings are conjugate under $G_0$.
+
+Let $H \in i\mf{s}(\R)$ be the element such that $\kappa(H,Y)=d\tau(Y)$ for all $Y \in \mf{s}(\R)$. For $j \in J^{G_0}(\R)$, the element $dj(H) \in i\mf{g}(\R)$ is associated to the representation $\pi_j$ as in Proposition \ref{p:whittaker}, which implies that $\pi_j$ is $\mf{w}$-generic if and only if $dj(H)$ meets the associated Kostant section. But as $j$ varies over $J^{G_0}(\R)/G_0(\R)$, the element $dj(H)$ varies over the $G_0(\R)$-classes in a fixed stable class. Therefore, $dj(H)$ meets any Kostant section for precisely one $j \in J^{G_0}(\R)/G_0(\R)$. At the same time, $j \mapsto \pi_j$ is a bijection from $j \in J^{G_0}(\R)/G_0(\R)$ to $\Pi_\varphi((G_0,1,1))$ by construction of the latter.
 \end{proof}
 
-Taking the unique $\mf{w}$-generic member of $\Pi((G_0,1,1)) \subset \Pi_\varphi/\!\!\sim$, provided by Lemma \ref{lem:uniqgen}, as a base-point, the simply-transitive action turns into the desired bijection from $\pi_0(S_\varphi)^*$ (resp. $\pi_0(S_\varphi^+)^*$) to $\Pi_\varphi/\!\!\sim$.
+Taking the unique $\mf{w}$-generic member of $\Pi((G_0,1,1)) \subset \Pi_\varphi$, provided by Lemma \ref{lem:uniqgen}, as a base-point, the simply-transitive action turns into the desired bijection from $\pi_0(S_\varphi)^*$ (resp. $\pi_0(S_\varphi^+)^*$) to $\Pi_\varphi$.
 
 \subsection{The case of a cover of $G$} \label{sub:packetcover}
 
-\subsection{Dependence on the choice of Whittaker datum} \label{sub:whit}
+\warn{TODO}
+
+\subsection{Dependence on the choice of Whittaker datum} \label{sub:whitdep}
 
 \warn{TODO}
 
@@ -755,7 +830,7 @@ Then
 \[ \alpha^{1/2}(\dot\delta_0)-\alpha^{-1/2}(\dot\delta_0) = -2i\sin(r\<d\alpha,\rho^\vee\>/2). \]
 Choosing $r>0$ so that $r\<d\alpha,\rho^\vee\>/2 < \pi$ for all $\alpha \in R(S,G)^+$ we obtain
 \[ \arg(\alpha^{1/2}(\dot\delta_0) - \alpha^{-1/2}(\dot\delta_0)) = (-i)^{\#R(S,G/H)^+}. \]
-Choose a pinning $(T_0,B_0,\{X_\alpha\})$, which, together with $\Lambda(x)=e^{2\pi ix}$, produces the chosen Whittaker datum $\mf{w}$. Proposition \ref{pro:gen} then shows that $\rho^\vee(-i)$ is $G_0(\R)$-conjugate lies in the Kostant section of that pinning. Thus $X$ is $G_0(\R)$-conjugate to the Kostant section of the pinning $(T_0,B_0,\{rX_\alpha\})$. If we construct $\Delta_I(\dot\gamma_0,\dot\delta_0)$ with respect to this rescaled pinning, then \cite[Lemma 4.1.4]{KalHDC} show that $\Delta_I(\dot\gamma_0,\dot\delta_0)=1$. On the other hand, the rescaled pinning together with the character $\Lambda_r(x)=e^{r2\pi i x}$ also produces the Whittaker datum $\mf{w}$. According to Lemma \ref{lem:epsilon} the right hand side equals $1$.
+Choose a pinning $(T_0,B_0,\{X_\alpha\})$, which, together with $\Lambda(x)=e^{2\pi ix}$, produces the chosen Whittaker datum $\mf{w}$. Corollary \ref{cor:gen} then shows that $\rho^\vee(-i)$ is $G_0(\R)$-conjugate lies in the Kostant section of that pinning. Thus $X$ is $G_0(\R)$-conjugate to the Kostant section of the pinning $(T_0,B_0,\{rX_\alpha\})$. If we construct $\Delta_I(\dot\gamma_0,\dot\delta_0)$ with respect to this rescaled pinning, then \cite[Lemma 4.1.4]{KalHDC} show that $\Delta_I(\dot\gamma_0,\dot\delta_0)=1$. On the other hand, the rescaled pinning together with the character $\Lambda_r(x)=e^{r2\pi i x}$ also produces the Whittaker datum $\mf{w}$. According to Lemma \ref{lem:epsilon} the right hand side equals $1$.
 \end{proof}
 
 \subsection{The right hand side: classical set-up}
@@ -811,7 +886,7 @@ The following lemma completes the proof.
 The splitting invariant $\lambda$ of $S$ computed in terms of $(-\rho)$-based $a$-data is trivial.
 \end{lem}
 \begin{proof}
-Let $X=\rho^\vee(-i) \in \tx{Lie}(S_\tx{sc})$. This element is Galois-fixed and thus lies in $\tx{Lie}(S_\tx{sc})(\R)$. For every $\alpha>0$ the complex number $d\alpha(X)$ is a positive real multiple of $-i$. Therefore we can replace the $(-\rho)$-based $a$-data with the $a$-data $d\alpha(X)$ without changing the splitting invariant. According to \cite[Theorem 5.1]{Kot99} and Proposition \ref{pro:gen}, $\lambda$ is trivial.
+Let $X=\rho^\vee(-i) \in \tx{Lie}(S_\tx{sc})$. This element is Galois-fixed and thus lies in $\tx{Lie}(S_\tx{sc})(\R)$. For every $\alpha>0$ the complex number $d\alpha(X)$ is a positive real multiple of $-i$. Therefore we can replace the $(-\rho)$-based $a$-data with the $a$-data $d\alpha(X)$ without changing the splitting invariant. According to \cite[Theorem 5.1]{Kot99} and Corollary \ref{cor:gen}, $\lambda$ is trivial.
 \end{proof}
 
 
