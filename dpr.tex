@@ -78,7 +78,7 @@
 
 \tableofcontents
 
-\section{Recollections and preparations}
+\section{Recollections}
 
 \subsection{The $L$-group}
 
@@ -319,6 +319,9 @@ The Iwasawa decomposition $\tx{Lie}(G_0)=\mf{a} \oplus\mf{n} \oplus \mf{k}$ show
 \[ \dim(A_0^H)-\dim(A_0^G) = 2(q(H)-q(G_0))+(r_G/2-r_H/2).\qedhere \]
 \end{proof}
 
+\section{Genericity of discrete series representations} \label{sec:gen}
+
+From the work of Kostant \cite{Kos78} and Vogan \cite{Vog78} it is known that every essentially discrete series representation is generic for some Whittaker datum. In this section we will prove a more precise statement (Proposition \ref{p:whittaker}) that gives a link between the representation and the Whittaker datum. It provides  (Corollary \ref{cor:gen}) an exact analog of a result in the p-adic case, originally due to DeBacker and \cite[Proposition 4.10]{DR10} under unramifiedness assumptions, but whose proof applies in much greater generality, see \cite[Lemma 6.2.2]{KalRSP} and \cite[\S4.4]{FKS}. This allows us to prove the strong form of Shahidi's generic packet conjecture \cite[\S9]{Sha90} for discrete series packets, originally established by Shelstad \cite{SheTE3} using a less direct argument. Note that the general form of the conjecture (for tempered $L$-packets) reduces immediately to the case of discrete $L$-packets.
 
 \subsection{Whittaker data and Kostant sections} \label{sub:whit}
 
@@ -445,7 +448,8 @@ Let $X_-=\sum_{\alpha \in \Delta} X_{-\alpha}$ and let $\bar X=2\pi i X_-$. Acco
 Let $H=\rho^\vee(i) \in \tx{Lie}(S_\tx{sc})$. This element is Galois-fixed and thus lies in $\tx{Lie}(S_\tx{sc})(\R)$. \textcolor{red}{Argue from above statement to the fact that $H$ is $G(\R)$-conjugate to the Kostant section $K(i\bar X)$.} But $K(i\bar X)=K(-2\pi X_-)$ and we conclude that $\rho^\vee(-i)$ is $G(\R)$-conjugate to $K(2\pi X_-)$.
 \end{proof}
 
-\begin{exa}
+\subsection{An example with $\tx{SL}_2$}
+
 Set $G=\SL(2,\R)$. Let $\s(\C)=\{t_z\mid z\in\C\}$ where
 $$
 t_z=\begin{pmatrix}0&z\\-z&0
@@ -573,7 +577,7 @@ $$
 -\frac{z-\frac 1z}{2i}&\frac{z+\frac 1z}2
 \end{pmatrix}.
 $$
-\end{exa}
+
 
 \section{Construction of $L$-packet and internal structure}
 
