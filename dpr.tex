@@ -269,7 +269,7 @@ By construction the parameter $\varphi$ takes values in $\mc{H}$. However, the e
 
 The classical approach is to choose a $z$-extension $H_1 \to H$ and an $L$-embedding $\mc{H} \to {^LH_1}$ that extends the natural embedding $\hat H \to \hat H_1$. These choices (which always exist, cf. \cite[\S2.2]{KS99}) are called a $z$-pair. They provide a parameter $\varphi_1$ for $H_1$.
 
-An approach introduced in \cite{KalHDC} is to extend the theory of double covers of tori from \cite{KalDC} to the setting of quasi-split connected reductive groups. The datum $\mc{H}$ then leads to a \emph{canonical} double cover $H(F)_\pm$ of $H(F)$ and a \emph{canonical} isomorphism $^LH_\pm \to \mc{H}$. In this way, $\varphi$ naturally becomes a parameter for $H(F)_\pm$.
+An approach introduced in \cite{KalHDC} is to extend the theory of double covers of tori from \cite{KalDC} to the setting of quasi-split connected reductive groups. The datum $\mc{H}$ then leads to a \emph{canonical} double cover $H(F)_\pm$ of $H(F)$ and a \emph{canonical} isomorphism $^LH_\pm \to \mc{H}$. In this way, $\varphi$ naturally becomes a parameter for $H(F)_\pm$, and there are no choices involved.
 
 The transfer of orbital integrals and characters between $G$ and $H$ is governed by the transfer factor. In the classical case, it is a function
 \[ \Delta : H_1(\R)^\tx{rs} \times G(\R)^\tx{rs} \to \C \]
@@ -583,12 +583,12 @@ $$
 
 Let $G_0$ be a quasi-split connected reductive $\R$-group with dual group $\hat G$ and $L$-group $^LG$.
 %We choose an $\R$-pinning $(T,B,\{X_\alpha\})$ of $G$ and a non-trivial additive character $\psi : \R \to \C^\times$ and denote by $\mf{w}$ the resulting Whittaker datum, as in \S\ref{sec:whit}.
-Let $\varphi : W_\R \to {^LG}$ be a discrete Langlands parameter, given up to conjugation by $\hat G$.
+Let $[\varphi] : W_\R \to {^LG}$ be a $\hat G$-conjugacy class of discrete Langlands parameters.
 
 \subsection{Factorization of a parameter}
 
 
-We choose a $\Gamma$-invariant Borel pair $(\hat T,\hat B)$ of $\hat G$. Conjugating by $\hat G$ we arrange that $\varphi(z) \in \hat T$ for all $z \in \C^\times$. Thus, $\varphi|_{\C^\times}$ is a continuous group homomorphism $\C^\times \to \hat T$. Every continuous group homomorphism $\C^\times \to \C^\times$ is of the form $z^a\bar z^b = |z|^{a+b}\tx{arg}(z)^{a-b}$ for some $a,b \in \C$ with $a-b \in \Z$. Thus there exist $\lambda,\mu \in X_*(\hat T)\otimes_\Z\C$ with $\lambda-\mu \in X_*(\hat T)$ such that
+Choose any representative $\varphi$ within the conjugacy class $[\varphi]$. There exists a maximal torus $\hat T \subset \hat G$ satisfying $\varphi(z) \in \hat T$ for all $z \in \C^\times$ \warn{why}. The restriction $\varphi|_{\C^\times}$ is a continuous group homomorphism $\C^\times \to \hat T$. Every continuous group homomorphism $\C^\times \to \C^\times$ is of the form $z^a\bar z^b = |z|^{a+b}\tx{arg}(z)^{a-b}$ for unique $a,b \in \C$ with $a-b \in \Z$. Thus there exist unique $\lambda,\mu \in X_*(\hat T)\otimes_\Z\C$ with $\lambda-\mu \in X_*(\hat T)$ such that
 \[ \varphi(z) = \lambda(z) \cdot \mu(\bar z),\qquad \forall z \in \C^\times. \]
 
 \begin{lem} \label{lem:icreg}
@@ -603,26 +603,29 @@ Assume that $G_0$ is semi-simple and simply connected.
 \warn{TODO.}
 \end{proof}
 
-We can apply Lemma \ref{lem:icreg} to the composition of $\varphi$ with the projection $^LG \to {^LG}/\hat Z$, where $\hat Z$ is the center of $\hat G$, noting that $\hat G/\hat Z$ is the dual group of $G_\tx{sc}$.
-%
-%  Conjugating $\varphi$ by $N(\hat T,\hat G)$ we assume that the image of $\lambda$ in $X_*(\hat T/\hat Z)_\C$, which according to the lemma lies in $X_*(\hat T/\hat Z)$, lies in the chamber determined by $\hat B$.
+We can apply Lemma \ref{lem:icreg} to the composition of $\varphi$ with the projection $^LG \to {^LG}/\hat Z$, where $\hat Z$ is the center of $\hat G$, noting that $\hat G/\hat Z$ is the dual group of $G_\tx{sc}$. It implies that the image $\bar\lambda \in X_*(\hat T/\hat Z)_\C$ of $\lambda$, which according to the lemma lies in $X_*(\hat T/\hat Z)$, is regular. In particular, $\hat T$ is unique determined as the centralizer of $\varphi(\C^\times)$ in $\hat G$.
+%Conjugating $\varphi$ by $N(\hat T,\hat G)$ we may then assume that this image lies in the chamber determined by $\hat B$. This will be used in Lemma \ref{lem:a} below.
 %
 % At this point, $\varphi$ is well-defined up to conjugation by $\hat T$. This of course depends on the chosen Borel pair $(\hat T,\hat B)$.
 %
-It implies that the centralizer of $\varphi|_{\C^\times}$ in $\hat G$ equals $\hat T$. Since $\C^\times$ is normal in $W_\R$, the image of $\varphi$ lies in $N(\hat T,\hat G)$. Its projection to $\Omega(\hat T,\hat G)$ factors through a homomorphism $\xi : \Gamma \to \Omega(\hat T,\hat G) \rtimes \Gamma$. Let $\hat S$ denote the $\Gamma$-module with underlying abelian group $\hat T$ and $\Gamma$-structure given by $\tx{Ad}\circ\xi$. Let $S$ be the $\R$-torus whose dual is $\hat S$, i.e. the $\R$-torus determined by $X^*(S)=X_*(\hat S)$ as $\Gamma$-modules.
+Since $\C^\times$ is normal in $W_\R$, the image of $\varphi$ lies in $N(\hat T,\hat G)$. Its projection to $\Omega(\hat T,\hat G)$ factors through a homomorphism $\xi : \Gamma \to \Omega(\hat T,\hat G) \rtimes \Gamma$. Let $\hat S$ denote the $\Gamma$-module with underlying abelian group $\hat T$ and $\Gamma$-structure given by $\tx{Ad}\circ\xi$. Let $S$ be the $\R$-torus whose dual is $\hat S$, i.e. the $\R$-torus determined by $X^*(S)=X_*(\hat S)$ as $\Gamma$-modules.
 
 
 By construction we have $R(\hat T,\hat G) \subset X^*(\hat T)=X^*(\hat S)=X_*(S)$, and we write $R^\vee(S,G)$ for this set. Analogously we have a subset $R(S,G) \subset X^*(S)$. Both of these subsets are $\Gamma$-stable. Moreover $\mu=\sigma\lambda$ in $X_*(\hat S)$ and according to Lemma \ref{lem:icreg} the action of $\sigma$ on $R(S,G)$ is by negation.
 
 Let $S(\R)_G$ be the double cover of $S(\R)$ reviewed in \S\ref{sub:covtori}, associated to the subset $R(S,G) \subset X^*(S)$. As discussed there, there is a canonical $\hat G$-conjugacy class of $L$-embeddings $^LS_G \to {^LG}$. Inside of this class, there is a unique $\hat S$-conjugacy class, call it $^Lj$, whose restriction to $\hat S$ is the tautological embedding $\hat S \to \hat G$. The image of this $L$-embedding is described in \eqref{eq:lembim}, and contains the image of $\varphi$ by construction. Thus $\varphi = {^Lj}\circ\varphi_S$ for a unique $\hat S$-conjugacy class of $L$-homomorphisms $\varphi_S : W_\R \to {^LS_G}$. According to \cite[Theorem 3.15]{KalDC}, $\varphi_S$ corresponds to a genuine character $\tau : S(\R)_G \to \C^\times$.
 
-The construction of $(S,\tau)$ depended on the choice of $\hat T$.
+Finally, the tautological inclusion $\hat T \subset \hat G$ provides an embedding $\hat\jmath : \hat S \to \hat G$. While this embedding is not $\Gamma$-equivariant, its $\hat G$-conjugacy class is, because the embedding $\hat T \to \hat G$ is $\Gamma$-equivariant and the $\Gamma$-structures of $\hat T$ and $\hat S$ differ by twisting by $N(\hat T,\hat G)$.
 
-\begin{lem}
-If $(S_1,\tau_1)$ and $(S_2,\tau_2)$ are two pairs obtained from two different choices of $\hat T$, there exists $g \in \hat G^\Gamma$ such that $\tx{Ad}(g)\hat S_1 = \hat S_2$, $\tx{Ad}(g) : \hat S_1 \to \hat S_2$ is $\Gamma$-equivariant, and its dual isomorphism $S_2 \to S_1$ identifies $\tau_2$ with $\tau_1$.
+The construction of $(S,\tau,\hat\jmath\,)$ depended on the choice of $\varphi$ within its conjugacy class. The next lemma shows that this dependence is irrelevant.
+
+\begin{lem} \label{lem:a}
+If $(S_1,\tau_1,\hat\jmath_1)$ and $(S_2,\tau_2,\hat\jmath_2)$ are two pairs obtained from two different choices $\varphi_1$ and $\varphi_2$ of elements of the $\hat G$-conjugacy class $[\varphi]$, there exists a unique isomorphism $S_1 \to S_2$ which identifies $\tau_1$ with $\tau_2$ and whose dual intertwines $\hat\jmath_1$ and $\hat\jmath_2$. It is given by conjugation by an element of $\hat G$.
 \end{lem}
 \begin{proof}
-	\warn{TODO}
+	The uniqueness claim is clear from the compatibility with $\hat\jmath_i$. We show existence. Let $\hat T_i$ be the centralizer of $\varphi_i(\C^\times)$, a maximal torus according to Lemma \ref{lem:icreg}. Choose any $g \in \hat G$ such that $\tx{Ad}(g) \circ\varphi_1=\varphi_2$. Then $\tx{Ad}(g)\hat T_1=\hat T_2$ and the isomorphism $\tx{Ad}(g) : \hat T_1 \to \hat T_2$ translates the $\Gamma$-action induced by $\tx{Ad}\circ\varphi_1$ to that induced by $\tx{Ad}\circ\varphi_2$. Therefore, $\tx{Ad}(g) : \hat S_1 \to \hat S_2$ is $\Gamma$-equivariant. Tautologically, it intertwines $\hat\jmath_1$ and $\hat\jmath_2$.
+
+	The dual isomorphism $S_2 \to S_1$ identifies the subsets $R(S_1,G) \subset X^*(S_1)$ and $R(S_2,G) \subset X^*(S_2)$, hence lifts canonically to an isomorphism of double covers $S_2(\R)_G \to S_1(\R)_G$. Dually the isomorphism $\hat S_1 \to \hat S_2$ extends canonically to an isomorphism $^LS_{1,G} \to {^LS_{2,G}}$, which commutes with the canonical $L$-embeddings into $^LG$. Therefore, it translates the factorization of $\varphi_1$ through $^LS_{1,G}$ to the factorization of $\varphi_2$ through $^LS_{2,G}$, which implies that the isomorphism $S_2(\R)_G \to S_1(\R)_G$ identifies $\tau_2$ with $\tau_1$.
 \end{proof}
 
 % \begin{cns} \label{cns:stj}
