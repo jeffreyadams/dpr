@@ -322,7 +322,7 @@ In both cases $\delta$ runs over the set of $G(\R)$-conjugacy classes in $G(\R)^
 The functions $f$ and $f^{H_\pm}$ are called \emph{matching}. The functions $f$ and $f^{H_1}$ are called \emph{matching}.
 \end{dfn}
 
-For the computations of this paper it would be useful to review a basic property of the transfer factor. The first property concerns the behavior of $\Delta$ under stable conjugacy in the variables $\gamma$ and $\delta$. If $\dot\gamma$, resp. $\gamma_1$, is replaced by a stable conjugate, then the value of $\Delta$ doesn't change. On the other hand, if $\delta$ is replaced by a stable conjugate, the value of $\Delta$ changes in the following way
+For the computations of this paper it would be useful to review some basic properties of the transfer factor. The first property concerns the behavior of $\Delta$ under stable conjugacy in the variables $\gamma$ and $\delta$. If $\dot\gamma$, resp. $\gamma_1$, is replaced by a stable conjugate, then the value of $\Delta$ doesn't change. On the other hand, if $\delta$ is replaced by a stable conjugate, the value of $\Delta$ changes in the following way
 \begin{equation} \label{eq:tfstab}
 	\Delta(\dot\gamma,(z_2,\delta_2)) = \Delta(\dot\gamma,(z_1,\delta_1)) \cdot \<\tx{inv}((z_1,\delta_1),(z_2,\delta_2)),\hat \jmath\,^{-1}(s)\>.
 \end{equation}
@@ -330,8 +330,28 @@ This is in the setting of covers and we refer to \cite[Lemma 4.3.1]{KalHDC}. In 
 
 To explain this formula let us denote by $\gamma \in H(F)$ the image of $\dot\gamma$ resp. $\gamma_1$, and let $S \subset H$ be the centralizer of $\gamma \in H(F)$. Let $T \subset G_{z_1}$ be the centralizer of $\delta_1$. Using the discussion of \S\ref{sub:adm} we obtain from the inclusion $S \to H$ a $\Gamma$-stable $\hat H$-conjugacy class of embeddings $\hat S \to \hat H$. Composing this with the inclusion $\eta : \hat H \to \hat G$ we obtain a $\Gamma$-stable $\hat G$-conjugacy class of embeddings $\hat S \to \hat G$, hence conversely a $\Gamma$-stable $G(F^s)$-conjugacy class of embeddings $S \to G$. Among them, there is a unique one that maps $\gamma$ to $\delta_1$. It is automatically defined over $F$, and we call it $j$. Its dual-inverse $\hat\jmath^{-1}$ is an isomorphism $\hat S \to \hat T$. Composing with the canonical inclusion $Z(\hat H) \to \hat S$ we can use it to transport the element $s \in Z(\hat H)^\Gamma$ to $\hat T^\Gamma$, where it can be paired with elements of $H^1(F,T)$ by Tate-Nakayama duality. This is in the setting of pure inner twists, and the setting of rigid inner twists is analogous.
 
+The second property is related to the definition of $\Delta_{III}$. We will first present an idealized situation. Assume that an $L$-embedding $^LH \to {^LG}$ exists and has been fixed. Assume further that $L$-embeddings $^LS \to {^LH}$ and $^LT \to {^LG}$ have been fixed. These always exist if we use the Weil-forms of the $L$-groups, but are not unique. The isomorphism $j : S \to T$ from the previous paragraph induces an $L$-isomorphism $^LS \to {^LT}$. We now have four maps that fit in a square, but this square has no reason to commute. More precisely, there does exist an $L$-isomorphism $^LS \to {^LT}$ that does make the square commute, but it is not necessarily the one induced from $j$. Rather, it differs from it by multiplication by an element $a \in H^1(W_\R,\hat S)$. This element is the $L$-parameter of a character of $S(\R)$, which we may denote by $\<a,-\>$. By definition
+\[ \Delta_{III}(\gamma,\delta)=\<a,\gamma\>. \]
+Even though $\delta$ doesn't appear on the right, it influences the construction via the map $j$, which depends on $\delta$. 
 
-% The second property is related to the definition of $\Delta_{III}$. In the classical setting this factor depends on the choice of $\chi$-data. This choice produces $L$-embeddings $^LS \to {^LH}$ and $^LT \to {^LG}$. If we assume that $H_1=H$ and $\eta_1 : {^LH} \to {^LG}$ is an $L$-embedding, then composing we obtain $L$-embeddings $^LS \to {^LG}$ and $^LT \to {^LG}$. On the other hand we have the isomorphism $j : S \to T$ reviewed above, and it induces an $L$-isomorphism $^LS \to {^LG}$. Composing again we now have two $L$-embedings $^LS \to {^LG}$. They necessarily differ by an element of $H^1(W_\R,\hat S)$, which is the parameter of a character $\chi$ of $S(\R)$. Then $\Delta_{III}(\gamma,\delta)=\chi(\gamma)$. From this definition one sees the following property. If $\varphi : W_\R \to {^LS}$ is a the parameter of a character $\theta$ of $S(\R)$ and $\varphi' : W_\R \to {^LT}$ is the parameter of a character $\theta'$ of $T(\R)$, and if composing these parameters with $^LS \to {^LH} \to {^LG}$ and $^LT \to {^LG}$ we obtain the same parameter for $^LG$, then
+The key property of this definition that we will need is the following. Assume given $L$-parameters $\varphi_S : W_\R \to {^LS}$ and $\varphi_T : W_\R \to {^LT}$, with the property that composing them with the $L$-embeddings $^LS \to {^LH}$, $^LH \to {^LG}$, and $^LT \to {^LG}$, provides a commutative triangle. If $\theta_S$ and $\theta_T$ are the characters of $S(\R)$ and $T(\R)$ corresponding to these parameters, then we have
+\begin{equation} \label{eq:tfd3}
+\Delta_{III}(\gamma,\delta) = \theta_T(\delta)/\theta_S(\gamma).	
+\end{equation}
+To see this one observes that in the diagram
+\[ \xymatrix{
+	&^LS\ar[dd]_a\ar[r]&^LH\ar[dd]\\
+	W_\R\ar[ru]^{\varphi_S}\ar[rd]_{\varphi_T}\\
+	&^LT\ar[r]&^LG,
+}
+\]
+the square commutes by definition of $a$, hence the trangle commutes by assumptions on $\varphi_S$ and $\varphi_T$.
+
+We now comment on the practical, rather than idealized, situation. In the classical setting an $L$-embedding $^LH \to {^LG}$ doesn't always exist. Instead, one has to choose a $z$-pair $(H_1,\eta_1)$ and then has $^LG \leftarrow \mc{H} \to {^LH_1}$. This makes the first variable of $\Delta_{III}$ an element of $S_1(\R)$, where $S_1$ is the preimage of $S$ in $H_1$. Moreover, the $L$-embeddings $^LS \to {^LH}$ and $^LT \to {^LG}$ are specified in terms of auxiliary data, called $\chi$-data, and the term $\Delta_III$ depends on that choice, as well as on the choice of $z$-pair.
+
+In the setting of covers, all $L$-embeddings are canonical, and no auxiliary data need to be chosen, but the $L$-groups that are involved are those of certain covers. Therefore, $\Delta_{III}$, while independent of any choices, has first variable coming from the double cover $S(\R)_\pm$ of $S(\R)$ that is the pull-back of $S(\R)$ under the canonical double cover $H(\R)_\pm \to H(\R)$. With these provios, the obvious analog of \eqref{eq:tfd3} still holds.
+
+% this factor depends on the choice of $\chi$-data. This choice produces $L$-embeddings $^LS \to {^LH}$ and $^LT \to {^LG}$. If we assume that $H_1=H$ and $\eta_1 : {^LH} \to {^LG}$ is an $L$-embedding, then composing we obtain $L$-embeddings $^LS \to {^LG}$ and $^LT \to {^LG}$. On the other hand we have the isomorphism $j : S \to T$ reviewed above, and it induces an $L$-isomorphism $^LS \to {^LG}$. Composing again we now have two $L$-embedings $^LS \to {^LG}$. They necessarily differ by an element of $H^1(W_\R,\hat S)$, which is the parameter of a character $\chi$ of $S(\R)$. Then $\Delta_{III}(\gamma,\delta)=\chi(\gamma)$. From this definition one sees the following property. If $\varphi : W_\R \to {^LS}$ is a the parameter of a character $\theta$ of $S(\R)$ and $\varphi' : W_\R \to {^LT}$ is the parameter of a character $\theta'$ of $T(\R)$, and if composing these parameters with $^LS \to {^LH} \to {^LG}$ and $^LT \to {^LG}$ we obtain the same parameter for $^LG$, then
 % \begin{equation} \label{eq:tfd3}
 % 	\Delta_{III}(\gamma,\delta) = \theta(\gamma_1,\delta))/\theta'((\gamma_1,\delta)),
 % \end{equation}
@@ -880,7 +900,7 @@ where we recall that the term $\Delta_{IV}$ is missing because we are working wi
 
 We claim that
 \[ \Delta_{III}(\dot\gamma_0,\dot\delta_0) = \frac{\tau_\mf{w}}{\tau_H}(\dot\delta_0). \]
-To see this, we note that we have the commutative diagram
+This is the property \eqref{eq:tfd3} that was reviewed in an idelized situation. We say here a few more words about the actual situation in the setting of double covers. We have the commutative diagram
 \[ \xymatrix{
 	&^LS_{H,\pm}\ar[dd]_a\ar[r]&^LH_\pm\ar[dd]\\
 	W_\R\ar[ru]^{\varphi^H_S}\ar@/^4pc/[rru]_-{\varphi^H}\ar[rd]_{\varphi_S}\ar@/_4pc/[rrd]_-{\varphi}\\
@@ -930,7 +950,7 @@ The construction of the pieces involves a choice of an admissible isomorphism $S
 
 We claim that
 \[ \Delta_{III_2}(\gamma_1,\delta_0) = \frac{\tau'_\mf{w}(\delta_0)}{\tau'_{H_1}(\gamma_1)}.\]
-We will explain this under the assumption that the $z$-pair is trivial, i.e. there exists an $L$-isomorphism $^L\eta : {^LH} \to \mc{H}$, the general case being entirely analogous by requiring more cumbersome notation. We then have the commutative diagram
+This was the property \eqref{eq:tfd3} that was reviewed in an idealized situation. We say here a few more words about the actual situation, still assuming that the $z$-pair is trivial, i.e. there exists an $L$-isomorphism $^L\eta : {^LH} \to \mc{H}$, the general case being entirely analogous by requiring more cumbersome notation. We then have the commutative diagram
 \[ \xymatrix{
 	&^LS_H\ar[dd]_a\ar[r]^{\rho^H}&^LH\ar[dd]^{^L\eta}\\
 	W_\R\ar[ru]^{\varphi^H_S}\ar@/^4pc/[rru]_-{\varphi^H}\ar[rd]_{\varphi_S}\ar@/_4pc/[rrd]_-{\varphi}\\
