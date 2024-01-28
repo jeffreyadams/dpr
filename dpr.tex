@@ -74,9 +74,21 @@
 \begin{document}
 
 \begin{mytitle} Discrete series $L$-packets for real reductive groups \end{mytitle}
-%\begin{center} Tasho Kaletha \end{center}
+\begin{center} Jeffrey Adams and Tasho Kaletha \end{center}
+
+\begin{abstract}
+We give a modern exposition of the construction, parameterization, and character relations, for discrete series $L$-packets of real reductive groups, which are fundamental results due to Langlands and Shelstad. This exposition incorporates the canonical double covers of tori and endoscopic groups, and gives a simple proof of Shahidi's generic packet conjecture, and incorporates normalized geometric transfer factors.
+\end{abstract}
 
 \tableofcontents
+
+\section{Introduction}
+
+\warn{TODO}
+
+Fundamental results of Langlands Shelstad, cornerstone of many applications of the Langlands program to arithmetic questions. Exposition different from classical, more closely aligned to the treatment of $p$-adic groups in \cite{KalRSP}. Endoscopic transfer originally due to Shelstad \cite{She82}, with implicit transfer factors and implicit internal structure. Later Shelstad gave an updated treatment using the explicit factors of \cite{LS87}. However, the normalization of these factors had not yet been established, and this made the internal structure again implicit, and the spectral transfer was complicated due to the occurrence of the so called ``spectral transfer factors'', whose purpose was to incorporate the arbitrary choice of geometric transfer factor \cite{SheTE2}. The canonical internal structure was obtain in \cite{SheTE3} but only for quasi-split $K$-groups. Give example unitary groups. 
+
+Here we give a direct and largely self-contained exposition of the construction of $L$-packets, their canonical internal structure, and proof of character identities. We work with the canonical normalization of transfer factors from the start. In full generality this requires the rigid inner twists of \cite{KalRI}, but to help the reader we work in parallel with Vogan's notion of pure inner twist. We also incorporate double covers of tori and endoscopic groups. This eliminates the need for auxiliary choices in the construction of packets and in the proof of character identities.
 
 \section{Recollections}
 
@@ -643,7 +655,7 @@ If $(S_1,\tau_1,\hat\jmath_1)$ and $(S_2,\tau_2,\hat\jmath_2)$ are two pairs obt
 
 The natural embedding $\hat S \to \hat G$ is not $\Gamma$-equivariant, but its $\hat G$-conjugacy class is. From \S\ref{sub:adm} we obtain the category $\mc{J}$ of embeddings of $S$ into all pure (or rigid) inner forms of $G_0$.
 
-Consider $(G,\xi,z,j) \in \mc{J}(F)$. As discussed in \S\ref{sub:essds}, there exists a unique essentially discrete series representation $\pi_j$ of $G(\R)$ associated to the pair $(S,\tau)$, transported to $G$ via $j$.
+Consider $(G,\xi,z,j) \in \mc{J}(F)$. As discussed in \S\ref{sub:essds}, there exists a unique essentially discrete series representation $\pi_j$ of $G(\R)$ associated to the pair $(S,\tau)$, transported to $G$ via $j$. According to \S\ref{sub:essds} the representation $\pi_j$ depends on the $G(\R)$-conjugacy class of $j$, and two distinct such conjugacy classes produce two non-isomorphic representations.
 
 
 % The images of all elements of $J_\xi$ are elliptic maximal tori in $G$. According to \warn{ref}, these are conjugate to each other under $G(\R)$. To simplify notation we fix one elliptic maximal torus $S' \subset G$ and we write $J_\xi'$ for the subset of $J_\xi$ consisting of all elements with image $S'$. Then $J_\xi'$ is a torsor under $\Omega(S',G)(\R)$.
@@ -664,6 +676,8 @@ The set of representations $\Pi_\varphi((G,\xi,z))$ equals $\{\pi_j|j \in J^G(\R
 	As discussed in \S\ref{sub:adm}, the set of $(G,\xi,z,j) \in \mc{J}(\R)$ with fixed triple $(G,\xi,z)$ corresponds to $J^G(\R)$, in particular is independent of $z$. Since the images of the members of $J^G(\R)$ are elliptic maximal tori, and all such are conjugate under $G(\R)$, we can choose representatives of $J^G(\R)/G(\R)$ that all have the same image, call it $S' \subset G$. Then these representatives are a single orbit under $\Omega(S',G)$. In other words, if $\tau'$ is the transport of $\tau$ under one admissible embedding $j : S \to G$ with image $S'$, then all others make out the $\Omega(S',G)$-orbit of $\tau'$. Since we have specified the representations $\pi_j$ by their character values on regular elements of $S'(\R)$ in the same way as in \cite[\S3]{Lan89} or \cite[\S4]{AV16}.
 \end{proof}
 
+We have thus recovered the $L$-packets constructed by Langlands. At the moment they do not depend on the datum $z$ in the triple $(G,\xi,z)$. This datum will play a role in the internal parameterization of these packets, to which we turn next.
+
 \subsection{Internal structure of the compound packet} \label{sub:intstr}
 
 
@@ -678,15 +692,37 @@ Choose a $G_0$-equivariant extension $\kappa$ to $\mf{g}$ of the Killing form on
 Let $H \in i\mf{s}(\R)$ be the element such that $\kappa(H,Y)=d\tau(Y)$ for all $Y \in \mf{s}(\R)$. For $j \in J^{G_0}(\R)$, the element $dj(H) \in i\mf{g}(\R)$ is associated to the representation $\pi_j$ as in Proposition \ref{p:whittaker}, which implies that $\pi_j$ is $\mf{w}$-generic if and only if $dj(H)$ meets the associated Kostant section. But as $j$ varies over $J^{G_0}(\R)/G_0(\R)$, the element $dj(H)$ varies over the $G_0(\R)$-classes in a fixed stable class. Therefore, $dj(H)$ meets any Kostant section for precisely one $j \in J^{G_0}(\R)/G_0(\R)$. At the same time, $j \mapsto \pi_j$ is a bijection from $j \in J^{G_0}(\R)/G_0(\R)$ to $\Pi_\varphi((G_0,1,1))$ by construction of the latter.
 \end{proof}
 
-Taking the unique $\mf{w}$-generic member of $\Pi((G_0,1,1)) \subset \Pi_\varphi$, provided by Lemma \ref{lem:uniqgen}, as a base-point, the simply-transitive action turns into the desired bijection from $\pi_0(S_\varphi)^*$ (resp. $\pi_0(S_\varphi^+)^*$) to $\Pi_\varphi$.
+Taking the unique $\mf{w}$-generic member of $\Pi((G_0,1,1)) \subset \Pi_\varphi$, provided by Lemma \ref{lem:uniqgen}, as a base-point, the simply-transitive action turns into the bijection from 
+\[ \iota_\mf{w} : \pi_0(S_\varphi)^* \to  \Pi_\varphi, \quad \tx{resp.}\quad \iota_\mf{w} : \pi_0(S_\varphi^+)^* \to \Pi_\varphi. \]
+
+We can summarize the construction and internal structure of $\Pi_\varphi$ as follows. We use the language of pure inner forms; that of rigid inner forms is entirely analogous. We use the simplified notation to write $\tilde\Pi$ for the set of pairs $(z,\pi)$, where $z \in Z^1(\R,G_0)$ and $\pi$ an isomorphism class of representations of the twist $G_z$, and $\Pi=\tilde\Pi/G_0(\C)$. Then $\tilde\Pi_\varphi \subset \tilde\Pi$ is the image of the map $\mc{J}(F) \to \tilde\Pi$ sending $(z,j)$ to $(z,\pi_j)$. The group $Z^1(\R,S)$ acts on $\mc{J}(\R)$ by $x\cdot (z,j)=(x \cdot z,j)$. If $j_\mf{w} : S \to G_0$ is an embedding for which $\pi_{j_\mf{w}}$ is $\mf{w}$-generic, then we obtain the map $Z^1(\R,S) \to \mc{J}(\R)$ sending $x$ to $(x,j_\mf{w})$. Composing this with the map $\mc{J}(\R) \to \tilde\Pi_\varphi$ and taking quotient under the action of $G_0(\C)$ produces the bijection $H^1(\R,S) \to \Pi_\varphi$, which, together with the isomorphism $\pi_0(S_\varphi)^*=H^1(\R,S)$ produces the desired bijection $\iota_\mf{w} : \pi_0(S_\varphi)^* \to \Pi_\varphi$.
+
+\subsection{Dependence on the choice of Whittaker datum} \label{sub:whitdep}
+
+In order to obtain the bijection from $\pi_0(S_\varphi)^*$ (resp,. $\pi_0(S_\varphi^+)^*)$ to $\Pi_\varphi$, we had to choose a Whittaker datum $\mf{w}$ and apply Lemma \ref{lem:uniqgen}. Another Whittaker datum is of the form $\mf{w'}=\tx{Ad}(\bar g)\mf{w}$ with $\bar g \in G_{0,\tx{ad}}(\R)$. According to Proposition \ref{p:whittaker}, if $\pi$ is $\mf{w}$-generic, then $\tx{Ad}(\bar g)\pi$ is $\mf{w'}$-generic. If $j : S \to G_0$ is the embedding with $\pi=\pi_j$, then $\tx{Ad}(\bar g)\pi_j$ is associated to the embedding $\tx{Ad}(\bar g)\circ j$.
+
+As described in \S\ref{sub:intstr}, the bijection $\pi_0(S_\varphi)^* \to \Pi_\varphi$ is the composition of the orbit map for the action of $\pi_0(S_\varphi)^*=H^1(\R,S)$ on $\mc{J}(\R)/G_0(\C)$ through the embedding $j$ with the $G_0(\C)$-equivariant bijection $\mc{J}(F) \to \tilde\Pi_\varphi$. Neither the latter bijection nor the action of $H^1(\R,S)$ on $\mc{J}(\R)/G_0(\C)$ depend on $\mf{w}$, only the particular point $j \in \mc{J}(F)$ does. The orbit map through $j$ is given by $x \mapsto (x,j)$, while the orbit map through $\tx{Ad}(\bar g)\circ j$ is given by $x \mapsto (x,\tx{Ad}(\bar g)\circ j)$. But $(x,\tx{Ad}(\bar g)\circ j)=g(g^{-1}x\sigma(g),j)g^{-1}$, for any $g \in G_0(\C)$ lifting $\bar g \in G_{0,\tx{ad}}(\R)$.
+
+Now $z(\sigma)=g^{-1}\sigma(g)$ belongs to $Z^1(\R,Z(G_0))$. We conclude that $(x,\tx{Ad}(\bar g),j)$ is equivalent modulo the action of $G_0(\C)$ to $(z\cdot x,j)$. This shows that the bijection $H^1(\R,S) \to \Pi_\varphi$ normalized via $\mf{w'}=\tx{Ad}(g)\mf{w}$ is obtained form the bijection normalized via $\mf{w}$ by shifting the latter via multiplication by $[z] \in H^1(\R,Z(G_0))$. 
+
+Now consider the identification $\pi_0(S_\varphi)^* = H^1(\R,S)$. It can be extended to a commutative diagram
+\[ \xymatrix{
+	\pi_0(S_\varphi)^*\ar[r]^\cong&H^1(\R,S)\\
+	H^1(W_\R,\hat G_\tx{sc} \to \hat G)^*\ar[u]\ar[r]^\cong&H^1(\R,Z(G_0)).\ar[u]
+}
+\]
+We have used here the $W_\R$-cohomology of the crossed module $\hat G_\tx{sc} \to \hat G$ and the duality between it and the $\Gamma$-cohomology of the crossed module $G \to G_\tx{ad}$. The latter is however quasi-isomorphic to $Z(G_0)$. The left vertical map is obtained from the long exact cohomology sequence for the crossed module $\hat G_\tx{sc} \to \hat G$ endowed with $W_\R$-action given by $\tx{Ad}\circ\varphi$. The edge map $S_\varphi=H^0(W_\R,\varphi,\hat G) \to H^1(W_\R,\hat G_\tx{sc} \to \hat G)$ factors through $\pi_0(S_\varphi)$. Note that, the cohomology of $\hat G_\tx{sc} \to \hat G$ is canonically the same whether we take the $W_\R$-action coming from the dual groups, or the one coming from $\tx{Ad}\circ\varphi$, because the two structures differ by a homotopically trivial twist in the sense of \cite[\S2.4]{KalECI}. For an alternative construction without resorting to crossed modules we refer to \cite[\S4]{KalGen}.
+
+If we denote by $(\mf{w},\mf{w'})$ the character of $H^1(W_\R,\hat G_\tx{sc} \to \hat G)$ corresponding to $[z]$, as well as its pull-back to $\pi_0(S_\varphi)$, then we obtain the formula
+\begin{equation}
+	\iota_\mf{w'}(x) = \iota_\mf{w}(x \cdot (\mf{w},\mf{w'})).
+\end{equation}
+
 
 \subsection{The case of a cover of $G$} \label{sub:packetcover}
 
 \warn{TODO}
 
-\subsection{Dependence on the choice of Whittaker datum} \label{sub:whitdep}
-
-\warn{TODO}
 
 \section{Endoscopic character identities}
 
