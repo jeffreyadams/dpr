@@ -84,9 +84,9 @@ We give a modern exposition of the construction, parameterization, and character
 
 \section{Introduction}
 
-\warn{TODO}
+\warn{TODO. Below a short list of topics to cover}
 
-Fundamental results of Langlands Shelstad, cornerstone of many applications of the Langlands program to arithmetic questions. Exposition different from classical, more closely aligned to the treatment of $p$-adic groups in \cite{KalRSP}. Endoscopic transfer originally due to Shelstad \cite{She82}, with implicit transfer factors and implicit internal structure. Later Shelstad gave an updated treatment using the explicit factors of \cite{LS87}. However, the normalization of these factors had not yet been established, and this made the internal structure again implicit, and the spectral transfer was complicated due to the occurrence of the so called ``spectral transfer factors'', whose purpose was to incorporate the arbitrary choice of geometric transfer factor \cite{SheTE2}. The canonical internal structure was obtain in \cite{SheTE3} but only for quasi-split $K$-groups. Give example unitary groups. 
+Fundamental results of Langlands Shelstad, cornerstone of many applications of the Langlands program to arithmetic questions. Exposition different from classical, more closely aligned to the treatment of $p$-adic groups in \cite{KalRSP}. Endoscopic transfer originally due to Shelstad \cite{She82}, with implicit transfer factors and implicit internal structure. Later Shelstad gave an updated treatment using the explicit factors of \cite{LS87}. However, the normalization of these factors had not yet been established, and this made the internal structure again implicit, and the spectral transfer was complicated due to the occurrence of the so called ``spectral transfer factors'', whose purpose was to incorporate the arbitrary choice of geometric transfer factor \cite{SheTE2}. The canonical internal structure was obtain in \cite{SheTE3} but only for quasi-split $K$-groups. For example, in the setting of unitary groups, there are two distinct $K$-groups. For unitary groups in odd variables, both $K$-groups contain the same inner forms, hence both are quasi-split, but for ever unitary groups, the two $K$-groups contain distinct inner forms, and only one is quasi-split. In the particular case of 4 variables, the one $K$-group is comprised of the compact groups $U(0,4)$ and $U(2,2)$, the latter of which is quasi-split, while the other contains only the non-quasi-split $U(3,1)$.
 
 Here we give a direct and largely self-contained exposition of the construction of $L$-packets, their canonical internal structure, and proof of character identities. We work with the canonical normalization of transfer factors from the start. In full generality this requires the rigid inner twists of \cite{KalRI}, but to help the reader we work in parallel with Vogan's notion of pure inner twist. We also incorporate double covers of tori and endoscopic groups. This eliminates the need for auxiliary choices in the construction of packets and in the proof of character identities.
 
@@ -141,7 +141,7 @@ Let $F$ be a field and let $G$ be a connected reductive $F$-group. Let $\hat G$ 
 
 Let $S$ be an $F$-torus. We recall from \cite[\S5.1]{KalRSP} that, given a $\Gamma$-stable $\hat G$-conjugacy class $\hat J$ of embeddings $\hat S \to \hat G$ whose images are maximal tori, there is an associated $\Gamma$-stable $G(F^s)$-conjugacy class $J$ of embeddings $S \to G$. To obtain $J$, we first assume that $G$ is quasi-splut. Fix $\Gamma$-stable Borel pairs $(\hat T,\hat B)$ and $(T,B)$ in $\hat G$ and $G$, respectively. Thus we have the identifications $X_*(T)=X^*(\hat T)$ and $\Omega(T,G)=\Omega(\hat T,\hat G)$ as $\Gamma$-modules. There is $\hat\jmath \in \hat J$ with image $\hat T$ and we obtain the isomorphism $X_*(T)=X^*(\hat T) \to X^*(\hat S)=X_*(S)$, hence an isomorphism $j : S_{F^s} \to T_{F^s}$. We let $J$ be the $G(F^s)$-conjugacy class of the composition of $j$ with the inclusion $T \to G$.
 
-For $\sigma \in \Gamma$ the embedding $\sigma(\hat\jmath)=\sigma_{\hat G}\circ \hat\jmath \circ \sigma_{\hat S}$ is $\hat G$-conjugate to $\hat\jmath$, but has the same image because $\hat T$ is $\Gamma$-stable, so there exists $w \in \Omega(\hat T,\hat G)$ such that $\sigma(\hat\jmath)=w\circ\hat\jmath$. By construction of $j$ we have $\sigma(j)=w\circ j$, using $\Omega(T,G)=\Omega(\hat T,\hat G)$, and conclude that $J$ is $\Gamma$-stable. Since all $\Gamma$-stable Borel pairs of $\hat G$ are conjugate under $\hat G^\Gamma$, and all $\Gamma$-stable Borel pairs of $G$ are conjugate under $G(F)$, the construction of $J$ does not depend on the choices of Borel pairs.
+For $\sigma \in \Gamma$ the embedding $\sigma(\hat\jmath\,)=\sigma_{\hat G}\circ \hat\jmath \circ \sigma_{\hat S}$ is $\hat G$-conjugate to $\hat\jmath$, but has the same image because $\hat T$ is $\Gamma$-stable, so there exists $w \in \Omega(\hat T,\hat G)$ such that $\sigma(\hat\jmath)=w\circ\hat\jmath$. By construction of $j$ we have $\sigma(j)=w\circ j$, using $\Omega(T,G)=\Omega(\hat T,\hat G)$, and conclude that $J$ is $\Gamma$-stable. Since all $\Gamma$-stable Borel pairs of $\hat G$ are conjugate under $\hat G^\Gamma$, and all $\Gamma$-stable Borel pairs of $G$ are conjugate under $G(F)$, the construction of $J$ does not depend on the choices of Borel pairs.
 
 Now drop the assumption that $G$ is quasi-split. We consider an inner twist $\xi : G_0 \to G$ with $G_0$ quasi-split. It gives an identification $\hat G_0=\hat G$ and we obtain from $\hat J$ a $\Gamma$-stable $G_0(F^s)$-conjugacy class $J_0$ of embeddings $S \to G_0$. Composing with $\xi$ we obtain the desired $G(F^s)$-conjugacy class $J$ of embeddings $S \to G$. It is $\Gamma$-stable, because the $G(F^s)$-conjugacy class of $\xi$ is.
 
@@ -151,7 +151,7 @@ Write $J(F)$ for the set of $\Gamma$-fixed points in $J$, i.e. the set of embedd
 
 Given any two elements $j_1,j_2 \in J(F)$ there exists $g \in G(F^s)$ such that $j_2 = \tx{Ad}(g)\circ j_1$. The map $\sigma \mapsto j_1^{-1}(g^{-1}\sigma(g))$ is a 1-cocycle of $\Gamma$ valued in $S(F^s)$. Its class is independent of $g$ and will be denoted by $\tx{inv}(j_1,j_2)$. For a fixed $j \in J(F)$ the map $j_2 \mapsto \tx{inv}(j_1,j_2)$ is a bijection between $J(F)/G(F)$ and $\tx{ker}(H^1(j_1) : H^1(F,S) \to H^1(F,G))$.
 
-One can combine multiple inner forms in this discussion to obtain a more uniform picture. This requires the use of pure or rigid inner twists. Fix a quasi-split group $G_0$. We start with the case of pure inner twists and consider tuples $(G,\xi,z,j)$, where $(G,\xi,z)$ is a pure inner twist of $G_0$ and $j \in J^G(F)$. An isomorphism $(G_1,\xi_1,z_1,j_1) \to (G_2,\xi_2,z_2,j_2)$ between such tuples is an isomorphism $(f,g) : (G_1,\xi_1,z_1) \to (G_2,\xi_2,z_2)$ of inner twists that satisfies $j_2=f\circ j_1$. Let $\mc{J}(F)$ be the category whose objects are these tuples and whose morphisms are these isomorphisms. Given two tuples as above there exists $g \in G_0(F^s)$ such that $j_2 = \xi_2 \circ \tx{Ad}(g)\circ\xi_1^{-1}\circ j_1$. The map $\sigma \mapsto j_1^{-1}(g^{-1}z_2(\sigma)\sigma(g)z_1(\sigma)^{-1})$ \textcolor{red}{which side should $z_1$ be on?} is a 1-cocycle $\Gamma \to S(F^s)$ whose class $\tx{inv}(j_2,j_1)$ depends only on the isomorphism classes of the tuples. Fixing the tuple $(G_1,\xi_1,z_1,j_1)$, the map $(G_2,\xi_2,z_2,j_2) \mapsto \tx{inv}(j_1,j_2)$ induces a bijection from the set of isomorphism classes $[\mc{J}(F)]$ to $H^1(F,S)$.
+One can combine multiple inner forms in this discussion to obtain a more uniform picture. This requires the use of pure or rigid inner twists. Fix a quasi-split group $G_0$. We start with the case of pure inner twists and consider tuples $(G,\xi,z,j)$, where $(G,\xi,z)$ is a pure inner twist of $G_0$ and $j \in J^G(F)$. An isomorphism $(G_1,\xi_1,z_1,j_1) \to (G_2,\xi_2,z_2,j_2)$ between such tuples is an isomorphism $(f,g) : (G_1,\xi_1,z_1) \to (G_2,\xi_2,z_2)$ of inner twists that satisfies $j_2=f\circ j_1$. Let $\mc{J}(F)$ be the category whose objects are these tuples and whose morphisms are these isomorphisms. Given two tuples as above there exists $g \in G_0(F^s)$ such that $j_2 = \xi_2 \circ \tx{Ad}(g)\circ\xi_1^{-1}\circ j_1$. The map $\sigma \mapsto j_1^{-1}(g^{-1}z_2(\sigma)\sigma(g)z_1(\sigma)^{-1})$ \warn{which side should $z_1$ be on?} is a 1-cocycle $\Gamma \to S(F^s)$ whose class $\tx{inv}(j_2,j_1)$ depends only on the isomorphism classes of the tuples. Fixing the tuple $(G_1,\xi_1,z_1,j_1)$, the map $(G_2,\xi_2,z_2,j_2) \mapsto \tx{inv}(j_1,j_2)$ induces a bijection from the set of isomorphism classes $[\mc{J}(F)]$ to $H^1(F,S)$.
 
 
 The individual groups can be extracted from the combined picture as follows. For a fixed $(G,\xi,z)$ we can view the set $J^G(F)$ as the set of objects in a category, with set of morphisms $j_1 \to j_2$ given by $\{g \in G(F)|j_2=\tx{Ad}(g)\circ j_1\}$. Then we obtain an embedding (fully faithful functor) from $J^G(F)$ to $\mc{J}(F)$. The category $\mc{J}(F)$ decomposes into blocks, indexed by $H^1(F,G_0)$, and each block is equivalent to $J^G(F)$ for some $(G,\xi,z)$. In particular, the set of isomorphism classes $[\mc{J}(F)]$ is the disjoint union $\bigcup_{H^1(F,G_0)} (J^G(F)/G(F))$. If we choose $j_0 \in J^{G_0}(F)$, then under the bijection $[\mc{J}(F)] \to H^1(F,S)$ given by $(G,\xi,z,j) \mapsto \tx{inv}(j,j_0)$, an individual $J^G(F)/G(F)$ coming from $(G,\xi,z)$ is mapped bijectively onto the fiber of $H^1(j_0) : H^1(F,S) \to H^1(F,G)$ over the class of $z$.
@@ -166,6 +166,7 @@ For simplicity, let $x \in Z^1(F,S)$, $g \in G_0(F^s)$, and $(z,j) \in \mc{J}(F)
 For transitivity, we need to show that any two elements of $[\mc{J}(F)]$ are in the same $H^1(F,S)$ orbit. Since the members of $J^{G_0}$ are all conjugate under $G_0(F^s)$ we may represent the two elements of $[\mc{J}(F)]$ by $(z_1,j)$ and $(z_2,j)$ with the same $j$. The fact that both lie in $\mc{J}(F)$ implies that $\tx{Ad}(z_1(\sigma))\circ\sigma_{G_0}\circ j = \tx{Ad}(z_2(\sigma))\circ\sigma_{G_0}\circ j$. It follows that $\sigma_{G_0}^{-1}(z_2(\sigma)^{-1}z_1(\sigma))$ lies in the image of $j$, and we write it as $j(\sigma_S^{-1}(x(\sigma)))$ for some $x(\sigma) \in S(F^s)$. Using that $(z_1,j),(z_2,j) \in \mc{J}(F)$ we see that $j(x(\sigma))=z_1(\sigma)z_2(\sigma)^{-1}$. From this one easily checks that $x \in Z^1(F,S)$ and concludes $(z_1,j)=x\cdot (z_2,j)$, as desired.
 \end{proof}
 
+The procedure that produced $J$ from $\hat J$ is invertible. Given a $\Gamma$-stable $G(F^s)$-conjugacy class $J$ of embeddings $S \to G$, we compose with $\xi^{-1}$ to obtain a $\Gamma$-stable $G_0(F^s)$-conjugacy class $J_0$ of embeddings $S \to G_0$. Pick a $\Gamma$-stable Borel pairs $(T,B)$ of $G_0$ and $(\hat T,\hat B)$ of $\hat G$. Choose $j \in J_0$ giving an isomorphism $S \to T$ and use it to get identifications $X^*(\hat S)=X_*(S)=X_*(T)=X^*(\hat T)$. The resulting isomorphism $\hat S \to \hat T$ is not $\Gamma$-equivariant, but translates the $\Gamma$-structure on $\hat S$ to a twist by $\Omega(\hat T,\hat G)$ of the $\Gamma$-structure on $\hat T$. Therefore the composition of this isomorphism with the tautological inclusion $\hat T \to \hat G$ has the property that its $\hat G$-conjugacy class $\hat J$ is $\Gamma$-stable. 
 
 
 The same discussion applies to the setting of rigid inner forms when the base field is local. One should only replace $H^1(F,-)$ with $H^1(u_F \to \mc{E}_F,Z(G) \to -)$.
@@ -175,6 +176,8 @@ The same discussion applies to the setting of rigid inner forms when the base fi
 In \S\ref{sub:adm} we reviewed the idea of grouping the various admissible embeddings of a torus $S$ into the different inner forms of a fixed group $G_0$, thereby obtaining a set $\mc{J}(F)$ with an action of $G_0(F^s)$ on it. Here we follow the same idea, but group elements or representations. 
 
 We focus on $F=\R$, although the same procedure applies for any $F$ of interest. Let $\tilde\Pi$ be the set of pairs $(z,\pi)$, where $z \in Z^1(F,G_0)$ and $\pi$ is an isomorphism class of irreducible admissible representations of $G_z(F)$, where $G_z$ is again the $\R$-group obtained by twisting the $\R$-structure of $G_0$ by $z$. The group $G_0(\C)$ acts on this set by $g\cdot (z,\pi) = (gz(\sigma)\sigma(g)^{-1},\pi \circ\tx{Ad}(g)^{-1})$. Note that $\tx{Ad}(g) : G_z \to G_{gz(\sigma)\sigma(g)^{-1}}$ is an isomorphism of algebraic $\R$-groups. Let $\Pi=\tilde\Pi/G_0(\C)$. This is the set of isomorphism classes of irreducible admissible representations of pure inner forms of $G_0$. The pairs $(z,\pi) \in \tilde\Pi$ with a fixed $z$ correspond to all isomorphism classes of representations of $G_z(\R)$.
+
+Similarly, consider the set of pairs $(z,\delta)$, where $z \in Z^1(F,G_0)$ and $\delta \in G_z(F)$ is a regular semi-simple element. The group $G_0(\C)$ acts on this set by $g\cdot (z,\delta)=(gz(\sigma)\sigma(g)^{-1},g\delta g^{-1})$. If two pairs $(z_1,\delta_1)$ and $(z_2,\delta_2)$ are in the same orbit for this action, we will call them \emph{stably conjugate}. Just as with the case of admissible embeddings, there is a cohomological invariant $\tx{inv}((z_1,\delta_1),(z_2,\delta_2)) \in H^1(F,S_1)$, where $S_1 \subset G_0$ is the centralizer of $\delta_1$, a maximal $\R$-torus of $G_{z_1}$. This invariant is the class of the 1-cocycle $z_2 \cdot z_1^{-1}$ \warn{check again that this is the correct order}. If $z_1=z_2$, then the element of $G_0(\C)$ that conjugates them must lie in $G_z(\R)$, and we see that $\delta_1$ and $\delta_2$ are $G_z(\R)$ conjugate; we will call them \emph{rationally} conjugate. With this in mind, we call the orbit space for this action the set of rational classes of regular semi-simple elements of pure inner forms. 
 
 \subsection{Weyl denominators} \label{sub:weyldenom}
 
@@ -273,7 +276,7 @@ The map $\eta$ produces a $\Gamma$-equivariant embedding $Z(\hat G) \to Z(\hat H
 
 An isomorphism $(H_1,s_1,\mc{H}_1,\eta_1) \to (H_2,s_2,\mc{H}_2,\eta_2)$ is an element $g \in \hat G$ that satisfies the following properties. First, $\tx{Ad}(g)\eta_1(\mc{H}_1)=\eta_2(\mc{H}_2)$. In particular, $\eta_2^{-1}\circ\tx{Ad}(g)\circ\eta_1$ is an $L$-isomorphism $\mc{H}_1 \to \mc{H}_2$, and restricts to a $\Gamma$-equivariant isomorphism $Z(\hat H_1) \to Z(\hat H_2)$. The second condition is that the resulting isomorphism $\pi_0(Z(\hat H_1)/Z(\hat G)) \to \pi_0(Z(\hat H_2)/Z(\hat G))$ maps the coset of $s_1$ to the coset of $s_2$.
 
-In this paper we are working with pure (resp. rigid) inner twists, and this necessitates a slight refinement of the notion of endoscopic datum. A \emph{pure refined} endoscopic datum is one in which it is required $s \in Z(\hat H)^\Gamma$ in point (3), and this eliminates the need for condition (d). An isomorphism of such data is required to map the coset of $s_1$ to the coset of $s_2$ under $\pi_0(Z(\hat H_1)^\Gamma) \to \pi_0(Z(\hat H_2)^\Gamma)$, without dividing by $Z(\hat G)$. A rigid refined endoscopic datum replaces $s \in Z(\hat H)^\Gamma$ by $\dot s \in Z(\hat{\bar H})^+$. An isomorphism of such data is required to map the coset of $\dot s_1$ to the coset of $\dot s_2$ under $\pi_0(Z(\hat{\bar H_1})^+) \to \pi_0(Z(\hat{ \bar H_2})^+)$.
+In this paper we are working with pure (resp. rigid) inner twists, and this necessitates a slight refinement of the notion of endoscopic datum. A \emph{pure refined} endoscopic datum is one in which it is required $s \in Z(\hat H)^\Gamma$ in point (3), and this eliminates the need for condition (d). An isomorphism of such data is required to map the coset of $s_1$ to the coset of $s_2$ under $\pi_0(Z(\hat H_1)^\Gamma) \to \pi_0(Z(\hat H_2)^\Gamma)$, without dividing by $Z(\hat G)$. A \emph{rigid refined} endoscopic datum replaces $s \in Z(\hat H)^\Gamma$ by $\dot s \in Z(\hat{\bar H})^+$. An isomorphism of such data is required to map the coset of $\dot s_1$ to the coset of $\dot s_2$ under $\pi_0(Z(\hat{\bar H_1})^+) \to \pi_0(Z(\hat{ \bar H_2})^+)$.
 
 Given an $L$-parameter $\varphi : W_\R \to {^LG}$ and a semi-simple element $s \in S_\varphi$, where $S_\varphi=\tx{Cent}(\varphi,\hat G)$, one obtains a pure refined endoscopic datum as follows. Set $\hat H = \tx{Cent}(s,\hat G)^\circ$. The homomorphism  $\varphi : W_\R \to \tx{Cent}(s,\hat G) \to \tx{Out}(\hat H)$ factors through the projection $W_\R \to \Gamma$. There is a unique (up to isomorphism) quasi-split connected reductive $\R$-group $H$ with dual group $\hat H$ such that the homomorphism $\Gamma \to \tx{Out}(H)=\tx{Out}(\hat H)$ induced by the $\R$-structure of $H$ matches the one induced by $\varphi$. Set $\mc{H}=\hat H \cdot \varphi(W_\R)$, and let $\eta$ be the tautological inclusion $\mc{H} \to {^LG}$. In the rigid setting, the same construction works starting with $\dot s \in S_\varphi^+$, where $S_\varphi^+$ is the preimage in $\hat{\bar G}$ of $S_\varphi$.
 
@@ -282,6 +285,14 @@ By construction the parameter $\varphi$ takes values in $\mc{H}$. However, the e
 The classical approach is to choose a $z$-extension $H_1 \to H$ and an $L$-embedding $\mc{H} \to {^LH_1}$ that extends the natural embedding $\hat H \to \hat H_1$. These choices (which always exist, cf. \cite[\S2.2]{KS99}) are called a $z$-pair. They provide a parameter $\varphi_1$ for $H_1$.
 
 An approach introduced in \cite{KalHDC} is to extend the theory of double covers of tori from \cite{KalDC} to the setting of quasi-split connected reductive groups. The datum $\mc{H}$ then leads to a \emph{canonical} double cover $H(F)_\pm$ of $H(F)$ and a \emph{canonical} isomorphism $^LH_\pm \to \mc{H}$. In this way, $\varphi$ naturally becomes a parameter for $H(F)_\pm$, and there are no choices involved.
+
+\subsection{Transfer of orbital integrals} \label{sub:transfer}
+
+We continue with an endoscopic datum $(H,s,\mc{H},\eta)$ for $G$. In the pure setting we demand $s \in Z(\hat H)^\Gamma$, and in the rigid setting we demand $s \in Z(\hat{\bar H})^+$. We will review here the transfer of orbital integrals, which is dual to the transfer of characters that is the subject of this paper.
+
+As explained in \S\ref{sub:covendo}, in the classical setting order to formulate endoscopic transfer (both geometric and spectral), one has to make an arbitrary choice of a $z$-pair $(H_1,\eta_1)$, where $H_1 \to H$ is a surjective homomorphism of algebraic groups whose kernel is an induced torus, and $\eta_1 : \mc{H} \to {^LH_1}$ is an $L$-embedding. 
+
+Alternatively, \cite{KalHDC} shows that there is a canonical double cover $H(F)_\pm \to H(F)$ and a canonical isomorphism $L^H_\pm \to \mc{H}$, whose composition with $\eta$ then becomes an $L$-embedding $^LH_\pm \to {^LG}$. In this framework, no auxiliary choices are needed.
 
 The transfer of orbital integrals and characters between $G$ and $H$ is governed by the transfer factor. In the classical case, it is a function
 \[ \Delta : H_1(\R)^\tx{rs} \times G(\R)^\tx{rs} \to \C \]
@@ -311,9 +322,28 @@ In both cases $\delta$ runs over the set of $G(\R)$-conjugacy classes in $G(\R)^
 The functions $f$ and $f^{H_\pm}$ are called \emph{matching}. The functions $f$ and $f^{H_1}$ are called \emph{matching}.
 \end{dfn}
 
-For the computations of this paper it would be useful to review the factor $\epsilon$ and compute it in the case of the base field $\R$, where the computation is rather straightforward. Consider the universal maximal torus $T_0^G$ of $G$ and $T_0^H$ of $H$. The complexified character modules $V_G := X^*(T_0^G)\otimes_\Z\C$ and $V_H := X^*(T_0^H)\otimes_\Z\C$ are self-dual Artin representations of the same dimension. Choose an $\R$-pinning of the quasi-split form $G_0$ of $G$ and a non-trivial additive character $\Lambda : \R \to \C$, which combine to the Whittaker datum fixed for $G_0$. Then
+For the computations of this paper it would be useful to review a basic property of the transfer factor. The first property concerns the behavior of $\Delta$ under stable conjugacy in the variables $\gamma$ and $\delta$. If $\dot\gamma$, resp. $\gamma_1$, is replaced by a stable conjugate, then the value of $\Delta$ doesn't change. On the other hand, if $\delta$ is replaced by a stable conjugate, the value of $\Delta$ changes in the following way
+\begin{equation} \label{eq:tfstab}
+	\Delta(\dot\gamma,(z_2,\delta_2)) = \Delta(\dot\gamma,(z_1,\delta_1)) \cdot \<\tx{inv}((z_1,\delta_1),(z_2,\delta_2)),\hat \jmath\,^{-1}(s)\>.
+\end{equation}
+This is in the setting of covers and we refer to \cite[Lemma 4.3.1]{KalHDC}. In the classical setting, where $\dot\gamma$ is replaced by $\gamma_1$, we refer to \cite[Definitions 4.2.7,4.3.11]{KalIMS}, or \cite[\S4.1]{LS87}.
+
+To explain this formula let us denote by $\gamma \in H(F)$ the image of $\dot\gamma$ resp. $\gamma_1$, and let $S \subset H$ be the centralizer of $\gamma \in H(F)$. Let $T \subset G_{z_1}$ be the centralizer of $\delta_1$. Using the discussion of \S\ref{sub:adm} we obtain from the inclusion $S \to H$ a $\Gamma$-stable $\hat H$-conjugacy class of embeddings $\hat S \to \hat H$. Composing this with the inclusion $\eta : \hat H \to \hat G$ we obtain a $\Gamma$-stable $\hat G$-conjugacy class of embeddings $\hat S \to \hat G$, hence conversely a $\Gamma$-stable $G(F^s)$-conjugacy class of embeddings $S \to G$. Among them, there is a unique one that maps $\gamma$ to $\delta_1$. It is automatically defined over $F$, and we call it $j$. Its dual-inverse $\hat\jmath^{-1}$ is an isomorphism $\hat S \to \hat T$. Composing with the canonical inclusion $Z(\hat H) \to \hat S$ we can use it to transport the element $s \in Z(\hat H)^\Gamma$ to $\hat T^\Gamma$, where it can be paired with elements of $H^1(F,T)$ by Tate-Nakayama duality. This is in the setting of pure inner twists, and the setting of rigid inner twists is analogous.
+
+
+% The second property is related to the definition of $\Delta_{III}$. In the classical setting this factor depends on the choice of $\chi$-data. This choice produces $L$-embeddings $^LS \to {^LH}$ and $^LT \to {^LG}$. If we assume that $H_1=H$ and $\eta_1 : {^LH} \to {^LG}$ is an $L$-embedding, then composing we obtain $L$-embeddings $^LS \to {^LG}$ and $^LT \to {^LG}$. On the other hand we have the isomorphism $j : S \to T$ reviewed above, and it induces an $L$-isomorphism $^LS \to {^LG}$. Composing again we now have two $L$-embedings $^LS \to {^LG}$. They necessarily differ by an element of $H^1(W_\R,\hat S)$, which is the parameter of a character $\chi$ of $S(\R)$. Then $\Delta_{III}(\gamma,\delta)=\chi(\gamma)$. From this definition one sees the following property. If $\varphi : W_\R \to {^LS}$ is a the parameter of a character $\theta$ of $S(\R)$ and $\varphi' : W_\R \to {^LT}$ is the parameter of a character $\theta'$ of $T(\R)$, and if composing these parameters with $^LS \to {^LH} \to {^LG}$ and $^LT \to {^LG}$ we obtain the same parameter for $^LG$, then
+% \begin{equation} \label{eq:tfd3}
+% 	\Delta_{III}(\gamma,\delta) = \theta(\gamma_1,\delta))/\theta'((\gamma_1,\delta)),
+% \end{equation}
+% where we have transported $\theta_1$ and $\theta_1'$ to characters $\theta$ and $\theta'$ on $S_1 \times_S T$.
+
+
+
+% The setting of non-trivial $z$-pair is similar, but more notationally heavy, and one has $\Delta_{III}(\gamma_1)=\chi(\gamma_1)$ for a character $\chi$ of $S_1(\R)$, where $S_1 \subset H_1$ is the preimage of $S$. 
+
+Finally, we will need to review the factor $\epsilon$ and compute it in the case of the base field $\R$, where the computation is rather straightforward. Consider the universal maximal torus $T_0^G$ of $G$ and $T_0^H$ of $H$. The complexified character modules $V_G := X^*(T_0^G)\otimes_\Z\C$ and $V_H := X^*(T_0^H)\otimes_\Z\C$ are self-dual Artin representations of the same dimension. Choose an $\R$-pinning of the quasi-split form $G_0$ of $G$ and a non-trivial additive character $\Lambda : \R \to \C$, which combine to the Whittaker datum fixed for $G_0$. Then
 \[ \epsilon = \epsilon(1/2,V_G-V_H,\Lambda), \]
-where we have use Langlands' convention \cite[(3.6.4)]{TateCor} for the $\epsilon$-factor. The pinning is used in the construction of $G_0$. \warn{May be better to review the construction of $\Delta_I$ and $\Delta_{III}$ here.}
+where we have use Langlands' convention \cite[(3.6.4)]{TateCor} for the $\epsilon$-factor. The pinning is used in the construction of $G_0$.
 
 
 \begin{lem} \label{lem:epsilon}
@@ -385,7 +415,7 @@ Then, since $X$ is also defined over $\R$, the unique point in $\K(X)\cap \O$ is
 \subsection{Generic discrete series representations} \label{sub:gen}
 
 \begin{dfn}
-Suppose $\w=[(B,\eta)]$ is a Whittaker datum. We say that a representation $\pi$ of $G$ is $\w$-generic if there is a non-zero smooth vector $v$ in the space of $\pi$ such that $\pi(X)(v)=\eta(v)$ for all $x\in \n(\R)$. We say $\pi$ is generic if it is $\w$-generic for some $\w$. \textcolor{red}{Jeff, do you want $\pi(x)v=\eta(x)$ for all $x \in N(\R)$, or $d\pi(X)v=d\eta(X)$ for all $X \in \n(\R)$?}
+Suppose $\w=[(B,\eta)]$ is a Whittaker datum. We say that a representation $\pi$ of $G$ is $\w$-generic if there is a non-zero smooth vector $v$ in the space of $\pi$ such that $\pi(X)(v)=\eta(v)$ for all $x\in \n(\R)$. We say $\pi$ is generic if it is $\w$-generic for some $\w$. \warn{Jeff, do you want $\pi(x)v=\eta(x)$ for all $x \in N(\R)$, or $d\pi(X)v=d\eta(X)$ for all $X \in \n(\R)$?}
 \end{dfn}
 
 Suppose $\pi$ is an irreducible essentially discrete series representation and write $\pi=\pi(S,\tau)$ as in Section  \ref{sub:essds}. Let $H_\pi$ be the element of $i\s(\R)$ corresponding to $d\tau$ via $\kappa$. The $G(\R)$-conjugacy class of $H_\pi$ is well defined. The purpose of this subsection is to prove the following result.
@@ -417,7 +447,7 @@ Let $\O_\C$ be the $G(\C)$-orbit of $\O_\R$. It is a regular orbit defined over 
 By definition of $AC(\O_\R)$, the distance (in a Euclidean metric on $\mf{g}(\R)$) between $t\O_\R$ and $X$ goes to zero as $t \to 0$.
 
 	Let $\O_X$ be the $G(\C)$-orbit of $X$.
-By \cite{Kos63} \textcolor{red}{Can you give a more precise reference?} $\K(Y)$ is transverse to $\O_X$ for any $Y\in \O_X$.
+By \cite{Kos63} \warn{Can you give a more precise reference?} $\K(Y)$ is transverse to $\O_X$ for any $Y\in \O_X$.
 Since $\O_\R$ and $\K(Y)$ are defined over $\R$, we also have
 $\K(Y)(\R)$ is transverse to $\O_X(\R)$.
 
@@ -457,7 +487,7 @@ Let $\pi$ be the essentially discrete series representation associated to $(S,\r
 
 Let $X_-=\sum_{\alpha \in \Delta} X_{-\alpha}$ and let $\bar X=2\pi i X_-$. According to Lemma \ref{lem:w1}, being generic with respect to the pinning and $\Lambda$ is equivalent to being generic with respect to $\w_{\bar X}$, and Proposition \ref{p:whittaker} implies that $H_\pi$ is $G(\R)$-conjugate to the Kostant section $K(\bar X)$.
 
-Let $H=\rho^\vee(i) \in \tx{Lie}(S_\tx{sc})$. This element is Galois-fixed and thus lies in $\tx{Lie}(S_\tx{sc})(\R)$. \textcolor{red}{Argue from above statement to the fact that $H$ is $G(\R)$-conjugate to the Kostant section $K(i\bar X)$.} But $K(i\bar X)=K(-2\pi X_-)$ and we conclude that $\rho^\vee(-i)$ is $G(\R)$-conjugate to $K(2\pi X_-)$.
+Let $H=\rho^\vee(i) \in \tx{Lie}(S_\tx{sc})$. This element is Galois-fixed and thus lies in $\tx{Lie}(S_\tx{sc})(\R)$. \warn{Argue from above statement to the fact that $H$ is $G(\R)$-conjugate to the Kostant section $K(i\bar X)$.} But $K(i\bar X)=K(-2\pi X_-)$ and we conclude that $\rho^\vee(-i)$ is $G(\R)$-conjugate to $K(2\pi X_-)$.
 \end{proof}
 
 \subsection{An example with $\tx{SL}_2$}
@@ -837,7 +867,7 @@ where now $\gamma_0$ runs over all elements of $S_H(\R)$, equivalently all those
 
 Having fixed the embeddings $j_\mf{w}$ and $j_H$, they provide an isomorphism $S_\mf{w} \to S_H$, and this isomorphism induces a bijection
 \[ \delta_0 \leftrightarrow \gamma_0 \]
-between the set of elements of $S_\mf{w}(\R)$ that are stably conjugate to $\delta$ and the set of elements of $S_H(\R)$ related to $\delta$. Using the basic property of transfer factors \textcolor{red}{ref} we obtain
+between the set of elements of $S_\mf{w}(\R)$ that are stably conjugate to $\delta$ and the set of elements of $S_H(\R)$ related to $\delta$. Using the basic property \eqref{eq:tfstab} of transfer factors we obtain
 \begin{equation} \label{eq:rhs1}
 \sum_{\delta_0 \in S_\mf{w}(\R)} \Delta[\mf{w},\mf{e},z](\dot\gamma_0,\delta_0)\<s_\mf{w},\tx{inv}(\delta_0,\delta)\> \frac{\tau_H}{d_{H}}(\dot\gamma_0),
 \end{equation}
@@ -848,8 +878,17 @@ We now unpack the transfer factor. It is given as
 where we recall that the term $\Delta_{IV}$ is missing because we are working with normalized characters and orbital integrals, and $\dot\delta_0 \in S_\mf{w}(\R)_{G/H}$ is an arbitrary lift of $\delta_0$.
 %Here $\dot\delta_0 \in S_\mf{w}(\R)_\pm$ is the image of $\dot\gamma_0$ under the isomorphism $S_\mf{w}(\R)_\pm \to S_H(\R)_\pm$, and $\ddot\delta_0$ is a lift of this element to $S_\mf{w}(R)_\pm \times_{S_\mf{w}(\R)} S_\mf{w}(\R)_{G/H}$.
 
-By construction, \warn{ref}
+We claim that
 \[ \Delta_{III}(\dot\gamma_0,\dot\delta_0) = \frac{\tau_\mf{w}}{\tau_H}(\dot\delta_0). \]
+To see this, we note that we have the commutative diagram
+\[ \xymatrix{
+	&^LS_{H,\pm}\ar[dd]_a\ar[r]&^LH_\pm\ar[dd]\\
+	W_\R\ar[ru]^{\varphi^H_S}\ar@/^4pc/[rru]_-{\varphi^H}\ar[rd]_{\varphi_S}\ar@/_4pc/[rrd]_-{\varphi}\\
+	&^LS_G\ar[r]&^LG,
+}
+\]
+Here $^LS_G$ is the $L$-group of the double cover $S(\R)_G$ and the bottom horizontal map is the canonical $L$-embedding. We have written $^LS_{H,\pm}$ for the $L$-group of the double cover of $S_H(\R)$ obtained as the Baer sum of the canonical double cover $S_H(\R)_H$ coming from $R(S_H,H) \subset X^*(S_H)$ and the double cover $S_H(\R)_\pm$ that is the preimage of $S_H(\R)$ in the double cover $H(\R)_\pm \to H(\R)$. The top horizontal map is the canonical $L$-embedding of the $L$-group of $S_H(\R)_H$ into $^LH$, which remains an $L$-embedding after passing to the $\pm$-covers. The right vertical map is the canonical $L$-embedding $^LH_\pm \to {^LG}$. The map $a$ is the unique map making the square, hence also the triangle, commute. It is the paremter of a genuine character of the double cover of $S(\R)$ obtained as the Baer sum of $S_H(\R)_H$, $S_H(\R)_\pm$, and $S(\R)_G$, where we have identified $S_H$ with $S$. This Baer sum is the same as for $S_H(\R)_\pm$ and $S(\R)_{G/H}$. The claimed identity now follows.
+
 The following lemma completes the proof of Theorem \ref{thm:main2}(1).
 
 
