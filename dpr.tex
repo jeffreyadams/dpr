@@ -270,14 +270,14 @@ $\R$.  We say a unitary character $\eta$ of $N(\R)$ is {\it
 for all $\alpha\in \Delta$.
 
 By a  {\it Whittaker datum} we mean a $G(\R)$-conjugacy class of  pairs  $(B,\eta)$ where $B$ is a Borel subgroup defined over $\R$
-and $\eta$ is a non-degenerate character of $N(\R)$. We  write $\w=[(B,\eta)]$ for it $G(\R)$-conjugacy class of $(B,\eta)$.
+and $\eta$ is a non-degenerate character of $N(\R)$. We  write $\w=[(B,\eta)]$ for the $G(\R)$-conjugacy class of $(B,\eta)$.
 
 Suppose $\w=[(B,\eta)]$ is a Whittaker datum. We say $\pi$ is $\w$-generic if there is a vector $v\in \pi^\infty$ such that 
 $\pi(X)(v)=\eta(v)$ for all $x\in \n(\R)$. We say $\pi$ is generic if it is $\w$-generic for some $\w$.
 
 
 
-Let $\kappa$ be any non-degenerate extension of the Killing form on the derived Lie algebra to all of $\g$.
+Let $\kappa$ be any non-degenerate invariant form on $\g$ restricting to the Killing form on the derived algebra $\g_d$.
 Given $B,N,T$ as above let $\overline N$ be the opposite nilradical with respect to $T$. 
 Suppose $X\in i\overline\n(\R)$.
 Then
@@ -308,24 +308,25 @@ The $G(\R)$-conjugacy class of $H_\pi$ is well defined.
 \end{dfn}
 
 Suppose $X\in\g$ is a regular nilpotent element. Choose an
-$SL(2)$-triple $[X,H,Y]$ [reference].  The {\it Kostant Section} $\K(X)$ of
+$SL(2)$-triple $[X,H,Y]$.  The {\it Kostant Section} $\K(X)$ of
 $X$ is the affine space $X+\Cent_\g(Y)$.
-Kostant showed \cite{kostant} that the Kostant section meets every regular orbit in a unique point.
+Kostant showed \cite{Kos63} that the Kostant section meets every regular orbit in a unique point.
 
-The Kostant section $\K(X)$ depends on a choice of
-triple, but any two such choices are $G(\R)$-conjugate, and the
+Suppose $X\in \g(\R)$ and $\O$ is defined over $\R$.
+We  choose $H,Y\in \g(\R)$, so $\K(X)$ is defined over $\R$. This implies
+the unique point in $\K(X)\cap \O$ is contained in $\g(\R)$.
+Although $\K(X)$ depends on a choice of
+triple,  any two such choices are $G(\R)$-conjugate, and the
 $G(\R)$-conjugacy class of $\K(X)$ only depends on the $G(\R)$-conjugacy class of
 $X$.
 
-Suppose $X\in \g(\R)$ and $\O$ is a regular nilpotent orbit which is defined over $\R$.
-Then, since $X$ is also defined over $\R$, the unique point in $\K(X)\cap \O$ is contained in $\g(\R)$.
 
 \begin{pro}
   \label{p:whittaker}
 Suppose $\pi$ is a generic discrete series representation. Then $\pi$ is $\w$-generic
 for a unique Whittaker datum $\w$.
-Write $\w=\w_X$ for some regular nilpotent element $X\in i\g(\R)$.
-Then $H_\pi\in i\s(\R)$ is $G(\R)$-conjugate to an element of the Kostant section of $X$.
+Write $\w=\w_X$ for some regular nilpotent element $X$.
+Then $H_\pi$ is $G(\R)$-conjugate to an element of the Kostant section of $X$.
 \end{pro}
 
 
@@ -335,8 +336,8 @@ If $W$ is a subset of a real or complex vector space $V$, define  $\AC(W)$,  the
 $$
 \AC(W)=\{v\in V\mid \exists t_i\in \R_{>0},t_i\rightarrow 0,w_i\in W,\lim_{i\rightarrow\infty}t_i w_i=X\}
 $$
-This is a closed cone. 
-If $\O$ is a $G(\R)$-orbit it  is a finite union of nilpotent orbits in $\g(\R)$.
+This is a closed cone.
+If $\O\subset \g$ is a $G(\R)$-orbit it  is a finite union of nilpotent orbits in $\g_d(\R)$.
 
 \begin{lem}
 Let $\O_\R\subset \g(\R)$ be a $G(\R)$-orbit. Suppose $X\in\AC(\O_\R)$ is a regular nilpotent element.
@@ -345,40 +346,68 @@ Then $\K(X)$ meets $\O_\R$.
 
 \begin{proof}
 Let $\O_X$ be the $G(\C)$-orbit of $X$.
-By \cite{Kos63} $\K(Y)$ is transverse to $\O_X$ for any $Y\in \O_X$.
-Since $\O_\R$ and $\K(Y)$ are defined over $\R$, we also have
-$\K(Y)(\R)$ is transverse to $\O_X(\R)$.
+By \cite{Kos63} $\K(X)$ is transverse to $\O_X$.
+Since $\O_X$ and $\K(X)$ are defined over $\R$, we also have
+$\K(X)(\R)$ is transverse to $\O_X(\R)$.
 
-By the definition of $\AC(\O_\R)$, $tX$ approaches $\O_\R$ as $t\rightarrow\infty$. 
-By transversality this says $\O_\R\cap \K(tX)(\R)\ne \emptyset$ for $t>>0$.
-But $tX$ is $G(\R)$-conjugate to $X$ so $\O_\R\cap \K(X)$ is also non-empty.
+We use two elementary properties of the Kostant section:
+\begin{enumerate}
+\item $\K(tX)=t\K(X)\quad (t>0)$
+\item $\K(g X)=g\K(X)\quad (g\in G)$
+\end{enumerate}
+
+Choose $w_i\in\O_\R, t_i$ in the definition of $\AC(\O_\R)$ such that $\lim_{i\rightarrow\infty}t_i w_i=X$.
+By transversality we can choose $n>>0$ so that  $t_nw_n\in \K(X)$.
+By (1)  $w_n\in \frac1{t_n}\K(X)=\K(\frac 1{t_n}X)$. 
+Since $X$ is nilpotent $\O_X(\R)$ is a cone, so there exists $g\in G(\R)$ such that $w_n\in\K(\frac 1{t_n}X)=\K(gX)$. 
+Then by (2) $g^{-1} w_n\in \K(X)$.
 \end{proof}
 
+
+
+
 Returning to the proof of the Proposition, suppose $\pi$ is $\w_X$-generic.
-By \cite[Theorem A]{matumoto} $X\in \WF(\pi)$. By \cite[Theorem 1.2]{harris} $\WF(\pi)=\AC(G(\R)\cdot H_\pi)$.
-The proposition then follows from the Lemma (applied with $i\g(\R)$ in place of $\g(\R))$.
+We define the wave-front set $\WF(\pi)$ as in \cite[Section 3]{matumoto}.
+By definition this is a subset of $\i\g(\R)^*$.
+Using the splitting, $\g=\mathfrak z(\g)\oplus\g_d$ 
+$\WF(\pi)$ is a union of nilpotent orbits in $i\g_d(\R)^*$.
+
+We claim we have:
+$$
+X\in \WF(\pi)=\AC(G(\R)\cdot H_\pi).
+$$
+The first containment is  \cite[Theorem A]{matumoto}.
+The second is
+\cite[Theorem 1.2]{harris} $\WF(\pi)=\AC(G(\R)\cdot H_\pi)$.
+The proposition then follows from the Lemma applied with $i\g_d(\R)^*$ in place of $\g(\R)$.
 \end{proof}
 
 
 \begin{rem}
-  The maps $\pi\rightarrow H_\pi$ and $\w\rightarrow X$ both depend on the choice of $\kappa$.
-  This dependence is very minor (only on the center), and in any event these two choices cancel so the statement of the Proposition
-  is independent of the choice of $\kappa$.
+  The map $\pi\rightarrow H_\pi$ depends on the extension $\kappa$ of the Killing form.
+  However since the Kostant section $\kappa(X)$ contains the center, the condition of the Proposition is independent
+  of the choice of  $\kappa$. [Question: is it necessary to say this?]
 \end{rem}
 
 Here is an alternative formulation.
-\begin{pro}
+\begin{cor}
 \label{p:whittakeralt}
 Suppose $\pi$ is a generic discrete series representation. Then $\pi$ is $\w$-generic
 for a unique Whittaker datum $\w$.
-Write $\pi=\pi(S,\tau)$, and let $\ch\rho=\frac12\sum_{\langle d\tau,\ch\alpha\rangle>0}\ch\alpha$. 
 Write $\w=\w_X$ for some regular nilpotent element $X\in i\g(\R)$.
+Write $\pi=\pi(S,\tau)$, and let $\ch\rho=\frac12\sum_{\langle d\tau,\ch\alpha\rangle>0}\ch\alpha$. 
 Then $\ch\rho(i)\in\s(\R)$ is $G(\R)$-conjugate to the Kostant section of $iX\in \g(\R)$.
-\end{pro}
+\end{cor}
   
 
-{\it The previous statement:}
+\begin{proof}
+Let $\pi'=\pi(S,\ch\rho)$. Since $\ch\rho$ and $\tau$ are in the same Weyl chamber it is a basic fact 
+that $\pi$ and $\pi'$ have the same Whittaker model. See the proofs  \cite[Proposition 13.6]{ABV92} and
+\cite[Theorem 6.62]{Kos78}. Apply the Proposition  with $\pi'$ in place of $\pi$.
+\end{proof}
 
+
+{\it Here is the previous version:}
 
 \begin{pro} \label{pro:gen}
 Let $S \subset G_0$ be an elliptic maximal torus, $\rho$ a Weyl chamber in $X^*(S/Z_{G_0})$, and $\tau_0$ a character of $S(\R)$ whose differential is $\rho$-dominant and $\rho$-integral. Let $(T_0,B_0,\{X_\alpha\})$ be a pinning of $G_0$ and $\Lambda(x)=e^{2\pi ix}$. If the discrete series representation associated to $(S,\rho,\tau_0)$ is generic with respect to the Whittaker datum associated to the pinning and $\Lambda$, then the element $\rho^\vee(-i) \in \tx{Lie}(S_\tx{sc})(\R)$ is $G_0(\R)$-conjugate to the Kostant section associated to the pinning.
@@ -624,6 +653,18 @@ Taking the unique $\mf{w}$-generic member of $\Pi((G_0,1,1)) \subset \Pi_\varphi
 \subsection{The case of a cover of $G$} \label{sub:packetcover}
 
 \subsection{Dependence on the choice of Whittaker datum} \label{sub:whit}
+
+Let
+$$
+Q(G(\R))=G_{\mathrm{ad}}(\R)/\mathrm{ad}(G(\R)).
+$$
+This can also be realized as
+$$
+Q(G(\R))=\mathrm{ker}H^1(\Gamma,Z)\rightarrow H^1(\Gamma,G).
+$$
+This group acts simply transitively on the generic discrete series in an $L$-packet.
+
+I'm not sure what else we need to say, but surely this is the main point.
 
 \warn{TODO}
 
