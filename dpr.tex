@@ -77,7 +77,7 @@
 \begin{center} Jeffrey Adams and Tasho Kaletha \end{center}
 
 \begin{abstract}
-We give a modern exposition of the construction, parameterization, and character relations for discrete series $L$\-packets of real reductive groups, which are fundamental results due to Langlands and Shelstad. This exposition incorporates normalized geometric transfer factors, the canonical double covers of tori and endoscopic groups, and gives a simple proof of Shahidi's generic packet conjecture.
+We give a modern exposition of the construction, parameterization, and character relations for discrete series $L$\-packets of real reductive groups, which are fundamental results due to Langlands and Shelstad. This exposition incorporates normalized geometric transfer factors, the canonical double covers of tori and endoscopic groups, and gives a simple criterion for detecting generic representations for a prescribed Whittaker datum.
 \end{abstract}
 
 \tableofcontents
@@ -504,18 +504,11 @@ Let $\O_\R\subset \g(\R)$ be a regular $G(\R)$-orbit. Assume there exists a regu
 \end{lem}
 
 \begin{proof}
-Let $\O_\C$ be the $G(\C)$-orbit of $\O_\R$. It is a regular orbit defined over $\R$ and hence meets $\K(X)$ in a unique point, which lies in $\O_\C(\R)$.
+By \cite{Kos63}, $\K(X)$ is transversal to any $G(\C)$-orbit in $\g(\C)$. Therefore the set $\tx{Ad}(G(\C))\K(X)$ contains an open ball around $X$ in $\g(\C)$. This remains valid over $\R$ as well: $\tx{Ad}(G(\R))\K(X)(\R)$ contains an open ball around $X$ in $\g(\R)$.
 
-By definition of $AC(\O_\R)$, the distance (in a Euclidean metric on $\mf{g}(\R)$) between $t\O_\R$ and $X$ goes to zero as $t \to 0$.
+Choose $t_i \in \R_{>0}$ with $t_i \to 0$ and $w_i \in \O_\R$ such that $t_iw_i \to X$. We conclude that there exists $g \in G(\R)$ such that $t_iw_i \in \tx{Ad}(g)\K(X)(\R)$ for some $i$. This is equivalent to $\tx{Ad}(g)^{-1}w_i \in t_i^{-1}(\K(X))(\R)$. Since $O_\R$ is a $G(\R)$-orbit, we see $\O_\R \cap t_i^{-1}(\K(X))(\R) \neq \varnothing$. 
 
-	Let $\O_X$ be the $G(\C)$-orbit of $X$.
-By \cite{Kos63} \warn{Can you give a more precise reference?} $\K(Y)$ is transverse to $\O_X$ for any $Y\in \O_X$.
-Since $\O_\R$ and $\K(Y)$ are defined over $\R$, we also have
-$\K(Y)(\R)$ is transverse to $\O_X(\R)$.
-
-By the definition of $\AC(\O_\R)$, $tX$ approaches $\O_\R$ as $t\rightarrow\infty$. 
-By transversality this says $\O_\R\cap \K(tX)(\R)\ne \emptyset$ for $t>>0$.
-But $tX$ is $G(\R)$-conjugate to $X$ so $\O_\R\cap \K(X)$ is also non-empty.
+We now use the elementary facts that $t\K(X)=\K(tX)$ and $\tx{Ad}(h)\K(X)=\K(\tx{Ad}(h)X)$ for $t \in \R$ and $h \in G(\C)$, as well as the fact that the $G(\R)$-orbit of $X$ is a cone \warn{ref}. The latter of these facts implies that there exists $h \in G(\R)$ with $t_i^{-1}X=\tx{Ad}(h)X$, and we see $t_i^{-1}\K(X)=\tx{Ad}(h)\K(X)$. Thus $\O_\R$ intersects $\K(X)(\R)$ as claimed.
 \end{proof}
 
 \begin{proof}[Proof of Proposition \ref{p:whittaker}]
