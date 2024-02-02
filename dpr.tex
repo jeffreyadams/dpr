@@ -9,7 +9,7 @@
 
 \renewcommand\cftsecafterpnum{\vskip2pt}
 \renewcommand\cftsubsecafterpnum{\vskip2pt}
-
+\newcommand{\inv}{^{-1}}
 
 \newcommand{\redwarn}[1]{\textcolor{red}{#1}\message{#1}}
 
@@ -310,7 +310,9 @@ The $G(\R)$-conjugacy class of $H_\pi$ is well defined.
 Suppose $X\in\g$ is a regular nilpotent element. Choose an
 $SL(2)$-triple $[X,H,Y]$.  The {\it Kostant Section} $\K(X)$ of
 $X$ is the affine space $X+\Cent_\g(Y)$.
-Kostant showed \cite{Kos63} that the Kostant section meets every regular orbit in a unique point.
+Kostant showed \cite{Kos63} that the $\K(X)$ meets every regular orbit in a unique point, and 
+$\K(X)$ is transverse to the orbit of $X$.
+
 
 Suppose $X\in \g(\R)$ and $\O$ is defined over $\R$.
 We  choose $H,Y\in \g(\R)$, so $\K(X)$ is defined over $\R$. This implies
@@ -346,7 +348,7 @@ Then $\K(X)$ meets $\O_\R$.
 
 \begin{proof}
 Let $\O_X$ be the $G(\C)$-orbit of $X$.
-By \cite{Kos63} $\K(X)$ is transverse to $\O_X$.
+By \cite{Kos63} $\K(X)$ is transverse to $\O_X$. 
 Since $\O_X$ and $\K(X)$ are defined over $\R$, we also have
 $\K(X)(\R)$ is transverse to $\O_X(\R)$.
 
@@ -357,11 +359,16 @@ We use two elementary properties of the Kostant section:
 \end{enumerate}
 
 Choose $w_i\in\O_\R, t_i$ in the definition of $\AC(\O_\R)$ such that $\lim_{i\rightarrow\infty}t_i w_i=X$.
-By transversality we can choose $n>>0$ so that  $t_nw_n\in \K(X)$.
-By (1)  $w_n\in \frac1{t_n}\K(X)=\K(\frac 1{t_n}X)$. 
-Since $X$ is nilpotent $\O_X(\R)$ is a cone, so there exists $g\in G(\R)$ such that $w_n\in\K(\frac 1{t_n}X)=\K(gX)$. 
-Then by (2) $g^{-1} w_n\in \K(X)$.
+By transversality $G(\R)\K(X)(\R)$ contains an open ball $B$ containing $X$. 
+Choose $n>>0$ so that $t_nw_n\in B$. Then $t_nw_n\in g\K(X)(\R)$ for some $g\in G(\R)$, so by (1)
+$$
+g\inv w_n \in \frac 1{t_n}\K(X)(\R)=\K(\frac 1{t_n} X)(\R)
+$$
+Since $\O_X(\R)$ is a cone, $\frac 1{t_n}X=hX$ for some $h\in G(\R)$, so by (2) $g\inv w_n \in h\K(X)(\R)$, i.e.
+$(gh)\inv w_n\in \K(X)(\R)$ as required.
 \end{proof}
+
+
 
 
 
@@ -388,6 +395,9 @@ The proposition then follows from the Lemma applied with $i\g_d(\R)^*$ in place 
   However since the Kostant section $\kappa(X)$ contains the center, the condition of the Proposition is independent
   of the choice of  $\kappa$. [Question: is it necessary to say this?]
 \end{rem}
+
+A useful fact is that the Whittaker model of $\pi(S,\tau)$ only depends on the Weyl chamber of $d\tau$. 
+
 
 Here is an alternative formulation.
 \begin{cor}
@@ -553,24 +563,72 @@ $$
 
 Let $G_0$ be a quasi-split connected reductive $\R$-group with dual group $\hat G$ and $L$-group $^LG$.
 %We choose an $\R$-pinning $(T,B,\{X_\alpha\})$ of $G$ and a non-trivial additive character $\psi : \R \to \C^\times$ and denote by $\mf{w}$ the resulting Whittaker datum, as in \S\ref{sec:whit}.
-Let $\varphi : W_\R \to {^LG}$ be a discrete Langlands parameter, given up to conjugation by $\hat G$.
+We fix a $\Gamma$-invariant Borel pair $(\hat T,\hat B)$ of $\hat G$.
 
 \subsection{Factorization of a parameter }
 
-
-We choose a $\Gamma$-invariant Borel pair $(\hat T,\hat B)$ of $\hat G$. Conjugating by $\hat G$ we arrange that $\varphi(z) \in \hat T$ for all $z \in \C^\times$. Thus, $\varphi|_{\C^\times}$ is a continuous group homomorphism $\C^\times \to \hat T$. Every continuous group homomorphism $\C^\times \to \C^\times$ is of the form $z^a\bar z^b = |z|^{a+b}\tx{arg}(z)^{a-b}$ for some $a,b \in \C$ with $a-b \in \Z$. Thus there exist $\lambda,\mu \in X_*(\hat T)\otimes_\Z\C$ with $\lambda-\mu \in X_*(\hat T)$ such that
-\[ \varphi(z) = \lambda(z) \cdot \mu(\bar z),\qquad \forall z \in \C^\times. \]
+Suppose $\varphi : W_\R \to {^LG}$ be a discrete Langlands parameter.
 
 \begin{lem} \label{lem:icreg}
-Assume that $G_0$ is semi-simple and simply connected.
-\begin{enumerate}
-	\item $\lambda,\mu \in X_*(\hat T)$
-	\item $\<\lambda,\alpha\> \neq 0$ for all $\alpha \in R(\hat T,\hat G)$.
-	\item $\mu=-\lambda$ in $X_*(\hat T/Z(\hat G))$
-\end{enumerate}
+Assume that $G_0$ is semi-simple and simply connected. After conjugating by $\hat G$ we may assume $\phi(\C^\times)\subset \hat T$.
+Furthermore there exists $\lambda\in X_*(\hat T)$ such that 
+\begin{equation}
+\label{e:phi}
+\phi(z)=(z/\overline z)^\lambda\quad (z\in \C^\times).
+\end{equation}
 \end{lem}
+
+Every continuous group homomorphism $\C^\times\rightarrow \hat T$ is of the form
+$$
+\phi(z)=z^\lambda\overline z^{\mu}\quad (z\in \C^\times)
+$$
+where $\lambda,\mu\in X_*(\hat T)\otimes_\Z\C$, and the formula is shorthand for
+$$
+\phi(e^w)=\exp(\lambda w +\mu\overline w)\quad (w\in \C).
+$$
+In particular \eqref{e:phi} can be written
+$$
+\phi(re^{i\theta})=\exp(2i\theta\lambda).
+$$
+
 \begin{proof}
-\warn{TODO.}
+By definition the image of $\phi(\C^\times)$ consists of semisimple elements.  Therefore it is a torus, and is thus conjugate to
+a subgroup of $\hat T$. Conjugation by $\phi(j)$ takes $\hat T$ to a new Cartan subgroup, and after conjugating again
+we may assume $\phi(j)$ normalizes $\hat T$. Let $\ch\theta$ be the involution $t\rightarrow \phi(j)t\phi(j)\inv$ of $\hat T$. 
+
+The condition that $\phi$ is a discrete series parameter is that $\phi(W_\R)$ is not contained in a proper Levi subgroup.
+This is equivalent to: $\Cent_{\hat G}(W_\R)$ does not contain a non-trivial torus. Since $\phi(\C^\times)\subset\hat T$ 
+this is equivalent to: $\hat T^{\ch\theta}$ does not contain a non-trivial torus. Since $\ch\theta$ is an involution of $\hat T$,
+by the classification of involutive automorphisms of a torus this implies $\ch\theta(t)=t\inv$. 
+
+
+Thus conjugation by $\phi(j)$ is an automorphism of $\hat G$, which
+restricts to inversion on $\ch T$. There is a unique
+$\hat G$-conjugacy class of such automorphisms: the Chevalley
+involutions of $G$. In particular conjugation by $\phi(j)$ is an
+involution of $\hat G$, which implies $\phi(j)^2\in Z(\hat G)$. Since
+$G_0$ is simply connected, $\hat G$ is adjoint, so $\phi(j)^2=1$.
+
+By the discussion above write 
+$$
+\phi(z)=z^\lambda \overline z^\mu
+$$
+for some $\lambda,\mu\in X_*(\hat T)\otimes_\Z\C$. Applying $\phi$ to the identity
+$\overline z=jzj\inv$ gives
+$$
+\phi(\overline z)=\phi(j)\phi(z)\phi(j)\inv = \phi(z\inv)
+$$
+and therefore
+$$
+\overline z^\lambda z^\mu=z^{-\lambda}\overline z^{-\mu}
+$$
+for all $z\in \C^\times$. This implies $\mu=-\lambda$ and $\phi(z)=(z/\overline z)^\lambda$. 
+Apply $\phi$ to $j^2=-1$, and using the fact from above that $\phi(j)^2=1$ gives
+$$
+\phi(-1)=\exp(2\pi i\lambda)=1.
+$$
+Finally use the fact that $X_*(\hat T)$ is the kernel of the map $\gamma\mapsto \exp(2\pi i\gamma)$ to conclude $\lambda\in X_*(\hat T)$.
+
 \end{proof}
 
 We can apply Lemma \ref{lem:icreg} to the composition of $\varphi$ with the projection $^LG \to {^LG}/\hat Z$, where $\hat Z$ is the center of $\hat G$, noting that $\hat G/\hat Z$ is the dual group of $G_\tx{sc}$.
