@@ -684,31 +684,65 @@ Let $[\varphi] : W_\R \to {^LG}$ be a $\hat G$-conjugacy class of discrete Langl
 
 \subsection{Factorization of a parameter} \label{sub:fac}
 
-
-Choose any representative $\varphi$ within the conjugacy class $[\varphi]$. There exists a maximal torus $\hat T \subset \hat G$ satisfying $\varphi(z) \in \hat T$ for all $z \in \C^\times$ \warn{why}. The restriction $\varphi|_{\C^\times}$ is a continuous group homomorphism $\C^\times \to \hat T$. Every continuous group homomorphism $\C^\times \to \C^\times$ is of the form $z^a\bar z^b = |z|^{a+b}\tx{arg}(z)^{a-b}$ for unique $a,b \in \C$ with $a-b \in \Z$. Thus there exist unique $\lambda,\mu \in X_*(\hat T)\otimes_\Z\C$ with $\lambda-\mu \in X_*(\hat T)$ such that
-\[ \varphi(z) = \lambda(z) \cdot \mu(\bar z),\qquad \forall z \in \C^\times. \]
+Before we state the next lemma, we introduce the following notation. Given $a,b \in \C$ with $a-b \in \Z$ and $z \in \C^\times$ we define
+\[ z^a \cdot \bar z^b := |z|^{a+b} \cdot (z/|z|)^{a-b}. \]
+More generally, if $\hat T$ is a complex torus and $\lambda,\mu \in X_*(\hat T)_\C$ with $\lambda-\mu \in X_*(\hat T)$, and $z \in \C^\times$, we define
+\[ \lambda(z) \cdot \mu(\bar z) \in \hat T \]
+to be the unique element characterized by 
+\[ \chi(\lambda(z) \cdot \mu(\bar z)) = z^{\<\chi,\lambda\>} \cdot \bar z^{\<\chi,\mu\>},\qquad \forall \chi \in X^*(\hat T).\]
+It is well known that every continuous group homomorphism $\C^\times \to \C^\times$ is of the form $z \mapsto z^a \cdot \bar z^b$ for unique $a,b \in \C$ with $a-b \in \Z$. Therefore, every continuous group homomorphism $\C^\times \to \hat T$ is of the form $z \mapsto \lambda(z) \cdot \mu(\bar z)$ for unique $\lambda,\mu \in X_*(\hat T)_\C$ with $\lambda-\mu \in X_*(\hat T)$.
 
 \begin{lem} \label{lem:icreg}
-Assume that $G_0$ is semi-simple and simply connected.
+Choose any representative $\varphi$ within the conjugacy class $[\varphi]$. 
 \begin{enumerate}
-	\item $\lambda,\mu \in X_*(\hat T)$
-	\item $\<\lambda,\alpha\> \neq 0$ for all $\alpha \in R(\hat T,\hat G)$.
-	\item $\mu=-\lambda$ in $X_*(\hat T/Z(\hat G))$
+\item There exists a maximal torus $\hat T \subset \hat G$ that is normalized by the image of $\varphi$. 
+\item There exist $\lambda,\mu \in X_*(\hat T)_\C$ with $\lambda-\mu \in X_*(\hat T)$ such that, for all $z \in \C^\times$,
+\[ \varphi(z) = \lambda(z) \cdot \mu(\bar z) \in \hat T. \]
+\item The action of $\Gamma=W_\R/\C^\times$ on $\hat T$ by conjugation via $\varphi$ induces multiplication by $-1$ on $X_*(\hat T/Z(\hat G))$.
+\item For all $\alpha \in R(\hat T,\hat G)$, the a-priori complex number $\<\lambda,\alpha\>$ is a non-zero half-integer, and equals $-\<\mu,\alpha\>$.
+\item $\hat T=\tx{Cent}(\varphi(\C^\times),\hat G)$, thus $\hat T$ is uniquely determined by $\varphi$.
 \end{enumerate}
 \end{lem}
-\begin{proof}
-\warn{TODO.}
+
+\begin{rem}
+	\begin{enumerate}
+		\item Note that 4. implies that the images $\lambda',\mu' \in X_*(\hat T/Z(\hat G))_\C$ lie in $\tfrac{1}{2}X_*(\hat T/Z(\hat G))$ and satisfy $\mu'=-\lambda'$. Although we will not need it, it can be shown that in fact $\lambda',\mu'$ are integral, i.e. they lie in $X_*(\hat T/Z(\hat G))$.
+  		\item Furthermore, 4. implies that $\lambda'$ is a regular element of $X_*(\hat T/Z(\hat G))_\R$, and hence determines a Weyl chamber. Let $\Delta$ be the set of simple roots for that chamber. Once the integrality of $\lambda'$ is established, its regularity implies $\<\alpha,\lambda'\> \geq 1$, and hence $\lambda'-\rho \in X_*(\hat T/Z(\hat G))$ is still a dominant integral element of the chamber.
+	\end{enumerate}
+
+\end{rem}
+
+\begin{proof}[Proof of Lemma \ref{lem:icreg}]
+(1) We consider $^LG = \hat G \rtimes \Gamma$ as a disconnected algebraic group. Let $A \subset {^LG}$ denote the Zariski closure of the image of $\varphi$ and let $B \subset A$ denote the Zariski closure of $\varphi(\C^\times)$; the latter lies in $\hat G$. 
+
+We claim that $A$ consists of semi-simple elements. Since $A^2 \subset B$ it is enough to show that $B$ consists of semi-simple elements. This is equivalent to showing that the adjoint action of $B$ on the Lie algebra of $\hat G$ is semi-simple. Thus consider $\tx{Ad} : \hat G \to \tx{GL}(\mf{\hat g})$. The subgroup $\varphi(\C^\times)$ of $\hat G$ and consists of elements which commute with each other, and are semi-simple elements by definition of $\varphi$, cf. \cite[\S8]{BorCor}. Therefore their actions on $\mf{\hat g}$ can be simultaneously diagonalized, i.e. their images in $\tx{GL}(\mf{\hat g})$ lie in a common torus. The preimage of this torus in $\hat G$ is a closed subgroup consisting of commuting semi-simple elements and contains $B$, proving the claim.
+
+Now $B$ is normal in $A$ of index $2$, $B/B^\circ$ is a finite abelian group, and $B^\circ$ is a connected abelian algebraic groups consisting of semi-simple elements, hence a torus. We conclude that $A$ is supersolvable according to \cite[Definition 5.14]{SS70}, and \cite[Theorem 5.16]{SS70} implies that $A$ normalizes a maximal torus $\hat T \subset \hat G$. 
+
+(2) We continue with a maximal torus $\hat T \subset \hat G$ normalized by the image of $\varphi$. Thus $\varphi(\C^\times)$, which is a subgroup of $\hat G$, lies in $N(\hat T,\hat G)$. By continuity of $\varphi$ for the analytic topology, the subset $\varphi(\C^\times)$ of $\hat G$ is connected in the analytic topology. The projection map $N(\hat T,\hat G) \to \Omega(\hat T,\hat G)$ is continuous in the analytic topology, from which we conclude that the image of $\varphi(\C^\times)$ in $\Omega(\hat T,\hat G)$ is trivial, and hence $B \subset \hat T$. In particular, $\varphi(z) \in \hat T$ for all $z \in \C^\times$. The discussion before the statement of the lemma provides unique $\lambda,\mu \in X_*(\hat T)\otimes_\Z\C$ with $\lambda-\mu \in X_*(\hat T)$ such that
+\[ \varphi(z) = \lambda(z) \cdot \mu(\bar z),\qquad \forall z \in \C^\times. \]
+
+For the remainder of the proof, we assume without loss of generality that $\hat G$ is adjoint.
+
+(3) Since $\varphi(\C^\times) \subset \hat T$ by (2), the action of $W_\R$ on $\hat T$ by conjugation via $\varphi$ factors through $W_\R/\C^\times=\Gamma$. If the induced action on $X_*(\hat T)$ stabilizes some $0 \neq \nu \in X_*(\hat T)$, then the image of $\varphi$ would be contained in the proper parabolic subgroup $P_\nu$ determined by $\ nu$, contradicting the assumed discreteness of $\varphi$. Therefore, the involution of $X_*(\hat T)$ induced by the action of the non-trivial element of $\Gamma$ is given by multiplication by $-1$. 
+
+(4) Using (3) we see that, for all $z \in \C^\times$,
+\[ \mu(z)\lambda(\bar z)=\varphi(\bar z)=\varphi(\sigma \cdot z \cdot \sigma^{-1})=\tx{Ad}(\varphi(\sigma))(\lambda(z)\mu(\bar z))=(-\lambda)(z) \cdot (-\mu)(\bar z), \] which shows $\lambda=-\mu$. Thus $\<\lambda,\alpha\>=-\<\mu,\alpha\>$ for all $\alpha \in R(\hat T,\hat G)$. Moreover, since $\lambda-\mu \in X_*(\hat T)$, we conclude $2\lambda \in X_*(\hat T)$.
+
+If there is some $\alpha \in R(\hat T,\hat G)$ with $\<\lambda,\alpha\>=0$, then all elements of the root subgroups $U_\alpha$ and $U_{-\alpha}$ are fixed by $\varphi(\C^\times)$, while these two root subgroups are interchanged by $\varphi(\sigma)$ for any $\sigma \in W_\R$ projecting to the non-trivial element of $\Gamma$. The semi-simple group of rank 1 generated by $U_\alpha$ and $U_{-\alpha}$ is thus stable under the action of $W_\R$ via conjugation by $\varphi$, and this action descends to $\Gamma$ and is thus given by an involution. This involution is necessarily inner, i.e. it coincides with the conjutation action of an element of this group. The subgroup of fixed points is thus at least of dimension $1$ (it contains a maximal torus in this 3-dimensional subgroup). This subgroup lies in $\tx{Cent}(\varphi,\hat G)$ and contradicts the discreteness of $\varphi$.
+
+(5) From (2) and (4) we have $\varphi(z)=(2\lambda)(z/|z|) \in \hat T$ and $2\lambda$ is a regular element of $X_*(\hat T)$. Since the image of $z \mapsto z/|z|$ is the unit circle $\mb{S}^1$ of $\C^\times$, which is Zariski dense in the 1-dimensional torus $\C^\times$, the centralizer of the subgroup $(2\lambda)(\mb{S}^1)$ of $\hat G$ is the same as that of $(2\lambda)(\C^\times)$, which in turn equals $\hat T$.
 \end{proof}
 
-We can apply Lemma \ref{lem:icreg} to the composition of $\varphi$ with the projection $^LG \to {^LG}/\hat Z$, where $\hat Z$ is the center of $\hat G$, noting that $\hat G/\hat Z$ is the dual group of $G_\tx{sc}$. It implies that the image $\bar\lambda \in X_*(\hat T/\hat Z)_\C$ of $\lambda$, which according to the lemma lies in $X_*(\hat T/\hat Z)$, is regular. In particular, $\hat T$ is unique determined as the centralizer of $\varphi(\C^\times)$ in $\hat G$.
+We continue with a chosen representative $\varphi$ of the conjugacy class $[\varphi]$. Lemma \ref{lem:icreg} provides the maximal torus $\hat T \subset \hat G$ normalized by $\varphi$ and containing $\varphi(\C^\times)$.
 %Conjugating $\varphi$ by $N(\hat T,\hat G)$ we may then assume that this image lies in the chamber determined by $\hat B$. This will be used in Lemma \ref{lem:a} below.
 %
 % At this point, $\varphi$ is well-defined up to conjugation by $\hat T$. This of course depends on the chosen Borel pair $(\hat T,\hat B)$.
 %
-Since $\C^\times$ is normal in $W_\R$, the image of $\varphi$ lies in $N(\hat T,{^LG})$. Its projection to $\Omega(\hat T,{^LG})=N(\hat T,{^LG})/\hat T$ factors through a homomorphism $\xi : \Gamma \to \Omega(\hat T,{^LG})$. Let $\hat S$ denote the $\Gamma$-module with underlying abelian group $\hat T$ and $\Gamma$-structure given by $\tx{Ad}\circ\xi$. Let $S$ be the $\R$-torus whose dual is $\hat S$, i.e. the $\R$-torus determined by $X^*(S)=X_*(\hat S)$ as $\Gamma$-modules.
+The composition of $\varphi$ with the projection $N(\hat T,{^LG}) \to \Omega(\hat T,{^LG})=N(\hat T,{^LG})/\hat T$ factors through a homomorphism $\xi : \Gamma \to \Omega(\hat T,{^LG})$. Let $\hat S$ denote the $\Gamma$-module with underlying abelian group $\hat T$ and $\Gamma$-structure given by $\tx{Ad}\circ\xi$. Let $S$ be the $\R$-torus whose dual is $\hat S$, i.e. the $\R$-torus determined by $X^*(S)=X_*(\hat S)$ as $\Gamma$-modules.
 
 
-By construction we have $R(\hat T,\hat G) \subset X^*(\hat T)=X^*(\hat S)=X_*(S)$, and we write $R^\vee(S,G)$ for this set. Analogously we have a subset $R(S,G) \subset X^*(S)$. Both of these subsets are $\Gamma$-stable. Moreover $\mu=\sigma\lambda$ in $X_*(\hat S)$ and according to Lemma \ref{lem:icreg} the action of $\sigma$ on $R(S,G)$ is by negation.
+By construction we have $R(\hat T,\hat G) \subset X^*(\hat T)=X^*(\hat S)=X_*(S)$, and we write $R^\vee(S,G)$ for this set. Analogously we have a subset $R(S,G) \subset X^*(S)$. Both of these subsets are $\Gamma$-stable and according to Lemma \ref{lem:icreg} the action of $\sigma$ on $R(S,G)$ is by negation. Thus $S/Z(G)$ is anisotropic, where $Z(G) \subset S$ is the joint kernel of all elements if $R(S,G)$.
 
 Let $S(\R)_G$ be the double cover of $S(\R)$ reviewed in \S\ref{sub:covtori}, associated to the subset $R(S,G) \subset X^*(S)$. As discussed there, there is a canonical $\hat G$-conjugacy class of $L$\-embeddings $^LS_G \to {^LG}$. Inside of this class, there is a unique $\hat S$-conjugacy class, call it $^Lj$, whose restriction to $\hat S$ is the tautological embedding $\hat S \to \hat G$. The image of this $L$\-embedding is described in \eqref{eq:lembim}, and contains the image of $\varphi$ by construction. Thus $\varphi = {^Lj}\circ\varphi_S$ for a unique $\hat S$-conjugacy class of $L$\-homomorphisms $\varphi_S : W_\R \to {^LS_G}$. According to \cite[Theorem 3.15]{KalDC}, $\varphi_S$ corresponds to a genuine character $\tau : S(\R)_G \to \C^\times$.
 
