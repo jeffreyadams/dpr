@@ -64,6 +64,7 @@
 \newcommand{\w}{\mathfrak w}
 \newcommand{\Cent}{\mathrm{Cent}}
 \newcommand{\WF}{\mathrm{WF}}
+\newcommand{\AV}{\mathrm{AV}}
 \newcommand{\AS}{\mathrm{AS}}
 \newcommand{\KS}{\mathrm{KS}}
 \newcommand{\Cone}{\mathrm{Cone}}
@@ -77,7 +78,7 @@
 \begin{center} Jeffrey Adams and Tasho Kaletha \end{center}
 
 \begin{abstract}
-We give a modern exposition of the construction, parameterization, and character relations for discrete series $L$\-packets of real reductive groups, which are fundamental results due to Langlands and Shelstad. This exposition incorporates normalized geometric transfer factors, the canonical double covers of tori and endoscopic groups, and gives a simple criterion for detecting generic representations for a prescribed Whittaker datum.
+We give a modern exposition of the construction, parameterization, and character relations for discrete series $L$\-packets of real reductive groups, which are fundamental results due to Langlands and Shelstad. This exposition incorporates normalized geometric transfer factors, the canonical double covers of tori and endoscopic groups. We also prove some new results, such as a simple criterion for detecting generic representations for a prescribed Whittaker datum, and an explicit formula for the term $\Delta_I$ in terms of covers of tori.
 \end{abstract}
 
 \tableofcontents
@@ -126,11 +127,11 @@ The final issue in the classical set-up that we want to discuss is that of the a
 
 Work of Adams and Vogan \cite{AV92} introduced the idea that groups of the form $\mc{H}$ should be understood as $L$\-groups of topological covers of $H(\R)$. In \cite{KalHDC} it was shown that, in the setting of an endoscopic datum $(H,s,\mc{H},\eta)$, there is a natural double cover $H(\R)_\pm \to H(\R)$ whose $L$\-group is canonically identified with $\mc{H}$. In other words, there is a canonical $L$\-embedding $^LH_\pm \to {^LG}$. Therefore, instead of assuming the existence of an  (arbitrary) $L$\-embedding $^LH \to {^LG}$ and working with the $L$\-packet $\Pi_{\varphi'}(H)$, or choosing a $z$-extension $H_1 \to H$ and an (again arbitrary) $L$\-embedding $\mc{H} \to {^LH_1}$ and working with the $L$\-packet $\Pi_{\varphi_1}(H_1)$, one ought to consider an $L$\-packet $\Pi_{\varphi'}(H_\pm)$ consisting of genuine representations of $H(\R)_\pm$, where $\varphi' : W_\R \to {^LH_\pm}$ is the factorization of $\varphi$ through the canonical $L$\-embedding $^LH_\pm \to {^LG}$. Here the word ``genuine'' means that the non-trivial element $\epsilon$ in the kernel of $H(\R)_\pm \to H(\R)$ acts on the representation by $-1$. This allows the identity \eqref{eq:s3} to be stated without the assumption of an existence of an $L$\-embedding $^LH \to {^LG}$, and without an arbitrary choice of a $z$-extension. At this point, the identity \eqref{eq:s3} becomes fully canonical and does not depend on any choices. It is also worth pointing out that explicit construction given in \cite{LS87} of the transfer factor $\Delta$ is rather complicated and involves multiple factors, each of which depends on auxiliary data. In contrast, the construction of $\Delta$ in the setting of the canonical cover $H(\R)_\pm$, which is given in \cite[\S4.3]{KalHDC}, simplifies noticeably and becomes the product of two natural invariants, one of which has a close relationship to the simple form of the transfer factor for Lie algebras derived by Kottwitz in \cite{Kot99}.
 
-After this overview of the classical statements and constructions and the historical development of ideas, let us briefly describe the approach taken in this note. We spend about the first half of the note to give in \S\ref{sec:recoll} a review of much of the background that is needed for the main argument, in order to make the note as self-contained as possible. Then, in \S\ref{sec:gen}, we discuss how to detect that an essentially discrete series representation is generic for a particular fixed Whittaker datum. This goes beyond the classical work of Kostant \cite{Kos78} and Vogan \cite{Vog78}, which treats the question of when a representation is generic with respect to \emph{some} Whittaker datum. The main result of that section, Proposition \ref{p:whittaker}, and especially its Corollary \ref{cor:gen}, describes a simple answer to this question that is entirely analogous to the answer for supercuspidal representations of $p$-adic groups. This is key result that we use to give a direct and explicit proof of Shelstad's \cite[Theorem 11.5]{SheTE3}.
+After this overview of the classical statements and constructions and the historical development of ideas, let us briefly describe the approach taken in this note. We spend about the first half of the note to give in \S\ref{sec:recoll} a review of much of the background that is needed for the main argument, in order to make the note as self-contained as possible. Then, in \S\ref{sec:gen}, we discuss how to detect that an essentially discrete series representation is generic for a particular fixed Whittaker datum. This goes beyond the classical work of Kostant \cite{Kos78} and Vogan \cite{Vog78}, which treats the question of when a representation is generic with respect to \emph{some} Whittaker datum. The main result of that section, Proposition \ref{p:whittaker}, and especially its Corollary \ref{cor:gen}, describes a simple answer to this question that is entirely analogous to the answer for supercuspidal representations of $p$-adic groups. As far as we know this result has not yet been recorded in the literature. It allows us to give a direct and explicit proof of Shelstad's \cite[Theorem 11.5]{SheTE3}.
 
 In \S\ref{sec:cons} we give the construction of the $L$\-packet for a discrete series parameter. Here we use systematically the device of admissible embeddings of tori into reductive groups, and the existence of a canonical $L$\-embedding from the $L$\-group of the natural double cover of a maximal torus into the $L$\-group of $G$. This provides a canonical factorization of the $L$\-parameter into the $L$\-group of that double cover, hence a genuine character of that double cover. From the genuine character we can produce explicitly a function on the set of regular elements of that torus, and basic results of Harish-Chandra provide the desired discrete series representation. The internal structure of the resulting $L$\-packet is a simple consequence of Tate-Nakayama duality. This approach is very conceptual and avoids any explicit calculations using cocharacters and Galois cohomology. It is also parallel to the constructions employed in the $p$-adic case, such as in \cite{KalRSP}.
 
-In \S\ref{sec:endo} we prove \eqref{eq:s3}. Our proof is direct and does not involve considerations of spectral transfer factors or compatibility factors, and does not appeal to prior expositions. Instead, work directly with the factor $\Delta(\gamma,\delta)$, which in the setting of the canonical double cover $H(\R)_\pm$ is the product of two natural invariants. We show how one of these invariants simply measures the difference between the factorizations of $\varphi$ and $\varphi'$ through the $L$\-groups of the natural double covers of the elliptic tori, while the other invariant detects which member of $\Pi_\varphi(G)$ is generic. In this way, we show that the factor $\Delta(\gamma,\delta)$ plays both a geometric and a spectral role. For the convenience of the reader, we give two versions of the proof of \eqref{eq:s3}, one using the language of covers, and one using the classical language.
+In \S\ref{sec:endo} we prove \eqref{eq:s3}. Our proof is direct and does not involve considerations of spectral transfer factors or compatibility factors, and does not appeal to prior expositions. Instead, work directly with the factor $\Delta(\gamma,\delta)$, which in the setting of the canonical double cover $H(\R)_\pm$ is the product of two natural invariants. We show how one of these invariants simply measures the difference between the factorizations of $\varphi$ and $\varphi'$ through the $L$\-groups of the natural double covers of the elliptic tori, while the other invariant detects which member of $\Pi_\varphi(G)$ is generic. In this way, we show that the factor $\Delta(\gamma,\delta)$ plays both a geometric and a spectral role. For the convenience of the reader, we give two versions of the proof of \eqref{eq:s3}, one using the language of covers, and one using the classical language. As part of the proof, we derive a new formula for the term $\Delta_I$ of the transfer factor in terms of covers of tori, which is purely Lie-theoretic and does not appeal to Galois cohomology, see Proposition \ref{pro:magic}.
 
 \section{Recollections} \label{sec:recoll}
 
@@ -571,7 +572,7 @@ $$
 This is a closed cone. 
 %If $\O$ is a $G(\R)$-orbit it  is a finite union of nilpotent orbits in $\g(\R)$.
 
-\begin{lem}
+\begin{lem} \label{lem:g1}
 Let $\O_\R\subset \g(\R)$ be a regular $G(\R)$-orbit. Assume there exists a regular nilpotent element $X\in\AC(\O_\R)$. Then $\K(X)$ meets $\O_\R$.
 \end{lem}
 
@@ -584,9 +585,11 @@ We now use the elementary facts that $t\K(X)=\K(tX)$ and $\tx{Ad}(h)\K(X)=\K(\tx
 \end{proof}
 
 \begin{proof}[Proof of Proposition \ref{p:whittaker}]
+
 Suppose $\pi$ is $\w_X$-generic.
-By \cite[Theorem A]{matumoto} $X\in \WF(\pi)$. By \cite[Theorem 1.2]{harris} $\WF(\pi)=\AC(G(\R)\cdot H_\pi)$.
-The proposition then follows from the Lemma (applied with $i\g(\R)$ in place of $\g(\R))$.
+	We define the wave-front set $\WF(\pi)$ as in \cite[Section 3]{matumoto}. By definition this is a subset of $i\g(\R)^*$ consisting of nilpotent orbits. We have the direct sum decomposition $\g = \mf{z} \oplus \mf{g}'$, where $\mf{g}'=[\mf{g},\mf{g}]$. Then $\WF(\pi)$ is a union of nilpotent orbits in $i\g'(\R)^*$.
+	
+	We have $X\in \WF(\pi)$ according to \cite[Theorem A]{matumoto} and moreover $\WF(\pi)=\AC(G(\R)\cdot H_\pi)$ according to \cite[Theorem 1.2]{harris}. The proposition then follows from Lemma \ref{lem:g1} applied with $i\g'(\R)^*$ in place of $\g(\R)$.
 \end{proof}
 
 
@@ -596,15 +599,23 @@ The proposition then follows from the Lemma (applied with $i\g(\R)$ in place of 
   is independent of the choice of $\kappa$.
 \end{rem}
 
-% Here is an alternative formulation.
-% \begin{pro}
-% \label{p:whittakeralt}
-% Suppose $\pi$ is a generic discrete series representation. Then $\pi$ is $\w$-generic
-% for a unique Whittaker datum $\w$.
-% Write $\pi=\pi(S,\tau)$, and let $\ch\rho=\frac12\sum_{\langle d\tau,\ch\alpha\rangle>0}\ch\alpha$. 
-% Write $\w=\w_X$ for some regular nilpotent element $X\in i\g(\R)$.
-% Then $\ch\rho(i)\in\s(\R)$ is $G(\R)$-conjugate to the Kostant section of $iX\in \g(\R)$.
-% \end{pro}
+\begin{lem} \label{lem:g2}
+    Suppose $\pi=\pi(S,\tau)$ and $\pi'=\pi(S,\tau')$ are generic discrete series representations, with Whittaker models $\w,\w'$, respectively. 
+    Then $\w=\w'$ if and only if $d\tau$ and $d\tau'$ are in the same Weyl chamber.
+\end{lem}
+    
+The simplest  and most natural proof relies on  relating the Whittaker model of an irreducible representation $\pi$ to its associated variety. We refer to  \cite{howe_wave_front} or \cite{bv_local_structure} for the definition of the wave front set $\WF(\pi)$, which is an analytic invariant, and is a union of nilpotent $G(\R)$-orbits. Also see \cite{vogan_bowdoin} for the definition of the associated variety $\AV(\pi)$, which is an algebraic invariant, and is a union of nilpotent $K(\C)$-orbits on the $-1$-eigenspace of $\theta$ acting on $\g$. We briefly sketch the proof here, and refer the reader to a forthcoming paper by the first author and Alexandre Afgoustidis for details.
+    
+    
+    \begin{proof}
+    Set $\pi=\pi(S,\tau)$.
+    Write $\w=\w_X$ for $X$ a regular nilpotent element. By \cite[Theorem A]{matumoto} $\WF(\pi)$
+    is the closure of the  nilpotent $G(\R)$-orbit $\O_X$ of $X$. By \cite{SV1}  $\AV(\pi)$
+    is the closure of the $K$-orbit obtained from $\O_X$ by the Sekiguchi correspondence.
+    By \cite{yamashita} $\AV(\pi)$ only depends on the Weyl chamber of $d\tau$. Since the Sekiguchi correspondence is a bijection 
+    the same holds for $\O_X$, and hence $\w_X$.
+    \end{proof}
+    
   
 \begin{cor} \label{cor:gen}
 Let $S \subset G_0$ be an elliptic maximal torus, $\rho$ a Weyl chamber in $X^*(S/Z_{G_0})$, and $\tau_0$ a character of $S(\R)$ whose differential is $\rho$-dominant and $\rho$-integral. Let $(T_0,B_0,\{X_\alpha\})$ be a pinning of $G_0$ and $\Lambda(x)=e^{2\pi ix}$. If the discrete series representation associated to $(S,\rho,\tau_0)$ is generic with respect to the Whittaker datum associated to the pinning and $\Lambda$, then the element $\rho^\vee(-i) \in \tx{Lie}(S_\tx{sc})(\R)$ is $G_0(\R)$-conjugate to the Kostant section associated to the pinning.
@@ -612,9 +623,14 @@ Let $S \subset G_0$ be an elliptic maximal torus, $\rho$ a Weyl chamber in $X^*(
 \begin{proof}
 Let $\pi$ be the essentially discrete series representation associated to $(S,\rho,\tau_0)$ and let $H_\pi \in i\tx{Lie}(S)(\R)$ be the associated element, determined by $d\tau(Z)=\kappa(H_\pi,Z)$. 
 
-Let $X_-=\sum_{\alpha \in \Delta} X_{-\alpha}$ and let $\bar X=2\pi i X_-$. According to Lemma \ref{lem:w1}, being generic with respect to the pinning and $\Lambda$ is equivalent to being generic with respect to $\w_{\bar X}$, and Proposition \ref{p:whittaker} implies that $H_\pi$ is $G(\R)$-conjugate to the Kostant section $K(\bar X)$.
+Let $X_-=\sum_{\alpha \in \Delta} X_{-\alpha}$ and let $\bar X=2\pi i X_-$. According to Lemma \ref{lem:w1}, being generic with respect to the pinning and $\Lambda$ is equivalent to being generic with respect to $\w_{\bar X}$, and Proposition \ref{p:whittaker} implies that $H_\pi$ is $G(\R)$-conjugate to the Kostant section $K(\bar X)$. Note that $H_\pi=d\tau_0+\rho$.
 
-Let $H=\rho^\vee(i) \in \tx{Lie}(S_\tx{sc})$. This element is Galois-fixed and thus lies in $\tx{Lie}(S_\tx{sc})(\R)$. \warn{Argue from above statement to the fact that $H$ is $G(\R)$-conjugate to the Kostant section $K(i\bar X)$.} But $K(i\bar X)=K(-2\pi X_-)$ and we conclude that $\rho^\vee(-i)$ is $G(\R)$-conjugate to $K(2\pi X_-)$.
+Let $H=\rho^\vee(i) \in \tx{Lie}(S_\tx{sc})$. This element is Galois-fixed and thus lies in $\tx{Lie}(S_\tx{sc})(\R)$. By construction it lies in the same Weyl chamber as $H_\pi$. We claim that $H$ and $H_\pi$ are conjugate under $S'(\R)$, where $S'=S \cap G_\tx{der}$. 
+
+To see this, let $(\varpi_\alpha)_{\alpha \in \Delta}$ be the basis of $X_*(S')_\R$ dual to the basis $\Delta$ of $X^*(S')_\R$. Write $H_\pi=\sum_{\alpha \in \Delta} a_\alpha \varphi_\alpha$ and $H=\sum_{\alpha\in\Delta} b_\alpha\varpi_\alpha$. By construction $b_\alpha=i$ for all $\alpha$, while $a_\alpha \in i\R_{>0}$. The element 
+
+
+\warn{Argue from above statement to the fact that $H$ is $G(\R)$-conjugate to the Kostant section $K(i\bar X)$.} But $K(i\bar X)=K(-2\pi X_-)$ and we conclude that $\rho^\vee(-i)$ is $G(\R)$-conjugate to $K(2\pi X_-)$.
 \end{proof}
 
 \subsection{An example with $\tx{SL}_2$}
@@ -1100,14 +1116,14 @@ This is the property \eqref{eq:tfd3} that was reviewed in an idelized situation.
 \]
 Here $^LS_G$ is the $L$\-group of the double cover $S(\R)_G$ and the bottom horizontal map is the canonical $L$\-embedding. We have written $^LS_{H,\pm}$ for the $L$\-group of the double cover of $S_H(\R)$ obtained as the Baer sum of the canonical double cover $S_H(\R)_H$ coming from $R(S_H,H) \subset X^*(S_H)$ and the double cover $S_H(\R)_\pm$ that is the preimage of $S_H(\R)$ in the double cover $H(\R)_\pm \to H(\R)$. The top horizontal map is the canonical $L$\-embedding of the $L$\-group of $S_H(\R)_H$ into $^LH$, which remains an $L$\-embedding after passing to the $\pm$-covers. The right vertical map is the canonical $L$\-embedding $^LH_\pm \to {^LG}$. The map $a$ is the unique map making the square, hence also the triangle, commute. It is the paremter of a genuine character of the double cover of $S(\R)$ obtained as the Baer sum of $S_H(\R)_H$, $S_H(\R)_\pm$, and $S(\R)_G$, where we have identified $S_H$ with $S$. This Baer sum is the same as for $S_H(\R)_\pm$ and $S(\R)_{G/H}$. The claimed identity now follows.
 
-The following lemma completes the proof of Theorem \ref{thm:main2}(1).
+The following result completes the proof of Theorem \ref{thm:main2}(1).
 
 
-\begin{lem} \label{lem:magic}
+\begin{pro} \label{pro:magic}
 For any $\dot\delta_0 \in S_\mf{w}(\R)_{G/H}$, the following identity holds
 \[  \Delta_{I}(\dot\gamma_0,\dot\delta_0) = \epsilon\cdot(-1)^{q(G_0)-q(H)}\cdot\prod_{\alpha \in R(S,G/H)^+}\arg(\alpha^{1/2}(\dot\delta_0) - \alpha^{-1/2}(\dot\delta_0)), \]
 where $\dot\gamma_0 \in S_H(\R)_{G/H}$ is the image of $\dot\delta_0$ under the isomorphism $j_H \circ j_\mf{w}^{-1}$.
-\end{lem}
+\end{pro}
 \begin{proof}
 We first investigate how both sides vary as functions of $\dot\delta_0$. Consider another strongly regular $\dot\delta_1$. Replacing $\dot\delta_0$ with $\dot\delta_1$ in the right hand side results in multiplication by $\prod_\alpha \tx{arg}(b_\alpha)$, where the product runs again over $R(S,G/H)^+$ and $b_\alpha=(\dot\delta_{1,\alpha}-\dot\delta_{1,-\alpha})/(\dot\delta_{0,\alpha}-\dot\delta_{0,-\alpha})$. By construction $\dot\delta_{0,-\alpha}=\sigma(\dot\delta_{0,\alpha})$, and the same holds for $\dot\delta_1$, from which follows $b_\alpha \in \R^\times$, and hence $\tx{arg}(b_\alpha)=\tx{sgn}(b_\alpha)$.
 
