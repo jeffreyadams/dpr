@@ -224,14 +224,17 @@ Similarly, consider the set of pairs $(z,\delta)$, where $z \in Z^1(F,G_0)$ and 
 \subsection{Weyl denominators} \label{sub:weyldenom}
 
 Let $G$ be a connected reductive $\R$-group and $T \subset G$ a maximal $\R$-torus. One can consider the function $T(\R) \to \R$ defined as
-\[ D_G(t) = \textstyle\prod\limits_{\alpha \in R(T,G)} (1-\alpha(t)). \]
-In this paper we will normalize orbital integrals and characters by multiplying them by $|D_G(t)|^{1/2}$. Thus, for $t \in T(\R)$ strongly regular and $f \in \mc{C}_c^\infty(G(\R))$ we set
-\[ J(t,f) = |D_G(t)|\int_{G(\R)/T(\R)} f(gtg^{-1})dg, \]
-while for $\pi$ admissible representation of $G(\R)$ we have
-\[ J(t,\pi) = |D_G(t)|\Theta_\pi(t), \]
-where $\Theta_\pi$ is the character function of $\pi$. This has the advantage that the resulting functions remain bounded as $t$ approaches singular elements in $T(\R)$.
+\[ D_T(t) = D_T^G(t) = \textstyle\prod\limits_{\alpha \in R(T,G)} (1-\alpha(t)). \]
 
-A key role in this paper will be played by a function $D_B$ which has the property that $|D_B|=|D_G|^{1/2}$. To see this function, let us interpret $D_G$ as an element of the group ring $\Z[Q]$, where $Q \subset X^*(T)\otimes\Q$ is the root lattice, we we write the group operation on $Q$ multiplicatively. Given a Borel $\C$-subgroup $B \subset G$ containing $T$ we write $\alpha>0$ when $\alpha$ is a $B$-positive root, and define
+In this paper we will normalize orbital integrals and characters by multiplying them by $|D_T(t)|^{1/2}$. Thus, for $t \in T(\R)$ strongly regular and $f \in \mc{C}_c^\infty(G(\R))$ we set
+\[ O_\gamma(f) = |D_T(t)|^{1/2}\int_{G(\R)/T(\R)} f(g\gamma g^{-1})dg/dt, \]
+while for $\pi$ admissible representation of $G(\R)$ we have the normalized character function $\Theta_\pi : G(\R)_\tx{sr} \to \C$ determined by
+\[ \tx{tr}(\pi(f)) = \Theta_\pi(f) = \int_{G(\R)} |D_T(t)|^{-1/2}\Theta_\pi(g)f(g)dg. \]
+This has the advantage that the functions $O_\gamma(f)$ and $\Theta_\pi(\gamma)$  remain bounded as $\gamma$ approaches singular elements in $T(\R)$.
+
+We note here that the distribution $f \mapsto O_\gamma(f)$ depends on the choice of measures $dg$ on $G(\R)$ and $dt$ on $T(\R)$, the distribution $f\mapsto \Theta_\pi(f)$ depends on $dg$, while the function $\gamma \mapsto \Theta_\pi(\gamma)$ does not depend on any choices.
+
+An important role in this paper will be played by a function $D_B$ which has the property that $|D_B|=|D_T|^{1/2}$. To see this function, let us interpret $D_T$ as an element of the group ring $\Z[Q]$, where $Q \subset X^*(T)\otimes\Q$ is the root lattice, we we write the group operation on $Q$ multiplicatively. Given a Borel $\C$-subgroup $B \subset G$ containing $T$ we write $\alpha>0$ when $\alpha$ is a $B$-positive root, and define
 \begin{equation} \label{eq:weyldenom}
 D_B' = \prod_{\alpha>0} (1-\alpha^{-1}) \in \Q[Q],\qquad D_B = \prod_{\alpha>0} (\alpha^{1/2}-\alpha^{-1/2}) \in \Q[Q].
 \end{equation}
@@ -240,12 +243,12 @@ In $\Q[Q]$ we have the identity
 D_B = \rho \cdot D_B',	
 \end{equation}
 where $\rho=\prod_{\alpha>0} \alpha^{1/2} \in Q$. This implies
-\[ D_G = D_B' \cdot D_{\bar B}' = D_B \cdot D_{\bar B}, \]
+\[ D_T = D_B' \cdot D_{\bar B}' = D_B \cdot D_{\bar B}, \]
 where $\bar B$ is the Borel subgroup opposite to $B$. Moreover, for $w \in \Omega(T,G)$ we have
 \begin{equation} \label{eq:wsd}
 wD_B = D_{w^{-1}Bw} = \tx{sgn}(w)D_B.	
 \end{equation}
-In particular, $|D_B|$ is independent of the choice of $B$ and hence $|D_G|^{1/2}=|D_B|$, provided we can interpret $D_B$ as a function on $T(\R)$.
+In particular, $|D_B|$ is independent of the choice of $B$ and hence $|D_T|^{1/2}=|D_B|$, provided we can interpret $D_B$ as a function on $T(\R)$.
 
 It is clear that $D_B'$ is a function on $T(\R)$. If we want to interpret $D_B$ as a function of $T(\R)$, the occurrence of $\alpha^{1/2}$ in the formula causes a problem. From \eqref{eq:dgb} we see that $D_B$ will be a function of $T(\R)$ if and only if $\rho$ is, which is equivalent to the element $\rho$ lying in $X^*(T)$. This is always the case when $G$ is semi-simple and simply connected, but can fail in general. To remedy this situation, one can introduce a double cover of $T(\R)$, which will be discussed in the next section.
 
@@ -296,6 +299,14 @@ We explain the notation. Pull back $\tau$ to a character of $S_\tx{sc}(\R)_G$, w
 
 In the second sum we have set $\tau'=\tau \cdot \rho_B^{-1}$, and $d_\tau'=d_\tau \cdot \rho_B^{-1}$, cf. \eqref{eq:dgb}. In this way, both numerator and denominator are functions of $S(\R)$. Note that $\rho_B$ takes values in $\mb{S}^1$ because $S$ is elliptic.
 
+% \subsection{Orbital integrals} \label{sub:orbit}
+
+% Let $\gamma \in G(\R)_\tx{sr}$ be a strongly regular semi-simple element, i.e. one whose centralizer is a maximal torus $T$. Choose Haar measures $dg$ and $dt$ on $G(\R)$ and $T(\R)$. For a smooth compactly supported function $f : G(\R) \to \C$, its orbital integral is defined as
+% \[ O_\gamma(f,dg/dt) = \int_{G(\R)/T(\R)} f(g \gamma g^{-1})dg/dt. \]
+% Its stable orbital integral is defined as
+% \[ SO_\gamma(f,dg/dt) = \sum_{\gamma'}O_{\gamma'}(f,dg/dt), \]
+% where $\gamma'$ runs over a set of representatives for the $G(\R)$-conjugacy classes of strongly regular semi-simple elements of $G(\R)$ that are $G(\C)$-conjugate to $\gamma$. If $T'$ is the centralizer of such $\gamma'$, then any $g \in G(\C)$ with $g\gamma g^{-1}=\gamma'$ induces an isomorphism $\tx{Ad}(g) : T \to T'$ of $\R$-tori that depends only on $\gamma$ and $\gamma'$, but not on the choice of $g$. We use that isomorphism to transport $dt$ to $T'(\R)$.
+
 \subsection{Endoscopic groups and double covers} \label{sub:covendo}
 
 The notion of endoscopic data is introduced in \cite[\S1.2]{LS87}, and is a variation of the notion of endoscopic pairs or endoscopic triples discussed in \cite{Kot84} and \cite{Kot86}.
@@ -337,9 +348,9 @@ As explained in \S\ref{sub:covendo}, in the classical setting order to formulate
 Alternatively, \cite{KalHDC} shows that there is a canonical double cover $H(F)_\pm \to H(F)$ and a canonical isomorphism $L^H_\pm \to \mc{H}$, whose composition with $\eta$ then becomes an $L$\-embedding $^LH_\pm \to {^LG}$. In this framework, no auxiliary choices are needed.
 
 The transfer of orbital integrals and characters between $G$ and $H$ is governed by the transfer factor. In the classical case, it is a function
-\[ \Delta : H_1(\R)^\tx{rs} \times G(\R)^\tx{rs} \to \C \]
+\[ \Delta : H_1(\R)^\tx{sr} \times G(\R)^\tx{sr} \to \C \]
 that depends on the $z$-pair datum, while in the setting of covers it is a function
-\[ \Delta : H(R)_\pm^\tx{rs} \times G(\R)^\tx{rs} \to \C \]
+\[ \Delta : H(R)_\pm^\tx{sr} \times G(\R)^\tx{sr} \to \C \]
 that is genuine in the first argument. In the classical case, it is given as the product
 \[ \epsilon \cdot \Delta_I^{-1}\Delta_{II}\Delta_{III_1}^{-1}\Delta_{III_2}. \]
 The individual factors are defined in \cite{LS87}, except for $\epsilon$, which is defined in the more general twisted setting in \cite[\S5.3]{KS99}, and $\Delta_{III_1}$, whose relative definition is given in \cite{LS87}, but whose absolute definition is given in \cite{KalECI} in the setting of pure inner forms, and in \cite{KalRI} in the setting of rigid inner forms. The inverses appear due to the conventions of \cite[(1.0.4)]{KS12}, which we will use in this paper. The term $\Delta_{IV}$ is missing because we have normalized orbital integrals and characters by the Weyl denominator. We will not review the construction of the individual pieces here, as it has been reviewed in various other places, such as \cite[\S3.5,\S4.2,\S4.3]{KalIMS}. The individual factors depend on auxiliary data, known as $a$-data and $\chi$-data. The total factor depends on a choice of Whittaker datum, and $z$-datum.
@@ -348,21 +359,34 @@ In the case of covers, the transfer factor becomes the product
 \[ \epsilon \cdot \Delta_I^{-1} \cdot \Delta_{III}.\]
 The terms $\Delta_I$ and $\Delta_{III}$ are slightly different from the original ones, and are defined in \cite[\S4.3]{KalHDC}. Neither of them depends on auxiliary data, although they are defined on certain covers of tori, and one could argue that the elements of those covers count as auxiliary data.
 
-We now state the theorem asserting transfer of orbital integrals. It is a fundamental result of Shelstad, \cite{She82}, \cite{SheTE1}. We state two versions, one using the cover $H(\R)_\pm$ and one using a $z$-pair $(H_1,\eta_1)$.
-\begin{thm}
+Recall the notation $O_\gamma(f)$ for normalized orbital integrals from \S\ref{sub:weyldenom}. We define the stable orbital integral
+\[ SO_\gamma(f) = \sum_{\gamma'} O_{\gamma'}(f), \]
+where $\gamma'$ runs over a set of representatives for the $G(\R)$-conjugacy classes of those elements that are stably conjugate, i.e. $G(\C)$-conjugate, to $\gamma$.
+
+In the setting of covers, orbital integrals and stable orbital integrals are defined analogously, using the fact that every admissible isomorphism $T \to T'$ between maximal tori of $G$ maps $R(T,G)$ to $R(T',G)$ and hence lifts canonically to an isomorphism $T(\R)_G \to T'(\R)_G$. We apply this to the isomorphism induced by conjugation or stable conjugation. 
+
+We now state the theorem asserting transfer of orbital integrals. It is a fundamental result of Shelstad, \cite{She82}, \cite{SheTE1}. We state two versions, one using the cover $H(\R)_\pm$ and one using a $z$-pair $(H_1,\eta_1)$. 
+
+\begin{thm} \label{thm:orbtrans}
 Let $f \in \mc{C}_c^\infty(G(\R))$.
 \begin{enumerate}
-	\item There exists a genuine function $f^{H_\pm} \in \mc{C}_c^\infty(H(\R)_\pm)$ such that for all $\dot\gamma \in H(F)_\pm^\tx{rs}$
-	\[ SO_{\dot\gamma}(f^{H_\pm}) = \sum_\delta \Delta(\dot\gamma,\delta) O_\delta(f). \]
-	\item Assume chosen a $z$-pair $(H_1,\eta_1)$. There exists a genuine function $f^{H_1} \in \mc{C}_c^\infty(H_1(\R))$ such that for all $\gamma_1 \in H_1(F)^\tx{rs}$
+	\item There exists a genuine function $f^{H_\pm} \in \mc{C}_c^\infty(H(\R)_\pm)$ such that for all $\dot\gamma \in H(F)_\pm^\tx{sr}$
+	\[ SO_{\dot\gamma}(f^{H_\pm}) = \sum_\delta \Delta(\dot\gamma,\delta) O(\delta,f). \]
+	\item Assume chosen a $z$-pair $(H_1,\eta_1)$. There exists a genuine function $f^{H_1} \in \mc{C}_c^\infty(H_1(\R))$ such that for all $\gamma_1 \in H_1(F)^\tx{sr}$
 	\[ SO_{\gamma_1}(f^{H_1}) = \sum_\delta \Delta(\gamma_1,\delta) O_\delta(f). \]
 \end{enumerate}
-In both cases $\delta$ runs over the set of $G(\R)$-conjugacy classes in $G(\R)^\tx{rs}$.
+In both cases $\delta$ runs over the set of $G(\R)$-conjugacy classes in $G(\R)^\tx{sr}$.
 \end{thm}
 
 \begin{dfn} \label{dfn:matching}
 The functions $f$ and $f^{H_\pm}$ are called \emph{matching}. The functions $f$ and $f^{H_1}$ are called \emph{matching}.
 \end{dfn}
+
+\begin{rem} \label{rem:matchmeasures}
+	Since the orbital integral $O_\delta(f)$ depends on the choice of measures on $G(\R)$ and $T(\R)$, $T=\tx{Cent}(\delta,G)$, the concept of matching functions also depends on the choice of measures on $G(\R)$, $H(\R)$, and all tori in $G$ and $H$. There is a way to synchronize the various tori, see Remark \ref{rem:measures}.
+
+	We note further that the normalization of orbital integrals we are using (\S\ref{sub:weyldenom}) cancels the normalization of the transfer factor we are using (it is missing the $\Delta_{IV}$ piece) and therefore the notion of matching functions of Definition \ref{dfn:matching} is the same as that obtained by using un-normalized orbital integrals and a transfer factor containing the $\Delta_{IV}$ piece.
+\end{rem}
 
 For the computations of this paper it would be useful to review some basic properties of the transfer factor. The first property concerns the behavior of $\Delta$ under stable conjugacy in the variables $\gamma$ and $\delta$. If $\dot\gamma$, resp. $\gamma_1$, is replaced by a stable conjugate, then the value of $\Delta$ doesn't change. On the other hand, if $\delta$ is replaced by a stable conjugate, the value of $\Delta$ changes in the following way
 \begin{equation} \label{eq:tfstab}
@@ -422,6 +446,54 @@ where $d=\dim(T_0^G)$. We use the same computation for $H$ and conclude
 The Iwasawa decomposition $\tx{Lie}(G_0)=\mf{a} \oplus\mf{n} \oplus \mf{k}$ shows  $2q(G_0)=\dim(\mf{a})+\dim(\mf{n})=\dim(A_0^G)+r_G/2$. We note that $q(G_0)$ is an integer, becaus e $G_0$ has an elliptic maximal torus, and $q(G_0)$ equals the number of positive non-compact roots with respect to any Weyl chamber. Therefore
 \[ \dim(A_0^H)-\dim(A_0^G) = 2(q(H)-q(G_0))+(r_G/2-r_H/2).\qedhere \]
 \end{proof}
+
+
+\subsection{The Weyl integration formula and its stable analog} 
+
+In this section we work with an arbitrary local field $F$ of characteristic zero. While our intended application is $F=\R$, the arguments work for an arbitrary $F$ and do not admit any significant simplification for $F=\R$, so we take this opportunity to record the statement for a general $F$. 
+
+Let $G$ be a connected reductive $F$-group. Given a maximal torus $T \subset G$, write $\Omega(T,G)=N(T,G)/T$ for its absolute Weyl group. This is a finite $F$-group and we may consider the group $\Omega(T,G)(F)$ of its $F$-points. Write $\Omega_F(T,G)=N(T,G)(F)/T(F)$. This is an abstract finite group and we have $\Omega_F(T,G) \subset \Omega(T,G)(F)$. The inclusion is often proper.
+
+
+
+\begin{thm}[Weyl integration formula] \label{thm:weyl}
+	Let $f$ be a smooth compactly supported functon on $G(F)$. Let $\mc{T}$ be a set of representatives for the $G(F)$-conjugacy classes of maximal tori of $G$.
+	Then
+	\[ \int_{G(F)}f(g)dg = \sum_{T \in \mc{T}}|\Omega_F(T,G)|^{-1}\int_{T(F)_\tx{sr}} |D_T(\gamma)|^{1/2}O_\gamma(f)d\gamma. \]
+\end{thm}
+
+In this theorem we have chosen a Haar measure $dg$ on $G(\R)$, and a Haar measure $d\gamma$ on $T(\R)$ for any $T \in \mc{T}$. The orbital integral $O_\gamma(f)$ is formed with respect to the quotient measure $dg/d\gamma$. The power $1/2$ occurs in the Weyl discriminant because $O_\gamma$ has been normalized in \S\ref{sub:weyldenom}.
+
+\begin{cor}[Stable Weyl integration formula] \label{cor:stabweyl}
+	Let $f$ be a smooth compactly supported functon on $G(F)$. Let $\mc{ST}$ be a set of representatives for the stable conjugacy classes of maximal tori of $G$.
+	Then
+	\[ \int_{G(F)}f(g)dg = \sum_{T \in \mc{ST}}|\Omega(T,G)(F)|^{-1}\int_{T(F)_\tx{sr}} |D_T(\gamma)|^{1/2}SO_\gamma(f)d\gamma. \]
+\end{cor}
+\begin{proof}
+	Let $T \in \mc{ST}$ and let $T_1,\dots,T_n \in \mc{T}$ be those tori that  are stably conjugate to $T$. In fact, it is known that $n=1$ (a special feature of $F$) but we will not need to know that.
+	
+	It is enough to show that 
+	\[ |\Omega(T,G)(F)|^{-1}\int_{T(F)_\tx{sr}} |D_T(\gamma)|^{1/2}SO_\gamma(f)d\gamma = \sum_{i=1}^n|\Omega_F(T_i,G)|^{-1}\int_{T_i(F)_\tx{sr}} |D_{T_i}(\gamma)|^{1/2}O_{\gamma_i}(f)d\gamma_i. \]
+	
+	Two elements of $T(F)_\tx{sr}$ are stably conjugate if and only if they are conjugate under $\Omega(T,G)(F)$, and are rationally conjugate if and only if they are conjugate under $\Omega_F(T,G)$. Since $SO_\gamma(f)$ and $|D_T(\gamma)|$ are invariant under stable conjugacy in $\gamma$, and $O_\gamma(f)$ is invariant under rational conjugacy in $\gamma$, and since the action of $\Omega(T,G)(F)$ on $T(F)_\tx{sr}$ is free,  we can write the above identity as 
+	\[ \int_{T(F)_\tx{sr}/\Omega(T,G)(F)} |D_{T}(\gamma)|^{1/2} SO_\gamma(f)d\gamma = \sum_{i=1}^n\int_{T_i(F)_\tx{sr}/\Omega_F(T_i,G)} |D_{T_i}(\gamma)|^{1/2}O_{\gamma_i}(f)d\gamma_i. \]
+	The domain of integration on the left is the set of elements of $T(F)_\tx{sr}$ up to stable conjugacy, and the domain of integration on the right is the set of elements of $T_i(F)_\tx{sr}$ up to rational conjugacy.
+
+	Choose $g_1,\dots,g_n \in G(\C)$ so that $\tx{Ad}(g_i) : T \to T_i$ is an isomorphism of $F$-tori and induces an isomorphism of $F$-groups $\Omega(T,G) \to \Omega(T_i,G)$. For any $\gamma \in T(F)_\tx{sr}$, the set 
+	\[ \bigcup_{i=1}^n [\Omega_F(T_i,G) \lmod \Omega(T_i,G)(F)] \cdot \tx{Ad}(g_i)\gamma \]
+	represents the $G(F)$-conjugacy classes in the stable class of $\gamma$. Therefore 
+	\[ SJ(\gamma,f) = \sum_{i=1}^n \sum_{w \in \Omega_F(T_i,G) \lmod \Omega(T_i,G)(F)} J(w\tx{Ad}(g_i)\gamma,f).\]
+	Moreover $D_T(\gamma)=D_{T_i}(\tx{Ad}(g_i)\gamma)$.
+	As $\gamma$ runs over all elements of $T(F)_\tx{sr}/\Omega(T,G)(F)$, $\tx{Ad}(g_i)\gamma$ runs over all elements of $T_i(F)_\tx{sr}/\Omega(T_i,G)(F)$.
+\end{proof}
+
+\begin{rem} \label{rem:weyl1}
+	As discussed in the proof, we can rewrite the above formulas as
+	\[ \int_{G(F)}f(g)dg = \sum_{T \in \mc{T}}\int_{T(F)_\tx{sr}/\Omega_F(T,G)} |D_T(\gamma)|^{1/2} O_\gamma(f)d\gamma \]
+	and
+	\[ \int_{G(F)}f(g)dg = \sum_{T \in \mc{ST}}\int_{T(F)_\tx{sr}/\Omega(T,G)(F)} |D_T(\gamma)|^{1/2} SO_\gamma(f)d\gamma \]
+	respectively.
+\end{rem}
 
 \section{Genericity of discrete series representations} \label{sec:gen}
 
@@ -895,8 +967,15 @@ Let $f \in \mc{C}^\infty_c(G(\R))$ be a test function.
 \end{enumerate}
 \end{thm}
 
+\begin{rem} \label{rem:measures}
+	Recall from Remark \ref{rem:matchmeasures} that the concept of matching functions depends on choices of measures for $G(\R)$, $H(\R)$, and all tori in those groups. In the above theorem the distribution $\Theta^{\mf{w},s}_\varphi$ depends on the choice of measure on $G(\R)$, and $S\Theta_{\varphi_H}$ depends on the choice of measure on $H(\R)$. But the measures on the tori are do not influence these distributions. Therefore, the validity of the claimed identity assumes that the measures on the tori of $G$ and $H$ are synchronized.
+
+	More precisely, if $T_H \subset H$ and $T \subset G$ are tori and $T_H \to T$ is an admissible isomorphism, we demand that it identifies the measures  on $T_H(\R)$ and $T(\R)$. Any two admissible isomorphisms differ by conjugation by $\Omega(T,G)(\R)$. Since this action preserves any Haar measure on $T(\R)$, the choice of admissible isomorphism is irrelevant.
+\end{rem}
 
 \subsection{Reduction to the elliptic set}
+
+We now formulate an equivalent version of Theorem \ref{thm:main1} that involves character functions, rather than character distributions. Note that the character functions are canonical, in particular independent of choices of mesures.
 
 \begin{thm} \label{thm:main2}
 \begin{enumerate}
@@ -909,10 +988,42 @@ Let $f \in \mc{C}^\infty_c(G(\R))$ be a test function.
 
 
 \begin{lem}
-Theorem \ref{thm:main1} is equivalent to Theorem \ref{thm:main2}.
+Theorem \ref{thm:main1} is equivalent to Theorem \ref{thm:main2}. In fact, this equivalence holds when $\R$ is replaced by any local field $F$.
 \end{lem}
 \begin{proof}
-\warn{TODO}
+The proofs of 1. and 2. are almost identical. We give the proof of 1. 
+
+We have $S\Theta_{\varphi_H}(f^{H_\pm}) = \int_{H(F)}|D^H(\gamma)|^{-1/2}S\Theta_{\varphi_H}(\dot\gamma)f^{H_1}(\dot\gamma)d\gamma$, where $\dot\gamma \in H(F)_\pm$ is any preimage of $\gamma$. Note that, while the factors in the integrand depends on $\dot\gamma$, the dependence cancels out in the product, because both $S\Theta_\varphi$ and $f^{H_\pm}$ are genuine.
+
+We apply the stable Weyl integration formula (Corollary \ref{cor:stabweyl}, but in the form of Remark \ref{rem:weyl1}) and use the stable invariance of $S\Theta_{\varphi_H}$ to rewrite the above as
+\[ \sum_{T_H \in \mc{ST}_H} \int_{T_H(F)_\tx{sr}/\Omega(T_H,H)(F)}S\Theta_{\varphi_H}(\dot\gamma) SO_{\dot\gamma}(f^{H_\pm})d\gamma.\]
+According to Theorem \ref{thm:orbtrans} this equals
+\begin{equation} \label{eq:x1}
+\sum_{T_H \in \mc{ST}_H} \int_{T_H(F)_\tx{sr}/\Omega(T_H,H)(F)}S\Theta_{\varphi_H}(\dot\gamma)  \sum_\delta \Delta(\dot\gamma,\delta) O_\delta(f) d\gamma.
+\end{equation}
+We will now rework the indexing sets. Let $\mf{X}$ be the set of pairs $([[\gamma]],[\delta])$, where $[[\gamma]]$ is a stable class of strongly regular semi-simple elements of $H(F)$, $[\delta]$ is a rational class of strongly regular semi-simple elements of $G(F)$, and $\gamma$ and $\delta$ are related. Projecting onto the first coordinate provides a surjective map
+\[ \mf{X} \to \bigcup_{T_H \in \mc{ST}_H} T_H(F)_\tx{sr}/\Omega(T_H,H)(F) \]
+with finite fibers. Pulling back the measure on the target that is comprised of the various Haar measures on the tori $T_H(F)$, we obtain a measure on $\mf{X}$, and \eqref{eq:x1} becomes
+\begin{equation} \label{eq:x2}
+\int_{\mf{X}} S\Theta_{\varphi_H}(\dot\gamma) \Delta(\dot\gamma,\delta) O_\delta(f) d([[\gamma]],[\delta]).
+\end{equation}
+On the other hand, projecting onto the second coordinate provides a surjective map
+\[ \mf{X} \to \bigcup_{T \in \mc{T}_G} T(F)_\tx{sr}/\Omega_F(T,G) \]
+and pulling back the measure on the target that is comprised of the various Haar measures on the tori $T(F)$, we obtain a measure on $\mf{X}$. Since the measures on the tori in $H$ and those on the tori in $G$ are synchronized as in Remark \ref{rem:measures}, the two measures on $\mf{X}$ agree. Therefore, we can rewrite \eqref{eq:x2} as 
+\[ 
+\sum_{T \in \mc{T}} \int_{T(F)_\tx{sr}/\Omega_F(T,G)}O_\delta(f) \sum_\gamma \Delta(\dot\gamma,\delta) S\Theta_{\varphi_H}(\dot\gamma) d\delta,	
+\] 
+where now $\gamma$ runs over the set of stable classes of strongly regular semi-simple elements of $H(F)$. Applying the Weyl integration formula (Theorem \ref{thm:weyl}, in the form of Remark \ref{rem:weyl1}) we can rewrite this as 
+\begin{equation} \label{eq:x3}
+\int_{G(F)_\tx{sr}}f(\delta) |D^G(\delta)|^{-1/2}\sum_\gamma \Delta(\dot\gamma,\delta) S\Theta_{\varphi_H}(\dot\gamma) d\delta.
+\end{equation}
+Now, if we assume the validity of Theorem \ref{thm:main1}, so that $S\Theta_{\varphi_H}(f^{H_\pm}) = \Theta_\varphi(f)$ we see that 
+\[ \int_{G(F)_\tx{sr}}f(\delta) \sum_\gamma \Delta(\dot\gamma,\delta) S\Theta_{\varphi_H}(\dot\gamma) |D^G(\delta)|^{-1/2}d\delta = \int_{G(F)_\tx{sr}}f(\delta) \Theta_\varphi(\delta)|D^G(\delta)|^{-1/2} d\delta \]
+and conclude that 
+\begin{equation} \label{eq:x4}
+\Theta_\varphi(\delta) = \sum_\gamma \Delta(\dot\gamma,\delta) S\Theta_{\varphi_H}(\dot\gamma),
+\end{equation}
+which is the statement of Theorem \ref{thm:main2}. Conversely, if we assume the validity of Theorem \ref{thm:main2} then plugging \eqref{eq:x4} into \eqref{eq:x3} we obtain the validity of Theorem \ref{thm:main1}.
 \end{proof}
 
 \begin{lem}
