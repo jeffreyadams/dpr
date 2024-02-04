@@ -64,7 +64,7 @@
 \newcommand{\w}{\mathfrak w}
 \newcommand{\Cent}{\mathrm{Cent}}
 \newcommand{\WF}{\mathrm{WF}}
-\newcommand{\AS}{\mathrm{AS}}
+\newcommand{\AV}{\mathrm{AV}}
 \newcommand{\KS}{\mathrm{KS}}
 \newcommand{\Cone}{\mathrm{Cone}}
 \newcommand{\AC}{\mathrm{AC}}
@@ -396,10 +396,31 @@ The proposition then follows from the Lemma applied with $i\g_d(\R)^*$ in place 
   of the choice of  $\kappa$. [Question: is it necessary to say this?]
 \end{rem}
 
-A useful fact is that the Whittaker model of $\pi(S,\tau)$ only depends on the Weyl chamber of $d\tau$. 
+A useful fact is that the Whittaker model of $\pi(S,\tau)$  only depends on the Weyl chamber of $d\tau$. 
+
+\begin{lem}
+Suppose $\pi=\pi(S,\tau)$ and $\pi'=\pi(S,\tau')$ are generic discrete series representations, with Whittaker models $\w,\w'$, respectively. 
+Then $\w=\w'$ if and only if $d\tau$ and $d\tau'$ are in the same Weyl chamber.
+\end{lem}
+
+The simplest  and most natural proof relies on  relating the Whittaker model of an irreducible representation $\pi$ to its associated variety.
+We refer to  \cite{howe_wave_front} or \cite{bv_local_structure} for the definition of the wave front set $\WF(\pi)$, which is an analytic invariant, and is a union of nilpotent $G(\R)$-orbits.
+Also see \cite{vogan_bowdoin} for the definition of the associated variety $\AV(\pi)$, which is an algebraic invariant, and is a union
+of nilpotent $K(\C)$-orbits on the $-1$-eigenspace of $\theta$ acting on $\g$.
+We briefly sketch the proof here, and refer the reader to a forthcoming paper by the first author and Alexandre Afgoustidis for details.
 
 
-Here is an alternative formulation.
+\begin{proof}
+Set $\pi=\pi(S,\tau)$.
+Write $\w=\w_X$ for $X$ a regular nilpotent element. By \cite[Theorem A]{matumoto} $\WF(\pi)$
+is the closure of the  nilpotent $G(\R)$-orbit $\O_X$ of $X$. By \cite{SV1}  $\AV(\pi)$
+is the closure of the $K$-orbit obtained from $\O_X$ by the Sekiguchi correspondence.
+By \cite{yamashita} $\AV(\pi)$ only depends on the Weyl chamber of $d\tau$. Since the Sekiguchi correspondence is a bijection 
+the same holds for $\O_X$, and hence $\w_X$.
+\end{proof}
+
+This gives us an alternative formulation of Proposition \ref{p:whittaker}.
+
 \begin{cor}
 \label{p:whittakeralt}
 Suppose $\pi$ is a generic discrete series representation. Then $\pi$ is $\w$-generic
@@ -411,9 +432,8 @@ Then $\ch\rho(i)\in\s(\R)$ is $G(\R)$-conjugate to the Kostant section of $iX\in
   
 
 \begin{proof}
-Let $\pi'=\pi(S,\ch\rho)$. Since $\ch\rho$ and $\tau$ are in the same Weyl chamber it is a basic fact 
-that $\pi$ and $\pi'$ have the same Whittaker model. See the proofs  \cite[Proposition 13.6]{ABV92} and
-\cite[Theorem 6.62]{Kos78}. Apply the Proposition  with $\pi'$ in place of $\pi$.
+Let $\pi'=\pi(S,\ch\rho)$. By the Lemma $\pi$ and $\pi'$ have the same Whittaker model, so apply 
+apply Proposition \ref{p:whittaker} to $\pi'$.
 \end{proof}
 
 
