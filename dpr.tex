@@ -504,13 +504,15 @@ From the work of Kostant \cite{Kos78} and Vogan \cite{Vog78} it is known that ev
 
 We assume that $G$ is a quasi-split connected reductive $\R$-group. Suppose $B$ is a Borel $\R$-subgroup of $G$, $N$ its unipotent radical, and $\n=\mathrm{Lie}(N)$. Since $N(\R)$ is a connected Lie group, any character $\eta : N(\R) \to \C^\times$ is determined by its differential $d\eta : \n(\R) \to \C$, which is an $\R$-linear form. We have $\eta(\exp(Y))=e^{\<d\eta,Y\>}$ for $Y \in \n(\R)$. In fact, the real Lie group $N(\R)$ is connected, nilpotent, and simply connected (see \cite[Theorem 6.46]{KnappLie}, where the assumption that $G$ is semi-simple is unnecessary) and  hence the exponential map $\exp : \n(\R) \to N(\R)$ is a diffeomorphism by \cite[Theorem 1.127]{KnappLie}.
 
+Given a maximal torus $T\subset B$ defined over $\R$, the space $\n(\R)$ decomposes as the direct sum of relative root spaces, with respect to the action of the split part of $T$. 
+
 An $\R$-linear form $\n(\R) \to \C$ can be obtained as the restriction of a $\C$-linear form $\n(\C) \to \C$. Let $\bar N$ be the unipotent radical of $B$ that is $T$-opposite to $N$. Since the Killing form $\kappa$ induces a non-degenerate $\C$-linear pairing $\n \times \bar\n \to \C$, such forms are in 1-1 correspondence with elements of $\bar\n(\C)$. Given $X \in \bar\n(\C)$ we thus obtain the character $\eta_X(\exp(Y))=e^{\kappa(X,Y)}$. It is unitary if and only if $X \in i\bar\n(\R)$. 
 
-
-Given a maximal torus $T\subset B$ defined over $\R$, the space $\n(\R)$ decomposes as the direct sum of relative root spaces, with respect to the action of the split part of $T$. We say a character $\eta: N(\R) \to \C^\times$ is \emph{non-degenerate} if its differential $d\eta$ restricts non-trivially to any relative root space in $\n(\R)$. Since all choices of $T$ are conjugate under $N(\R)$, this condition is independent of $T$. For $\eta_X$ with $X \in i\bar\n(\R)$ we can write $X=\sum_\alpha X_{-\alpha}$ where the sum runs over the set of absolute positive roots and $X_{-\alpha} \in \mf{g}_{-\alpha}$. Then $\eta_X$ is non-degenerat if and only if $X_{-\alpha} \neq 0$ for all simple roots $\alpha$, i.e. if and only if $X$ is a regular nilpotent element.
+We say a character $\eta: N(\R) \to \C^\times$ is \emph{non-degenerate} if its differential $d\eta$ restricts non-trivially to any relative root space in $\n(\R)$. Since all choices of $T$ are conjugate under $N(\R)$, this condition is independent of $T$.
+ For $\eta_X$ with $X \in i\bar\n(\R)$ we can write $X=\sum_\alpha X_{-\alpha}$ where the sum runs over the set of absolute positive roots and $X_{-\alpha} \in \mf{g}_{-\alpha}$. Then $\eta_X$ is non-degenerate if and only if $X_{-\alpha} \neq 0$ for all simple roots $\alpha$, i.e. if and only if $X$ is a regular nilpotent element.
 
 By a  {\it Whittaker datum} we mean a $G(\R)$-conjugacy class of  pairs  $(B,\eta)$ where $B$ is a Borel subgroup defined over $\R$
-and $\eta$ is a non-degenerate unitary character of $N(\R)$. We  write $\w=[(B,\eta)]$ for it $G(\R)$-conjugacy class of $(B,\eta)$.
+and $\eta$ is a non-degenerate unitary character of $N(\R)$. We  write $\w=[(B,\eta)]$ for the $G(\R)$-conjugacy class of $(B,\eta)$.
 
 Suppose $X\in i\g(\R)$ is a regular nilpotent element. Let $\overline B$ be the unique Borel subgroup 
 containing $X$. Then $\overline B$ is defined over $\R$. Let $B$ be an $\R$-Borel subgroup that is opposite to $\bar B$, i.e. such that $B \cap \bar B$ is a maximal torus. The Whittaker datum defined by $X$ is  $\w_X=[(B,\eta_X)]$.
@@ -541,7 +543,7 @@ where $\psi : N(\R) \to \C^\times$ is constructed from the pinning and $\Lambda$
 Suppose $X\in\g$ is a regular nilpotent element. Choose an
 $SL(2)$-triple $[X,H,Y]$ [reference].  The {\it Kostant Section} $\K(X)$ of
 $X$ is the affine space $X+\Cent_\g(Y)$.
-Kostant showed \cite{Kos63} that the Kostant section meets every regular orbit in a unique point. If the tripple lies in $\g(\R)$, then $\K(X)$ is Galois stable. The Kostant section $\K(X)$ depends on a choice of
+Kostant showed \cite{Kos63} that the Kostant section meets every regular orbit in a unique point. If the triple lies in $\g(\R)$, then $\K(X)$ is Galois stable. The Kostant section $\K(X)$ depends on a choice of
 triple, but any two such choices that lie in $\g(\R)$ are $G(\R)$-conjugate, and the $G(\R)$-conjugacy class of $\K(X)$ only depends on the $G(\R)$-conjugacy class of $X$.
 
 Suppose $X\in \g(\R)$ and $\O$ is a regular orbit which is defined over $\R$.
@@ -550,7 +552,7 @@ Then, since $X$ is also defined over $\R$, the unique point in $\K(X)\cap \O$ is
 \subsection{Generic discrete series representations} \label{sub:gen}
 
 \begin{dfn}
-Suppose $\w=[(B,\eta)]$ is a Whittaker datum. We say that a representation $\pi$ of $G$ is $\w$-generic if there is a non-zero smooth vector $v$ in the space of $\pi$ such that $\pi(X)(v)=\eta(v)$ for all $x\in \n(\R)$. We say $\pi$ is generic if it is $\w$-generic for some $\w$. \warn{Jeff, do you want $\pi(x)v=\eta(x)$ for all $x \in N(\R)$, or $d\pi(X)v=d\eta(X)$ for all $X \in \n(\R)$?}
+Suppose $\w=[(B,\eta)]$ is a Whittaker datum. We say that a representation $\pi$ of $G$ is $\w$-generic if there is a non-zero smooth vector $v$ in the space of $\pi$ such that $\pi(X)(v)=\eta(x)v$ for all $x\in N(\R)$. We say $\pi$ is generic if it is $\w$-generic for some $\w$. 
 \end{dfn}
 
 Suppose $\pi$ is an irreducible essentially discrete series representation and write $\pi=\pi(S,\tau)$ as in Section  \ref{sub:essds}. Let $H_\pi$ be the element of $i\s(\R)$ corresponding to $d\tau$ via $\kappa$. The $G(\R)$-conjugacy class of $H_\pi$ is well defined. The purpose of this subsection is to prove the following result.
@@ -579,7 +581,7 @@ Let $\O_\R\subset \g(\R)$ be a regular $G(\R)$-orbit. Assume there exists a regu
 \begin{proof}
 By \cite{Kos63}, $\K(X)$ is transversal to any $G(\C)$-orbit in $\g(\C)$. Therefore the set $\tx{Ad}(G(\C))\K(X)$ contains an open ball around $X$ in $\g(\C)$. This remains valid over $\R$ as well: $\tx{Ad}(G(\R))\K(X)(\R)$ contains an open ball around $X$ in $\g(\R)$.
 
-Choose $t_i \in \R_{>0}$ with $t_i \to 0$ and $w_i \in \O_\R$ such that $t_iw_i \to X$. We conclude that there exists $g \in G(\R)$ such that $t_iw_i \in \tx{Ad}(g)\K(X)(\R)$ for some $i$. This is equivalent to $\tx{Ad}(g)^{-1}w_i \in t_i^{-1}(\K(X))(\R)$. Since $O_\R$ is a $G(\R)$-orbit, we see $\O_\R \cap t_i^{-1}(\K(X))(\R) \neq \varnothing$. 
+Choose $t_i \in \R_{>0}$ with $t_i \to 0$ and $w_i \in \O_\R$ such that $t_iw_i \to X$. We conclude that there exists $g \in G(\R)$ such that $t_iw_i \in \tx{Ad}(g)\K(X)(\R)$ for some $i$. This is equivalent to $\tx{Ad}(g)^{-1}w_i \in t_i^{-1}(\K(X))(\R)$. Since $\O_\R$ is a $G(\R)$-orbit, we see $\O_\R \cap t_i^{-1}(\K(X))(\R) \neq \varnothing$. 
 
 We now use the elementary facts that $t\K(X)=\K(tX)$ and $\tx{Ad}(h)\K(X)=\K(\tx{Ad}(h)X)$ for $t \in \R$ and $h \in G(\C)$, as well as the fact that the $G(\R)$-orbit of $X$ is a cone \warn{ref}. The latter of these facts implies that there exists $h \in G(\R)$ with $t_i^{-1}X=\tx{Ad}(h)X$, and we see $t_i^{-1}\K(X)=\tx{Ad}(h)\K(X)$. Thus $\O_\R$ intersects $\K(X)(\R)$ as claimed.
 \end{proof}
@@ -587,7 +589,7 @@ We now use the elementary facts that $t\K(X)=\K(tX)$ and $\tx{Ad}(h)\K(X)=\K(\tx
 \begin{proof}[Proof of Proposition \ref{p:whittaker}]
 
 Suppose $\pi$ is $\w_X$-generic.
-	We define the wave-front set $\WF(\pi)$ as in \cite[Section 3]{matumoto}. By definition this is a subset of $i\g(\R)^*$ consisting of nilpotent orbits. We have the direct sum decomposition $\g = \mf{z} \oplus \mf{g}'$, where $\mf{g}'=[\mf{g},\mf{g}]$. Then $\WF(\pi)$ is a union of nilpotent orbits in $i\g'(\R)^*$.
+	We define the wave-front set $\WF(\pi)$ as in \cite[Section 3]{matumoto}. By definition this is a subset of $i\g(\R)^*$ consisting of nilpotent elements. We have the direct sum decomposition $\g = \mf{z} \oplus \mf{g}'$, where $\mf{g}'=[\mf{g},\mf{g}]$. Then $\WF(\pi)$ is a union of nilpotent orbits in $i\g'(\R)^*$.
 	
 	We have $X\in \WF(\pi)$ according to \cite[Theorem A]{matumoto} and moreover $\WF(\pi)=\AC(G(\R)\cdot H_\pi)$ according to \cite[Theorem 1.2]{harris}. The proposition then follows from Lemma \ref{lem:g1} applied with $i\g'(\R)^*$ in place of $\g(\R)$.
 \end{proof}
@@ -597,15 +599,16 @@ Suppose $\pi$ is $\w_X$-generic.
   The map $\pi\rightarrow H_\pi$ depends on the choice of $\kappa$. However, different choices of $\kappa$ differ only on the center of $\mf{g}$. Since any Kostant section is stable under the action of the center by translations, this choice is immaterial for Proposition \ref{p:whittaker}.
 \end{rem}
 
-We now mention without proof the following result of independent interest, which will appear in forthcoming work by the first author and Alexandre Afgoustidis.
+We now mention  a supplementary result, which is well known to the experts, but not easy to find in the literature.
 
 \begin{lem} \label{lem:g2}
     Suppose $\pi=\pi(S,\tau)$ and $\pi'=\pi(S,\tau')$ are generic discrete series representations, with Whittaker models $\w,\w'$, respectively. 
     Then $\w=\w'$ if and only if $d\tau$ and $d\tau'$ are in the same Weyl chamber.
 \end{lem}
-    
-    
-  
+
+Since we don't use this result we skip the proof, and refer the reader to a forthcoming paper on Whittaker models for real groups
+by the first author and Alexandre Afgoustidis.
+
 
 \subsection{An example with $\tx{SL}_2$}
 
