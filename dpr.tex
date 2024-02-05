@@ -827,7 +827,18 @@ Choose any representative $\varphi$ within the conjugacy class $[\varphi]$.
 
 We claim that $A$ consists of semi-simple elements. Since $A^2 \subset B$ it is enough to show that $B$ consists of semi-simple elements. This is equivalent to showing that the adjoint action of $B$ on the Lie algebra of $\hat G$ is semi-simple. Thus consider $\tx{Ad} : \hat G \to \tx{GL}(\mf{\hat g})$. The subgroup $\varphi(\C^\times)$ of $\hat G$ and consists of elements which commute with each other, and are semi-simple elements by definition of $\varphi$, cf. \cite[\S8]{BorCor}. Therefore their actions on $\mf{\hat g}$ can be simultaneously diagonalized, i.e. their images in $\tx{GL}(\mf{\hat g})$ lie in a common torus. The preimage of this torus in $\hat G$ is a closed subgroup consisting of commuting semi-simple elements and contains $B$, proving the claim.
 
-Now $B$ is normal in $A$ of index $2$, $B/B^\circ$ is a finite abelian group, and $B^\circ$ is a connected abelian algebraic groups consisting of semi-simple elements, hence a torus. We conclude that $A$ is supersolvable according to \cite[Definition 5.14]{SS70}, and \cite[Theorem 5.16]{SS70} implies that $A$ normalizes a maximal torus $\hat T \subset \hat G$. 
+Now $B$ is normal in $A$ of index $2$, $B/B^\circ$ is a finite abelian group, and $B^\circ$ is a connected abelian algebraic groups consisting of semi-simple elements, hence a torus. We conclude that $A$ is supersolvable according to \cite[Definition 5.14]{SS70}, and \cite[Theorem 5.16]{SS70} implies that $A$ normalizes a maximal torus $\hat T \subset \hat G$.
+
+{\bf Alternative proof of 1}
+The image of $\C^\times$ is connected, abelian, and consists of semisimple elements. It follows [reference?] that $\hat L=\Cent_{\hat G}(\phi(\C^\times))$ is a Levi subgroup.
+In particular $\hat L$ is connected, reductive, and contains a maximal torus $\hat S$ of $\hat G$. Since $\phi(\C^\times)$ is contained in the identity component of the center of $\hat L$, it is contained in $\hat S$.
+Choose an element $g\in \phi(W_\R)\backslash \phi(\C^\times)$. Then $g$ normalizes $\hat L$, and since $g^2\in \phi(\C^\times)$ conjugation by $g$ acts as an involution on $\hat L$.
+Therefore $\hat L$ contains a maximal torus $\hat T$ which is fixed by conjugation by $g$
+(this is well known, or apply \cite[Theorem 5.16]{SS70}).
+Then $\hat T$ is a maximal torus of $\hat G$; containing $\phi(\C^\times)$ (since the latter is contained in the center of of $\hat L$);
+fixed by the action of $g$; and therefore normalized by $\phi(\C^\times)$.
+
+
 
 (2) We continue with a maximal torus $\hat T \subset \hat G$ normalized by the image of $\varphi$. Thus $\varphi(\C^\times)$, which is a subgroup of $\hat G$, lies in $N(\hat T,\hat G)$. By continuity of $\varphi$ for the analytic topology, the subset $\varphi(\C^\times)$ of $\hat G$ is connected in the analytic topology. The projection map $N(\hat T,\hat G) \to \Omega(\hat T,\hat G)$ is continuous in the analytic topology, from which we conclude that the image of $\varphi(\C^\times)$ in $\Omega(\hat T,\hat G)$ is trivial, and hence $B \subset \hat T$. In particular, $\varphi(z) \in \hat T$ for all $z \in \C^\times$. The discussion before the statement of the lemma provides unique $\lambda,\mu \in X_*(\hat T)\otimes_\Z\C$ with $\lambda-\mu \in X_*(\hat T)$ such that
 \[ \varphi(z) = \lambda(z) \cdot \mu(\bar z),\qquad \forall z \in \C^\times. \]
