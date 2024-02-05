@@ -57,6 +57,7 @@
 \newcommand{\p}{\mathfrak p}
 \renewcommand{\k}{\mathfrak k}
 \renewcommand{\O}{\mathcal O}
+\renewcommand{\P}{\mathcal P}
 \newcommand{\K}{\mathcal K}
 \newcommand{\Op}{\O_p}
 \newcommand{\Oss}{\O_{ss}}
@@ -524,21 +525,60 @@ containing $X$. Then $\overline B$ is defined over $\R$. Let $B$ be an $\R$-Bore
 The choice of $B$ is equivalent to a choice of a maximal torus $T \subset \bar B$ defined over $\R$, because $T$ is determined by $B$ as $T=B \cap \bar B$ and $B$ is determined by $T$ as the unique $T$-opposite of $\bar B$. But all maximal $\R$-tori in $\bar B$ are conjugate under $\bar B(\R)$ by \cite[Theorem 19.2]{Bor91}.
 \end{proof}
 
-There is a similar but slightly different way to obtain a Whittaker datum. Let $(T,B,\{X_\alpha\})$ be an $\R$-pinning of $G$ and let $\Lambda : \R \to \C^\times$ be a non-trivial unitary character. The element $X_\alpha$ specifies an isomorphism $u_\alpha$ from $\mb{G}_a$ to the root group $U_\alpha$ of $G$ associated to the absolute root $\alpha$, namely the unique isomorphism whose differential maps $1$ to $X_\alpha$. If $N$ is the unipotent radical of $B$ then the composition $\prod_{\alpha \in \Delta} U_\alpha \to N \to N/[N,N]$ is an isomorphism of complex algebraic groups, which we compose with $(u_\alpha)$. The inverse of the result, composed with the product map $\prod_\alpha \mb{G}_a \to \mb{G}_a$, becomes a homomorphism of algebraic groups $N/[N,N] \to \mb{G}_a$ defined over $\R$, which leads to a homomorphism $N(\R) \to \R$. Composing that with the character $\Lambda$ provides a non-degenerate unitary character $\psi : N(\R) \to \C^\times$. The $G(\R)$-conjugacy class of the pair $(B,\psi)$ is a Whittaker datum and depends only on the $G(\R)$-conjugacy class of the pinning $(T,B,\{X_\alpha\})$.
+
+It is helpful to understand the set of all Whittaker data.
+Let
+$$
+Q(G(\R))=G_{\mathrm{ad}}(\R)/\mathrm{ad}(G(\R)).
+$$
+This is a finite abelian $2$-group.
+Now $G_{\mathrm{ad}}(\R)$ acts by automorphisms on $G(\R)$, which induces an action of $Q(G(\R))$ on the set of Whittaker data.
+
+\begin{lem}
+  $Q(G(\R))$ acts simply transitively on the set of Whittaker data.
+\end{lem}
+
+Since we don't need this we refer to \cite[Lemma 14.14]{ABV92}.
+
+Here is another way to obtain Whittaker data.  Let
+$\P=(T,B,\{X_\alpha\})$ be an $\R$-pinning of $G$.  The element
+$X_\alpha$ specifies an isomorphism $u_\alpha$ from $\mb{G}_a$ to the
+root group $U_\alpha$ of $G$ associated to the absolute root $\alpha$,
+namely the unique isomorphism whose differential maps $1$ to
+$X_\alpha$. If $N$ is the unipotent radical of $B$ then the
+composition $\prod_{\alpha \in \Delta} U_\alpha \to N \to N/[N,N]$ is
+an isomorphism of complex algebraic groups, which we compose with
+$(u_\alpha)$. The inverse of the result, composed with the product map
+$\prod_\alpha \mb{G}_a \to \mb{G}_a$, becomes a homomorphism of
+algebraic groups $N/[N,N] \to \mb{G}_a$ defined over $\R$, which leads
+to a homomorphism $\eta_{\P}:N(\R) \to \R$.
+
+Now fix a non-trivial unitary character $\Lambda$ of $\R$. Then $\eta(\P,\Lambda)=\Lambda\circ \eta_{\P}$ is a non-degenerate unitary character of $N(\R)$.
+The $G(\R)$-conjugacy class of $\eta(\P,\Lambda)$ only depends on the $G(\R)$-conjugacy class of  $\P$.  Write $\w(\P,\Lambda)$ for the Whittaker model
+$[(B,\eta(\P,\Lambda)]$.
 
 \begin{lem} \label{lem:w1}
-Let $(T,B,\{X_\alpha\})$ be an $\R$-pinning of $G$ and let $\Lambda(x)=e^{i x}$. Then the Whittaker datum associated to this pinning and character by the above procedure is equal to the Whittaker datum $\w_{\bar X}$, where $\bar X=i\sum_{\alpha \in \Delta} X_{-\alpha}$, where $X_{-\alpha} \in \mf{g}_{-\alpha}$ is determined by the rule $[X_\alpha,X_{-\alpha}]=H_\alpha$. 
+Fix $\Lambda$. The map $\P\mapsto \w(\P,\Lambda)$ is a bijection from $G(\R)$-conjugacy classes of real pinnings to Whittaker models.
+
+Set $\Lambda(x)=e^{\pi ix}$. Then $\w(\P,\Lambda)=\w_{\overline X}$, where $\P=(T,B,\{X_\alpha\})$ and $\overline X=i\sum_{\alpha\in\Delta}X_{-\alpha}$,
+and $X_{-\alpha}$ satisfies $[X_\alpha,X_{-\alpha}]=H_\alpha$.
 \end{lem}
 \begin{proof}
+Since all Borel subgroups of $G(\R)$ are $G(\R)$-conjugate, fix a Borel subgroup $B$ defined over $\R$. Then the first statement is equivalent to:
+there is a bijection between 
+the sets of positive root vectors $\{X_\alpha\}$, modulo conjugation by $T(\R)$, and non-degenerate characters of $N(\R)$, modulo the action of $T(\R)$.
+We leav the straightforward verification of this bijection to the reader.
+
+ 
 Set $X_-=\sum_{\alpha \in \Delta} X_{-\alpha}$. Then $X_-$ is a regular nilpotent element of the Lie algebra of $G$ and is fixed by the Galois action, hence an $\R$-point. It lies in $\bar\n$, the Lie algebra of the unipotent radical of the Borel subgroup $T$-opposite to $B$. Thus $\bar X \in i\bar\n(\R)$ is also regular nilpotent. 
 
 Given $Y \in \n(\R)$ write it as $\sum_{\alpha \in \Delta} y_\alpha \cdot X_\alpha + Y'$ with $Y' \in [\n,\n](\R)$. Then
 we have
 \[ \kappa(Y, X_-)= \sum_{\alpha \in \Delta} y_\alpha \kappa(X_\alpha,X_{-\alpha}) =\sum_{\alpha \in \Delta} y_\alpha, \]
 therefore
-\[ \psi_{\bar X}(\exp(Y)) = e^{\kappa(Y,\bar X)}=e^{2\pi i \kappa(Y,X_-)} = \Lambda(\sum_{\alpha \in\Delta}y_\alpha) = \psi(\exp(Y)), \]
-where $\psi : N(\R) \to \C^\times$ is constructed from the pinning and $\Lambda$ as above.
+\[ \eta_{\bar X}(\exp(Y)) = e^{\kappa(Y,\bar X)}=e^{2\pi i \kappa(Y,X_-)} = \Lambda(\sum_{\alpha \in\Delta}y_\alpha) = \eta(\P,\Lambda)(\exp(Y)). \]
 \end{proof}
+
 
 Suppose $X\in\g$ is a regular nilpotent element. Choose an
 $SL(2)$-triple $[X,H,Y]$ [reference].  The {\it Kostant Section} $\K(X)$ of
@@ -910,13 +950,19 @@ We now consider $G$ quasi-split and a cover of $G(\R)$ coming from a character $
 The procedure is essentially the same as for the group $G(\R)$. We start with a discrete $L$\-parameter $\varphi : W_\R \to {^LG_x}$. By the same arguments as in \S\ref{sub:fac}, $\hat T = \tx{Cent}(\varphi(\C^\times),\hat G)$ is a maximal torus of $\hat G$, and the image of $\varphi$ lies in $N(\hat T,{^LG_x})$. The composition of $\varphi$ with the adjoint action $\tx{Ad}$ factors through $\Gamma$ and induces a $\Gamma$-structure on $\hat T$, which we call 
 $\hat S$. The $\hat G$-conjugacy class of the inclusion $\hat\jmath : \hat S \to \hat G$ is $\Gamma$-stable, hence leads again to the set $\mc{J}(F)$ of admissible embeddings of $S$ into pure (or rigid) inner forms of $G$.
 
-Let $S(F)_G$ be the double cover of $S(F)$ associated to the subset $R(S,G) \subset X^*(S)$. It is the same double cover as in \S\ref{sub:fac}. Now we have another double cover, called $S(F)_x$, coming from the pull-back of $x : \tilde\pi_1(G) \to \mu_n(\C)$ under the natural map $\tilde\pi_1(S) \to \tilde\pi_1(G)$. Each admissible embedding $j : S \to G$ lifts naturally to an embedding $S(\R)_x \to G(\R)_x$.
+Let $S(F)_G$ be the double cover of $S(F)$ associated to the subset $R(S,G) \subset X^*(S)$. It is the same double cover as in \S\ref{sub:fac}.
+\warn{I don't think Section 4.1 is the correct reference. Section 2.8?}.Now we have another double cover, called $S(F)_x$, coming from the pull-back of $x : \tilde\pi_1(G) \to \mu_n(\C)$ under the natural map $\tilde\pi_1(S) \to \tilde\pi_1(G)$. Each admissible embedding $j : S \to G$ lifts naturally to an embedding $S(\R)_x \to G(\R)_x$.
 
 Consider the Baer sum $S(\R)_{G,x}$ of the two double covers. We have the canonical $L$\-embedding $^LS_G \to {^LG}$. This embedding induces a canonical $L$\-embedding ${^LS_{G,x}} \to {^LG_x}$. The $L$-parameter $\varphi$ factors through it and provides an $L$-parameter $\varphi_S : W_\R \to {^LS_{G,x}}$, hence a genuine character $\tau : S(\R)_{G,x} \to \C^\times$. Thus again we have a triple $(S,\tau,\hat\jmath\,)$. The analog of Lemma \ref{lem:a} holds, with the same proof.
 
 For each $(G,\xi,z,j) \in \mc{J}(\R)$ we use $j$ to identify $S$ with a maximal torus of $G$. We can again write the formula \eqref{eq:charfmla}. Note that now $\tau/d_\tau$ is not a function of $S(\R)$ and more, but rather a function on $S(\R)_x$, which is a subgroup of $G(\R)_x$. Nonetheless, Harish-Chandra's results imply that there is a unique discrete series representation $\pi_j$ of the real Lie group $G(\R)_x$ whose character restricted to $S(\R)_x$ is given by this formula. The definition of the $L$-packet and its internal structure are now done in the same way as in \S\ref{sub:fac} and \S\ref{sub:intstr}.
 
 \warn{Jeff, am I right here that Harish-Chandra's results can treat the generality of finite-order covers of reductive groups?}
+
+\warn{Answer: A little care is required here. If you take a non-linear cover then Cartan subgroups aren't abelian. Trouble can arise, but probably not here.
+I'm not sure precisely what covers we're talking about here (see the warning above). But I assume they are linear in the following sense:
+$G(\R)_x$ is a   subgroup of a complex reductive group (something like $G(C)\times C^\times$). Then it is in ``Harish-Chandra's class'' which makes everything OK.
+  But there is something to check.}
 
 
 \section{Endoscopic character identities} \label{sec:endo}
@@ -1023,7 +1069,16 @@ which is the statement of Theorem \ref{thm:main2}. Conversely, if we assume the 
 If Theorem \ref{thm:main2} holds for all elliptic $\delta$, then it holds for all $\delta$.
 \end{lem}
 \begin{proof}
-\warn{TODO}
+  Again the proofs of 1. and 2. are essentially the same.
+
+  After tensoring with characters of $H(\R)$ and $G(\R)$ we reduce to the case that $G$ is semisimple \warn{more words here...}.
+
+  We know that the right hand side of 1. defines an invariant eigendistribution on $G(\R)$.
+  Furthermore  $\Theta_{\varphi_H}$ is a virtual discrete series character, hence tempered.
+  By [find best reference] a representation is tempered if and only if, for every Cartan subgroup, the numerator of its character
+  is bounded. This property is preserved by endoscopic lifting, so the right hand side defines a tempered, invariant, eigendistribution.
+  The left hand side, being a linear combination of discrete series characters, also has this property.
+  If the two sides agree on the elliptic elements, then by  \cite[Theorem 2]{HCDSI} the two sides are equal.
 \end{proof}
 
 \subsection{The left hand side}
