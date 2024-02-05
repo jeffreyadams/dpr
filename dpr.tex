@@ -127,7 +127,7 @@ The final issue in the classical set-up that we want to discuss is that of the a
 
 Work of Adams and Vogan \cite{AV92} introduced the idea that groups of the form $\mc{H}$ should be understood as $L$\-groups of topological covers of $H(\R)$. In \cite{KalHDC} it was shown that, in the setting of an endoscopic datum $(H,s,\mc{H},\eta)$, there is a natural double cover $H(\R)_\pm \to H(\R)$ whose $L$\-group is canonically identified with $\mc{H}$. In other words, there is a canonical $L$\-embedding $^LH_\pm \to {^LG}$. Therefore, instead of assuming the existence of an  (arbitrary) $L$\-embedding $^LH \to {^LG}$ and working with the $L$\-packet $\Pi_{\varphi'}(H)$, or choosing a $z$-extension $H_1 \to H$ and an (again arbitrary) $L$\-embedding $\mc{H} \to {^LH_1}$ and working with the $L$\-packet $\Pi_{\varphi_1}(H_1)$, one ought to consider an $L$\-packet $\Pi_{\varphi'}(H_\pm)$ consisting of genuine representations of $H(\R)_\pm$, where $\varphi' : W_\R \to {^LH_\pm}$ is the factorization of $\varphi$ through the canonical $L$\-embedding $^LH_\pm \to {^LG}$. Here the word ``genuine'' means that the non-trivial element $\epsilon$ in the kernel of $H(\R)_\pm \to H(\R)$ acts on the representation by $-1$. This allows the identity \eqref{eq:s3} to be stated without the assumption of an existence of an $L$\-embedding $^LH \to {^LG}$, and without an arbitrary choice of a $z$-extension. At this point, the identity \eqref{eq:s3} becomes fully canonical and does not depend on any choices. It is also worth pointing out that explicit construction given in \cite{LS87} of the transfer factor $\Delta$ is rather complicated and involves multiple factors, each of which depends on auxiliary data. In contrast, the construction of $\Delta$ in the setting of the canonical cover $H(\R)_\pm$, which is given in \cite[\S4.3]{KalHDC}, simplifies noticeably and becomes the product of two natural invariants, one of which has a close relationship to the simple form of the transfer factor for Lie algebras derived by Kottwitz in \cite{Kot99}.
 
-After this overview of the classical statements and constructions and the historical development of ideas, let us briefly describe the approach taken in this note. We spend about the first half of the note to give in \S\ref{sec:recoll} a review of much of the background that is needed for the main argument, in order to make the note as self-contained as possible. Then, in \S\ref{sec:gen}, we discuss how to detect that an essentially discrete series representation is generic for a particular fixed Whittaker datum. This goes beyond the classical work of Kostant \cite{Kos78} and Vogan \cite{Vog78}, which treats the question of when a representation is generic with respect to \emph{some} Whittaker datum. The main result of that section, Proposition \ref{p:whittaker}, and especially its Corollary \ref{cor:gen}, describes a simple answer to this question that is entirely analogous to the answer for supercuspidal representations of $p$-adic groups. As far as we know this result has not yet been recorded in the literature. It allows us to give a direct and explicit proof of Shelstad's \cite[Theorem 11.5]{SheTE3}.
+After this overview of the classical statements and constructions and the historical development of ideas, let us briefly describe the approach taken in this note. We spend about the first half of the note to give in \S\ref{sec:recoll} a review of much of the background that is needed for the main argument, in order to make the note as self-contained as possible. Then, in \S\ref{sec:gen}, we discuss how to detect that an essentially discrete series representation is generic for a particular fixed Whittaker datum. This goes beyond the classical work of Kostant \cite{Kos78} and Vogan \cite{Vog78}, which treats the question of when a representation is generic with respect to \emph{some} Whittaker datum. The main result of that section, Proposition \ref{p:whittaker}, describes a simple answer to this question that is entirely analogous to the answer for supercuspidal representations of $p$-adic groups. As far as we know this result has not yet been recorded in the literature. It allows us to give a direct and explicit proof of Shelstad's \cite[Theorem 11.5]{SheTE3}.
 
 In \S\ref{sec:cons} we give the construction of the $L$\-packet for a discrete series parameter. Here we use systematically the device of admissible embeddings of tori into reductive groups, and the existence of a canonical $L$\-embedding from the $L$\-group of the natural double cover of a maximal torus into the $L$\-group of $G$. This provides a canonical factorization of the $L$\-parameter into the $L$\-group of that double cover, hence a genuine character of that double cover. From the genuine character we can produce explicitly a function on the set of regular elements of that torus, and basic results of Harish-Chandra provide the desired discrete series representation. The internal structure of the resulting $L$\-packet is a simple consequence of Tate-Nakayama duality. This approach is very conceptual and avoids any explicit calculations using cocharacters and Galois cohomology. It is also parallel to the constructions employed in the $p$-adic case, such as in \cite{KalRSP}.
 
@@ -498,7 +498,7 @@ In this theorem we have chosen a Haar measure $dg$ on $G(\R)$, and a Haar measur
 
 \section{Genericity of discrete series representations} \label{sec:gen}
 
-From the work of Kostant \cite{Kos78} and Vogan \cite{Vog78} it is known that every essentially discrete series representation is generic for some Whittaker datum. In this section we will prove a more precise statement (Proposition \ref{p:whittaker}) that gives a link between the representation and the Whittaker datum. It provides  (Corollary \ref{cor:gen}) an exact analog of a result in the p-adic case, originally due to DeBacker and \cite[Proposition 4.10]{DR10} under unramifiedness assumptions, but whose proof applies in much greater generality, see \cite[Lemma 6.2.2]{KalRSP} and \cite[\S4.4]{FKS}. This allows us to prove the strong form of Shahidi's generic packet conjecture \cite[\S9]{Sha90} for discrete series packets, originally established by Shelstad \cite{SheTE3} using a less direct argument. Note that the general form of the conjecture (for tempered $L$\-packets) reduces immediately to the case of discrete $L$\-packets.
+From the work of Kostant \cite{Kos78} and Vogan \cite{Vog78} it is known that every essentially discrete series representation is generic for some Whittaker datum. In this section we will prove a more precise statement (Proposition \ref{p:whittaker}) that gives a link between the representation and the Whittaker datum. It provides  (Proposition \ref{p:whittaker}) an exact analog of a result in the p-adic case, originally due to DeBacker and \cite[Proposition 4.10]{DR10} under unramifiedness assumptions, but whose proof applies in much greater generality, see \cite[Lemma 6.2.2]{KalRSP} and \cite[\S4.4]{FKS}. This allows us to prove the strong form of Shahidi's generic packet conjecture \cite[\S9]{Sha90} for discrete series packets, originally established by Shelstad \cite{SheTE3} using a less direct argument. Note that the general form of the conjecture (for tempered $L$\-packets) reduces immediately to the case of discrete $L$\-packets.
 
 \subsection{Whittaker data and Kostant sections} \label{sub:whit}
 
@@ -525,7 +525,7 @@ The choice of $B$ is equivalent to a choice of a maximal torus $T \subset \bar B
 There is a similar but slightly different way to obtain a Whittaker datum. Let $(T,B,\{X_\alpha\})$ be an $\R$-pinning of $G$ and let $\Lambda : \R \to \C^\times$ be a non-trivial unitary character. The element $X_\alpha$ specifies an isomorphism $u_\alpha$ from $\mb{G}_a$ to the root group $U_\alpha$ of $G$ associated to the absolute root $\alpha$, namely the unique isomorphism whose differential maps $1$ to $X_\alpha$. If $N$ is the unipotent radical of $B$ then the composition $\prod_{\alpha \in \Delta} U_\alpha \to N \to N/[N,N]$ is an isomorphism of complex algebraic groups, which we compose with $(u_\alpha)$. The inverse of the result, composed with the product map $\prod_\alpha \mb{G}_a \to \mb{G}_a$, becomes a homomorphism of algebraic groups $N/[N,N] \to \mb{G}_a$ defined over $\R$, which leads to a homomorphism $N(\R) \to \R$. Composing that with the character $\Lambda$ provides a non-degenerate unitary character $\psi : N(\R) \to \C^\times$. The $G(\R)$-conjugacy class of the pair $(B,\psi)$ is a Whittaker datum and depends only on the $G(\R)$-conjugacy class of the pinning $(T,B,\{X_\alpha\})$.
 
 \begin{lem} \label{lem:w1}
-Let $(T,B,\{X_\alpha\})$ be an $\R$-pinning of $G$ and let $\Lambda(x)=e^{2\pi i x}$. Then the Whittaker datum associated to this pinning and character by the above procedure is equal to the Whittaker datum $\w_{\bar X}$, where $\bar X=2\pi i\sum_{\alpha \in \Delta} X_{-\alpha}$, where $X_{-\alpha} \in \mf{g}_{-\alpha}$ is determined by the rule $[X_\alpha,X_{-\alpha}]=H_\alpha$. 
+Let $(T,B,\{X_\alpha\})$ be an $\R$-pinning of $G$ and let $\Lambda(x)=e^{i x}$. Then the Whittaker datum associated to this pinning and character by the above procedure is equal to the Whittaker datum $\w_{\bar X}$, where $\bar X=i\sum_{\alpha \in \Delta} X_{-\alpha}$, where $X_{-\alpha} \in \mf{g}_{-\alpha}$ is determined by the rule $[X_\alpha,X_{-\alpha}]=H_\alpha$. 
 \end{lem}
 \begin{proof}
 Set $X_-=\sum_{\alpha \in \Delta} X_{-\alpha}$. Then $X_-$ is a regular nilpotent element of the Lie algebra of $G$ and is fixed by the Galois action, hence an $\R$-point. It lies in $\bar\n$, the Lie algebra of the unipotent radical of the Borel subgroup $T$-opposite to $B$. Thus $\bar X \in i\bar\n(\R)$ is also regular nilpotent. 
@@ -594,44 +594,18 @@ Suppose $\pi$ is $\w_X$-generic.
 
 
 \begin{rem}
-  The maps $\pi\rightarrow H_\pi$ and $\w\rightarrow X$ both depend on the choice of $\kappa$.
-  This dependence is very minor (only on the center), and in any event these two choices cancel so the statement of the Proposition
-  is independent of the choice of $\kappa$.
+  The map $\pi\rightarrow H_\pi$ depends on the choice of $\kappa$. However, different choices of $\kappa$ differ only on the center of $\mf{g}$. Since any Kostant section is stable under the action of the center by translations, this choice is immaterial for Proposition \ref{p:whittaker}.
 \end{rem}
+
+We now mention without proof the following result of independent interest, which will appear in forthcoming work by the first author and Alexandre Afgoustidis.
 
 \begin{lem} \label{lem:g2}
     Suppose $\pi=\pi(S,\tau)$ and $\pi'=\pi(S,\tau')$ are generic discrete series representations, with Whittaker models $\w,\w'$, respectively. 
     Then $\w=\w'$ if and only if $d\tau$ and $d\tau'$ are in the same Weyl chamber.
 \end{lem}
     
-The simplest  and most natural proof relies on  relating the Whittaker model of an irreducible representation $\pi$ to its associated variety. We refer to  \cite{howe_wave_front} or \cite{bv_local_structure} for the definition of the wave front set $\WF(\pi)$, which is an analytic invariant, and is a union of nilpotent $G(\R)$-orbits. Also see \cite{vogan_bowdoin} for the definition of the associated variety $\AV(\pi)$, which is an algebraic invariant, and is a union of nilpotent $K(\C)$-orbits on the $-1$-eigenspace of $\theta$ acting on $\g$. We briefly sketch the proof here, and refer the reader to a forthcoming paper by the first author and Alexandre Afgoustidis for details.
-    
-    
-    \begin{proof}
-    Set $\pi=\pi(S,\tau)$.
-    Write $\w=\w_X$ for $X$ a regular nilpotent element. By \cite[Theorem A]{matumoto} $\WF(\pi)$
-    is the closure of the  nilpotent $G(\R)$-orbit $\O_X$ of $X$. By \cite{SV1}  $\AV(\pi)$
-    is the closure of the $K$-orbit obtained from $\O_X$ by the Sekiguchi correspondence.
-    By \cite{yamashita} $\AV(\pi)$ only depends on the Weyl chamber of $d\tau$. Since the Sekiguchi correspondence is a bijection 
-    the same holds for $\O_X$, and hence $\w_X$.
-    \end{proof}
     
   
-\begin{cor} \label{cor:gen}
-Let $S \subset G_0$ be an elliptic maximal torus, $\rho$ a Weyl chamber in $X^*(S/Z_{G_0})$, and $\tau_0$ a character of $S(\R)$ whose differential is $\rho$-dominant and $\rho$-integral. Let $(T_0,B_0,\{X_\alpha\})$ be a pinning of $G_0$ and $\Lambda(x)=e^{2\pi ix}$. If the discrete series representation associated to $(S,\rho,\tau_0)$ is generic with respect to the Whittaker datum associated to the pinning and $\Lambda$, then the element $\rho^\vee(-i) \in \tx{Lie}(S_\tx{sc})(\R)$ is $G_0(\R)$-conjugate to the Kostant section associated to the pinning.
-\end{cor}
-\begin{proof}
-Let $\pi$ be the essentially discrete series representation associated to $(S,\rho,\tau_0)$ and let $H_\pi \in i\tx{Lie}(S)(\R)$ be the associated element, determined by $d\tau(Z)=\kappa(H_\pi,Z)$. 
-
-Let $X_-=\sum_{\alpha \in \Delta} X_{-\alpha}$ and let $\bar X=2\pi i X_-$. According to Lemma \ref{lem:w1}, being generic with respect to the pinning and $\Lambda$ is equivalent to being generic with respect to $\w_{\bar X}$, and Proposition \ref{p:whittaker} implies that $H_\pi$ is $G(\R)$-conjugate to the Kostant section $K(\bar X)$. Note that $H_\pi=d\tau_0+\rho$.
-
-Let $H=\rho^\vee(i) \in \tx{Lie}(S_\tx{sc})$. This element is Galois-fixed and thus lies in $\tx{Lie}(S_\tx{sc})(\R)$. By construction it lies in the same Weyl chamber as $H_\pi$. We claim that $H$ and $H_\pi$ are conjugate under $S'(\R)$, where $S'=S \cap G_\tx{der}$. 
-
-To see this, let $(\varpi_\alpha)_{\alpha \in \Delta}$ be the basis of $X_*(S')_\R$ dual to the basis $\Delta$ of $X^*(S')_\R$. Write $H_\pi=\sum_{\alpha \in \Delta} a_\alpha \varphi_\alpha$ and $H=\sum_{\alpha\in\Delta} b_\alpha\varpi_\alpha$. By construction $b_\alpha=i$ for all $\alpha$, while $a_\alpha \in i\R_{>0}$. The element 
-
-
-\warn{Argue from above statement to the fact that $H$ is $G(\R)$-conjugate to the Kostant section $K(i\bar X)$.} But $K(i\bar X)=K(-2\pi X_-)$ and we conclude that $\rho^\vee(-i)$ is $G(\R)$-conjugate to $K(2\pi X_-)$.
-\end{proof}
 
 \subsection{An example with $\tx{SL}_2$}
 
@@ -733,7 +707,7 @@ $$
 \K\begin{pmatrix}0&i\\0&0\end{pmatrix}\cap i\g(\R)\ni H_\pi=\begin{pmatrix}0&-\frac{ik}8\\\frac{ik}8&0\end{pmatrix}\quad (k<0).
 $$
 
-In this case Proposition \ref{p:whittakeralt} amounts to 
+Using Lemma \ref{lem:g2} amounts to 
 $$
 \K(-iX)=\K\begin{pmatrix}0&-1\\0&0
 \end{pmatrix}\ni \ch\rho(-i)=
@@ -1121,25 +1095,27 @@ The following result completes the proof of Theorem \ref{thm:main2}(1).
 
 \begin{pro} \label{pro:magic}
 For any $\dot\delta_0 \in S_\mf{w}(\R)_{G/H}$, the following identity holds
-\[  \Delta_{I}(\dot\gamma_0,\dot\delta_0) = \epsilon\cdot(-1)^{q(G_0)-q(H)}\cdot\prod_{\alpha \in R(S,G/H)^+}\arg(\alpha^{1/2}(\dot\delta_0) - \alpha^{-1/2}(\dot\delta_0)), \]
+\[  \Delta_{I}(\dot\gamma_0,\dot\delta_0) = \epsilon\cdot(-1)^{q(G_0)-q(H)}\cdot\prod_{\substack{\alpha \in R(S,G/H)\\ \<\alpha^\vee,d\tau_\mf{w}\>>0}}\arg(\alpha^{1/2}(\dot\delta_0) - \alpha^{-1/2}(\dot\delta_0)), \]
 where $\dot\gamma_0 \in S_H(\R)_{G/H}$ is the image of $\dot\delta_0$ under the isomorphism $j_H \circ j_\mf{w}^{-1}$.
 \end{pro}
 \begin{proof}
-We first investigate how both sides vary as functions of $\dot\delta_0$. Consider another strongly regular $\dot\delta_1$. Replacing $\dot\delta_0$ with $\dot\delta_1$ in the right hand side results in multiplication by $\prod_\alpha \tx{arg}(b_\alpha)$, where the product runs again over $R(S,G/H)^+$ and $b_\alpha=(\dot\delta_{1,\alpha}-\dot\delta_{1,-\alpha})/(\dot\delta_{0,\alpha}-\dot\delta_{0,-\alpha})$. By construction $\dot\delta_{0,-\alpha}=\sigma(\dot\delta_{0,\alpha})$, and the same holds for $\dot\delta_1$, from which follows $b_\alpha \in \R^\times$, and hence $\tx{arg}(b_\alpha)=\tx{sgn}(b_\alpha)$.
+Since $d\tau_\mf{w}$ is a regular element of $X_*(S)_\R$ the condition $\<\alpha^\vee,d\tau_\mf{w}\>>0$ defines a positive system $R(S,G)^+$ of roots in $R(S,G)$. We will write $\alpha>0$ when $\alpha \in R(S,G)$ belongs to that positive system. We will write $R(S,G/H)^+ = R(S,G/H) \cap R(S,G)^+$.
+
+	We first investigate how both sides vary as functions of $\dot\delta_0$. Consider another strongly regular $\dot\delta_1$. Replacing $\dot\delta_0$ with $\dot\delta_1$ in the right hand side results in multiplication by $\prod_\alpha \tx{arg}(b_\alpha)$, where the product runs again over $R(S,G/H)^+$ and $b_\alpha=(\dot\delta_{1,\alpha}-\dot\delta_{1,-\alpha})/(\dot\delta_{0,\alpha}-\dot\delta_{0,-\alpha})$. By construction $\dot\delta_{0,-\alpha}=\sigma(\dot\delta_{0,\alpha})$, and the same holds for $\dot\delta_1$, from which follows $b_\alpha \in \R^\times$, and hence $\tx{arg}(b_\alpha)=\tx{sgn}(b_\alpha)$.
 
 We now look at the left hand side. Replacing $\dot\delta_0$ by $\dot\delta_1$ multiplies $\tx{inv}(\dot\delta_0,\tx{pin})$ by $\prod_{\alpha>0,\sigma\alpha<0}\alpha^\vee(b_\alpha)$, and hence $\Delta_{I}$ by the Tate-Nakayama pairing of this 1-cocycle with the endoscopic element $s_\mf{w}$. Since the torus $S$ is elliptic, the conditions $\alpha>0$ and $\sigma\alpha<0$ are equivalent, and the value of the 1-cocycle at $\sigma$ equals $\prod_{\alpha>0}\alpha^\vee(b_\alpha)$. This is the product over $\alpha>0$ of the images of the 1-cocycles $b_\alpha \in Z^1(\Gamma,R_{\C/R}^1\mb{G}_m)$ under the homomorphisms $\alpha^\vee : R_{\C/R}^1\mb{G}_m \to S$, so the change in $\Delta_{I,\pm}$ is given by $\prod_{\alpha>0}\<b_\alpha,s_\alpha\>$, where $s_\alpha$ is the image of $s \in \hat S$ under $\hat\alpha : \hat S \to \C^\times$. This is a Galois-equivariant homomorphism, with $\sigma$ acting as inversion on $\C^\times$. Since $s$ is $\sigma$-fixed, so is $s_\alpha$, i.e. $s_\alpha \in \{\pm1\} \subset \C^\times$. By construction of the endoscopic group $H$, we have $s_\alpha=1$ precisely for $\alpha \in R(S,H)$. On the other hand, when $s_\alpha=-1$, then $\<b_\alpha,s_\alpha\>=\tx{sgn}(b_\alpha)$.
 
-We have thus shown that both sides of the identity multiply by the same factor upon replacing $\dot\delta_0$ by a different element $\dot\delta_1$. To establish the identity we may thus evaluate at an arbitrary element $\dot\delta_0$. For this we note that both sides descend to functions on $S_\tx{ad}(\R)_{G/H}$, so we may assume that $G$ is adjoint. Let $\rho^\vee \in X_*(S_\mf{w})$ denote half the sum of the coroots that pair positively with $d\tau_\mf{w}$. Since complex conjugation acts on $X_*(S_\mf{w})$ by multiplication by $-1$, we have $X=\rho^\vee(-ir) \in \tx{Lie}(S_\mf{w})(\R)$ for any $r \in \R$. We will choose $r>0$ small enough and set $\ddot\delta=\exp(X) \in S_\mf{w}(\R)_{\pm\pm}$, where we are using the exponential map $\tx{Lie}(S_\mf{w})(\R) \to S_\mf{w}(\R)_{\pm\pm}$ discussed in \cite[\S3.7]{KalDC}.
+We have thus shown that both sides of the identity multiply by the same factor upon replacing $\dot\delta_0$ by a different element $\dot\delta_1$. To establish the identity we may thus evaluate at an arbitrary element $\dot\delta_0$. For this we note that both sides descend to functions on $S_\tx{ad}(\R)_{G/H}$, so we may assume that $G$ is adjoint. Let $H_{\mf{w}}$ be the element corresponding to $d\tau_\mf{w}$ via some extension $\kappa$ of the Killing form on $\mf{g}'$ to $\mf{g}$. Then $H_\mf{w} \in i\cdot \tx{Lie}(S_\mf{w})(\R)$, so $-irH_\mf{w} \in \tx{Lie}(S_\mf{w})(\R)$ for any $r \in \R$. We will choose $r>0$ small enough and set $\ddot\delta=\exp(-irH_\mf{w}) \in S_\mf{w}(\R)_{\pm\pm}$, where we are using the exponential map $\tx{Lie}(S_\mf{w})(\R) \to S_\mf{w}(\R)_{\pm\pm}$ discussed in \cite[\S3.7]{KalDC}.
 
 
 
 Considering the right hand side, we have for each $\alpha \in R(S,G)$
-\[ \alpha^{1/2}(\dot\delta_0)=\dot\delta_{0,\alpha} = \exp(d\alpha(X)/2)=e^{-ir\<d\alpha,\rho^\vee\>/2}.\]
+\[ \alpha^{1/2}(\dot\delta_0)=\dot\delta_{0,\alpha} = e^{d\alpha(-irH_\mf{w})/2}=e^{-ir\<\alpha^\vee,d\tau_\mf{w}\>/2}.\]
 Then
-\[ \alpha^{1/2}(\dot\delta_0)-\alpha^{-1/2}(\dot\delta_0) = -2i\sin(r\<d\alpha,\rho^\vee\>/2). \]
-Choosing $r>0$ so that $r\<d\alpha,\rho^\vee\>/2 < \pi$ for all $\alpha \in R(S,G)^+$ we obtain
+\[ \alpha^{1/2}(\dot\delta_0)-\alpha^{-1/2}(\dot\delta_0) = -2i\sin(r\<\alpha^\vee,d\tau_\mf{w}\>/2). \]
+Choosing $r>0$ so that $0<r\<d\alpha,d\tau_\mf{w}\>/2 < \pi$ for all $\alpha>0$ we obtain
 \[ \arg(\alpha^{1/2}(\dot\delta_0) - \alpha^{-1/2}(\dot\delta_0)) = (-i)^{\#R(S,G/H)^+}. \]
-Choose a pinning $(T_0,B_0,\{X_\alpha\})$, which, together with $\Lambda(x)=e^{2\pi ix}$, produces the chosen Whittaker datum $\mf{w}$. Corollary \ref{cor:gen} then shows that $\rho^\vee(-i)$ is $G_0(\R)$-conjugate lies in the Kostant section of that pinning. Thus $X$ is $G_0(\R)$-conjugate to the Kostant section of the pinning $(T_0,B_0,\{rX_\alpha\})$. If we construct $\Delta_I(\dot\gamma_0,\dot\delta_0)$ with respect to this rescaled pinning, then \cite[Lemma 4.1.4]{KalHDC} show that $\Delta_I(\dot\gamma_0,\dot\delta_0)=1$. On the other hand, the rescaled pinning together with the character $\Lambda_r(x)=e^{r2\pi i x}$ also produces the Whittaker datum $\mf{w}$. According to Lemma \ref{lem:epsilon} the right hand side equals $1$.
+Choose a pinning $(T_0,B_0,\{X_\alpha\})$, which, together with $\Lambda(x)=e^{ix}$, produces the chosen Whittaker datum $\mf{w}$. Let $X_-=\sum_{\alpha \in \Delta} X_{-\alpha}$ and let $\bar X=i X_-$. According to Lemma \ref{lem:w1}, being generic with respect to the pinning and $\Lambda$ is equivalent to being generic with respect to $\w_{\bar X}$, and Proposition \ref{p:whittaker} implies that $H_\mf{w}$ is $G(\R)$-conjugate to the Kostant section $K(\bar X)$. Therefore, $-irH_\mf{w}$ is $G(\R)$-conjugate to the Kostant section $K(rX_-)$, which is the Kostant section of the rescaled pinning $(T_0,B_0,\{rX_\alpha\})$. If we construct $\Delta_I(\dot\gamma_0,\dot\delta_0)$ with respect to this rescaled pinning, then \cite[Lemma 4.1.4]{KalHDC} show that $\Delta_I(\dot\gamma_0,\dot\delta_0)=1$. On the other hand, the rescaled pinning together with the character $\Lambda_r(x)=e^{r^{-1} i x}$ also produces the Whittaker datum $\mf{w}$. According to Lemma \ref{lem:epsilon} the right hand side equals $1$.
 \end{proof}
 
 \subsection{The right hand side: classical set-up}
@@ -1153,7 +1129,7 @@ where we have used the parameter $\varphi_{H_1}$ of the z-extension $H_1$ to obt
 
 It is the handling of the transfer factor that is slightly different. Indeed, in this setting without covers the transfer factor is given by
 \[ \Delta = \epsilon\Delta_I^{-1}\Delta_{II}\Delta_{III_2}. \]
-The construction of the pieces involves a choice of an admissible isomorphism $S^H \to S_\mf{w}$, which we take to be $j_\mf{w}\circ j_H^{-1}$, as we did in \S\ref{sub:rhs_cover}. It further involves choices of $\chi$-data and $a$-data for $S$. We take $\rho$-based $\chi$-data, and $(-\rho)$-based $a$-data, so that $\chi_\alpha(x)=\arg(x)$ when $\alpha>0$ and $a_\alpha=i$ when $\alpha<0$.
+The construction of the pieces involves a choice of an admissible isomorphism $S^H \to S_\mf{w}$, which we take to be $j_\mf{w}\circ j_H^{-1}$, as we did in \S\ref{sub:rhs_cover}. It further involves choices of $\chi$-data and $a$-data for $S$. We take $\rho$-based $\chi$-data, and $(-\rho)$-based $a$-data, so that $\chi_\alpha(x)=\arg(x)$ when $\alpha>0$ and $a_\alpha=i$ when $\alpha<0$, and where $\alpha>0$ means $\<\alpha^\vee,d\tau_\mf{w}\>>0$.
 
 We claim that
 \[ \Delta_{III_2}(\gamma_1,\delta_0) = \frac{\tau'_\mf{w}(\delta_0)}{\tau'_{H_1}(\gamma_1)}.\]
@@ -1195,7 +1171,7 @@ The following lemma completes the proof.
 The splitting invariant $\lambda$ of $S$ computed in terms of $(-\rho)$-based $a$-data is trivial.
 \end{lem}
 \begin{proof}
-Let $X=\rho^\vee(-i) \in \tx{Lie}(S_\tx{sc})$. This element is Galois-fixed and thus lies in $\tx{Lie}(S_\tx{sc})(\R)$. For every $\alpha>0$ the complex number $d\alpha(X)$ is a positive real multiple of $-i$. Therefore we can replace the $(-\rho)$-based $a$-data with the $a$-data $d\alpha(X)$ without changing the splitting invariant. According to \cite[Theorem 5.1]{Kot99} and Corollary \ref{cor:gen}, $\lambda$ is trivial.
+Let $(S_\mf{w},\tau_\mf{w})$ be the Harish-Chandra parameter of the generic member of $\Pi_\varphi((G_0,1,1))$. Let $H_\mf{w} \in \tx{Lie}(S_\mf{w})$ be the element determined by $\kappa(H_\mf{w},-)=\<d\tau_\mf{w},-\>$ with respect to any extension $\kappa$ to $\mf{g}$ of the Killing form on $\mf{g}'$. We transport $H_\mf{w}$ to $\tx{Lie}(S)$ via the admissible isomorphism $j_\mf{w}$. The element $-iH_\mf{w} \in \tx{Lie}(S)$ is then Galois-fixed and thus lies in $\tx{Lie}(S)(\R)$. For every $\alpha>0$ the complex number $d\alpha(-iH_\mf{w})$ is a positive real multiple of $-i$. Therefore we can replace the $(-\rho)$-based $a$-data with the $a$-data $d\alpha(-iH_\mf{w})$ without changing the splitting invariant. According to \cite[Theorem 5.1]{Kot99} and Proposition \ref{p:whittaker}, $\lambda$ is trivial.
 \end{proof}
 
 
