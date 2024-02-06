@@ -541,12 +541,13 @@ algebraic groups $N/[N,N] \to \mb{G}_a$ defined over $\R$, which leads
 to a homomorphism $\eta_{\P}:N(\R) \to \R$.
 
 Now fix a non-trivial unitary character $\Lambda$ of $\R$. Then $\eta_{\P,\Lambda}=\Lambda\circ \eta_{\P}$ is a non-degenerate unitary character of $N(\R)$.
-The $G(\R)$-conjugacy class of $\eta_{\P,\Lambda}$ only depends on the $G(\R)$-conjugacy class of  $\P$.  Write $\w_{\P,\Lambda}$ for the Whittaker model
+The $G(\R)$-conjugacy class of $\eta_{\P,\Lambda}$ only depends on the $G(\R)$-conjugacy class of  $\P$.  Write $\w_{\P,\Lambda}$ for the Whittaker data
 $[(B,\eta_{\P,\Lambda}]$.
 
 \begin{lem} \label{lem:w1}
 \begin{enumerate}
-	\item Fix a non-trivial unitary character $\Lambda$ of $\R$. The map $\P\mapsto \w_{\P,\Lambda}$ is a bijection from $G(\R)$-conjugacy classes of real pinnings to Whittaker models.
+\item Fix a non-trivial unitary character $\Lambda$ of $\R$. The map $\P\mapsto \w_{\P,\Lambda}$ is a bijection from $G(\R)$-conjugacy classes of real pinnings to Whittaker
+  data.
  	\item Set $\Lambda(x)=e^{ix}$. Then $\w_{\P,\Lambda}=\w_{\overline X}$, where $\P=(T,B,\{X_\alpha\})$ and $\overline X=i\sum_{\alpha\in\Delta}X_{-\alpha}$,
 	 and $X_{-\alpha}$ satisfies $[X_\alpha,X_{-\alpha}]=H_\alpha$.
 \end{enumerate}
@@ -623,7 +624,11 @@ By \cite{Kos63}, $\K(X)$ is transversal to any $G(\C)$-orbit in $\g(\C)$. Theref
 
 Choose $t_i \in \R_{>0}$ with $t_i \to 0$ and $w_i \in \O_\R$ such that $t_iw_i \to X$. We conclude that there exists $g \in G(\R)$ such that $t_iw_i \in \tx{Ad}(g)\K(X)(\R)$ for some $i$. This is equivalent to $\tx{Ad}(g)^{-1}w_i \in t_i^{-1}(\K(X))(\R)$. Since $\O_\R$ is a $G(\R)$-orbit, we see $\O_\R \cap t_i^{-1}(\K(X))(\R) \neq \varnothing$. 
 
-We now use the elementary facts that $t\K(X)=\K(tX)$ and $\tx{Ad}(h)\K(X)=\K(\tx{Ad}(h)X)$ for $t \in \R$ and $h \in G(\C)$, as well as the fact that the $G(\R)$-orbit of $X$ is a cone \warn{ref}. The latter of these facts implies that there exists $h \in G(\R)$ with $t_i^{-1}X=\tx{Ad}(h)X$, and we see $t_i^{-1}\K(X)=\tx{Ad}(h)\K(X)$. Thus $\O_\R$ intersects $\K(X)(\R)$ as claimed.
+We now use the elementary facts that $t\K(X)=\K(tX)$ and $\tx{Ad}(h)\K(X)=\K(\tx{Ad}(h)X)$ for $t \in \R$ and $h \in G(\C)$.
+Also it is well known that the $G(\R)$-orbit of $X$ is a cone. (To see this, apply the real version of the Jacobson-Morozov theorem
+\cite[Theorem 9.2.1]{CM} to  find a homomorphism $\phi:SL(2,\R)\rightarrow G$ such that $d\phi\begin{pmatrix}0&1\\0&0\end{pmatrix}=X$.
+Then $\Ad(\phi(\mathrm{diag}(t,\frac 1t))(X)=t^2X$.)
+The latter of these facts implies that there exists $h \in G(\R)$ with $t_i^{-1}X=\tx{Ad}(h)X$, and we see $t_i^{-1}\K(X)=\tx{Ad}(h)\K(X)$. Thus $\O_\R$ intersects $\K(X)(\R)$ as claimed.
 \end{proof}
 
 \begin{proof}[Proof of Proposition \ref{p:whittaker}]
@@ -644,8 +649,9 @@ We have $X\in \WF(\pi)$ according to \cite[Theorem A]{matumoto} and moreover $\W
 We now mention  a supplementary result, which is well known to the experts, but not easy to find in the literature.
 
 \begin{lem} \label{lem:g2}
-    Suppose $\pi=\pi(S,\tau)$ and $\pi'=\pi(S,\tau')$ are generic discrete series representations, with Whittaker models $\w,\w'$, respectively. 
-    Then $\w=\w'$ if and only if $d\tau$ and $d\tau'$ are in the same Weyl chamber. In particular, $\pi$ is generic of a unique Whittaker datum.
+    Suppose $\pi=\pi(S,\tau)$ and $\pi'=\pi(S,\tau')$ are generic discrete series representations, which are $\w, \w'$-generic, respectively.
+    Then $\w=\w'$ if and only if $d\tau$ and $d\tau'$ are in the same Weyl chamber. In particular a generic discrete series representation is $\w$-generic
+    for a unique Whittaker datum $\w$.
 \end{lem}
 
 Since we don't use this result we skip the proof, and refer the reader to a forthcoming paper on Whittaker models for real groups
