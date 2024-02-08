@@ -299,7 +299,7 @@ Harish-Chandra has shown that the set of isomorphism classes of essentially squa
 \begin{equation} \label{eq:charfmla}
 (-1)^{q(G)}\sum_{w \in N(S,G)(\R)/S(\R)} \frac{\tau}{d_\tau}(w\delta) = (-1)^{q(G)}\sum_{w \in N(S,G)(\R)/S(\R)} \frac{\tau'}{d'_\tau}(w\dot\delta).
 \end{equation}
-We explain the notation. Pull back $\tau$ to a character of $S_\tx{sc}(\R)_G$, where $S_\tx{sc}$ is the preimage of $S$ in the universal cover $G_\tx{sc}$ of the derived subgroup of $G$. The cover $S_\tx{sc}(\R)_G$ splits canonically, because $\rho$ is divisible by $2$ in $X^*(S_\tx{sc})$. Therefore $\tau$ provides a character $\tau_\tx{sc}$ of $S_\tx{sc}(\R)$. This being a compact torus, $\tau_\tx{sc}$ is an algebraic character, i.e. an element of $X^*(S_\tx{sc})$, and coincides with its differential, which is still regular. Thus $\tau$ specifies a choice of positive roots, i.e. a Borel $\C$-subgroup $B$ containing $S$. Write $D_\tau$ in place of $D_B$ for the Weyl denominator \eqref{eq:weyldenom}. Since our convention (cf. \S\ref{sub:weyldenom}) is to normalize orbital integrals and characters by the absolute value of this denominator, we will only need $d_\tau=\tx{arg}D_\tau$. Both $\tau$ and $d_\tau$ are genuine functions of $S(\R)_G$, so their quotient $\Theta:=\tau/d_\tau$ descends to $S(\R)$.
+We explain the notation. Pull back $\tau$ to a character of $S_\tx{sc}(\R)_G$, where $S_\tx{sc}$ is the preimage of $S$ in the universal cover $G_\tx{sc}$ of the derived subgroup of $G$. The cover $S_\tx{sc}(\R)_G$ splits canonically, because $\rho$ is divisible by $2$ in $X^*(S_\tx{sc})$. Therefore $\tau$ provides a character $\tau_\tx{sc}$ of $S_\tx{sc}(\R)$. This being a compact torus, $\tau_\tx{sc}$ is an algebraic character, i.e. an element of $X^*(S_\tx{sc})$, and coincides with its differential, which is still regular. Thus $\tau$ specifies a choice of positive roots, i.e. a Borel $\C$-subgroup $B$ containing $S$. Write $D_\tau$ in place of $D_B$ for the Weyl denominator \eqref{eq:weyldenom}. Since our convention (cf. \S\ref{sub:weyldenom}) is to normalize orbital integrals and characters by the absolute value of this denominator, we will only need $d_\tau=\tx{arg}D_\tau$. Both $\tau$ and $d_\tau$ are genuine functions of $S(\R)_G$, so their quotient $\tau/d_\tau$ descends to $S(\R)$.
 
 In the second sum we have set $\tau'=\tau \cdot \rho_B^{-1}$, and $d_\tau'=d_\tau \cdot \rho_B^{-1}$, cf. \eqref{eq:dgb}. In this way, both numerator and denominator are functions of $S(\R)$. Note that $\rho_B$ takes values in $\mb{S}^1$ because $S$ is elliptic.
 
@@ -888,12 +888,6 @@ If $(S_1,\tau_1,\hat\jmath_1)$ and $(S_2,\tau_2,\hat\jmath_2)$ are two pairs obt
 
 \subsection{Construction of the $L$\-packet}
 
-% Recall that $\theta$ has regular differential. It determines a choice of positive roots in $R(S,G)$, which we denote by $\alpha>0$. The function
-% \[ \Theta : S(\R)_G \to \C,\qquad \dot x \mapsto \frac{\theta(\dot x)}{\prod_{\alpha>0}(\alpha^{1/2}(\dot x)-\alpha^{-1/2}(\dot x))} \]
-% is non-genuine, i.e. it descends to $S(\R)$. Indeed, if we set $\theta'(x)=\theta(\dot x)\cdot \rho(\dot x)^{-1}$, then this function can also be written as
-% \[ \Theta(x) = \frac{\theta'(x)}{\prod_{\alpha>0}(1-\alpha^{-1}(x))}.\]
-% We will use it to specify the elements of the $L$\-packet associated to $\varphi$.
-
 The natural embedding $\hat S \to \hat G$ is not $\Gamma$-equivariant, but its $\hat G$-conjugacy class is. From \S\ref{sub:adm} we obtain the category $\mc{J}$ of embeddings of $S$ into all pure (or rigid) inner forms of $G_0$.
 
 Consider $(G,\xi,z,j) \in \mc{J}(\R)$. As discussed in \S\ref{sub:essds}, there exists a unique essentially discrete series representation $\pi_j$ of $G(\R)$ associated to the pair $(S,\tau)$, transported to $G$ via $j$. According to \S\ref{sub:essds} the representation $\pi_j$ depends on the $G(\R)$-conjugacy class of $j$, and two distinct such conjugacy classes produce two non-isomorphic representations.
@@ -1085,16 +1079,59 @@ which is the statement of Theorem \ref{thm:main2}. Conversely, if we assume the 
 If Theorem \ref{thm:main2} holds for all elliptic $\delta$, then it holds for all $\delta$.
 \end{lem}
 \begin{proof}
+\warn{this proof is not finished}
+
   Again the proofs of 1. and 2. are essentially the same.
 
-  After tensoring with characters of $H(\R)$ and $G(\R)$ we reduce to the case that $G$ is semisimple \warn{more words here...}.
+  \underline{Step 1:} Both sides are supported on $Z_G(\R) \cdot G_\tx{der}(\R)^0$, and transform by the same character of $Z_G(\R)$. Since $G_\tx{sc}(\R) \to G_\tx{der}(\R)^0$ is surjective, it is enough to compare them after pulling back to $G_\tx{sc}(\R)$. This allows us to assume that $G$ is semi-simple and simply connected.
 
-  We know that the right hand side of 1. defines an invariant eigendistribution on $G(\R)$.
-  Furthermore  $\Theta_{\varphi_H}$ is a virtual discrete series character, hence tempered.
-  By [find best reference] a representation is tempered if and only if, for every Cartan subgroup, the numerator of its character
-  is bounded. This property is preserved by endoscopic lifting, so the right hand side defines a tempered, invariant, eigendistribution.
-  The left hand side, being a linear combination of discrete series characters, also has this property.
-  If the two sides agree on the elliptic elements, then by  \cite[Theorem 2]{HCDSI} the two sides are equal.
+  \begin{proof}
+	  We first claim that the character of a discrete series representation of $G(\R)$ is supported on $Z_G(\R) \cdot G_\tx{der}(\R)^0$. \warn{Jeff, can you prove that?}
+
+	  It follows that the function $\Theta_\varphi^{\mf{w},s}$ is supported on $Z_G(\R) \cdot G_\tx{der}(\R)^0$ and transforms under $Z_G(\R)$ by the common central character $\omega_\varphi : Z_G(\R) \to \C^\times$ of all members of $\Pi_\varphi(G)$.
+	  
+	Applying the same reasoning to $H$ we see that the function $S\Theta_{\varphi_\pm}$ is supported on $Z_{H(\R)_\pm} \cdot H(\R)_\pm'$, where $H(\R)_\pm'$ is the image of the natural splitting $H_\tx{sc}(\R) \to H(\R)_\pm$.
+	
+	Letting $Z_G(\R)$ act on the elliptic maximal torus of $G$ by multiplication, the assumption that the identity of Theorem \ref{thm:main2} holds for elliptic elements implies that both sides of that identity transform under the same character of $Z_G(\R)$.
+
+	To show that the right hand side of that identity is supported on $Z_G(\R) \cdot G_\tx{der}(\R)^0$, consider a strongly regular semi-simple element $\delta \in G(\R)$ for which the right-hand side is non-zero. Thus there exists $\dot\gamma \in H(\R)_\pm$ such that $S\Theta_{\varphi'}(\dot\gamma) \neq 0$ and such that $\Delta(\dot\gamma,\delta)$. 
+	
+	Let $T \subset G$ be the centralizer of $\delta$ and let $S \subset H$ be the centralizer of the image $\gamma \in H(\R)$ of $\dot\gamma$. Then $\gamma \in Z_H(\R) \cdot S(\R)'$, where $S(\R)'$ is the image of $S_\tx{sc}(\R) \to S(\R)$. There is a unique admissible isomorphism $j : S \to T$ mapping $\gamma$ to $\delta$.
+	
+	\warn{finish}
+  \end{proof}
+
+	\underline{Step 2}: The left side is a tempered invariant eigendistribution. Show that the right side is also a tempered invariant eigendistribution.
+
+	\begin{proof}
+		We recall here that a \emph{distribution} is a linear functional $T : \mc{C}^\infty_c(G(\R)) \to \C$, continuous for the topology on $\mc{C}^\infty_c(G(\R))$ for which a sequence $f_n$ converges to $f$ if the domains of all $f_n$ and $f$ are contained in a fixed compact subset $\Omega$ and $f_n \to f$ uniformly on $\Omega$ together with all derivatives. 
+		
+		The distribution $T$ is called \emph{tempered} (see \cite[8.5.1]{WallachRed1}), if it extends to a continuos functional on the Harish-Chandra-Schwartz space $\mc{C}(G(\R))$. This is the space consisting of those smooth functions $f : G(\R) \to \C$ for which the seminorms
+		\[ p_{x,y,r}(f) = \sup\{(1+\log||g||)^r\cdot \Xi(g)^{-1}\cdot |L(x)R(y)f(g)|\,:\,g \in G(\R)\} \]
+		indexed by $r \geq 0$ and $x,y \in \mc{U}(\mf{g})$. Here $\Xi$ is the zonal spherical function defined in \cite[3.6.1,4.5.3]{WallachRed1}, and $||-|| : G(\R) \to \R_{>0}$ is any norm on $G(\R)$ in the sense of \cite[2.A.2]{WallachRed1}.
+		
+		The distribution is \emph{invariant} if it is invariant under the action of $G(\R)$ by conjugation on itself, hence on functions. 
+		
+		It is an \emph{eigendistribution}, if it transforms under a character $\chi : \mf{z} \to \C$ for the action of the center $\mf{z}$ of the universal enveloping algebra of the Lie algebra of $G$. 
+
+		By Harish-Chandra's regularity theorem \cite[Theorem 8.4.1]{WallachRed1}, an invariant eigendistribution $T$ is represented by a an analytic function $F_T$ on $G(\R)_\tx{sr}$ which is locally integrable on $G(\R)$. This distribution is tempered if and only if the function $F_T$ satisfies the following inequality, see \cite[Theorem 8.6.1]{WallachRed1}
+		\[ |D_T(x)|^{1/2} \cdot |F_T(x)| \leq C(1+\log||x||)^d \]
+		for some fixed constants $c \geq 0$, $D \geq 0$, and all strongly regular $x \in G(\R)$.
+
+		It is known that the character of a discrete series representation of a semi-simple group is a tempered invariant distribution, see \cite[Lemma 8.5.2]{WallachRed1}. In fact, it is an eigendistribution for the infinitesimal character of $\pi$, which is the $\Omega(S,G)$-orbit $[d\tau]$ of $d\tau_\pi$ \warn{Reference?}. Therefore, the virtual sum $\Theta_\varphi^{\mf{w},s}$ is also a tempered invariant eigendistribution with infinitesimal character $[d\tau]$.
+
+		We now claim that the right-hand side of the identity of Theorem \ref{thm:main2} is also a tempered invariant eigendistribution with the same infinitesimal character. Invariance (under conjugation by $G(\R)$) follows from the corresponding property of the transfer factor $\Delta(\dot\gamma,\delta)$ in the variable $\delta$.
+
+		To see temperedness, we note first that we have already normalized the characters by $|D_T|^{1/2}$, so the estimate we need is $|F_T(\delta)| \leq C(1+ \log||\delta||_G)^d$, where $F_T$ is the function on the right hand side of the identity of Theorem \ref{thm:main2}. We know $|S\Theta(\dot\gamma)| \leq C(1+\log||\gamma||_H)^d$. For any fixed $\delta$, there are only finitely many $\dot\gamma$ with $\Delta(\dot\gamma,\delta) \neq 0$, and in fact their number is bounded by $|\Omega(T,G)|$. The term $\Delta_I(\dot\gamma,\dot\delta)$ is obtained by evaluating a character of a Galois cohomology group on an element of that group. The result is a root of unity. The term $\Delta_{III}(\dot\gamma,\dot\delta)$ is a \warn{unitary!!!} character of a cover of the torus $T(\R)$. \warn{It remains to relate $||-||_G$ to $||-||_H$.}
+
+		\warn{remains to check eigen}
+		
+	\end{proof}
+
+
+
+
+	\underline{Step 3:} Apply the Harish-Chandra uniqueness theorem, \cite[Theorem 2]{HCDSI}.
 \end{proof}
 
 \subsection{The left hand side}
