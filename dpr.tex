@@ -515,6 +515,7 @@ In this theorem we have chosen a Haar measure $dg$ on $G(\R)$, and a Haar measur
 	respectively.
 \end{rem}
 
+
 \section{Genericity of discrete series representations} \label{sec:gen}
 
 From the work of Kostant \cite{Kos78} and Vogan \cite{Vog78} it is known that every essentially discrete series representation is generic for some Whittaker datum. In this section we will prove a more precise statement (Proposition \ref{p:whittaker}) that gives a link between the representation and the Whittaker datum. It provides  (Proposition \ref{p:whittaker}) an exact analog of a result in the p-adic case, originally due to DeBacker and \cite[Proposition 4.10]{DR10} under unramifiedness assumptions, but whose proof applies in much greater generality, see \cite[Lemma 6.2.2]{KalRSP} and \cite[\S4.4]{FKS}. This allows us to prove the strong form of Shahidi's generic packet conjecture \cite[\S9]{Sha90} for discrete series packets, originally established by Shelstad \cite{SheTE3} using a less direct argument. Note that the general form of the conjecture (for tempered $L$\-packets) reduces immediately to the case of discrete $L$\-packets.
@@ -1108,7 +1109,7 @@ If Theorem \ref{thm:main2} holds for all elliptic $\delta$, then it holds for al
 
 	To show that the right hand side of that identity is supported on $Z_G(\R) \cdot G_\tx{der}(\R)^0$, consider a strongly regular semi-simple element $\delta \in G(\R)$ for which the right-hand side is non-zero. Thus there exists $\dot\gamma \in H(\R)_\pm$ such that $S\Theta_{\varphi'}(\dot\gamma) \neq 0$ and such that $\Delta(\dot\gamma,\delta)$. 
 	
-	Let $T \subset G$ be the centralizer of $\delta$ and let $S \subset H$ be the centralizer of the image $\gamma \in H(\R)$ of $\dot\gamma$. Then $\gamma \in Z_H(\R) \cdot S(\R)'$, where $S(\R)'$ is the image of $S_\tx{sc}(\R) \to S(\R)$. There is a unique admissible isomorphism $j : S \to T$ mapping $\gamma$ to $\delta$.
+	Let $T \subset G$ be the centralizer of $\delta$ and let $S \subset H$ be the centralizer of the image $\gamma \in H(\R)$ of $\dot\gamma$. Then $\gamma \in Z_H(\R) \cdot S(\R)'$, where $S(\R)'$ is the image of $S_\tx{sc}(\R) \to S(\R)$. There is a unique admissible isomorphism $j : S \to T$ mapping $\gamma$ to $\delta$. The induced isomorphism $X_*(S) \to X_*(T)$ identifies the coroot lattice $Q^\vee(S,H)$ with a sublattice of the coroot lattice $Q^\vee(T,G)$, and hence restricts to a homomorphism $X_*(S_\tx{sc}) \to X_*(T_\tx{sc})$. This means that $j : S(\R) \to T(\R)$ maps $S(\R)'$ into $T(\R)'$. This reduces to showing that $j$ maps $Z_H(\R)$ to $Z_G(\R) \cdot T(\R)'$. For this we recall that, since the discrete parameter $\varphi$ factors through $H$, $H$ is an elliptic endoscopic group, i.e. $Z_H(\R)/Z_G(\R)$ is compact. Thus the image of $Z_H(\R)$ in $T(\R)$ lies in $Z_G(\R) \cdot T_c(\R)$, where $T_c(\R)$ is the maximal anisotropic sub torus in $T$.
 	
 	\warn{finish}
   \end{proof}
@@ -1134,7 +1135,7 @@ If Theorem \ref{thm:main2} holds for all elliptic $\delta$, then it holds for al
 
 		We now claim that the right-hand side of the identity of Theorem \ref{thm:main2} is also has those properties. Invariance (under conjugation by $G(\R)$) follows from the corresponding property of the transfer factor $\Delta(\dot\gamma,\delta)$ in the variable $\delta$. 
 
-		To see boundedness, we note first that we have already normalized the characters by $|D_T|^{1/2}$, so we need to show that the right-hand side is bounded. For any fixed $\delta$, there are only finitely many $\dot\gamma$ with $\Delta(\dot\gamma,\delta) \neq 0$, and in fact their number is bounded by $|\Omega(T,G)|$. The term $\Delta_I(\dot\gamma,\dot\delta)$ is obtained by evaluating a character of a Galois cohomology group on an element of that group. The result is a root of unity. The term $\Delta_{III}(\dot\gamma,\dot\delta)$ is a \warn{unitary!!!} character of a cover of the torus $T(\R)$. 
+		To see boundedness, we note first that we have already normalized the characters by $|D_T|^{1/2}$, so we need to show that the right-hand side is bounded. For any fixed $\delta$, there are only finitely many $\dot\gamma$ with $\Delta(\dot\gamma,\delta) \neq 0$, and in fact their number is bounded by $|\Omega(T,G)|$. The values of the transfer factor are roots of unity (\cite[Lemma 4.3.3]{KalHDC}). The boundedness of the right-hand side now follows from the boundedness of $S\Theta_{\varphi'}$. 
 
 		\warn{remains to check eigen}
 		
