@@ -303,6 +303,22 @@ We explain the notation. Pull back $\tau$ to a character of $S_\tx{sc}(\R)_G$, w
 
 In the second sum we have set $\tau'=\tau \cdot \rho_B^{-1}$, and $d_\tau'=d_\tau \cdot \rho_B^{-1}$, cf. \eqref{eq:dgb}. In this way, both numerator and denominator are functions of $S(\R)$. Note that $\rho_B$ takes values in $\mb{S}^1$ because $S$ is elliptic.
 
+
+It is worth pointing out that Harish-Chandra worked with a slightly different notion of a reductive group, adapted to the language of real Lie groups. His arguments often assumed the group to be connected (in the analytic topology) and \emph{acceptable}, which means that half-sum of the positive roots is analytically integral, i.e. it becomes a character of the complex points of a maximal torus. These conditions are inconvenient when one works with groups of the form $G(\R)$ for a connected reductive algebraic $\R$-group $G$, which are in general neither connected in the analytic topology nor acceptable. However, one can reduce to the setting of Harish-Chandra by the following lemma, based on the fact that $G(\R)$ is both connected and acceptable when $G$ is a simply connected semi-simple algebraic $\R$-group.
+
+\begin{lem} \label{lem:charsupp}
+	Let $\pi$ be an irreducible discrete series representation of $G(\R)$. Let $G(\R)'$ denote the image of the natural map $G_\tx{sc}(\R) \to G(\R)$. The restriction of $\pi$ to $Z_G(\R) \cdot G(\R)'$ is a finite direct sum of irreducible representations. If $\pi'$ is any one of them, then its restriction to $G_\tx{sc}(\R)$ is discrete series, and $\pi$ equals the induction of $\pi'$. In particular, the character of $\pi$ is supported on $Z_G(\R) \cdot G(\R)'$.
+\end{lem}
+\begin{proof}
+	Since $\pi$ is irreducible and $Z_G(\R)\cdot G(\R)'$ is of finite index in $G(\R)$, the restriction of $\pi$ is a finite direct sum of irreducible representations. They all share the same central character, namely that of $\pi$. Therefore, each of them remains irreducible upon restriction to $G(\R)'$. If $\pi'$ is one of them, the square-integrability of its matrix coefficients is inherited from that of $\pi$, and its inflation to $G_\tx{sc}(\R)$ is still square-integrable. By Harish-Chandra's theory, there exists an anisotropic maximal torus $S_\tx{sc}$ of $G_\tx{sc}$ and a regular character $\lambda$ of $S_\tx{sc}(\R)$, with the property that if $\rho$ is half of the sum of the positive roots for the chamber containing $\lambda$, then $\lambda-\rho$ still lies in that chamber.
+
+	The group $G(\R)$ acts by conjugation on $G(\R)'$, hence also on its representations. We claim that the stabilizer of $\pi'$ for this action is $Z_G(\R) \cdot G(\R)'$. Indeed, if an element $g \in G(\R)$ stabilizes $\pi$, it stabilizes the $G(\R)'$-orbit of $\lambda$, hence we can modify it to assume it fixes $\lambda$. Then it lies in the centralizer of $\lambda$, which is an elliptic maximal torus $S(\R)$. Both $S_\tx{ad}(\R)$ and $S_\tx{sc}(\R)$ are compact tori, hence connected, hence the isogeny $S_\tx{sc}(\R) \to S_\tx{ad}(\R)$ is surjective. It follows that the element $g$ lies in $Z_G(\R) \cdot S(\R)'$, where $S(\R)'$ is the image of $S_\tx{sc}(\R) \to S(\R)$.
+
+	We have proved that the stabilizer of $\pi'$ in $G(\R)$ is $Z_G(\R) \cdot G(\R)'$. Therefore the induction of $\pi'$ to $G(\R)$ is irreducible, and since there is a non-trivial map between it and $\pi$, this map must be an isomorphism.
+\end{proof}
+
+With this translation to the setting of connected acceptable groups, the discussion of discrete series representations and their characters comes from \cite[Theorem 3]{HCDSI}.
+
 % \subsection{Orbital integrals} \label{sub:orbit}
 
 % Let $\gamma \in G(\R)_\tx{sr}$ be a strongly regular semi-simple element, i.e. one whose centralizer is a maximal torus $T$. Choose Haar measures $dg$ and $dt$ on $G(\R)$ and $T(\R)$. For a smooth compactly supported function $f : G(\R) \to \C$, its orbital integral is defined as
@@ -1083,14 +1099,10 @@ If Theorem \ref{thm:main2} holds for all elliptic $\delta$, then it holds for al
 
   Again the proofs of 1. and 2. are essentially the same.
 
-  \underline{Step 1:} Both sides are supported on $Z_G(\R) \cdot G_\tx{der}(\R)^0$, and transform by the same character of $Z_G(\R)$. Since $G_\tx{sc}(\R) \to G_\tx{der}(\R)^0$ is surjective, it is enough to compare them after pulling back to $G_\tx{sc}(\R)$. This allows us to assume that $G$ is semi-simple and simply connected.
+  \underline{Step 1:} Let $G(\R)'$ be the image of $G_\tx{sc}(\R) \to G(\R)$. Both sides are supported on $Z_G(\R) \cdot G(\R)'$, and transform by the same character of $Z_G(\R)$. It is thus enough to compare them after pulling back to $G_\tx{sc}(\R)$. This allows us to assume that $G$ is semi-simple and simply connected.
 
   \begin{proof}
-	  We first claim that the character of a discrete series representation of $G(\R)$ is supported on $Z_G(\R) \cdot G_\tx{der}(\R)^0$. \warn{Jeff, can you prove that?}
-
-	  It follows that the function $\Theta_\varphi^{\mf{w},s}$ is supported on $Z_G(\R) \cdot G_\tx{der}(\R)^0$ and transforms under $Z_G(\R)$ by the common central character $\omega_\varphi : Z_G(\R) \to \C^\times$ of all members of $\Pi_\varphi(G)$.
-	  
-	Applying the same reasoning to $H$ we see that the function $S\Theta_{\varphi_\pm}$ is supported on $Z_{H(\R)_\pm} \cdot H(\R)_\pm'$, where $H(\R)_\pm'$ is the image of the natural splitting $H_\tx{sc}(\R) \to H(\R)_\pm$.
+		Lemma \ref{lem:charsupp} shows that the character of a discrete series representation of $G(\R)$ is supported on $Z_G(\R) \cdot G(\R)'$. It follows that the function $\Theta_\varphi^{\mf{w},s}$ is supported on $Z_G(\R) \cdot G(\R)'$ and transforms under $Z_G(\R)$ by the common central character $\omega_\varphi : Z_G(\R) \to \C^\times$ of all members of $\Pi_\varphi(G)$. Applying the same reasoning to $H$ we see that the function $S\Theta_{\varphi_\pm}$ is supported on $Z_{H(\R)_\pm} \cdot H(\R)_\pm'$, where $H(\R)_\pm'$ is the image of the natural splitting $H_\tx{sc}(\R) \to H(\R)_\pm$.
 	
 	Letting $Z_G(\R)$ act on the elliptic maximal torus of $G$ by multiplication, the assumption that the identity of Theorem \ref{thm:main2} holds for elliptic elements implies that both sides of that identity transform under the same character of $Z_G(\R)$.
 
@@ -1101,28 +1113,28 @@ If Theorem \ref{thm:main2} holds for all elliptic $\delta$, then it holds for al
 	\warn{finish}
   \end{proof}
 
-	\underline{Step 2}: The left side is a tempered invariant eigendistribution. Show that the right side is also a tempered invariant eigendistribution.
+	\underline{Step 2}: Both sides are invariant eigendistributions, with the same infinitesimal character, whose values on the regular set are bounded.  
 
 	\begin{proof}
-		We recall here that a \emph{distribution} is a linear functional $T : \mc{C}^\infty_c(G(\R)) \to \C$, continuous for the topology on $\mc{C}^\infty_c(G(\R))$ for which a sequence $f_n$ converges to $f$ if the domains of all $f_n$ and $f$ are contained in a fixed compact subset $\Omega$ and $f_n \to f$ uniformly on $\Omega$ together with all derivatives. 
+		% We recall here that a \emph{distribution} is a linear functional $T : \mc{C}^\infty_c(G(\R)) \to \C$, continuous for the topology on $\mc{C}^\infty_c(G(\R))$ for which a sequence $f_n$ converges to $f$ if the domains of all $f_n$ and $f$ are contained in a fixed compact subset $\Omega$ and $f_n \to f$ uniformly on $\Omega$ together with all derivatives. 
+		%
+		% The distribution $T$ is called \emph{tempered} (see \cite[8.5.1]{WallachRed1}), if it extends to a continuos functional on the Harish-Chandra-Schwartz space $\mc{C}(G(\R))$. This is the space consisting of those smooth functions $f : G(\R) \to \C$ for which the seminorms
+		% \[ p_{x,y,r}(f) = \sup\{(1+\log||g||)^r\cdot \Xi(g)^{-1}\cdot |L(x)R(y)f(g)|\,:\,g \in G(\R)\} \]
+		% indexed by $r \geq 0$ and $x,y \in \mc{U}(\mf{g})$. Here $\Xi$ is the zonal spherical function defined in \cite[3.6.1,4.5.3]{WallachRed1}, and $||-|| : G(\R) \to \R_{>0}$ is any norm on $G(\R)$ in the sense of \cite[2.A.2]{WallachRed1}.
+		%
+		% The distribution is \emph{invariant} if it is invariant under the action of $G(\R)$ by conjugation on itself, hence on functions. It is an \emph{eigendistribution}, if it transforms under a character $\chi : \mf{z} \to \C$ for the action of the center $\mf{z}$ of the universal enveloping algebra of the Lie algebra of $G$. 
+
+		% By Harish-Chandra's regularity theorem \cite[Theorem 8.4.1]{WallachRed1}, an invariant eigendistribution $T$ is represented by an analytic function $F_T$ on $G(\R)_\tx{sr}$ which is locally integrable on $G(\R)$. 
 		
-		The distribution $T$ is called \emph{tempered} (see \cite[8.5.1]{WallachRed1}), if it extends to a continuos functional on the Harish-Chandra-Schwartz space $\mc{C}(G(\R))$. This is the space consisting of those smooth functions $f : G(\R) \to \C$ for which the seminorms
-		\[ p_{x,y,r}(f) = \sup\{(1+\log||g||)^r\cdot \Xi(g)^{-1}\cdot |L(x)R(y)f(g)|\,:\,g \in G(\R)\} \]
-		indexed by $r \geq 0$ and $x,y \in \mc{U}(\mf{g})$. Here $\Xi$ is the zonal spherical function defined in \cite[3.6.1,4.5.3]{WallachRed1}, and $||-|| : G(\R) \to \R_{>0}$ is any norm on $G(\R)$ in the sense of \cite[2.A.2]{WallachRed1}.
-		
-		The distribution is \emph{invariant} if it is invariant under the action of $G(\R)$ by conjugation on itself, hence on functions. 
-		
-		It is an \emph{eigendistribution}, if it transforms under a character $\chi : \mf{z} \to \C$ for the action of the center $\mf{z}$ of the universal enveloping algebra of the Lie algebra of $G$. 
+		%This distribution is tempered if and only if the function $F_T$ satisfies the following inequality, see \cite[Theorem 8.6.1]{WallachRed1}
+		%\[ |D_T(x)|^{1/2} \cdot |F_T(x)| \leq C(1+\log||x||)^d \]
+		%for some fixed constants $c \geq 0$, $D \geq 0$, and all strongly regular $x \in G(\R)$.
 
-		By Harish-Chandra's regularity theorem \cite[Theorem 8.4.1]{WallachRed1}, an invariant eigendistribution $T$ is represented by a an analytic function $F_T$ on $G(\R)_\tx{sr}$ which is locally integrable on $G(\R)$. This distribution is tempered if and only if the function $F_T$ satisfies the following inequality, see \cite[Theorem 8.6.1]{WallachRed1}
-		\[ |D_T(x)|^{1/2} \cdot |F_T(x)| \leq C(1+\log||x||)^d \]
-		for some fixed constants $c \geq 0$, $D \geq 0$, and all strongly regular $x \in G(\R)$.
+		It is known \cite[Theorem 3]{HCDSI} that the un-normalized character of a discrete series representation $\pi$ of a $G(\R)$ is represented by a conjugation-invariant function $\Theta$ which is an eigenfunction for the center $\mf{z}$ of the universal enveloping algebra with respect to the character $\mu : \mf{z} \to \C$ corresponding to $d\tau$, where $(S,\tau)$ is the Harish-Chandra parameter of $\pi$, and such that the normalized function $|D_T|^{1/2}\Theta$ is bounded. These statements carry over to the left-hand side of the identity of Theorem \ref{thm:main2}, which is just a complex linear combination of such functions.
 
-		It is known that the character of a discrete series representation of a semi-simple group is a tempered invariant distribution, see \cite[Lemma 8.5.2]{WallachRed1}. In fact, it is an eigendistribution for the infinitesimal character of $\pi$, which is the $\Omega(S,G)$-orbit $[d\tau]$ of $d\tau_\pi$ \warn{Reference?}. Therefore, the virtual sum $\Theta_\varphi^{\mf{w},s}$ is also a tempered invariant eigendistribution with infinitesimal character $[d\tau]$.
+		We now claim that the right-hand side of the identity of Theorem \ref{thm:main2} is also has those properties. Invariance (under conjugation by $G(\R)$) follows from the corresponding property of the transfer factor $\Delta(\dot\gamma,\delta)$ in the variable $\delta$. 
 
-		We now claim that the right-hand side of the identity of Theorem \ref{thm:main2} is also a tempered invariant eigendistribution with the same infinitesimal character. Invariance (under conjugation by $G(\R)$) follows from the corresponding property of the transfer factor $\Delta(\dot\gamma,\delta)$ in the variable $\delta$.
-
-		To see temperedness, we note first that we have already normalized the characters by $|D_T|^{1/2}$, so the estimate we need is $|F_T(\delta)| \leq C(1+ \log||\delta||_G)^d$, where $F_T$ is the function on the right hand side of the identity of Theorem \ref{thm:main2}. We know $|S\Theta(\dot\gamma)| \leq C(1+\log||\gamma||_H)^d$. For any fixed $\delta$, there are only finitely many $\dot\gamma$ with $\Delta(\dot\gamma,\delta) \neq 0$, and in fact their number is bounded by $|\Omega(T,G)|$. The term $\Delta_I(\dot\gamma,\dot\delta)$ is obtained by evaluating a character of a Galois cohomology group on an element of that group. The result is a root of unity. The term $\Delta_{III}(\dot\gamma,\dot\delta)$ is a \warn{unitary!!!} character of a cover of the torus $T(\R)$. \warn{It remains to relate $||-||_G$ to $||-||_H$.}
+		To see boundedness, we note first that we have already normalized the characters by $|D_T|^{1/2}$, so we need to show that the right-hand side is bounded. For any fixed $\delta$, there are only finitely many $\dot\gamma$ with $\Delta(\dot\gamma,\delta) \neq 0$, and in fact their number is bounded by $|\Omega(T,G)|$. The term $\Delta_I(\dot\gamma,\dot\delta)$ is obtained by evaluating a character of a Galois cohomology group on an element of that group. The result is a root of unity. The term $\Delta_{III}(\dot\gamma,\dot\delta)$ is a \warn{unitary!!!} character of a cover of the torus $T(\R)$. 
 
 		\warn{remains to check eigen}
 		
@@ -1131,7 +1143,7 @@ If Theorem \ref{thm:main2} holds for all elliptic $\delta$, then it holds for al
 
 
 
-	\underline{Step 3:} Apply the Harish-Chandra uniqueness theorem, \cite[Theorem 2]{HCDSI}.
+	\underline{Step 3:} We have shown that both sides of the identity of Theorem \ref{thm:main2} are invariant functions on $G(\R)_\tx{sr}$, transform under the same character of $\mf{z}$, and are bounded (having already been normalized). We are assuming that they take equal values on all elliptic elements. Therefore \cite[Lemma 44]{HCDSI} implies that they are equal.
 \end{proof}
 
 \subsection{The left hand side}
