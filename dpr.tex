@@ -1100,7 +1100,7 @@ If Theorem \ref{thm:main2} holds for all elliptic $\delta$, then it holds for al
 
   Again the proofs of 1. and 2. are essentially the same.
 
-  \underline{Step 1:} Let $G(\R)'$ be the image of $G_\tx{sc}(\R) \to G(\R)$. Both sides are supported on $Z_G(\R) \cdot G(\R)'$, and transform by the same character of $Z_G(\R)$. It is thus enough to compare them after pulling back to $G_\tx{sc}(\R)$. This allows us to assume that $G$ is semi-simple and simply connected.
+  \underline{Step 1:} Let $G(\R)'$ be the image of $G_\tx{sc}(\R) \to G(\R)$. Both sides are supported on $Z_G(\R) \cdot G(\R)'$, and transform by the same character of $Z_G(\R)$. 
 
   \begin{proof}
 	Letting $Z_G(\R)$ act on the elliptic maximal torus of $G$ by multiplication, the assumption that the identity of Theorem \ref{thm:main2} holds for elliptic elements implies that both sides of that identity transform under the same character of $Z_G(\R)$. It thus remains to prove the support condition.	
@@ -1120,7 +1120,14 @@ If Theorem \ref{thm:main2} holds for all elliptic $\delta$, then it holds for al
 	We apply this general consideration to the case $S_1=S$, $T_1=T$, $j_1=j$, $S_2$ the maximal elliptic torus in $H$, $T_2$ the maximal elliptic torus in $G$, and $j_2 : S_2 \to T_2$ any admissible isomorphism.
   \end{proof}
 
-	\underline{Step 2}: Both sides are invariant eigendistributions, with the same infinitesimal character, whose values on the regular set are bounded.  
+With Step 1 complete, it is thus enough to compare both sides of the identity of Theorem \ref{thm:main2} after pulling back to $G_\tx{sc}(\R)$. The pull-back of $\Theta_{\varphi}^{\mf{w},s}$ to $G_\tx{sc}(\R)$ is equal to the analogous function for that group. Indeed, the $L$-group of $G_\tx{sc}$ is $^LG/Z(\hat G)$, so we can compose $\varphi$ with the projection modulo $Z(\hat G)$ and map $s$ modulo $Z(\hat G)$. The Whittaker datum $\mf{w}$ for $G$ produces one for $G_\tx{sc}$ by pull-back, and the function $\Theta_{\varphi}^{\mf{w},s}$ for $G_\tx{sc}$ equals the pullback to $G_\tx{sc}$ of the function $\Theta_{\varphi}^{\mf{w},s}$ for $G$.
+
+The same argument applies to the right-hand side of the identity of Theorem \ref{thm:main2}. We can replace $\mc{H}$ by $\mc{H}/Z(\hat G)$ to obtain an endoscopic pair for $G_\tx{sc}$. The transfer factors for that pair and $G_\tx{sc}$ are the pull-back of the transfer factors for $G$.
+
+This allows us to assume that $G$ is semi-simple and simply connected in what follows, and hence apply the results of \cite{HCDSI}.
+
+
+  \underline{Step 2}: Both sides are invariant eigendistributions, with the same infinitesimal character, whose values on the regular set are bounded.  
 
 	\begin{proof}
 		% We recall here that a \emph{distribution} is a linear functional $T : \mc{C}^\infty_c(G(\R)) \to \C$, continuous for the topology on $\mc{C}^\infty_c(G(\R))$ for which a sequence $f_n$ converges to $f$ if the domains of all $f_n$ and $f$ are contained in a fixed compact subset $\Omega$ and $f_n \to f$ uniformly on $\Omega$ together with all derivatives. 
@@ -1143,7 +1150,11 @@ If Theorem \ref{thm:main2} holds for all elliptic $\delta$, then it holds for al
 
 		To see boundedness, we note first that we have already normalized the characters by $|D_T|^{1/2}$, so we need to show that the right-hand side is bounded. For any fixed $\delta$, there are only finitely many $\dot\gamma$ with $\Delta(\dot\gamma,\delta) \neq 0$, and in fact their number is bounded by $|\Omega(T,G)|$. The values of the transfer factor are roots of unity (\cite[Lemma 4.3.3]{KalHDC}). The boundedness of the right-hand side now follows from the boundedness of $S\Theta_{\varphi'}$. 
 
-		\warn{remains to check eigen}
+		To check the eigendistribution property for the function $\delta \mapsto \sum_\gamma \Delta(\dot\gamma,\delta)S\Theta_{\varphi'}(\dot\gamma)$ we fix $\delta$ and let $T \subset G$ be its centralizer. To apply a differential operator to this function at $\delta$, it is enough to consider the function in a neighborhood of $\delta$. Let $\gamma_1\dots,\gamma_n$ be representatives for the stable classes in $H(\R)$ that transfer to the stable class of $\delta$ and let $S_1,\dots,S_n \subset H$ be their centralizers. Let $j_i : T \to S_i$ be the unique admissible isomorphism with $j_i(\delta)=\gamma_i$. There is a connected open neighborhood $U \subset T(\R)$ of $\delta$ so that, for each $\delta' \in U$, $j_1(\delta'),\dots,j_n(\delta')$ is a set of representatives for the stable classes in $H(\R)$ that transfer to $\delta'$, and such that the double cover $S_i(\R)_x$ splits over $j_i(U)$. We let $U_i \subset S_i(\R)_x$ be an arbitrary choice of one of the two connected components of the preimage of $j_i(U)$ in $S_i(\R)_x$. Then $j_i$ lifts to an isomorphism $U \to U_i$, which we still call $j_i$. The restriction to $U$ of the function $\delta \mapsto \sum_\gamma \Delta(\dot\gamma,\delta)S\Theta_{\varphi'}(\dot\gamma)$ is now given by $\delta' \mapsto \sum_{i=1}^n \Delta(j_i(\delta'),\delta')S\Theta_{\varphi'}(j_i(\delta'))$. 
+		
+		It will be enough to consider each summand individually. By \cite[Corollary 4.3.4]{KalHDC}, the function $\delta' \mapsto \Delta(j_i(\delta'),\delta')$ is locally constant, so after possibly shrinking $U$ we may assume that it is constant. Thus the summand under consideration becomes $\delta' \mapsto S\Theta_{\varphi'}(j_i(\delta'))$. The infinitesimal character of this function is the transport under $j_i : \mf{t} \to \mf{s}_i$ of the infinitesimal character of $S\Theta_{\varphi'}$. We claim that this transport equals the infinitesimal character of $\Theta_{\varphi}^{\mf{w},s}$.
+
+		\warn{Jeff, here I need the following statement: Let $F : G(\R)_\tx{sr} \to \C$ be a smooth class function. Let $X \in \mc{Z}(\mf{g})$. For a maximal torus $T \subset G$ let $h : \mc{Z}(\mf{g}) \to \mc{U}(\mf{t})^{\Omega(T,G)}$ be the Harish-Chandra isomorphism. Then, for any $\delta \in T(\R)$ we have $(XF)(\delta) = (h(X)F)(\delta)$.}
 		
 	\end{proof}
 
