@@ -468,7 +468,7 @@ The Iwasawa decomposition $\tx{Lie}(G_0)=\mf{a} \oplus\mf{n} \oplus \mf{k}$ show
 \end{proof}
 
 
-\subsection{The Weyl integration formula and its stable analog} 
+\subsection{The Weyl integration formula and its stable analog} \label{sub:weylint}
 
 In this section we work with an arbitrary local field $F$ of characteristic zero. While our intended application is $F=\R$, the arguments work for an arbitrary $F$ and do not admit any significant simplification for $F=\R$, so we take this opportunity to record the statement for a general $F$. 
 
@@ -532,22 +532,23 @@ We say a character $\eta: N(\R) \to \C^\times$ is \emph{non-degenerate} if its d
  For  $X \in i\bar\n(\R)$ we  write $X=\sum_\alpha X_{-\alpha}$ where the sum runs over the set of absolute positive roots and $X_{-\alpha} \in \mf{g}_{-\alpha}$. Then $\eta_X$ is non-degenerate if and only if $X_{-\alpha} \neq 0$ for all simple roots $\alpha$, i.e. if and only if $X$ is a regular nilpotent element.
 
 By a  {\it Whittaker datum} we mean a $G(\R)$-conjugacy class of  pairs  $(B,\eta)$ where $B$ is a Borel subgroup defined over $\R$
-and $\eta$ is a non-degenerate unitary character of $N(\R)$. We  write $\w=[(B,\eta)]$ for the $G(\R)$-conjugacy class of $(B,\eta)$.
+and $\eta$ is a non-degenerate unitary character of $N(\R)$. We  write $\w=[(B,\eta)]$ for the $G(\R)$-conjugacy class of $(B,\eta)$. We will now give two constructions of Whittaker data.
 
-Suppose $X\in i\g(\R)$ is a regular nilpotent element. Let $\overline B$ be the unique Borel subgroup 
-containing $X$. Then $\overline B$ is defined over $\R$. Let $B$ be an $\R$-Borel subgroup that is opposite to $\bar B$, i.e. such that $B \cap \bar B$ is a maximal torus. The Whittaker datum defined by $X$ is  $\w_X=[(B,\eta_X)]$.
+The first construction starts with a regular nilpotent element $X\in i\g(\R)$. Let $\overline B$ be the unique Borel subgroup 
+containing $X$. Then $\overline B$ is defined over $\R$. Let $B$ be an $\R$-Borel subgroup that is opposite to $\bar B$, i.e. such that $B \cap \bar B$ is a maximal torus. The Whittaker datum defined by $X$ is  $\w_X=[(B,\eta_X)]$. We did not record the choice of $B$ in the notation $\w_X$ because the $\bar B(\R)$-conjugacy class of $(B,\eta_X)$ is independent of $B$: the choice of $B$ is equivalent to a choice of a maximal torus $T \subset \bar B$ defined over $\R$, because $T$ is determined by $B$ as $T=B \cap \bar B$ and $B$ is determined by $T$ as the unique $T$-opposite of $\bar B$. But all maximal $\R$-tori in $\bar B$ are conjugate under $\bar B(\R)$ by \cite[Theorem 19.2]{Bor91}. 
 
-\begin{lem}
-\label{l:wX}
-	The Whittaker datum $\w_X$ depends only on the $G(\R)$-conjugacy class of $X$.
-\end{lem}
-\begin{proof}
-The choice of $B$ is equivalent to a choice of a maximal torus $T \subset \bar B$ defined over $\R$, because $T$ is determined by $B$ as $T=B \cap \bar B$ and $B$ is determined by $T$ as the unique $T$-opposite of $\bar B$. But all maximal $\R$-tori in $\bar B$ are conjugate under $\bar B(\R)$ by \cite[Theorem 19.2]{Bor91}.
-\end{proof}
+% \begin{lem}
+% \label{l:wX}
+% 	The map $X \mapsto \w_X$ is a well-defined $G_\tx{ad}(\R)$-equivariant bijection between the set of $G(\R)$-conjugacy classes of regular nilpotent elements of $\g(\R)$ and the set of Whittaker data $\w_X$.
+% \end{lem}
+% \begin{proof}
+% We first show that the $\bar B(\R)$-conjugacy class of $(B,\eta_X)$ depends only $X$. 
 
-Here is another way to obtain Whittaker data.  Let
-$\P=(T,B,\{X_\alpha\})$ be an $\R$-pinning of $G$.  The element
-$X_\alpha$ specifies an isomorphism $u_\alpha$ from $\mb{G}_a$ to the
+% It is clear that if we conjugate $X$ by $g \in G_\tx{ad}(\R)$-conjugacy then $\w_X$ is also conjugated by $g$. Hence we have a well-defined map as stated.
+% \end{proof}
+
+The second construction starts with a unitary character $\Lambda$ of $\R$ and an $\R$-pinning $\P=(T,B,\{X_\alpha\})$ of $G$.  The element
+$X_\alpha$ specifies an isomorphism of $\C$-groups $u_\alpha$ from $\mb{G}_a$ to the
 root group $U_\alpha$ of $G$ associated to the absolute root $\alpha$,
 namely the unique isomorphism whose differential maps $1$ to
 $X_\alpha$. If $N$ is the unipotent radical of $B$ then the
@@ -556,34 +557,33 @@ an isomorphism of complex algebraic groups, which we compose with
 $(u_\alpha)$. The inverse of the result, composed with the product map
 $\prod_\alpha \mb{G}_a \to \mb{G}_a$, becomes a homomorphism of
 algebraic groups $N/[N,N] \to \mb{G}_a$ defined over $\R$, which leads
-to a homomorphism $\eta_{\P}:N(\R) \to \R$.
-
-Now fix a non-trivial unitary character $\Lambda$ of $\R$. Then $\eta_{\P,\Lambda}=\Lambda\circ \eta_{\P}$ is a non-degenerate unitary character of $N(\R)$.
+to a homomorphism $\eta_{\P}:N(\R) \to \R$. Then $\eta_{\P,\Lambda}=\Lambda\circ \eta_{\P}$ is a non-degenerate unitary character of $N(\R)$.
 The $G(\R)$-conjugacy class of $\eta_{\P,\Lambda}$ only depends on the $G(\R)$-conjugacy class of  $\P$.  Write $\w_{\P,\Lambda}$ for the Whittaker data
 $[(B,\eta_{\P,\Lambda}]$.
 
 \begin{lem} \label{lem:w1}
 \begin{enumerate}
-\item Fix a non-trivial unitary character $\Lambda$ of $\R$. The map $\P\mapsto \w_{\P,\Lambda}$ is a bijection from $G(\R)$-conjugacy classes of real pinnings to Whittaker
-  data.
- 	\item Set $\Lambda(x)=e^{ix}$. Then $\w_{\P,\Lambda}=\w_{\overline X}$, where $\P=(T,B,\{X_\alpha\})$ and $\overline X=i\sum_{\alpha\in\Delta}X_{-\alpha}$,
-	 and $X_{-\alpha}$ satisfies $[X_\alpha,X_{-\alpha}]=H_\alpha$.
+\item Fix a non-trivial unitary character $\Lambda$ of $\R$. The map $\P\mapsto \w_{\P,\Lambda}$ is a $G_\tx{ad}(\R)$-equivariant bijection from $G(\R)$-conjugacy classes of real pinnings to Whittaker data.
+\item The map $X \mapsto \w_X$ is a $G_\tx{ad}(\R)$-equivariant bijection from the set of $G(\R)$-conjugacy classes of regular nilpotent elements of $\g(\R)$ to the set of Whittaker data of $G$.
+\item Set $\Lambda(x)=e^{ix}$. Then $\w_{\P,\Lambda}=\w_{\overline X}$, where $\P=(T,B,\{X_\alpha\})$ and $\overline X=i\sum_{\alpha\in\Delta}X_{-\alpha}$, and $X_{-\alpha}$ satisfies $[X_\alpha,X_{-\alpha}]=H_\alpha$.
 \end{enumerate}
 \end{lem}
 \begin{proof}
-Since all Borel subgroups of $G(\R)$ are $G(\R)$-conjugate, fix a Borel subgroup $B$ defined over $\R$. Then the first statement is equivalent to:
-there is a bijection between 
-the sets of positive root vectors $\{X_\alpha\}$, modulo conjugation by $T(\R)$, and non-degenerate characters of $N(\R)$, modulo the action of $T(\R)$.
-We leav the straightforward verification of this bijection to the reader.
+The $G_\tx{ad}(\R)$-equivariance of the maps in 1) and 2) is clear. We need to prove the bijectivity. The proof for 2) will use 3).
+
+1) Since all Borel subgroups of $G(\R)$ are $G(\R)$-conjugate, fix a Borel subgroup $B$ defined over $\R$. Then the first statement is equivalent to:
+there is a bijection between the $\Gamma$-stable sets of positive root vectors $\{X_\alpha\}$, modulo conjugation by $T(\R)$, and non-degenerate characters of $N(\R)$, modulo the action of $T(\R)$. \warn{better give a short indication, rathar than leaving to reader}.
 
  
-Set $X_-=\sum_{\alpha \in \Delta} X_{-\alpha}$. Then $X_-$ is a regular nilpotent element of the Lie algebra of $G$ and is fixed by the Galois action, hence an $\R$-point. It lies in $\bar\n$, the Lie algebra of the unipotent radical of the Borel subgroup $T$-opposite to $B$. Thus $\bar X \in i\bar\n(\R)$ is also regular nilpotent. 
+3) Set $X_-=\sum_{\alpha \in \Delta} X_{-\alpha}$. Then $X_-$ is a regular nilpotent element of the Lie algebra of $G$ and is fixed by the Galois action, hence an $\R$-point. It lies in $\bar\n$, the Lie algebra of the unipotent radical of the Borel subgroup $T$-opposite to $B$. Thus $\bar X \in i\bar\n(\R)$ is also regular nilpotent. 
 
 Given $Y \in \n(\R)$ write it as $\sum_{\alpha \in \Delta} y_\alpha \cdot X_\alpha + Y'$ with $Y' \in [\n,\n](\R)$. Then
 we have
 \[ \kappa(Y, X_-)= \sum_{\alpha \in \Delta} y_\alpha \kappa(X_\alpha,X_{-\alpha}) =\sum_{\alpha \in \Delta} y_\alpha, \]
 therefore
 \[ \eta_{\bar X}(\exp(Y)) = e^{\kappa(Y,\bar X)}=e^{i \kappa(Y,X_-)} = \Lambda(\sum_{\alpha \in\Delta}y_\alpha) = \eta_{\P,\Lambda}(\exp(Y)). \]
+
+2) \warn{todo}
 \end{proof}
 
 It is helpful to understand the set of all Whittaker data.
@@ -600,7 +600,7 @@ acts by automorphisms on $G(\R)$, and therefore  induces an action of $Q(G(\R))$
 \begin{enumerate}
 \item the set of Whittaker data;
 \item the set of regular nilpotent orbits in $\g(\R)$;
-\item the set of generic discrete series representations in an L-packet.
+\item the set of generic discrete series representations in an L-packet. \warn{it's too early to talk about $L$-packets here, we will only construct them in the next section. it's also not necessary in my view}
 \end{enumerate}
 \end{lem}
 
@@ -609,11 +609,21 @@ See \cite[Lemma 14.14]{AV92}.
 \begin{proof}
 	  We use Lemma \ref{lem:w1}(1) and the fact that $\mc{P} \mapsto \w_{\mc{P},\Lambda}$ is $G_\tx{ad}(\R)$-equivariant, to reduce to the transitivity of the action of $G_\tx{ad}(\R)$ on the set of $\R$-pinnings. Since all Borel pairs over $\R$ are conjugate under $G(\R)$, this reduces the statement to the simple transitivity of the action of $T_\tx{ad}(\R)$ on the possible choices of non-zero simple root vectors. If the simple root $\alpha$ is real, then so is the corresponding fundamental coweight $\varpi_\alpha$, which then gives a 1-parameter subgroup $\R^\times \to T_\tx{ad}(\R)$, which clearly acts simply transitively on $\mf{g}_\alpha(\R) \sm \{0\}$. If the simple root is complex, then a pair $(X_\alpha,X_{\sigma\alpha})$ contributing to the pinning is an element of $(\mf{g}_\alpha \oplus \mf{g}_{\sigma\alpha})(\R) = \C$. The fundamental coweight $\varpi_\alpha$ induces a 1-parameter subgroup $\C^\times \to T_\tx{ad}(\R)$ which again acts simply transitively on $(\mf{g}_\alpha \oplus \mf{g}_{\sigma\alpha})(\R)$.
 
-The second assertion is immediate from Lemma \ref{l:wX}.
+The second assertion is immediate from Lemma \ref{lem:w1}(2).
 
 For the third assertion\dots
 \end{proof}
-  
+
+For the next lemma recall the notation $\Omega_\R(S,G)$ from \S\ref{sub:weylint}.
+
+\begin{lem} \label{lem:g2}
+	Assume there exists and fix an elliptic maximal torus $S \subset G$. The inclusion $N(S_\tx{ad},G_\tx{ad})(\R) \to G_\tx{ad}(\R)$ induces a bijection 
+	\[ \Omega_\R(S_\tx{ad},G_\tx{ad})/\Omega_\R(S,G) \to Q(G(\R)). \]
+\end{lem}
+\begin{proof}
+	This follows from the fact that any two elliptic maximal tori of $G$ are conjugate under $G(\R)$ \warn{ref}.
+\end{proof}
+
 
 Suppose $X\in\g$ is a regular nilpotent element. Choose an
 $SL(2)$-triple $[X,H,Y]$ \cite[Chapter 3]{CM}.  The {\it Kostant Section} $\K(X)$ of
@@ -636,7 +646,7 @@ Suppose $\pi$ is an irreducible essentially discrete series representation and w
 
 \begin{pro}
   \label{p:whittaker}
-Let $\pi$ be a  generic discrete series representation,
+Let $\pi$ be a discrete series representation,
 and let $\O_\pi=G(\R)\cdot H_\pi$.
 Suppose $\w=\w_X$ is a Whittaker datum for some regular nilpotent element $X\in i\g(\R)$.
 Then $\pi$ is $\w$-generic if and only if $\O_\pi$ meets the Kostant section of $X$.
@@ -665,6 +675,7 @@ Then $\Ad(\phi(\mathrm{diag}(t,\frac 1t))(X)=t^2X$.)
 The latter of these facts implies that there exists $h \in G(\R)$ with $t_i^{-1}X=\tx{Ad}(h)X$, and we see $t_i^{-1}\K(X)=\tx{Ad}(h)\K(X)$. Thus $\O_\R$ intersects $\K(X)(\R)$ as claimed.
 \end{proof}
 
+
 \begin{proof}[Proof of Proposition \ref{p:whittaker}]
 
 Suppose $\pi$ is $\w_X$-generic.
@@ -674,22 +685,18 @@ We have $X\in \WF(\pi)$ according to \cite[Theorem A]{matumoto} and moreover $\W
 Then $\K(X)$ meets $\O_\pi$ by 
 Lemma \ref{lem:g1} applied with $i\g'(\R)^*$ in place of $\g(\R)$.
 
-For the opposite implication suppose $\O_\pi$ meets $\K(Y)$ for some regular nilpotent element $Y$.
-Since $\pi$ is generic, $\pi$ is $\w_X$-generic for some $X$. By the previous argument we know $\O_\pi$
-meets $\K(X)$ for some $X$; it is enough to show $Y$ is $G(\R)$ conjugate to $X$.
-We proceed by contradiction. If $Y$ and $X$ are in different $G(\R)$-orbits, then by Lemma \ref{l:Q} 
-$G(\R)\cdot Y=q(G(\R)\cdot X)$ for some $q\ne 1$ in $Q(G(\R))$. Since $Q(G(\R))$ is acting by automorphisms on $G(\R)$, 
-we see $\pi^q$ is $\w_Y$-generic. By the previous argument this implies $\O_{\pi^q}$ meets $\kappa(Y)$. 
-But we have already assumed $\O_\pi$ meets $\kappa(Y)$. Recall $\kappa(Y)$ meets every regular complex orbit in exactly one point.
-Since $\O_\pi$ and $\O_{\pi^q}=q\O_\pi$ are conjugate by $G(\C)$ this implies $\O_{\pi^q}=\O_\pi$. 
-Then $\pi^q\simeq\pi$, which contradicts Lemma \ref{l:Q}.
+For the opposite implication consider the Harish-Chandra parameter $(S,\tau)$ of $\pi$. Recall that $\Omega(S,G)$ acts on $S$ by $\R$-automorphisms, due to the ellipticity of $S$. Applying an element of $\Omega(S,G)$ to $\tau$ we obtain $\tau_1$ with the property that the element $H_1 \in i\mf{s}(\R)$ corresponding to $d\tau_1$ under $\kappa$ lies in a Weyl chamber whose simple roots are non-compact (such Weyl chambers exist). By \warn{ref} the corresponding representation $\pi_1$ is generic with respect to some Whittaker datum. By Lemmas \ref{lem:g1} and \ref{lem:g2} we can apply an element of $\Omega_\R(S_\tx{ad},G_\tx{ad})$ to $\tau_1$ to obtain $\tau_2$, such that the corresponding $\pi_2$ is $\w_X$-generic. By construction there is $n \in N(S,G)(\C)$ such that $\tau_2=\tx{Ad}(n)\tau$.
 
-
-
-
-
+By the already proved first implication of this proposition, $\O_{\pi_2}$ meets $K(X)$. By assumption $O_\pi$ also meets $K(X)$. Thus, the $G(\R)$-orbits of $H_\pi$ and $H_{\pi_2}=\tx{Ad}(n)H_\pi$ meet $K(X)$. Since the $G(\C)$-orbit of $H_\pi$ meets $K(X)$ in a unique point we conclude that $H_\pi$ and $H_{\pi_2}=\tx{Ad}(n)H_\pi$ lie in the same $G(\R)$-orbit, thus (by regularity) in the same $N(S,G)(\R)$-orbit. Modifying $n$ by $N(S,G)(\R)$ arranges $H_\pi=H_{\pi_2}$, hence $\tau=\tau_2$, without changing $\pi_2$, and we conclude $\pi=\pi_2$.
 %
 %\warn{Uniqueness isn't so easy. There is a reference: \cite[Lemma 14.14]{ABV92}. If you want to include a proof, I think the best one uses the associated variety argument, which was deleted as not needed but could be put back. Then: the associated variety of a discrete series is well known (reference...) to be a single orbit, so by the bijection the same holds for the Whittaker model}
+\end{proof}
+
+\begin{cor}
+	Let $\pi$ be a generic discrete series representation. There exists precisely one Whittaker model $\mf{w}$ for which $\pi$ is $\mf{w}$-generic.
+\end{cor}
+\begin{proof}
+	Let $(S,\tau)$ be the Harish-Chandra parameter of $\pi$ and let $H_\pi \in i\mf{s}(\R)$ be the element corresponding to $d\tau$ under $\kappa$. If $\w_1,\w_2$ are two Whittaker models for which $\pi$ is generic, let $w \in \Omega_\R(S_\tx{ad},G_\tx{ad})$ be an element s.t. $w\w_1=\w_2$ by Lemmas \ref{lem:g1} and \ref{lem:g2}. Proposition \ref{p:whittaker} shows that the $G(\R)$-orbits of $H_\pi$ and $wH_\pi$ meet the same Kostant section (associated to $\w_2$.) These $G(\R)$-orbits must then be equal. Modifying $w$ by an element of $\Omega_\R(S,G)$ we see that $H_\pi=wH_\pi$. By regularity of $H_\pi$ this shows $w=1$, but then $\w_2=w\w_1=\w_1$.
 \end{proof}
 
 
@@ -701,8 +708,7 @@ We now mention  a supplementary result, which is well known to the experts, but 
 
 \begin{lem} \label{lem:g2}
     Suppose $\pi=\pi(S,\tau)$ and $\pi'=\pi(S,\tau')$ are generic discrete series representations, which are $\w, \w'$-generic, respectively.
-    Then $\w=\w'$ if and only if $d\tau$ and $d\tau'$ are in the same Weyl chamber. In particular a generic discrete series representation is $\w$-generic
-    for a unique Whittaker datum $\w$.
+    Then $\w=\w'$ if and only if $d\tau$ and $d\tau'$ are in the same Weyl chamber. 
 \end{lem}
 
 Since we don't use this result we skip the proof, and refer the reader to a forthcoming paper on Whittaker models for real groups
