@@ -305,18 +305,17 @@ Thus, we take $\mc{G}$ to be a real Lie group, $\mf{g}(\R)$ its Lie algebra, and
    	\item Let $\mc{G}^\natural$ be the image of $G_\tx{sc}(\R) \to \mc{G}$. Then $[\mc{G}^\natural \cdot Z(\mc{G}):\mc{G}] < \infty$.
 \end{enumerate}
 
-One class of examples of this set-up arise as $\mc{G}=G(\R)$, where $G$ is a connected reductive $\R$-group. Another class of examples comes from the covers $G(\R)_x$ of such groups constructed in \cite{KalHDC} from characters $x : \bar\pi_1(G) \to \C^\times$.
-
-% \begin{lem} A group $\mc{G}$ satisfying the above conditions is in the Harish-Chandra class.
-% \end{lem}
-% \begin{proof}
-% 	Condition (1) of \cite[\S3]{HC-R1} follows from Condition 2. above.
+\begin{lem} A group $\mc{G}$ satisfying the above conditions is in the Harish-Chandra class provided $\pi_0(Z(\mc{G}))$ is finite.
+\end{lem}
+\begin{proof}
+	Condition (1) of \cite[\S3]{HC-R1} follows from Condition 2. above.
 	
-% 	Condition (2) of \cite[\S3]{HC-R1} follows from the fact that the analytic subgroup of $\mc{G}$ corresponding to $[\mf{g},\mf{g}]$ is equal to the image $\mc{G}^\natural$ of $G_\tx{sc}(\R) \to \mc{G}$. Any element of the center of $\mc{G}^\natural$ is therefore the image of an element $x \in G_\tx{sc}(\R)$ that maps trivially to $G_\tx{ad}(\R)$, hence lies in the center of $G_\tx{sc}(\R)$. We conclude that the center of $G_\tx{sc}(\R)$, which is finite, surjects onto the center of $\mc{G}^\natural$.
+	Condition (2) of \cite[\S3]{HC-R1} follows from the fact that the analytic subgroup of $\mc{G}$ corresponding to $[\mf{g},\mf{g}]$ is equal to the image $\mc{G}^\natural$ of $G_\tx{sc}(\R) \to \mc{G}$. Any element of the center of $\mc{G}^\natural$ is therefore the image of an element $x \in G_\tx{sc}(\R)$ that maps trivially to $G_\tx{ad}(\R)$, hence lies in the center of $G_\tx{sc}(\R)$. We conclude that the center of $G_\tx{sc}(\R)$, which is finite, surjects onto the center of $\mc{G}^\natural$.
 
-% 	Condition (3) may not be satisfied!!
-% \end{proof}
+	For condition (3) we use that $\mc{G}^\natural \subset \mc{G}^\circ$ and see that $[\mc{G}^\circ : \mc{G}] \leq [\mc{G}^\natural \cdot Z(\mc{G})^\circ : \mc{G}] \leq [\mc{G}^\natural \cdot Z(\mc{G}) : \mc{G}] \cdot [Z(\mc{G})^\circ:Z(\mc{G})] < \infty$.
+\end{proof}
 
+One class of examples of this set-up arise as $\mc{G}=G(\R)$, where $G$ is a connected reductive $\R$-group. Another class of examples comes from the covers $G(\R)_x$ of such groups constructed in \cite{KalHDC} from characters $x : \bar\pi_1(G) \to \C^\times$. In both cases $\pi_0(Z(\mc{G}))$ is finite, so these groups belong to the Harish-Chandra class.
 
 \begin{dfn}
 	Let $\pi$ be an irreducible admissible representation of $\mc{G}$.
