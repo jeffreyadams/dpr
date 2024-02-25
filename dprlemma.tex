@@ -1,0 +1,138 @@
+\documentclass{article}
+\usepackage {amsmath, amsfonts, amssymb, mathrsfs, amsthm, sectsty,hyphenat,enumitem,calc,url,color,array,tabu}
+%\usepackage{showlabels}
+\usepackage{palatino}
+\usepackage[all]{xy}
+\usepackage[nottoc]{tocbibind}
+\usepackage[toc,page]{appendix}
+\usepackage{tocloft}
+
+\renewcommand\cftsecafterpnum{\vskip2pt}
+\renewcommand\cftsubsecafterpnum{\vskip2pt}
+
+
+\newcommand{\redwarn}[1]{\textcolor{red}{#1}\message{#1}}
+
+
+\setlength{\parindent}{0pt} \setlength{\parskip}{10pt plus 2pt minus 1pt}
+\topmargin=-0.5in \headheight=0in \headsep=0.25in \textheight=9.1in
+\footskip=0.75in
+
+%\input{"Users/kaletha/Work/TexMain/macros.tex"}
+%\input{"C:/Users/Tasho/Documents/Dropbox/Work/TexMain/macros.tex"}
+\input{macros.tex}
+
+
+\newtheorem{thm}{Theorem}[subsection]
+\newtheorem{lem}[thm]{Lemma}
+\newtheorem{pro}[thm]{Proposition}
+\newtheorem{cor}[thm]{Corollary}
+\newtheorem{fct}[thm]{Fact}
+\newtheorem{clm}[thm]{Claim}
+\newtheorem{asm}[thm]{Assumption}
+\newtheorem{cnj}[thm]{Conjecture}
+\newtheorem{exn}[thm]{Expectation}
+\newtheorem{ntt}[thm]{Notation}
+\theoremstyle{definition}
+\newtheorem{dfn}[thm]{Definition}
+\newtheorem{rem}[thm]{Remark}
+\newtheorem{exa}[thm]{Example}
+\newtheorem{cns}[thm]{Construction}
+
+\sectionfont{\center\sc\normalsize}
+\subsectionfont{\bf\normalsize}
+
+\numberwithin{equation}{section}
+\renewcommand{\-}{\hyp{}}
+\hyphenation{co-cycle co-chain co-ho-mo-lo-gy}
+
+\renewcommand{\appendixtocname}{Appendix}
+\renewcommand{\appendixpagename}{\normalsize \center Appendix}
+
+\newcommand{\warn}[1]{{\leavevmode\color{red}[#1]}}
+%definitions by jda
+\newcommand{\inv}{^{-1}}
+\newcommand{\z}{\mathfrak Z}
+\newcommand{\n}{\mathfrak n}
+\newcommand{\s}{\mathfrak s}
+\newcommand{\g}{\mathfrak g}
+\newcommand{\p}{\mathfrak p}
+\renewcommand{\k}{\mathfrak k}
+\renewcommand{\O}{\mathcal O}
+\renewcommand{\P}{\mathcal P}
+\newcommand{\K}{\mathcal K}
+\newcommand{\Op}{\O_p}
+\newcommand{\Oss}{\O_{ss}}
+\newcommand{\wx}{\mathfrak w_X}
+\newcommand{\w}{\mathfrak w}
+\newcommand{\h}{\mathfrak h}
+\newcommand{\Cent}{\mathrm{Cent}}
+\newcommand{\ad}{\mathrm{ad}}
+\newcommand{\WF}{\mathrm{WF}}
+\newcommand{\AV}{\mathrm{AV}}
+\newcommand{\AS}{\mathrm{AS}}
+\newcommand{\KS}{\mathrm{KS}}
+\newcommand{\Cone}{\mathrm{Cone}}
+\newcommand{\AC}{\mathrm{AC}}
+\newcommand{\SL}{\mathrm{SL}}
+\newcommand{\ch}[1]{\negthinspace\negthinspace\negthinspace\phantom{a}^\vee\negthinspace #1}
+
+\begin{document}
+
+\begin{mytitle} A result from Harish Chandra\end{mytitle}
+We assume $G$ is a real, connected, semisimple group. Surely these
+assumptions can be weakened, but this is the setting of some of the
+results we want to quote from Harish Chandra.
+We let $\g=\mathrm{Lie}(G)$ and $G_\C=\g\otimes\C$.
+
+Let $G_r$ be the open set of regular semisimple elements if $G$ (I don't think we need strongly regular here).
+Let $H$ be a Cartan subgroup of $G$, and set
+$H_r=H\cap G_r$.
+Define
+$$
+\Delta(h)=(\det(\Ad(h)\inv -1)|_{\g/\h}\quad (h\in H_r).
+$$
+(I'm pretty sure this is $\pm $ the function denoted $D_T$ in section 2.5).
+
+Let $\z$ be the center of the  universal enveloping algebra, and let $\gamma:\z\rightarrow S(\h)^W$ be the Harish Chandra isomorphism.
+
+
+For $Z\in\z$ write $\partial(Z)$ for the corresponding differential operator on $\g$.
+Similarly for $Y\in S(\h)^W$ we have the differential operators $\delta(Y)$ on $\h$.
+
+
+If $f$ is a class function on $G_r$ write $\overline f$ for its restriction to $H_r$.
+
+\begin{lem}
+Suppose $f:G_r\rightarrow \C$ is a smooth class function. Then
+$$
+\partial(z)(f)(h)=|\Delta(h)|^{-\frac12}\partial(\gamma(z))(|\Delta|^{\frac12}\overline f)(h)\quad (h\in H_r).
+$$
+\end{lem}
+
+Here is a super short sketch of the proof. In \cite[Section 14]{HC1} Harish Chandra defines a bijection
+$\phi\rightarrow f_\phi$ between functions $\phi$ on an open set in $\g$, and functions on $U_G=\exp(U)\in G$,
+where $U$ is a sufficiently small open set.
+We can choose this set so that $\exp:U\rightarrow U_G$ is an analytic diffeomorphism, and $U_G$ contains a given element $h\in H_r$.
+
+The third-to-last formula on page 476 of \cite{HC1} states,
+for any invariant function $\phi$ on $U$:
+$$
+\partial(z)(f_\phi)(h)=|\Delta(h)|^{-\frac12}\partial(\gamma(z))(|\Delta|^{\frac12}\overline{f_\phi})(h)\quad (h\in H_r).
+$$
+The result follows since $\exp|_U$ is an analytic diffeomorphism and $\phi\rightarrow f_\phi$ is a bijection.
+
+There are a few, but not very many, details to check, and I'll write this out.
+
+It {\it does not} appear to me that you get rid of the $|\Delta|^{\frac12}$ terms, so perhaps we need to look at the application and see
+if they are actually there somewhere. If not\dots then maybe I need to see if this does indeed simplify.
+
+
+
+
+\bibliographystyle{amsalpha}
+%\bibliography{/Users/kaletha/Work/TexMain/bibliography.bib}
+\bibliography{hcrefs.bib}
+
+\end{document}
+
