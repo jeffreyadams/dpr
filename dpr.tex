@@ -227,11 +227,12 @@ Similarly, consider the set of pairs $(z,\delta)$, where $z \in Z^1(F,G_0)$ and 
 
 Let $G$ be a connected reductive $\R$-group and $T \subset G$ a maximal $\R$-torus. One can consider the function $T(\R) \to \R$ defined as
 \[ D_T(t) = D_T^G(t) = \textstyle\prod\limits_{\alpha \in R(T,G)} (1-\alpha(t)). \]
+An element $t \in T(\R)$ is called regular if $T$ is the identity component of its centralizer, and strongly regular if $T$ is its centralizer. In either case, $T$ is uniquely determined by $t$, and we can write $D_T(t)=D(t)$.
 
-In this paper we will normalize orbital integrals and characters by multiplying them by $|D_T(t)|^{1/2}$. Thus, for $t \in T(\R)$ strongly regular and $f \in \mc{C}_c^\infty(G(\R))$ we set
-\[ O_\gamma(f) = |D_T(t)|^{1/2}\int_{G(\R)/T(\R)} f(g\gamma g^{-1})dg/dt, \]
+In this paper we will normalize orbital integrals and characters by multiplying them by $|D(t)|^{1/2}$. Thus, for $t \in T(\R)$ strongly regular and $f \in \mc{C}_c^\infty(G(\R))$ we set
+\[ O_\gamma(f) = |D(t)|^{1/2}\int_{G(\R)/T(\R)} f(g\gamma g^{-1})dg/dt, \]
 while for $\pi$ admissible representation of $G(\R)$ we have the normalized character function $\Theta_\pi : G(\R)_\tx{sr} \to \C$ determined by
-\[ \tx{tr}(\pi(f)) = \Theta_\pi(f) = \int_{G(\R)} |D_T(t)|^{-1/2}\Theta_\pi(g)f(g)dg. \]
+\[ \tx{tr}(\pi(f)) = \Theta_\pi(f) = \int_{G(\R)_\tx{sr}} |D(g)|^{-1/2}\Theta_\pi(g)f(g)dg. \]
 This has the advantage that the functions $O_\gamma(f)$ and $\Theta_\pi(\gamma)$  remain bounded as $\gamma$ approaches singular elements in $T(\R)$.
 
 We note here that the distribution $f \mapsto O_\gamma(f)$ depends on the choice of measures $dg$ on $G(\R)$ and $dt$ on $T(\R)$, the distribution $f\mapsto \Theta_\pi(f)$ depends on $dg$, while the function $\gamma \mapsto \Theta_\pi(\gamma)$ does not depend on any choices.
@@ -697,7 +698,7 @@ Suppose $\pi$ is an irreducible eds representation and write $\pi=\pi(S,\tau)$ a
 
 \begin{pro}
   \label{p:whittaker}
-Let $\pi$ be a eds representation,
+Let $\pi$ be an eds representation,
 and let $\O_\pi=G(\R)\cdot H_\pi$.
 Suppose $\w=\w_X$ is a Whittaker datum for some regular nilpotent element $X\in i\g(\R)$.
 Then $\pi$ is $\w$-generic if and only if $\O_\pi$ meets the Kostant section of $X$.
@@ -744,7 +745,7 @@ By the already proved first implication of this proposition, $\O_{\pi_2}$ meets 
 \end{proof}
 
 \begin{cor}
-	Let $\pi$ be a eds representation. There exists precisely one Whittaker model $\mf{w}$ for which $\pi$ is $\mf{w}$-generic.
+	Let $\pi$ be an eds representation. There exists precisely one Whittaker model $\mf{w}$ for which $\pi$ is $\mf{w}$-generic.
 \end{cor}
 \begin{proof}
 	Let $(S,\tau)$ be the Harish-Chandra parameter of $\pi$ and let $H_\pi \in i\mf{s}(\R)$ be the element corresponding to $d\tau$ under $\kappa$. If $\w_1,\w_2$ are two Whittaker models for which $\pi$ is generic, let $w \in \Omega_\R(S_\tx{ad},G_\tx{ad})$ be an element s.t. $w\w_1=\w_2$ by Lemmas \ref{lem:g1} and \ref{lem:g2}. Proposition \ref{p:whittaker} shows that the $G(\R)$-orbits of $H_\pi$ and $wH_\pi$ meet the same Kostant section (associated to $\w_2$.) These $G(\R)$-orbits must then be equal. Modifying $w$ by an element of $\Omega_\R(S,G)$ we see that $H_\pi=wH_\pi$. By regularity of $H_\pi$ this shows $w=1$, but then $\w_2=w\w_1=\w_1$.
@@ -1190,7 +1191,7 @@ If Theorem \ref{thm:main2} holds for all elliptic $\delta$, then it holds for al
   \begin{proof}
 	Letting $Z_G(\R)$ act on the elliptic maximal torus of $G$ by multiplication, the assumption that the identity of Theorem \ref{thm:main2} holds for elliptic elements implies that both sides of that identity transform under the same character of $Z_G(\R)$. It thus remains to prove the support condition.	
 	
-	Theorem \ref{thm:eds} shows that the character of a eds representation of $G(\R)$ is supported on $Z_G(\R) \cdot G(\R)^\natural$. It follows that the function $\Theta_\varphi^{\mf{w},s}$ is supported on $Z_G(\R) \cdot G(\R)^\natural$. In the same way, we see that the function $S\Theta_{\varphi_\pm}$ is supported on $Z_{H(\R)_\pm} \cdot H(\R)_\pm^\natural$, where $H(\R)_\pm^\natural$ is the image of the natural splitting $H_\tx{sc}(\R) \to H(\R)_\pm$.
+	Theorem \ref{thm:eds} shows that the character of an eds representation of $G(\R)$ is supported on $Z_G(\R) \cdot G(\R)^\natural$. It follows that the function $\Theta_\varphi^{\mf{w},s}$ is supported on $Z_G(\R) \cdot G(\R)^\natural$. In the same way, we see that the function $S\Theta_{\varphi_\pm}$ is supported on $Z_{H(\R)_\pm} \cdot H(\R)_\pm^\natural$, where $H(\R)_\pm^\natural$ is the image of the natural splitting $H_\tx{sc}(\R) \to H(\R)_\pm$.
 	
 	
 
@@ -1229,18 +1230,50 @@ This allows us to assume that $G$ is semi-simple and simply connected in what fo
 		%\[ |D_T(x)|^{1/2} \cdot |F_T(x)| \leq C(1+\log||x||)^d \]
 		%for some fixed constants $c \geq 0$, $D \geq 0$, and all strongly regular $x \in G(\R)$.
 
-		It is known \cite[Theorem 3]{HCDSI} that the un-normalized character of a discrete series representation $\pi$ of a $G(\R)$ is represented by a conjugation-invariant function $\Theta$ which is an eigenfunction for the center $\mf{z}$ of the universal enveloping algebra with respect to the character $\mu : \mf{z} \to \C$ corresponding to $d\tau$, where $(S,\tau)$ is the Harish-Chandra parameter of $\pi$, and such that the normalized function $|D_T|^{1/2}\Theta$ is bounded. These statements carry over to the left-hand side of the identity of Theorem \ref{thm:main2}, which is just a complex linear combination of such functions.
+		It is known \cite[Theorem 3]{HCDSI} that the un-normalized character of a discrete series representation $\pi$ of a $G(\R)$ is represented by a conjugation-invariant function, denoted by $\Theta$ in loc. cit., which is an eigenfunction for the center $\mf{z}$ of the universal enveloping algebra and such that the normalized function $|D_T|^{1/2}\Theta$ is bounded. Let us explain more precisely the eigenfunction property. Let $(S,\tau)$ be the Harish-Chandra parameter of $\pi$. Let $\gamma : \mf{z} \to S(\mf{s})^{\Omega(S,G)}$ be the Harish-Chandra isomorphism. The differential $d\tau : \mf{s} \to \C$ is a $\C$-linear form and induces an algebra character $S(\mf{s}) \to \C$. The eigenfunction property is $z \cdot \Theta = d\tau(\gamma(z)) \cdot \Theta$.
+
+		These statements carry over to the left-hand side of the identity of Theorem \ref{thm:main2}, which is just a complex linear combination of such functions, but we need to be mindful that we are using here normalized characters. Therefore, these properties now read
+		\begin{enumerate}
+			\item $z \cdot (|D(-)|^{-1/2}\Theta_\varphi^{\mf{w},s}) = d\tau(\gamma(z)) \cdot (|D(-)|^{-1/2}\Theta_\varphi^{\mf{w},s})$ for all $z \in \mf{z}$.
+			\item $\sup_{x \in G(\R)_\tx{rs}}|\Theta_\varphi^{\mf{w},s}(x)|<\infty$.
+		\end{enumerate}
 
 		We now claim that the right-hand side of the identity of Theorem \ref{thm:main2} is also has those properties. Invariance (under conjugation by $G(\R)$) follows from the corresponding property of the transfer factor $\Delta(\dot\gamma,\delta)$ in the variable $\delta$. 
 
-		To see boundedness, we note first that we have already normalized the characters by $|D_T|^{1/2}$, so we need to show that the right-hand side is bounded. For any fixed $\delta$, there are only finitely many $\dot\gamma$ with $\Delta(\dot\gamma,\delta) \neq 0$, and in fact their number is bounded by $|\Omega(T,G)|$. The values of the transfer factor are roots of unity (\cite[Lemma 4.3.3]{KalHDC}). The boundedness of the right-hand side now follows from the boundedness of $S\Theta_{\varphi'}$. 
+		To see boundedness, we note that for any fixed $\delta$, there are only finitely many $\dot\gamma$ with $\Delta(\dot\gamma,\delta) \neq 0$, and in fact their number is bounded by $|\Omega(T,G)|$. The values of the transfer factor are roots of unity (\cite[Lemma 4.3.3]{KalHDC}). The boundedness of the right-hand side now follows from the boundedness of $S\Theta_{\varphi'}$, the latter function being the analog of $\Theta_\varphi^{\mf{w},s}$ for the group $H$ and $s=1$.
 
-		To check the eigendistribution property for the function $\delta \mapsto \sum_\gamma \Delta(\dot\gamma,\delta)S\Theta_{\varphi'}(\dot\gamma)$ we fix $\delta$ and let $T \subset G$ be its centralizer. To apply a differential operator to this function at $\delta$, it is enough to consider the function in a neighborhood of $\delta$. Let $\gamma_1\dots,\gamma_n$ be representatives for the stable classes in $H(\R)$ that transfer to the stable class of $\delta$ and let $S_1,\dots,S_n \subset H$ be their centralizers. Let $j_i : T \to S_i$ be the unique admissible isomorphism with $j_i(\delta)=\gamma_i$. There is a connected open neighborhood $U \subset T(\R)$ of $\delta$ so that, for each $\delta' \in U$, $j_1(\delta'),\dots,j_n(\delta')$ is a set of representatives for the stable classes in $H(\R)$ that transfer to $\delta'$, and such that the double cover $S_i(\R)_x$ splits over $j_i(U)$. We let $U_i \subset S_i(\R)_x$ be an arbitrary choice of one of the two connected components of the preimage of $j_i(U)$ in $S_i(\R)_x$. Then $j_i$ lifts to an isomorphism $U \to U_i$, which we still call $j_i$. The restriction to $U$ of the function $\delta \mapsto \sum_\gamma \Delta(\dot\gamma,\delta)S\Theta_{\varphi'}(\dot\gamma)$ is now given by $\delta' \mapsto \sum_{i=1}^n \Delta(j_i(\delta'),\delta')S\Theta_{\varphi'}(j_i(\delta'))$. 
+		To check the eigendistribution property for the function $\delta \mapsto \sum_\gamma \Delta(\dot\gamma,\delta)S\Theta_{\varphi'}(\dot\gamma)$ we fix $\delta$ and let $T \subset G$ be its centralizer. To apply a differential operator to this function at $\delta$, it is enough to consider the function in a neighborhood of $\delta$. Let $\gamma_1\dots,\gamma_n$ be representatives for the stable classes in $H(\R)$ that transfer to the stable class of $\delta$ and let $S_1,\dots,S_n \subset H$ be their centralizers. Let $j_i : T \to S_i$ be the unique admissible isomorphism with $j_i(\delta)=\gamma_i$. There is a connected open neighborhood $U \subset T(\R)$ of $\delta$ so that, for each $\delta' \in U$, $j_1(\delta'),\dots,j_n(\delta')$ is a set of representatives for the stable classes in $H(\R)$ that transfer to $\delta'$, and such that the double cover $S_i(\R)_x$ splits over $j_i(U)$. We let $U_i \subset S_i(\R)_x$ be an arbitrary choice of one of the two connected components of the preimage of $j_i(U)$ in $S_i(\R)_x$. Then $j_i$ lifts to a diffeomorphism $U \to U_i$, which we still call $j_i$. The restriction to $U$ of the function $\delta \mapsto \sum_\gamma \Delta(\dot\gamma,\delta)S\Theta_{\varphi'}(\dot\gamma)$ is now given by $\delta' \mapsto \sum_{i=1}^n \Delta(j_i(\delta'),\delta')S\Theta_{\varphi'}(j_i(\delta'))$. 
 		
-		It will be enough to consider each summand individually. By \cite[Corollary 4.3.4]{KalHDC}, the function $\delta' \mapsto \Delta(j_i(\delta'),\delta')$ is locally constant, so after possibly shrinking $U$ we may assume that it is constant. Thus the summand under consideration becomes $\delta' \mapsto S\Theta_{\varphi'}(j_i(\delta'))$. The infinitesimal character of this function is the transport under $j_i : \mf{t} \to \mf{s}_i$ of the infinitesimal character of $S\Theta_{\varphi'}$. We claim that this transport equals the infinitesimal character of $\Theta_{\varphi}^{\mf{w},s}$.
+		It will be enough to consider each summand individually. By \cite[Corollary 4.3.4]{KalHDC}, the function $\delta' \mapsto \Delta(j_i(\delta'),\delta')$ is locally constant, so after possibly shrinking $U$ we may assume that it is constant. Thus the summand under consideration becomes $\delta' \mapsto S\Theta_{\varphi'}(j_i(\delta'))$, a function defined on a connected open neighborhood $U$ in $G(\R)$ of the fixed strongly regular semi-simple element $\delta$.
 
-		\warn{Jeff, here I need the following statement: Let $F : G(\R)_\tx{sr} \to \C$ be a smooth class function. Let $X \in \mc{Z}(\mf{g})$. For a maximal torus $T \subset G$ let $h : \mc{Z}(\mf{g}) \to \mc{U}(\mf{t})^{\Omega(T,G)}$ be the Harish-Chandra isomorphism. Then, for any $\delta \in T(\R)$ we have $(XF)(\delta) = (h(X)F)(\delta)$.}
+		We apply lemma \textcolor{red}{JEFF} to the smooth class function 
+		\[ f_i(\delta') = |D_T(\delta')|^{-1/2}S\Theta_{\varphi'}(j_i(\delta')) \]
+		and see that for $z \in \mf{z}$ we have
+		\begin{equation} \label{eq:e1}
+		(z \cdot f_i)|_{T(\R) \cap U} = |D_T(-)|^{-1/2}\gamma(z) \cdot (S\Theta_{\varphi'}\circ j_i)|_{T(\R) \cap U}.
+		\end{equation}
+		The admissible isomorphism $j_i : T \to S_i$ induces an isomorphism $S(\mf{t}) \to S(\mf{s}_i)$ which embeds $S(\mf{t})^{\Omega(T,G)}$ into $S(\mf{s}_i)^{\Omega(S_i,H)}$. We have
+		\begin{equation} \label{eq:e2}
+		\gamma(z) \cdot (S\Theta_{\varphi'}\circ j_i)|_{T(\R) \cap U} = (j_i(\gamma(z)) \cdot S\Theta_{\varphi'}|_{S_i(\R)_x \cap U_i}) \circ j_i.
+		\end{equation}
+		Let $\gamma_i : \mf{z}_H \to S(\mf{s}_i)^{\Omega(S_i,H)}$ be the Harish-Chandra isomorphism for $(H,S_i)$ and let $z_H \in \mf{z}_H$ be the preimage under $\gamma_i$ of $j_i(\gamma(z))$. We apply again lemma \textcolor{red}{JEFF}, this time to the smooth class function $|D_{S_i}(-)|^{-1/2}S\Theta_{\varphi'}$ on $H(\R)_x$ to see
+		\begin{equation} \label{eq:e3}
+		j_i(\gamma(z)) \cdot S\Theta_{\varphi'}|_{S_i(\R)_x \cap U_i} = |D_{S_i}(-)|^{1/2}\cdot z_H \cdot (|D_{S_i}(-)|^{-1/2}S\Theta_{\varphi'})|_{S_i(\R)_x \cap U_i}.
+		\end{equation}
+		The eigenfunction property of $S\Theta_{\varphi'}$ gives
+		\begin{equation} \label{eq:e4}
+		z_H \cdot (|D_{S_i}(-)|^{-1/2}S\Theta_{\varphi'}) = d\tau'(\gamma'(z_H)) \cdot (|D_{S_i}(-)|^{-1/2}S\Theta_{\varphi'}),
+		\end{equation}
+		where $(S',\tau')$ is the Harish-Chandra parameter of any element in the $L$-packet $\Pi_{\varphi'}$, unique up to stable conjugacy, and $\gamma' : \mf{z}_H \to S(\mf{s'})^{\Omega(S',H)}$ is the Harish-Chandra isomorphism. The scalar $d\tau'(\gamma'(z_H))$ can now switch places with the Weyl discriminant and combining \eqref{eq:e2}, \eqref{eq:e3}, and \eqref{eq:e4}, we obtain
+		\begin{equation} \label{eq:e5}
+		\gamma(z) \cdot (S\Theta_{\varphi'}\circ j_i) = d\tau'(\gamma'(z_H)) \cdot S\Theta_{\varphi'} \circ j_i 
+		\end{equation}
+		as functions on $T(\R) \cap U$.
 		
+
+		By definition, the two Harish-Chandra isomorphisms $\gamma_i$ and $\gamma'$ are related by composition by $\tx{Ad}(h)$ for any $h \in H(\C)$ with $\tx{Ad}(h)S_i=S'$. Note that the $\R$-structure here is irrelevant. Furthermore, transporting $d\tau'$ under $\tx{Ad}(h)$ and then the isomorphism $j_i$ produces $d\tau$ \warn{do we need more detail here?}. With this we obtain $d\tau'(\gamma'(z_H))=d\tau(\gamma(z))$. Combining this with \eqref{eq:e1} and \eqref{eq:e5} we obtain
+		\[  z \cdot (|D_T(-)|^{-1/2}S\Theta_{\varphi'}\circ j_i) = d\tau(\gamma(z)) \cdot (|D_T(-)|^{-1/2}S\Theta_{\varphi'}\circ j_i). \] 
+		The desired eigendistribution property of the function $\delta \mapsto \sum_\gamma \Delta(\dot\gamma,\delta)S\Theta_{\varphi'}(\dot\gamma)$ has thus been proved.
 	\end{proof}
 
 
