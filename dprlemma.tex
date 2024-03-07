@@ -79,60 +79,88 @@
 
 \begin{document}
 
-\begin{mytitle} A result from Harish Chandra\end{mytitle}
-We assume $G$ is a real, connected, semisimple group. Surely these
-assumptions can be weakened, but this is the setting of some of the
-results we want to quote from Harish Chandra.
-We let $\g=\mathrm{Lie}(G)$ and $G_\C=\g\otimes\C$.
+\begin{mytitle} A Result of Harish Chandra\end{mytitle}
 
-Let $G_r$ be the open set of regular semisimple elements if $G$ (I don't think we need strongly regular here).
-Let $H$ be a Cartan subgroup of $G$, and set
+
+Let $G$ be a connected real reductive group.
+We let $\g=\mathrm{Lie}(G)$ and $\g_\C=\g\otimes\C$.
+Let $\theta$ be a Cartan involution of $G$.
+
+Let $G_r$ be the open set of regular semisimple elements if $G$. Suppose $H$ is a $\theta$-stable Cartan subgroup of $G$, and set $\h=\mathrm{Lie}(H)\otimes\C$ and 
 $H_r=H\cap G_r$.
 Define
 $$
 \Delta(h)=(\det(\Ad(h)\inv -1)|_{\g/\h}\quad (h\in H_r).
 $$
-(I'm pretty sure this is $\pm $ the function denoted $D_T$ in section 2.5).
 
-Let $\z$ be the center of the  universal enveloping algebra, and let $\gamma:\z\rightarrow S(\h)^W$ be the Harish Chandra isomorphism.
-
-
-For $Z\in\z$ write $\partial(Z)$ for the corresponding differential operator on $\g$.
-Similarly for $Y\in S(\h)^W$ we have the differential operators $\delta(Y)$ on $\h$.
-
-
-If $f$ is a class function on $G_r$ write $\overline f$ for its restriction to $H_r$.
+We identify the universal enveloping algebra $\mathfrak U(\g)$ with the algebra of left-invariant differential operators on $G$. 
+Let $\z$ be the center of  $\mathfrak U(\g)$.
+Similarly we identify $S(\h)$ with the algebra of differential operators on $H$. Let $W$ be the Weyl group of $H$ in $G$, and 
+let $\gamma:\z\rightarrow S(\h)^W$ be the Harish Chandra isomorphism.
+Let $G_r$ be the open set of regular semisimple elements of $G$, and let $C^\infty$ be the smooth function on $G_r$. 
 
 \begin{lem}
-Suppose $f:G_r\rightarrow \C$ is a smooth class function. Then
+Suppose $f\in C^\infty(G_r)$ is a class function. Then
 $$
-\partial(z)(f)(h)=|\Delta(h)|^{-\frac12}\partial(\gamma(z))(|\Delta|^{\frac12}\overline f)(h)\quad (h\in H_r).
+(zf)(h)=|\Delta(h)|^{-\frac12}\gamma(z)(|\Delta|^{\frac12}f)(h)\quad (h\in H_r).
 $$
 \end{lem}
 
-Here is a super short sketch of the proof. In \cite[Section 14]{HC1} Harish Chandra defines a bijection
-$\phi\rightarrow f_\phi$ between functions $\phi$ on an open set in $\g$, and functions on $U_G=\exp(U)\in G$,
-where $U$ is a sufficiently small open set.
-We can choose this set so that $\exp:U\rightarrow U_G$ is an analytic diffeomorphism, and $U_G$ contains a given element $h\in H_r$.
+\begin{proof}
+This statement can be found in the proof of \cite[Lemma 24]{HC1}. To be precise, write $h=\exp(H)$ with $H\in \g$.
+Then there is a neighborhood $U$ of $H$ such that the the map $\exp:U\rightarrow U_G=\exp(H)$ is an analytic diffeomorphism
+\cite[Section 10]{HC1}. Let $\xi$ be the analytic, non-zero function on $U$ of \cite[Section 10]{HC1}. 
+If $\phi$ is a locally invariant $C^\infty$ function on $U$ (see \cite[Section 8]{HC3}) let $f_\phi(\exp X)=\xi(X)\inv \phi(X)$.
+The map $\phi\rightarrow f_\phi$ is a bijection between the smooth locally invariant functions on $U$ and $U_G$.
 
-The third-to-last formula on page 476 of \cite{HC1} states,
-for any invariant function $\phi$ on $U$:
+According to the proof of \cite[Lemma 24]{HC1} it follows from 
+\cite[Lemma 17]{HC1} and \cite[Theorem 2]{HC2} that
+\begin{equation}
+\label{1}
+(zf_\phi)(h)=|\Delta(h)|^{-\frac12}\gamma(z)(|\Delta|^{\frac12}f_\phi)(h)\quad (h\in H_r).
+\end{equation}
+
+By the preceding discussion $f|_{U_G}$ is a locally invariant function, so $f_{U_G}=f_\phi$ for some locally invariant
+function $\phi$ on $U$. The result follows.
+\end{proof}
+
+
+\section{Discussion}
+
+Surely this result is known, but I could not find a clear statement and proof. In particular I do not see how \eqref{1}
+follows from the cited results. Here are a few comments. All references are to \cite{HC1} unless otherwise noted. 
+
+The references for the proof of \eqref{1} are Lemma 17 and 
+ \cite[Theorem 2]{HC2}. I don't see how Lemma 17 applies, except as a step in the proof of Lemma 18, which {\it is} relevant. 
+However Lemma 18 refers to the locally defined differential operator $\delta_a(z)$ (see Section 5). On the other hand 
+\cite[Theorem 2]{HC2} refers to the differential operator $\beta(z)$ which is defined on all of $H_r$. 
+I {\it think} that the proof is using the fact that if we write $h=ay$ with $y$ near the identity then
+$\beta(z)(f)(ay)=\delta_a(z)(f)(ay)$. However I was unable to convince myself this is true.
+
+Note that Lemma 13 says that
 $$
-\partial(z)(f_\phi)(h)=|\Delta(h)|^{-\frac12}\partial(\gamma(z))(|\Delta|^{\frac12}\overline{f_\phi})(h)\quad (h\in H_r).
+\delta_a(z)(f)(h)=|\Delta_a(h)|^{-\frac12}\gamma(z)(|\Delta_a|^{\frac12}f)(h)
 $$
-The result follows since $\exp|_U$ is an analytic diffeomorphism and $\phi\rightarrow f_\phi$ is a bijection.
+where 
+$$
+\Delta_a(h)=\Delta(ah).
+$$
+This is very close to the statement needed for the result, except that it involves the function $\Delta_a$, not $\Delta$.
+This has to do with the issue of defining the differential operator on $H_r$ using the local expression at each point.
+It is worth pointing out that there are some fraught technical details here. For example see the proof of Lemma 23 and 
+\cite[Lemma 25]{HC2}.
+Finally, note that Harish Chandra does {\it not} cite Lemma 13 in his proof, but rather the more distantly related \cite[Theorem 2]{HC2}.
 
-There are a few, but not very many, details to check, and I'll write this out.
+The conclusion is that I don't know how to fill in the details of the proof.
 
-It {\it does not} appear to me that you get rid of the $|\Delta|^{\frac12}$ terms, so perhaps we need to look at the application and see
-if they are actually there somewhere. If not\dots then maybe I need to see if this does indeed simplify.
+
 
 
 
 
 \bibliographystyle{amsalpha}
 %\bibliography{/Users/kaletha/Work/TexMain/bibliography.bib}
-\bibliography{hcrefs.bib}
+\bibliography{bibliography.bib}
 
 \end{document}
 
