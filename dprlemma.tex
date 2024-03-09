@@ -53,6 +53,7 @@
 %definitions by jda
 \newcommand{\inv}{^{-1}}
 \newcommand{\z}{\mathfrak Z}
+\newcommand{\U}{\mathfrak U}
 \newcommand{\n}{\mathfrak n}
 \newcommand{\s}{\mathfrak s}
 \newcommand{\g}{\mathfrak g}
@@ -82,7 +83,8 @@
 \begin{mytitle} A Result of Harish Chandra\end{mytitle}
 
 
-Let $G$ be a connected real reductive group.
+Let $G$ be
+ a connected real reductive group.
 We let $\g=\mathrm{Lie}(G)$ and $\g_\C=\g\otimes\C$.
 Let $\theta$ be a Cartan involution of $G$.
 
@@ -90,70 +92,131 @@ Let $G_r$ be the open set of regular semisimple elements if $G$. Suppose $H$ is 
 $H_r=H\cap G_r$.
 Define
 $$
-\Delta(h)=(\det(\Ad(h)\inv -1)|_{\g/\h}\quad (h\in H_r).
+\Delta(h)=(\det(\Ad(h)\inv -1)|_{\g/\h}\quad (a,h\in H_r).
+$$
+For later use we also define
+$$
+\Delta_a(h)=\Delta(ah)=(\det(\Ad(ah)\inv -1)|_{\g/\h}\quad (h\in H_r).
 $$
 
-We identify the universal enveloping algebra $\mathfrak U(\g)$ with the algebra of left-invariant differential operators on $G$. 
-Let $\z$ be the center of  $\mathfrak U(\g)$.
-Similarly we identify $S(\h)$ with the algebra of differential operators on $H$. Let $W$ be the Weyl group of $H$ in $G$, and 
+Let $\U(\g)$ be the universal enveloping algebra. 
+An element $X\in \U(\g)$ defines a left-invariant differential operator $\partial(X)$ on $G$. 
+Let $L_g(f)(h)=f(gh)$ $(g,h\in G,f\in C^\infty(G))$. A differential operator $D$ being left-invariant means 
+\begin{equation}
+\label{e:left}
+D(L_gf)(h)=D(f)(gh).
+\end{equation}
+
+Let $\z$ be the center of  $\U(\g)$.
+We identify $\U(\h)$ with $S(\h)$. 
+Let $W$ be the Weyl group of $H$ in $G$, and 
 let $\gamma:\z\rightarrow S(\h)^W$ be the Harish Chandra isomorphism.
 Let $G_r$ be the open set of regular semisimple elements of $G$, and let $C^\infty$ be the smooth function on $G_r$. 
 
-\begin{lem}
+
+\begin{pro}
 Suppose $f\in C^\infty(G_r)$ is a class function. Then
 $$
-(zf)(h)=|\Delta(h)|^{-\frac12}\gamma(z)(|\Delta|^{\frac12}f)(h)\quad (h\in H_r).
+(\partial(z)f)(h)=|\Delta(h)|^{-\frac12}\gamma(z)(|\Delta|^{\frac12}f)(h)\quad (h\in H_r).
+$$
+\end{pro}
+
+Before giving the proof we establish some notation and preliminary results.
+
+
+
+Suppose $D$ is a differential operator on $G$. Then $D$ has a local expression $D_g\in\U(\g)$ for any $g\in G$.
+See \cite[Section 4]{HC_characters}.
+By definition this means
+\begin{equation}
+\label{e:partial}
+\partial(D_g)(f)(g)=D(f)(g)\quad (g\in G).
+\end{equation}
+
+Suppose $a\in G$ is a regular semisimple element, and set $H=\Cent_G(a)$. Suppose $U$ is an open set in $G$ containing $a$, 
+and set
+$$
+U_H=a\inv U\cap H_r
+$$
+This is an open neighborhood of $1$ in $H_r$.
+Suppose $D$ is a differential operator on $U$. Define $\delta_a(D)$, a differential operator  on $U_H$ by \cite[Section 4]{HC_inv_eigen}.
+Note that if $y\in U_H$ then $\delta_a(D)_y\in S(\h)$. 
+
+See \cite[Section 8]{HC_inv_dist} for the definition of locally invariant functions.
+The restriction of a class function on $G_r$ to any open set is locally invariant.
+
+\begin{lem}
+\label{l:1}
+Suppose $a,H,U$ and $U_H$ are as above. 
+Suppose $D$ is a differential operator on $U$, and $f$ is a locally invariant function on $U$.
+Then for $y\in U_H$:
+$$
+D(f)(ay)=\partial(\delta_a(D)_y)(f)(ay)
 $$
 \end{lem}
 
-\begin{proof}
-This statement can be found in the proof of \cite[Lemma 24]{HC1}. To be precise, write $h=\exp(H)$ with $H\in \g$.
-Then there is a neighborhood $U$ of $H$ such that the the map $\exp:U\rightarrow U_G=\exp(H)$ is an analytic diffeomorphism
-\cite[Section 10]{HC1}. Let $\xi$ be the analytic, non-zero function on $U$ of \cite[Section 10]{HC1}. 
-If $\phi$ is a locally invariant $C^\infty$ function on $U$ (see \cite[Section 8]{HC3}) let $f_\phi(\exp X)=\xi(X)\inv \phi(X)$.
-The map $\phi\rightarrow f_\phi$ is a bijection between the smooth locally invariant functions on $U$ and $U_G$.
+This is \cite[Lemma 18]{HC_inv_eigen}. Some care is required here. Note that $\delta_a(D)$ is a differential operator on $U_H$ ({\it not} on $U$),
+so $\delta_a(D)(ay)$ is not defined. However $\delta_a(D)_y\in S(\h)$,
+so $\partial(\delta_a(D)_y)$ is a well defined differential operator at $ay$. 
 
-According to the proof of \cite[Lemma 24]{HC1} it follows from 
-\cite[Lemma 17]{HC1} and \cite[Theorem 2]{HC2} that
-\begin{equation}
-\label{1}
-(zf_\phi)(h)=|\Delta(h)|^{-\frac12}\gamma(z)(|\Delta|^{\frac12}f_\phi)(h)\quad (h\in H_r).
-\end{equation}
-
-By the preceding discussion $f|_{U_G}$ is a locally invariant function, so $f_{U_G}=f_\phi$ for some locally invariant
-function $\phi$ on $U$. The result follows.
-\end{proof}
+The statement of \cite[Lemma 18]{HC_inv_eigen} says
+$$
+D(f)(ay)=\delta_a(D)(f)(ay)
+$$
+However the right hand side isn't defined: $\delta_a(D)$ is a differential operator on $U_H$, but $ay$ is in $U$, but not $U_H$.
+What the proof actually shows (see the last line of the proof) is that 
+$$
+\partial(D_{ay})(f)(ay)=\partial(\delta_a(D)_y)(f)(ay).
+$$
+By \eqref{e:partial}
+the LHS equals $D(f)(ay)$, so this gives the statement of the Lemma.
 
 
-\section{Discussion}
-
-Surely this result is known, but I could not find a clear statement and proof. In particular I do not see how \eqref{1}
-follows from the cited results. Here are a few comments. All references are to \cite{HC1} unless otherwise noted. 
-
-The references for the proof of \eqref{1} are Lemma 17 and 
- \cite[Theorem 2]{HC2}. I don't see how Lemma 17 applies, except as a step in the proof of Lemma 18, which {\it is} relevant. 
-However Lemma 18 refers to the locally defined differential operator $\delta_a(z)$ (see Section 5). On the other hand 
-\cite[Theorem 2]{HC2} refers to the differential operator $\beta(z)$ which is defined on all of $H_r$. 
-I {\it think} that the proof is using the fact that if we write $h=ay$ with $y$ near the identity then
-$\beta(z)(f)(ay)=\delta_a(z)(f)(ay)$. However I was unable to convince myself this is true.
-
-Note that Lemma 13 says that
+\begin{lem}
+\label{l:2}
 $$
 \delta_a(z)(f)(h)=|\Delta_a(h)|^{-\frac12}\gamma(z)(|\Delta_a|^{\frac12}f)(h)
 $$
-where 
+\end{lem}
+This is \cite[Lemma 13]{HC_inv_eigen}.
+
+\begin{proof}[Proof of the Proposition]
+
+Let $U$ be an open set containing $h$ and let $U_H=h\inv U\cap H_r$ as before. 
+Write $h=ay$ where $a\in H_r$ and $y\in U_H$.
+Suppose $z\in\z(\g)$. By  Lemma \ref{l:1} we have
 $$
-\Delta_a(h)=\Delta(ah).
+\partial(z)(f)(ay)=\partial(\delta_a(z)_y)(f)(ay)
 $$
-This is very close to the statement needed for the result, except that it involves the function $\Delta_a$, not $\Delta$.
-This has to do with the issue of defining the differential operator on $H_r$ using the local expression at each point.
-It is worth pointing out that there are some fraught technical details here. For example see the proof of Lemma 23 and 
-\cite[Lemma 25]{HC2}.
-Finally, note that Harish Chandra does {\it not} cite Lemma 13 in his proof, but rather the more distantly related \cite[Theorem 2]{HC2}.
-
-The conclusion is that I don't know how to fill in the details of the proof.
-
-
+Here we've written $\delta_a(z)$ in place of $\delta_a(\partial(z))$.
+We have to show the right hand side is equal to 
+$$
+|\Delta(ay)|^{-\frac12}\gamma(z)(|\Delta|^{\frac12}f))(ay).
+$$
+By \eqref{e:partial} the right hand side is equal to 
+$$
+\begin{aligned}
+\partial(\delta_a(z)_y)(L_a(f))(y)&=\delta_a(z)(L_a(f))(y)\\
+&=|\Delta_a(y)|^{-\frac12}\gamma(z)(|\Delta_a|^{\frac12}L_a(f))(y)\quad(\text{by Lemma \ref{l:2}})\\
+\end{aligned}
+$$
+Consider the function
+$$
+y\mapsto(|\Delta_a|^{\frac12}L_a(f))(y)=|\Delta(ay)|^{\frac12}L_a(f)(y)=L_a(|\Delta|^{\frac12}f)(y)
+$$
+Using this we see
+$$
+\begin{aligned}
+|\Delta_a(y)|^{-\frac12}\gamma(z)(|\Delta_a|^{\frac12}L_a(f))(y)&=
+|\Delta(ay)|^{-\frac12}\gamma(z)(L_a(|\Delta|^{\frac12}f))(y)
+\end{aligned}
+$$
+Now $\gamma(z)$ is invariant by left-translation, so by \eqref{e:left} this equals
+$$
+|\Delta(ay)|^{-\frac12}\gamma(z)(|\Delta|^{\frac12}f))(ay)
+$$
+This proves the Proposition.
+\end{proof}
 
 
 
