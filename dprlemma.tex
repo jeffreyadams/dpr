@@ -86,9 +86,7 @@
 Let $G$ be
  a connected real reductive group.
 We let $\g=\mathrm{Lie}(G)$ and $\g_\C=\g\otimes\C$.
-Let $\theta$ be a Cartan involution of $G$.
-
-Let $G_r$ be the open set of regular semisimple elements if $G$. Suppose $H$ is a $\theta$-stable Cartan subgroup of $G$, and set $\h=\mathrm{Lie}(H)\otimes\C$ and 
+Let $G_r$ be the open set of regular semisimple elements of $G$. Suppose $H$ is a  Cartan subgroup of $G$, and set $\h=\mathrm{Lie}(H)\otimes\C$ and 
 $H_r=H\cap G_r$.
 Define
 $$
@@ -100,27 +98,36 @@ $$
 $$
 
 Let $\U(\g)$ be the universal enveloping algebra. 
-An element $X\in \U(\g)$ defines a left-invariant differential operator $\partial(X)$ on $G$. 
+An element $X\in \U(\g)$ defines a left-invariant differential operator $\tau(X)$.
+For $x\in \g$ the definition is
+$$\tau(X)(f)(g)=\frac d{dt}g\exp(tX)|_{t=0}.
+$$
 Let $L_g(f)(h)=f(gh)$ $(g,h\in G,f\in C^\infty(G))$. A differential operator $D$ being left-invariant means 
 \begin{equation}
 \label{e:left}
 D(L_gf)(h)=D(f)(gh).
 \end{equation}
 
+It is customary to drop the $\tau$ notation, and write $Xf$ instead of $\tau(X)f$. I prefer to keep it for reasons that should become clear.
 Let $\z$ be the center of  $\U(\g)$.
-We identify $\U(\h)$ with $S(\h)$. 
 Let $W$ be the Weyl group of $H$ in $G$, and 
-let $\gamma:\z\rightarrow S(\h)^W$ be the Harish Chandra isomorphism.
+let $\gamma:\z\rightarrow \U(\h)^W$ be the Harish Chandra isomorphism.
 Let $G_r$ be the open set of regular semisimple elements of $G$, and let $C^\infty$ be the smooth function on $G_r$. 
 
 
 \begin{pro}
 Suppose $f\in C^\infty(G_r)$ is a class function. Then
 $$
-(\partial(z)f)(h)=|\Delta(h)|^{-\frac12}\gamma(z)(|\Delta|^{\frac12}f)(h)\quad (h\in H_r).
+(\tau(z)f)(h)=|\Delta(h)|^{-\frac12}\tau(\gamma(z))(|\Delta|^{\frac12}f)(h)\quad (h\in H_r).
 $$
 \end{pro}
 
+A less pedantic way of writing this is to drop $\tau$ and identify $\U(\g)$ with the left-invariant differential operators on $G$. Then
+the conclusion is
+$$
+(zf)=|\Delta(h)|^{-\frac12}\gamma(z)(|\Delta|^{\frac12}f)
+$$
+as functions on $H_r$.
 Before giving the proof we establish some notation and preliminary results.
 
 
@@ -129,18 +136,35 @@ Suppose $D$ is a differential operator on $G$. Then $D$ has a local expression $
 See \cite[Section 4]{HC_characters}.
 By definition this means
 \begin{equation}
-\label{e:partial}
-\partial(D_g)(f)(g)=D(f)(g)\quad (g\in G).
+  \label{e:tau}
+  D(f)(g)=\tau(D_g)(f)(g)\quad(g\in G)
 \end{equation}
+
+Note that $D$ is left-invariant if and only if
+\begin{equation}
+  \label{e:left}
+  D_g=D_h\quad(\text{for all }g,h\in G)
+\end{equation}
+To see this, note that for $h,g\in G$, left-invariance of $D$ says:
+$$
+D(f)(hg)=D(L_hf)(g).
+$$
+The left hand side is $\tau(D_{hg})(f)(hg)$. The right hand side is
+$$
+\tau(D_g)(L_h(f))(g)=\tau(D_g)(f)(hg)
+$$
+since $\tau(D_g)$ is (obviously)  left-invariant. Therefore $\tau(D_{hg})=\tau(D_g)$, and therefore, $D_{hg}=D_g$ for all $g,h$.
+
 
 Suppose $a\in G$ is a regular semisimple element, and set $H=\Cent_G(a)$. Suppose $U$ is an open set in $G$ containing $a$, 
 and set
-$$
-U_H=a\inv U\cap H_r
-$$
+\begin{equation}
+  \label{e:UH}
+U_H=a\inv U\cap H_r.
+\end{equation}
 This is an open neighborhood of $1$ in $H_r$.
 Suppose $D$ is a differential operator on $U$. Define $\delta_a(D)$, a differential operator  on $U_H$ by \cite[Section 4]{HC_inv_eigen}.
-Note that if $y\in U_H$ then $\delta_a(D)_y\in S(\h)$. 
+Note that if $y\in U_H$ then $\delta_a(D)_y\in \U(\h)$. 
 
 See \cite[Section 8]{HC_inv_dist} for the definition of locally invariant functions.
 The restriction of a class function on $G_r$ to any open set is locally invariant.
@@ -151,13 +175,11 @@ Suppose $a,H,U$ and $U_H$ are as above.
 Suppose $D$ is a differential operator on $U$, and $f$ is a locally invariant function on $U$.
 Then for $y\in U_H$:
 $$
-D(f)(ay)=\partial(\delta_a(D)_y)(f)(ay)
+D(f)(ay)=\tau(\delta_a(D)_y)(f)(ay)
 $$
 \end{lem}
 
-This is \cite[Lemma 18]{HC_inv_eigen}. Some care is required here. Note that $\delta_a(D)$ is a differential operator on $U_H$ ({\it not} on $U$),
-so $\delta_a(D)(ay)$ is not defined. However $\delta_a(D)_y\in S(\h)$,
-so $\partial(\delta_a(D)_y)$ is a well defined differential operator at $ay$. 
+This is \cite[Lemma 18]{HC_inv_eigen}. Some care is required here.
 
 The statement of \cite[Lemma 18]{HC_inv_eigen} says
 $$
@@ -166,16 +188,42 @@ $$
 However the right hand side isn't defined: $\delta_a(D)$ is a differential operator on $U_H$, but $ay$ is in $U$, but not $U_H$.
 What the proof actually shows (see the last line of the proof) is that 
 $$
-\partial(D_{ay})(f)(ay)=\partial(\delta_a(D)_y)(f)(ay).
+\tau(D_{ay})(f)(ay)=\tau(\delta_a(D)_y)(f)(ay).
 $$
-By \eqref{e:partial}
+Note that $\tau(D_{ay})$ is a well defined left-invariant differential operator on $U_H$.
+By \eqref{e:tau}
 the LHS equals $D(f)(ay)$, so this gives the statement of the Lemma.
 
+\begin{cor}
+  Suppose $f$ is a class function on $G_r$ and $D$ is a left-invariant differential operator on $G_r$.
+  Suppose $a\in G_r$ is semisimple and set $H=\Cent_G(a)$. Then $U_H=H_r$ (see \eqref{e:UH}), so $\delta_a(D)$
+  is a  differential operator on $H_r$.
+
+  Assume $\delta_a(D)$ is left-invariant on $H_r$. Then
+  $$
+  D(f)(h)=\delta_a(D)(f)(h)\quad (h\in H_r)
+  $$
+\end{cor}
+
+\begin{rem}
+I think $D$ is automatically left-invariant on $H_r$, but I'm not sure. In any event we don't use the Corollary.
+\end{rem}
+
+\begin{proof}
+  From the Lemma we have
+  $$
+  D(f)(ay)=\tau(\delta_a(D)_y)(f)(ay)
+  $$
+  for all $y\in U_H=H_r$. Since $\delta_a(D)$ is left-invariant so by \eqref{e:left}
+  $$
+  \tau(\delta_a(D)_y)(f)(ay)=  \tau(\delta_a(D)_{ay})(f)(ay)=\delta_a(D)(ay)
+  $$
+\end{proof}
 
 \begin{lem}
 \label{l:2}
 $$
-\delta_a(z)(f)(h)=|\Delta_a(h)|^{-\frac12}\gamma(z)(|\Delta_a|^{\frac12}f)(h)
+\delta_a(\tau(z))(f)(h)=|\Delta_a(h)|^{-\frac12}\tau(\gamma(z))(|\Delta_a|^{\frac12}f)(h)
 $$
 \end{lem}
 This is \cite[Lemma 13]{HC_inv_eigen}.
@@ -184,37 +232,22 @@ This is \cite[Lemma 13]{HC_inv_eigen}.
 
 Let $U$ be an open set containing $h$ and let $U_H=h\inv U\cap H_r$ as before. 
 Write $h=ay$ where $a\in H_r$ and $y\in U_H$.
-Suppose $z\in\z(\g)$. By  Lemma \ref{l:1} we have
-$$
-\partial(z)(f)(ay)=\partial(\delta_a(z)_y)(f)(ay)
-$$
-Here we've written $\delta_a(z)$ in place of $\delta_a(\partial(z))$.
-We have to show the right hand side is equal to 
-$$
-|\Delta(ay)|^{-\frac12}\gamma(z)(|\Delta|^{\frac12}f))(ay).
-$$
-By \eqref{e:partial} the right hand side is equal to 
+Suppose $z\in\z(\g)$. Then:
+
 $$
 \begin{aligned}
-\partial(\delta_a(z)_y)(L_a(f))(y)&=\delta_a(z)(L_a(f))(y)\\
-&=|\Delta_a(y)|^{-\frac12}\gamma(z)(|\Delta_a|^{\frac12}L_a(f))(y)\quad(\text{by Lemma \ref{l:2}})\\
+  \tau(z)(f)(ay)&=\tau(\delta_a(\tau(z))_y)(f)(ay)\quad\text{(by Lemma \ref{l:2})}\\
+&=  \tau(\delta_a(\tau(z))_y)(L_a(f))(y)\\
+ &= \delta_a(\tau(z))(L_a(f))(y)\quad\text{(definition of $L_a$)}\\
+ &= |\Delta_a(y)|^{-\frac12}\tau(\gamma(z))(|\Delta_a|^{\frac12}L_a(f))(y)\quad\text{(by Lemma \ref{l:2})}\\
+ &= |\Delta_a(y)|^{-\frac12}\tau(\gamma(z))(L_a(|\Delta|^{\frac12}f))(y)\quad\text{(elementary)}\\
+   &= |\Delta_a(y)|^{-\frac12}\tau(\gamma(z))(|\Delta|^{\frac12}f))(ay)\quad\text{(by left-invariance of $\tau(\gamma(z))$)}
 \end{aligned}
 $$
-Consider the function
-$$
-y\mapsto(|\Delta_a|^{\frac12}L_a(f))(y)=|\Delta(ay)|^{\frac12}L_a(f)(y)=L_a(|\Delta|^{\frac12}f)(y)
-$$
-Using this we see
-$$
-\begin{aligned}
-|\Delta_a(y)|^{-\frac12}\gamma(z)(|\Delta_a|^{\frac12}L_a(f))(y)&=
-|\Delta(ay)|^{-\frac12}\gamma(z)(L_a(|\Delta|^{\frac12}f))(y)
-\end{aligned}
-$$
-Now $\gamma(z)$ is invariant by left-translation, so by \eqref{e:left} this equals
-$$
-|\Delta(ay)|^{-\frac12}\gamma(z)(|\Delta|^{\frac12}f))(ay)
-$$
+The elementary step is the equality of the functions $|\Delta_a|^{\frac12}L_a(f)$ 
+and
+ $L_a(|\Delta|^{\frac12}f)$.
+
 This proves the Proposition.
 \end{proof}
 
