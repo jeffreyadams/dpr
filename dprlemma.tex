@@ -80,8 +80,8 @@
 
 \begin{document}
 
-\begin{mytitle} A Result of Harish Chandra\end{mytitle}
 
+\section{A Result of Harish Chandra}
 
 Let $G$ be
  a connected real reductive group.
@@ -90,16 +90,19 @@ Let $G_r$ be the open set of regular semisimple elements of $G$. Suppose $H$ is 
 $H_r=H\cap G_r$.
 Define
 $$
-\Delta(h)=(\det(\Ad(h)\inv -1)|_{\g/\h}\quad (a,h\in H_r).
+\Delta(h)=(\det(\Ad(h)\inv -1)|_{\g/\h}\quad (h\in H).
 $$
+Note that $\Delta(h)\ne 0$ if and only if $h\in H_r$.
+
 For later use we also define
 $$
-\Delta_a(h)=\Delta(ah)=(\det(\Ad(ah)\inv -1)|_{\g/\h}\quad (h\in H_r).
+\Delta_a(h)=\Delta(ah)=(\det(\Ad(ah)\inv -1)|_{\g/\h}\quad (a,h\in H).
 $$
+
 
 Let $\U(\g)$ be the universal enveloping algebra. 
 An element $X\in \U(\g)$ defines a left-invariant differential operator $\tau(X)$.
-For $x\in \g$ the definition is
+For $X\in \g$ the definition is
 $$\tau(X)(f)(g)=\frac d{dt}g\exp(tX)|_{t=0}.
 $$
 Let $L_g(f)(h)=f(gh)$ $(g,h\in G,f\in C^\infty(G))$. A differential operator $D$ being left-invariant means 
@@ -128,6 +131,7 @@ $$
 (zf)=|\Delta(h)|^{-\frac12}\gamma(z)(|\Delta|^{\frac12}f)
 $$
 as functions on $H_r$.
+
 Before giving the proof we establish some notation and preliminary results.
 
 
@@ -139,21 +143,6 @@ By definition this means
   \label{e:tau}
   D(f)(g)=\tau(D_g)(f)(g)\quad(g\in G)
 \end{equation}
-
-Note that $D$ is left-invariant if and only if
-\begin{equation}
-  \label{e:left}
-  D_g=D_h\quad(\text{for all }g,h\in G)
-\end{equation}
-To see this, note that for $h,g\in G$, left-invariance of $D$ says:
-$$
-D(f)(hg)=D(L_hf)(g).
-$$
-The left hand side is $\tau(D_{hg})(f)(hg)$. The right hand side is
-$$
-\tau(D_g)(L_h(f))(g)=\tau(D_g)(f)(hg)
-$$
-since $\tau(D_g)$ is (obviously)  left-invariant. Therefore $\tau(D_{hg})=\tau(D_g)$, and therefore, $D_{hg}=D_g$ for all $g,h$.
 
 
 Suppose $a\in G$ is a regular semisimple element, and set $H=\Cent_G(a)$. Suppose $U$ is an open set in $G$ containing $a$, 
@@ -194,38 +183,15 @@ Note that $\tau(D_{ay})$ is a well defined left-invariant differential operator 
 By \eqref{e:tau}
 the LHS equals $D(f)(ay)$, so this gives the statement of the Lemma.
 
-\begin{cor}
-  Suppose $f$ is a class function on $G_r$ and $D$ is a left-invariant differential operator on $G_r$.
-  Suppose $a\in G_r$ is semisimple and set $H=\Cent_G(a)$. Then $U_H=H_r$ (see \eqref{e:UH}), so $\delta_a(D)$
-  is a  differential operator on $H_r$.
-
-  Assume $\delta_a(D)$ is left-invariant on $H_r$. Then
-  $$
-  D(f)(h)=\delta_a(D)(f)(h)\quad (h\in H_r)
-  $$
-\end{cor}
-
-\begin{rem}
-I think $D$ is automatically left-invariant on $H_r$, but I'm not sure. In any event we don't use the Corollary.
-\end{rem}
-
-\begin{proof}
-  From the Lemma we have
-  $$
-  D(f)(ay)=\tau(\delta_a(D)_y)(f)(ay)
-  $$
-  for all $y\in U_H=H_r$. Since $\delta_a(D)$ is left-invariant so by \eqref{e:left}
-  $$
-  \tau(\delta_a(D)_y)(f)(ay)=  \tau(\delta_a(D)_{ay})(f)(ay)=\delta_a(D)(ay)
-  $$
-\end{proof}
-
 \begin{lem}
 \label{l:2}
+Suppose $a$ is regular, $H=\Cent(a)$, $z\in \z(\g)$, and $f$ is a class function  
+on $G_r$. Then 
 $$
-\delta_a(\tau(z))(f)(h)=|\Delta_a(h)|^{-\frac12}\tau(\gamma(z))(|\Delta_a|^{\frac12}f)(h)
+\delta_a(\tau(z))(f)(h)=|\Delta_a(h)|^{-\frac12}\tau(\gamma(z))(|\Delta_a|^{\frac12}f)(h)\quad(h\in H_r).
 $$
 \end{lem}
+
 This is \cite[Lemma 13]{HC_inv_eigen}.
 
 \begin{proof}[Proof of the Proposition]
@@ -236,7 +202,7 @@ Suppose $z\in\z(\g)$. Then:
 
 $$
 \begin{aligned}
-  \tau(z)(f)(ay)&=\tau(\delta_a(\tau(z))_y)(f)(ay)\quad\text{(by Lemma \ref{l:2})}\\
+  \tau(z)(f)(ay)&=\tau(\delta_a(\tau(z))_y)(f)(ay)\quad\text{(by Lemma \ref{l:1})}\\
 &=  \tau(\delta_a(\tau(z))_y)(L_a(f))(y)\\
  &= \delta_a(\tau(z))(L_a(f))(y)\quad\text{(definition of $L_a$)}\\
  &= |\Delta_a(y)|^{-\frac12}\tau(\gamma(z))(|\Delta_a|^{\frac12}L_a(f))(y)\quad\text{(by Lemma \ref{l:2})}\\
@@ -251,6 +217,53 @@ and
 This proves the Proposition.
 \end{proof}
 
+
+\section{A few extra facts}
+
+Here are a few other facts I thought I might need. Although I don't, they are worth recording.
+
+Note that $D$ is left-invariant if and only if
+\begin{equation}
+  \label{e:left}
+  D_g=D_h\quad(\text{for all }g,h\in G)
+\end{equation}
+To see this, note that for $h,g\in G$, left-invariance of $D$ says:
+$$
+D(f)(hg)=D(L_h(f))(g).
+$$
+The left hand side is $\tau(D_{hg})(f)(hg)$. The right hand side is
+$$
+\tau(D_g)(L_h(f))(g)=\tau(D_g)(f)(hg)
+$$
+since $\tau(D_g)$ is by definition  left-invariant. Therefore $\tau(D_{hg})=\tau(D_g)$, and therefore, $D_{hg}=D_g$ for all $g,h$.
+
+Here is a Corollary to Lemma \ref{l:1}.
+
+\begin{lem}
+  Suppose $f$ is a class function on $G_r$ and $D$ is a left-invariant differential operator on $U=G_r$.
+  Suppose $a\in G_r$ is semisimple and set $H=\Cent_G(a)$. Then $U_H=H_r$ (see \eqref{e:UH}), so $\delta_a(D)$
+  is a  differential operator on $H_r$.
+
+  Assume $\delta_a(D)$ is left-invariant on $H_r$. Then
+  $$
+  D(f)(h)=\delta_a(D)(f)(h)\quad (h\in H_r)
+  $$
+\end{lem}
+
+\begin{rem}
+I think $D$ is automatically left-invariant on $H_r$, but I'm not sure. In any event we don't use the Corollary.
+\end{rem}
+
+\begin{proof}
+ From Lemma \ref{l:1} we have 
+  $$
+  D(f)(ay)=\tau(\delta_a(D)_y)(f)(ay)
+  $$
+  for all $y\in U_H=H_r$. Since $\delta_a(D)$ is left-invariant by \eqref{e:left}
+  $$
+  \tau(\delta_a(D)_y)(f)(ay)=  \tau(\delta_a(D)_{ay})(f)(ay)=\delta_a(D)(f)(ay)
+  $$
+\end{proof}
 
 
 
