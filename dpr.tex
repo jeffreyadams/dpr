@@ -679,12 +679,14 @@ From the work of Kostant \cite{Kos78} and Vogan \cite{Vog78} it is known that ev
 
 We assume that $G$ is a quasi-split connected reductive $\R$-group. Suppose $B$ is a Borel $\R$-subgroup of $G$, $N$ its unipotent radical, and $\n=\mathrm{Lie}(N)$. Since $N(\R)$ is a connected Lie group, any character $\eta : N(\R) \to \C^\times$ is determined by its differential $d\eta : \n(\R) \to \C$, which is an $\R$-linear form. We have $\eta(\exp(Y))=e^{\<d\eta,Y\>}$ for $Y \in \n(\R)$. In fact, the real Lie group $N(\R)$ is connected, nilpotent, and simply connected (see \cite[Theorem 6.46]{KnappLie}, where the assumption that $G$ is semi-simple is unnecessary) and  hence the exponential map $\exp : \n(\R) \to N(\R)$ is a diffeomorphism by \cite[Theorem 1.127]{KnappLie}.
 
-Given a maximal torus $T\subset B$ defined over $\R$, the space $\n(\R)$ decomposes as the direct sum of relative root spaces, with respect to the action of the split part of $T$. 
+An $\R$-linear form $\n(\R) \to \C$ can be obtained as the restriction of a $\C$-linear form $\n(\C) \to \C$. Let $\bar N$ be the unipotent radical of $B$ that is $T$-opposite to $N$. Since the Killing form $\kappa$ induces a non-degenerate $\C$-linear pairing $\n \times \bar\n \to \C$, such forms are in 1-1 correspondence with elements of $\bar\n(\C)$. Given $X \in \bar\n(\C)$ we thus obtain the character $\eta_X(\exp(Y))=e^{\kappa(X,Y)}$. 
 
-An $\R$-linear form $\n(\R) \to \C$ can be obtained as the restriction of a $\C$-linear form $\n(\C) \to \C$. Let $\bar N$ be the unipotent radical of $B$ that is $T$-opposite to $N$. Since the Killing form $\kappa$ induces a non-degenerate $\C$-linear pairing $\n \times \bar\n \to \C$, such forms are in 1-1 correspondence with elements of $\bar\n(\C)$. Given $X \in \bar\n(\C)$ we thus obtain the character $\eta_X(\exp(Y))=e^{\kappa(X,Y)}$. It is unitary if and only if $X \in i\bar\n(\R)$. 
+We will be particularly interested in unitary characters. The character $\eta_X$ is unitary if and only if $X \in i\bar\n(\R)$. A second way to think about unitary characters $\eta : N(\R) \to \C^\times$ is to note that $\eta(\exp(Y))=e^{\<d\eta,Y\>}$ implies that such a character is unitary if and only if $d\eta$ sends $\mf{n}(\R)$ to $i\R$, and hence that $d\eta/i : \mf{n}(\R) \to \R$ is a linear functional on the real vector space $\mf{n}(\R)$. This linear functional determines a unique homomorphism of algebraic $\R$-groups $\gamma : N \to \mb{G}_a$, via the identity $d\gamma=d\eta/i$, and we have $\eta = \Lambda_1 \circ \gamma$, where $\Lambda_1(x)=e^{ix}$ is the standard unitary character $\R \to \C^\times$ and we have denoted the homomorphism of Lie groups $N(\R) \to \R$ induced by $\gamma$ again by $\gamma$. Note that an arbitrary unitary character of $\R$ is of the form $\Lambda_r(x)=\Lambda_1(rx)=e^{irx}$ for some $r \in \R^\times$, and $\Lambda_1\circ\gamma=\Lambda_r\circ\gamma_{1/r}$, where $\gamma_{1/r}$ is the homomorphism $N \to \mb{G}_a$ determined by $d\gamma_{1/r}=d\gamma/r$.
 
-We say a character $\eta: N(\R) \to \C^\times$ is \emph{non-degenerate} if its differential $d\eta$ restricts non-trivially to any relative root space in $\n(\R)$. Since all choices of $T$ are conjugate under $N(\R)$, this condition is independent of $T$.
- For  $X \in i\bar\n(\R)$ we  write $X=\sum_\alpha X_{-\alpha}$ where the sum runs over the set of absolute positive roots and $X_{-\alpha} \in \mf{g}_{-\alpha}$. Then $\eta_X$ is non-degenerate if and only if $X_{-\alpha} \neq 0$ for all simple roots $\alpha$, i.e. if and only if $X$ is a regular nilpotent element.
+
+Given a maximal torus $T\subset B$ defined over $\R$, the space $\n(\R)$ decomposes as the direct sum of relative root spaces, with respect to the action of the split part of $T$. We say a character $\eta: N(\R) \to \C^\times$ is \emph{non-degenerate} if its differential $d\eta$ restricts non-trivially to any relative root space in $\n(\R)$. Since all choices of $T$ are conjugate under $N(\R)$, this condition is independent of $T$.
+ 
+For  $X \in i\bar\n(\R)$ we  write $X=\sum_\alpha X_{-\alpha}$ where the sum runs over the set of absolute positive roots and $X_{-\alpha} \in \mf{g}_{-\alpha}$. Then $\eta_X$ is non-degenerate if and only if $X_{-\alpha} \neq 0$ for all simple roots $\alpha$, i.e. if and only if $X$ is a regular nilpotent element. For $\eta=\Lambda\circ\gamma$ with $\Lambda$ an arbitrary non-trivial character of $\R$, the character $\eta$ is non-degenerate if $d\gamma(X_\alpha) \neq 0$ for all simple roots $\alpha$; here $d\gamma : \mf{n}(\C) \to \C$ is the differential of the algebraic homomorphism $\gamma : N \to \mb{G}_a$, and is equal to the complexification of the differential $\mf{n}(\R) \to \R$ of the homomorphism $N(\R) \to \R$ of real Lie groups given by $\gamma$.
 
 By a  {\it Whittaker datum} we mean a $G(\R)$-conjugacy class of  pairs  $(B,\eta)$ where $B$ is a Borel subgroup defined over $\R$
 and $\eta$ is a non-degenerate unitary character of $N(\R)$. We  write $\w=[(B,\eta)]$ for the $G(\R)$-conjugacy class of $(B,\eta)$. We will now give two constructions of Whittaker data.
@@ -711,26 +713,25 @@ composition $\prod_{\alpha \in \Delta} U_\alpha \to N \to N/[N,N]$ is
 an isomorphism of complex algebraic groups, which we compose with
 $(u_\alpha)$. The inverse of the result, composed with the product map
 $\prod_\alpha \mb{G}_a \to \mb{G}_a$, becomes a homomorphism of
-algebraic groups $N/[N,N] \to \mb{G}_a$ defined over $\R$, which leads
-to a homomorphism $\eta_{\P}:N(\R) \to \R$. Then $\eta_{\P,\Lambda}=\Lambda\circ \eta_{\P}$ is a non-degenerate unitary character of $N(\R)$.
+algebraic groups $\gamma : N/[N,N] \to \mb{G}_a$ defined over $\R$ and we get $\eta_{\P,\Lambda}=\Lambda\circ \gamma$ is a non-degenerate unitary character of $N(\R)$.
 The $G(\R)$-conjugacy class of $\eta_{\P,\Lambda}$ only depends on the $G(\R)$-conjugacy class of  $\P$.  Write $\w_{\P,\Lambda}$ for the Whittaker data
-$[(B,\eta_{\P,\Lambda}]$.
+$[(B,\eta_{\P,\Lambda})]$.
 
 \begin{lem} \label{lem:w1}
 \begin{enumerate}
 \item Fix a non-trivial unitary character $\Lambda$ of $\R$. The map $\P\mapsto \w_{\P,\Lambda}$ is a $G_\tx{ad}(\R)$-equivariant bijection from $G(\R)$-conjugacy classes of real pinnings to Whittaker data.
-\item The map $X \mapsto \w_X$ is a $G_\tx{ad}(\R)$-equivariant bijection from the set of $G(\R)$-conjugacy classes of regular nilpotent elements of $\g(\R)$ to the set of Whittaker data of $G$.
-\item Set $\Lambda(x)=e^{ix}$. Then $\w_{\P,\Lambda}=\w_{\overline X}$, where $\P=(T,B,\{X_\alpha\})$ and $\overline X=i\sum_{\alpha\in\Delta}X_{-\alpha}$, and $X_{-\alpha}$ satisfies $[X_\alpha,X_{-\alpha}]=H_\alpha$.
+\item The map $X \mapsto \w_X$ is a $G_\tx{ad}(\R)$-equivariant bijection from the set of $G(\R)$-conjugacy classes of regular nilpotent elements of $i\g(\R)$ to the set of Whittaker data of $G$.
+\item The map sending an $\R$-pinning $(T,B,\{X_\alpha\})$ to $X_-=\sum_\alpha X_{-\alpha}$, where the sum runs over the set of absolute $B$-simple roots, and $X_{-\alpha}$ satisfies $[X_\alpha,X_{-\alpha}]=H_\alpha$, is a $G_\tx{ad}(\R)$-equivariant bijection between the set of $G(\R)$-conjugacy classes of $\R$-pinnings and the set of $G(\R)$-conjugacy classes of regular nilpotent elements of $\mf{g}(\R)$.
+\item Set $\Lambda(x)=e^{ix}$. Then $\w_{\P,\Lambda}=\w_{\overline X}$, where $\overline X=iX_-$ and $X_-$ as in 3.
 \end{enumerate}
 \end{lem}
 \begin{proof}
-The $G_\tx{ad}(\R)$-equivariance of the maps in 1) and 2) is clear. We need to prove the bijectivity. The proof for 2) will use 3).
+The $G_\tx{ad}(\R)$-equivariance of the maps in 1) and 2) is clear. We need to prove the bijectivity. The proof for 2) follows at once by combining 1), 3), and 4).
 
 1) Since all Borel subgroups of $G(\R)$ are $G(\R)$-conjugate, fix a Borel subgroup $B$ defined over $\R$. Then the first statement is equivalent to:
-there is a bijection between the $\Gamma$-stable sets of positive root vectors $\{X_\alpha\}$, modulo conjugation by $T(\R)$, and non-degenerate characters of $N(\R)$, modulo the action of $T(\R)$. \warn{better give a short indication, rathar than leaving to reader}.
-
+there is a bijection between the set of $B(\R)$-conjugacy classes of pairs $(T,\{X_\alpha\})$ such that $(T,B,\{X_\alpha\})$ is a real pinning, and the set of $B(\R)$-conjugacy classes of non-degenerate characters of $N(\R)$. Since all maximal tori $T \subset B$ are $N(\R)$\-conjugate, we may fix one such $T$. Then we are claiming that the map sending a $\Gamma$-stable collection $\{X_\alpha\}$ of simple root vectors to a non-degenerate unitary character of $N(\R)$ is bijective (it is evidently $T_\tx{ad}(\R)$-equivariant). With $\Lambda$ being fixed, the discussion above shows $\eta = \Lambda\circ\gamma$ establishes a bijection between unitary characters $\eta$ and homomorphisms $\gamma : N \to \mb{G}_a$ of algebraic $\R$-groups, and in turn $\gamma \mapsto d\gamma$ establishes a bijection from the latter to linear forms $d\gamma : \mf{n}(\R) \to \R$ that factor through the quotient $\mf{n}(\R)/[\mf{n},\mf{n}](\R)$. The condition $d\gamma(X_\alpha)=1$ finally determines a bijection between the set of such linear forms and the set of $\Gamma$-stable collections $\{X_\alpha\}$ of non-zero absolute simple root vectors.
  
-3) Set $X_-=\sum_{\alpha \in \Delta} X_{-\alpha}$. Then $X_-$ is a regular nilpotent element of the Lie algebra of $G$ and is fixed by the Galois action, hence an $\R$-point. It lies in $\bar\n$, the Lie algebra of the unipotent radical of the Borel subgroup $T$-opposite to $B$. Thus $\bar X \in i\bar\n(\R)$ is also regular nilpotent. 
+4) Set $X_-=\sum_{\alpha \in \Delta} X_{-\alpha}$ and $\bar X=iX_-$. Then $X_-$ is a regular nilpotent element of the Lie algebra of $G$ and is fixed by the Galois action, hence an $\R$-point. It lies in $\bar\n$, the Lie algebra of the unipotent radical of the Borel subgroup $T$-opposite to $B$. Thus $\bar X \in i\bar\n(\R)$ is also regular nilpotent. 
 
 Given $Y \in \n(\R)$ write it as $\sum_{\alpha \in \Delta} y_\alpha \cdot X_\alpha + Y'$ with $Y' \in [\n,\n](\R)$. Then
 we have
@@ -738,7 +739,12 @@ we have
 therefore
 \[ \eta_{\bar X}(\exp(Y)) = e^{\kappa(Y,\bar X)}=e^{i \kappa(Y,X_-)} = \Lambda(\sum_{\alpha \in\Delta}y_\alpha) = \eta_{\P,\Lambda}(\exp(Y)). \]
 
-2) \warn{todo}
+3) Let $(T,B,\{X_\alpha\})$ be an $\R$-pinning and set $X_-=\sum_\alpha X_{-\alpha}$. Let $H \in \mf{t}(\R)$ be the sum of the positive coroots. Since $\{H_\alpha\}$ forms a basis of the coroot lattice there exist positive integers $n_\alpha$ such that $H=\sum_\alpha n_\alpha H_\alpha$. Since $H$ is $\Gamma$-fixed, the collection of integers $\{n_\alpha\}$ is $\Gamma$-stable. Then $X_+=\sum_\alpha n_\alpha X_\alpha \in \mf{g}(\R)$ and $(X_+,H,X_-)$ forms an $\mf{sl}_2$-triple with all three elements in $\mf{g}(\R)$. All three elements $X_+$, $H$, and $X_-$, are regular. The intersection of their centralizers is the center of $G$. In particular, the only unipotent element that centralizes the triple $(X_+,H,X_-)$ is the identity element.
+
+
+For injectivity, assume two $\R$-pinnings $(T^{(i)},B^{(i)},\{X_\alpha^{(i)}\})$, $i=1,2$, lead to the same regular nilpotent element $X_- \in \mf{g}(\R)$. Let $B^-$ be the unique (due to regularity of $X_-$) Borel subgroup such that $X_-$ is contained in the Lie algebra of its unipotent radical $U^-$. The two triples $(X_+^{(i)},H^{(i)},X_-)$ are then conjugate by a unique element of the centralizer of $X_-$ in $U^-$. This element must then lie in $U^-(\R)$. Since $H^{(i)}$ and $X_+^{(i)}$ are regular elements, after conjugating by that element of $U^-(\R)$ we may assume that $T^{(1)}=T^{(2)}$ and $B^{(1)}=B^{(2)}$. But then each $X_\alpha^{(i)}$ can be recovered as the $\alpha$-component of $X_+^{(i)}$. We conclude that the two pinnings are indeed conjugate under $G(\R)$.
+
+For surjectivity consider a regular nilpotent element $X_- \in \mf{g}(\R)$ and let $B^-$ be the unique Borel subgroup such that $X_-$ is contained in the Lie algebra of the unipotent radical $U^-$ of $B^-$. If we can find a maximal torus $T \subset B^-$ such that the decomposition of $X^-$ according to the root spaces for $T$ has non-zero components only for the $B^-$-simple roots, then writing $X^-=\sum_\alpha X_{-\alpha}$ accordingly and setting $X_\alpha \in \mf{g}_\alpha$ such that $[X_\alpha,X_{-\alpha}]=H_\alpha$ we obtain an $\R$-pinning $(T,B,\{X_\alpha\})$ giving rise to $X_-$, where $B$ is the $T$-opposite of $B^-$. In order to find such a $T$, we first choose an arbitrary maximal $\R$-torus $T \subset B^-$ and want to conjugate this torus under $U^-(\R)$ to obtain the desired torus. This is equivalent to conjugating $X^-$ under $U^-(\R)$ to achieve that its components for roots that are not $B^-$-simple are all zero. To see that this is possible, write $X_-=\sum_\alpha X_{-\alpha}$, where $\alpha$ runs over \emph{all} roots of $T$ in $B^-$, and set $X_-'=\sum_\alpha X_{-\alpha}$, where now $\alpha$ runs over \emph{only the simple} roots of $T$ in $B^-$. Thus $X_--X_-' \in [\mf{n}^-,\mf{n}^-](\R)$. Since both $X_-$ and $X_-'$ are regular and contained in $\mf{n}^-$, they are conjugate under an element of $B^-(\C)$. But conjugation by $U^-(\C)$ doesn't change the simple components, while conjugation by $T(\C)$ does so unless the element lies in $Z_G(\C) \subset T(\C)$. Therefore we conclude that $X_-$ and $X_-'$ are conjugate under  an element $u \in U^-(\C)$. Now $u^{-1}\sigma(u)$ lies in the centralizer of $X_-$ in $U^-(\C)$, which is a connected unipotent subgroup $U'(\C)$ of $U^-(\C)$. But $H^1(\Gamma,U'(\C))=\{0\}$ and we see that $uU'(\C)$ intersects $U^-(\R)$, i.e. $X_-$ and $X_-'$ are indeed conjugate under $U^-(\R)$, as claimed.
 \end{proof}
 
 It is helpful to understand the set of all Whittaker data.
@@ -755,18 +761,16 @@ acts by automorphisms on $G(\R)$, and therefore  induces an action of $Q(G(\R))$
 \begin{enumerate}
 \item the set of Whittaker data;
 \item the set of regular nilpotent orbits in $\g(\R)$;
-\item the set of generic eds representations in an L-packet. \warn{it's too early to talk about $L$-packets here, we will only construct them in the next section. it's also not necessary in my view}
+% \item the set of generic eds representations in an L-packet. \warn{it's too early to talk about $L$-packets here, we will only construct them in the next section. it's also not necessary in my view}
 \end{enumerate}
 \end{lem}
 
-See \cite[Lemma 14.14]{AV92}.
+See \cite[Lemma 14.14]{AV92}. \warn{Jeff: There is no Lemma 14.14 in that reference}
 
 \begin{proof}
 	  We use Lemma \ref{lem:w1}(1) and the fact that $\mc{P} \mapsto \w_{\mc{P},\Lambda}$ is $G_\tx{ad}(\R)$-equivariant, to reduce to the transitivity of the action of $G_\tx{ad}(\R)$ on the set of $\R$-pinnings. Since all Borel pairs over $\R$ are conjugate under $G(\R)$, this reduces the statement to the simple transitivity of the action of $T_\tx{ad}(\R)$ on the possible choices of non-zero simple root vectors. If the simple root $\alpha$ is real, then so is the corresponding fundamental coweight $\varpi_\alpha$, which then gives a 1-parameter subgroup $\R^\times \to T_\tx{ad}(\R)$, which clearly acts simply transitively on $\mf{g}_\alpha(\R) \sm \{0\}$. If the simple root is complex, then a pair $(X_\alpha,X_{\sigma\alpha})$ contributing to the pinning is an element of $(\mf{g}_\alpha \oplus \mf{g}_{\sigma\alpha})(\R) = \C$. The fundamental coweight $\varpi_\alpha$ induces a 1-parameter subgroup $\C^\times \to T_\tx{ad}(\R)$ which again acts simply transitively on $(\mf{g}_\alpha \oplus \mf{g}_{\sigma\alpha})(\R)$.
 
 The second assertion is immediate from Lemma \ref{lem:w1}(2).
-
-For the third assertion\dots
 \end{proof}
 
 For the next lemma recall the notation $\Omega_\R(S,G)$ from \S\ref{sub:weylint}.
@@ -1044,12 +1048,12 @@ We claim that $A$ consists of semi-simple elements. Since $A^2 \subset B$ it is 
 
 Now $B$ is normal in $A$ of index $2$, $B/B^\circ$ is a finite abelian group, and $B^\circ$ is a connected abelian algebraic groups consisting of semi-simple elements, hence a torus. We conclude that $A$ is supersolvable according to \cite[Definition 5.14]{SS70}, and \cite[Theorem 5.16]{SS70} implies that $A$ normalizes a maximal torus $\hat T \subset \hat G$.
 
-We now provide an alternative proof of (1).
-The image of $\C^\times$ is connected in the analytic topology, abelian, and consists of semisimple elements. It follows \warn{reference?} that $\hat L=\Cent_{\hat G}(\varphi(\C^\times))$ is a Levi subgroup.
-In particular $\hat L$ is connected, reductive, and contains a maximal torus $\hat S$ of $\hat G$. Since $\varphi(\C^\times)$ is contained in the identity component of the center of $\hat L$, it is contained in $\hat S$.
-Choose an element $g\in \varphi(W_\R)\backslash \varphi(\C^\times)$. Then $g$ normalizes $\hat L$, and since $g^2\in \varphi(\C^\times)$ conjugation by $g$ acts as an involution on $\hat L$ and is thus induces a semi-simple automorphism of $\hat L$. According to \cite[Theorem 7.5]{Ste68end}, it stablizes a Borel pair in $\hat L$.
-The maximal torus $\hat T$ in that Borel pair is a maximal torus of $\hat G$, containing $\varphi(\C^\times)$ (since the latter is contained in the center of of $\hat L$), and
-fixed by the action of $g$, hence and therefore normalized by the image of $\varphi$.
+% We now provide an alternative proof of (1).
+% The image of $\C^\times$ is connected in the analytic topology, abelian, and consists of semisimple elements. It follows \warn{reference?} that $\hat L=\Cent_{\hat G}(\varphi(\C^\times))$ is a Levi subgroup.
+% In particular $\hat L$ is connected, reductive, and contains a maximal torus $\hat S$ of $\hat G$. Since $\varphi(\C^\times)$ is contained in the identity component of the center of $\hat L$, it is contained in $\hat S$.
+% Choose an element $g\in \varphi(W_\R)\backslash \varphi(\C^\times)$. Then $g$ normalizes $\hat L$, and since $g^2\in \varphi(\C^\times)$ conjugation by $g$ acts as an involution on $\hat L$ and is thus induces a semi-simple automorphism of $\hat L$. According to \cite[Theorem 7.5]{Ste68end}, it stablizes a Borel pair in $\hat L$.
+% The maximal torus $\hat T$ in that Borel pair is a maximal torus of $\hat G$, containing $\varphi(\C^\times)$ (since the latter is contained in the center of of $\hat L$), and
+% fixed by the action of $g$, hence and therefore normalized by the image of $\varphi$.
 
 
 
@@ -1373,7 +1377,9 @@ This allows us to assume that $G$ is semi-simple and simply connected in what fo
 		as functions on $T(\R) \cap U$.
 		
 
-		By definition, the two Harish-Chandra isomorphisms $\gamma_i$ and $\gamma'$ are related by composition by $\tx{Ad}(h)$ for any $h \in H(\C)$ with $\tx{Ad}(h)S_i=S'$. Note that the $\R$-structure here is irrelevant. Furthermore, transporting $d\tau'$ under $\tx{Ad}(h)$ and then the isomorphism $j_i$ produces $d\tau$ \warn{do we need more detail here?}. With this we obtain $d\tau'(\gamma'(z_H))=d\tau(\gamma(z))$. Combining this with \eqref{eq:e1} and \eqref{eq:e5} we obtain
+		By definition, the two Harish-Chandra isomorphisms $\gamma_i$ and $\gamma'$ are related by composition by $\tx{Ad}(h)$ for any $h \in H(\C)$ with $\tx{Ad}(h)S_i=S'$. Note that the $\R$-structure here is irrelevant, because the Harish-Chandra homomorphism is defined over $\C$. Furthermore, transporting $d\tau'$ under $\tx{Ad}(h)$ and then under the isomorphism $j_i$ produces $d\tau$ 
+		%\warn{do we need more detail here?}. 
+		With this we obtain $d\tau'(\gamma'(z_H))=d\tau(\gamma(z))$. Combining this with \eqref{eq:e1} and \eqref{eq:e5} we obtain
 		\[  z \cdot (|D_T(-)|^{-1/2}S\Theta_{\varphi'}\circ j_i) = d\tau(\gamma(z)) \cdot (|D_T(-)|^{-1/2}S\Theta_{\varphi'}\circ j_i). \] 
 		The desired eigendistribution property of the function $\delta \mapsto \sum_\gamma \Delta(\dot\gamma,\delta)S\Theta_{\varphi'}(\dot\gamma)$ has thus been proved.
 	\end{proof}
