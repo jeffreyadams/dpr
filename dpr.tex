@@ -414,7 +414,7 @@ In the second sum we have set $\tau'=\tau \cdot \rho_\tau^{-1}$, and $d_\tau'=d_
 
 \subsection{Endoscopic groups and double covers} \label{sub:covendo}
 
-The notion of endoscopic data is introduced in \cite[\S1.2]{LS87}, and is a variation of the notion of endoscopic pairs or endoscopic triples discussed in \cite{Kot84} and \cite{Kot86}.
+For the next few sections we will work with an arbitrary local field $F$; the case $F=\R$ is one example. The notion of endoscopic data is introduced in \cite[\S1.2]{LS87}, and is a variation of the notion of endoscopic pairs or endoscopic triples discussed in \cite{Kot84} and \cite{Kot86}.
 
 It can be described equivalently as follows. An endoscopic datum for $G$ is a tuple $(H,s,\mc{H},\eta)$ consisting of
 \begin{enumerate}[label=(\arabic*)]
@@ -446,16 +446,16 @@ An approach introduced in \cite{KalHDC} is to extend the theory of double covers
 
 \subsection{Transfer of orbital integrals} \label{sub:transfer}
 
-We continue with an endoscopic datum $(H,s,\mc{H},\eta)$ for $G$. In the pure setting we demand $s \in Z(\hat H)^\Gamma$, and in the rigid setting we demand $s \in Z(\hat{\bar H})^+$. We will review here the transfer of orbital integrals, which is dual to the transfer of characters that is the subject of this paper.
+We continue with a local field $F$ (the main example for this note being $F=\R$) and an endoscopic datum $(H,s,\mc{H},\eta)$ for $G$. We shall further assume that $F$ has characteristic zero, because Theorem \ref{thm:orbtrans} below has so far been proved only under this assumption. In the pure setting we demand $s \in Z(\hat H)^\Gamma$, and in the rigid setting we demand $s \in Z(\hat{\bar H})^+$. We will review here the transfer of orbital integrals, which is dual to the transfer of characters that is the subject of this paper.
 
 As explained in \S\ref{sub:covendo}, in the classical setting order to formulate endoscopic transfer (both geometric and spectral), one has to make an arbitrary choice of a $z$-pair $(H_1,\eta_1)$, where $H_1 \to H$ is a surjective homomorphism of algebraic groups whose kernel is an induced torus, and $\eta_1 : \mc{H} \to {^LH_1}$ is an $L$\-embedding. 
 
 Alternatively, \cite{KalHDC} shows that there is a canonical double cover $H(F)_\pm \to H(F)$ and a canonical isomorphism $L^H_\pm \to \mc{H}$, whose composition with $\eta$ then becomes an $L$\-embedding $^LH_\pm \to {^LG}$. In this framework, no auxiliary choices are needed.
 
 The transfer of orbital integrals and characters between $G$ and $H$ is governed by the transfer factor. In the classical case, it is a function
-\[ \Delta : H_1(\R)^\tx{sr} \times G(\R)^\tx{sr} \to \C \]
+\[ \Delta : H_1(F)^\tx{sr} \times G(F)^\tx{sr} \to \C \]
 that depends on the $z$-pair datum, while in the setting of covers it is a function
-\[ \Delta : H(R)_\pm^\tx{sr} \times G(\R)^\tx{sr} \to \C \]
+\[ \Delta : H(F)_\pm^\tx{sr} \times G(F)^\tx{sr} \to \C \]
 that is genuine in the first argument. In the classical case, it is given as the product
 \[ \epsilon \cdot \Delta_I^{-1}\Delta_{II}\Delta_{III_1}^{-1}\Delta_{III_2}. \]
 The individual factors are defined in \cite{LS87}, except for $\epsilon$, which is defined in the more general twisted setting in \cite[\S5.3]{KS99}, and $\Delta_{III_1}$, whose relative definition is given in \cite{LS87}, but whose absolute definition is given in \cite{KalECI} in the setting of pure inner forms, and in \cite{KalRI} in the setting of rigid inner forms. The inverses appear due to the conventions of \cite[(1.0.4)]{KS12}, which we will use in this paper. The term $\Delta_{IV}$ is missing because we have normalized orbital integrals and characters by the Weyl denominator. We will not review the construction of the individual pieces here, as it has been reviewed in various other places, such as \cite[\S3.5,\S4.2,\S4.3]{KalIMS}. The individual factors depend on auxiliary data, known as $a$-data and $\chi$-data. The total factor depends on a choice of Whittaker datum, and $z$-datum.
@@ -466,21 +466,21 @@ The terms $\Delta_I$ and $\Delta_{III}$ are slightly different from the original
 
 Recall the notation $O_\gamma(f)$ for normalized orbital integrals from \S\ref{sub:weyldenom}. We define the stable orbital integral
 \[ SO_\gamma(f) = \sum_{\gamma'} O_{\gamma'}(f), \]
-where $\gamma'$ runs over a set of representatives for the $G(\R)$-conjugacy classes of those elements that are stably conjugate, i.e. $G(\C)$-conjugate, to $\gamma$.
+where $\gamma'$ runs over a set of representatives for the $G(F)$-conjugacy classes of those elements that are stably conjugate, i.e. $G(F_s)$-conjugate, to $\gamma$.
 
-In the setting of covers, orbital integrals and stable orbital integrals are defined analogously, using the fact that every admissible isomorphism $T \to T'$ between maximal tori of $G$ maps $R(T,G)$ to $R(T',G)$ and hence lifts canonically to an isomorphism $T(\R)_G \to T'(\R)_G$. We apply this to the isomorphism induced by conjugation or stable conjugation. 
+In the setting of covers, orbital integrals and stable orbital integrals are defined analogously, using the fact that every admissible isomorphism $T \to T'$ between maximal tori of $G$ maps $R(T,G)$ to $R(T',G)$ and hence lifts canonically to an isomorphism $T(F)_G \to T'(F)_G$. We apply this to the isomorphism induced by conjugation or stable conjugation. 
 
-We now state the theorem asserting transfer of orbital integrals. It is a fundamental result of Shelstad, \cite{She82}, \cite{SheTE1}. We state two versions, one using the cover $H(\R)_\pm$ and one using a $z$-pair $(H_1,\eta_1)$. 
+We now state the theorem asserting transfer of orbital integrals. In the case $F=\R$ it is a fundamental result of Shelstad, \cite{She82}, \cite{SheTE1}. In the case of $F/\Q_p$ it is a culmination of the work of many people, including Langlands and Shelstad \cite{LS87}, \cite{LS90}, Waldspurger, Ngo, \textcolor{red}{ref}. We state two versions, one using the cover $H(F)_\pm$ and one using a $z$-pair $(H_1,\eta_1)$. 
 
 \begin{thm} \label{thm:orbtrans}
-Let $f \in \mc{C}_c^\infty(G(\R))$.
+Let $f \in \mc{C}_c^\infty(G(F))$.
 \begin{enumerate}
-	\item There exists a genuine function $f^{H_\pm} \in \mc{C}_c^\infty(H(\R)_\pm)$ such that for all $\dot\gamma \in H(F)_\pm^\tx{sr}$
+	\item There exists a genuine function $f^{H_\pm} \in \mc{C}_c^\infty(H(F)_\pm)$ such that for all $\dot\gamma \in H(F)_\pm^\tx{sr}$
 	\[ SO_{\dot\gamma}(f^{H_\pm}) = \sum_\delta \Delta(\dot\gamma,\delta) O(\delta,f). \]
-	\item Assume chosen a $z$-pair $(H_1,\eta_1)$. There exists a genuine function $f^{H_1} \in \mc{C}_c^\infty(H_1(\R))$ such that for all $\gamma_1 \in H_1(F)^\tx{sr}$
+	\item Assume chosen a $z$-pair $(H_1,\eta_1)$. There exists a genuine function $f^{H_1} \in \mc{C}_c^\infty(H_1(F))$ such that for all $\gamma_1 \in H_1(F)^\tx{sr}$
 	\[ SO_{\gamma_1}(f^{H_1}) = \sum_\delta \Delta(\gamma_1,\delta) O_\delta(f). \]
 \end{enumerate}
-In both cases $\delta$ runs over the set of $G(\R)$-conjugacy classes in $G(\R)^\tx{sr}$.
+In both cases $\delta$ runs over the set of $G(F)$-conjugacy classes in $G(F)^\tx{sr}$.
 \end{thm}
 
 \begin{dfn} \label{dfn:matching}
@@ -488,7 +488,7 @@ The functions $f$ and $f^{H_\pm}$ are called \emph{matching}. The functions $f$ 
 \end{dfn}
 
 \begin{rem} \label{rem:matchmeasures}
-	Since the orbital integral $O_\delta(f)$ depends on the choice of measures on $G(\R)$ and $T(\R)$, $T=\tx{Cent}(\delta,G)$, the concept of matching functions also depends on the choice of measures on $G(\R)$, $H(\R)$, and all tori in $G$ and $H$. There is a way to synchronize the various tori, see Remark \ref{rem:measures}.
+	Since the orbital integral $O_\delta(f)$ depends on the choice of measures on $G(F)$ and $T(F)$, $T=\tx{Cent}(\delta,G)$, the concept of matching functions also depends on the choice of measures on $G(F)$, $H(F)$, and all tori in $G$ and $H$. There is a way to synchronize the various tori, see Remark \ref{rem:measures}.
 
 	We note further that the normalization of orbital integrals we are using (\S\ref{sub:weyldenom}) cancels the normalization of the transfer factor we are using (it is missing the $\Delta_{IV}$ piece) and therefore the notion of matching functions of Definition \ref{dfn:matching} is the same as that obtained by using un-normalized orbital integrals and a transfer factor containing the $\Delta_{IV}$ piece.
 \end{rem}
@@ -501,26 +501,26 @@ This is in the setting of covers and we refer to \cite[Lemma 4.3.1]{KalHDC}. In 
 
 To explain this formula let us denote by $\gamma \in H(F)$ the image of $\dot\gamma$ resp. $\gamma_1$, and let $S \subset H$ be the centralizer of $\gamma \in H(F)$. Let $T \subset G_{z_1}$ be the centralizer of $\delta_1$. Using the discussion of \S\ref{sub:adm} we obtain from the inclusion $S \to H$ a $\Gamma$-stable $\hat H$-conjugacy class of embeddings $\hat S \to \hat H$. Composing this with the inclusion $\eta : \hat H \to \hat G$ we obtain a $\Gamma$-stable $\hat G$-conjugacy class of embeddings $\hat S \to \hat G$, hence conversely a $\Gamma$-stable $G(F^s)$-conjugacy class of embeddings $S \to G$. Among them, there is a unique one that maps $\gamma$ to $\delta_1$. It is automatically defined over $F$, and we call it $j$. Its dual-inverse $\hat\jmath^{-1}$ is an isomorphism $\hat S \to \hat T$. Composing with the canonical inclusion $Z(\hat H) \to \hat S$ we can use it to transport the element $s \in Z(\hat H)^\Gamma$ to $\hat T^\Gamma$, where it can be paired with elements of $H^1(F,T)$ by Tate-Nakayama duality. This is in the setting of pure inner twists, and the setting of rigid inner twists is analogous.
 
-The second property is related to the definition of $\Delta_{III}$. We will first present an idealized situation. Assume that an $L$\-embedding $^LH \to {^LG}$ exists and has been fixed. Assume further that $L$\-embeddings $^LS \to {^LH}$ and $^LT \to {^LG}$ have been fixed. These always exist if we use the Weil-forms of the $L$\-groups, but are not unique. The isomorphism $j : S \to T$ from the previous paragraph induces an $L$\-isomorphism $^LS \to {^LT}$. We now have four maps that fit in a square, but this square has no reason to commute. More precisely, there does exist an $L$\-isomorphism $^LS \to {^LT}$ that does make the square commute, but it is not necessarily the one induced from $j$. Rather, it differs from it by multiplication by an element $a \in H^1(W_\R,\hat S)$. This element is the $L$\-parameter of a character of $S(\R)$, which we may denote by $\<a,-\>$. By definition
+The second property is related to the definition of $\Delta_{III}$. We will first present an idealized situation. Assume that an $L$\-embedding $^LH \to {^LG}$ exists and has been fixed. Assume further that $L$\-embeddings $^LS \to {^LH}$ and $^LT \to {^LG}$ have been fixed. These always exist if we use the Weil-forms of the $L$\-groups, but are not unique. The isomorphism $j : S \to T$ from the previous paragraph induces an $L$\-isomorphism $^LS \to {^LT}$. We now have four maps that fit in a square, but this square has no reason to commute. More precisely, there does exist an $L$\-isomorphism $^LS \to {^LT}$ that does make the square commute, but it is not necessarily the one induced from $j$. Rather, it differs from it by multiplication by an element $a \in H^1(W_F,\hat S)$. This element is the $L$\-parameter of a character of $S(F)$, which we may denote by $\<a,-\>$. By definition
 \[ \Delta_{III}(\gamma,\delta)=\<a,\gamma\>. \]
 Even though $\delta$ doesn't appear on the right, it influences the construction via the map $j$, which depends on $\delta$. 
 
-The key property of this definition that we will need is the following. Assume given $L$\-parameters $\varphi_S : W_\R \to {^LS}$ and $\varphi_T : W_\R \to {^LT}$, with the property that composing them with the $L$\-embeddings $^LS \to {^LH}$, $^LH \to {^LG}$, and $^LT \to {^LG}$, provides a commutative triangle. If $\theta_S$ and $\theta_T$ are the characters of $S(\R)$ and $T(\R)$ corresponding to these parameters, then we have
+The key property of this definition that we will need is the following. Assume given $L$\-parameters $\varphi_S : W_F \to {^LS}$ and $\varphi_T : W_F \to {^LT}$, with the property that composing them with the $L$\-embeddings $^LS \to {^LH}$, $^LH \to {^LG}$, and $^LT \to {^LG}$, provides a commutative triangle. If $\theta_S$ and $\theta_T$ are the characters of $S(F)$ and $T(F)$ corresponding to these parameters, then we have
 \begin{equation} \label{eq:tfd3}
 \Delta_{III}(\gamma,\delta) = \theta_T(\delta)/\theta_S(\gamma).	
 \end{equation}
 To see this one observes that in the diagram
 \[ \xymatrix{
 	&^LS\ar[dd]_a\ar[r]&^LH\ar[dd]\\
-	W_\R\ar[ru]^{\varphi_S}\ar[rd]_{\varphi_T}\\
+	W_F\ar[ru]^{\varphi_S}\ar[rd]_{\varphi_T}\\
 	&^LT\ar[r]&^LG,
 }
 \]
 the square commutes by definition of $a$, hence the trangle commutes by assumptions on $\varphi_S$ and $\varphi_T$.
 
-We now comment on the practical, rather than idealized, situation. In the classical setting an $L$\-embedding $^LH \to {^LG}$ doesn't always exist. Instead, one has to choose a $z$-pair $(H_1,\eta_1)$ and then has $^LG \leftarrow \mc{H} \to {^LH_1}$. This makes the first variable of $\Delta_{III}$ an element of $S_1(\R)$, where $S_1$ is the preimage of $S$ in $H_1$. Moreover, the $L$\-embeddings $^LS \to {^LH}$ and $^LT \to {^LG}$ are specified in terms of auxiliary data, called $\chi$-data, and the term $\Delta_III$ depends on that choice, as well as on the choice of $z$-pair.
+We now comment on the practical, rather than idealized, situation. In the classical setting an $L$\-embedding $^LH \to {^LG}$ doesn't always exist. Instead, one has to choose a $z$-pair $(H_1,\eta_1)$ and then has $^LG \leftarrow \mc{H} \to {^LH_1}$. This makes the first variable of $\Delta_{III}$ an element of $S_1(F)$, where $S_1$ is the preimage of $S$ in $H_1$. Moreover, the $L$\-embeddings $^LS \to {^LH}$ and $^LT \to {^LG}$ are specified in terms of auxiliary data, called $\chi$-data, and the term $\Delta_III$ depends on that choice, as well as on the choice of $z$-pair.
 
-In the setting of covers, all $L$\-embeddings are canonical, and no auxiliary data need to be chosen, but the $L$\-groups that are involved are those of certain covers. Therefore, $\Delta_{III}$, while independent of any choices, has first variable coming from the double cover $S(\R)_\pm$ of $S(\R)$ that is the pull-back of $S(\R)$ under the canonical double cover $H(\R)_\pm \to H(\R)$. With these provios, the obvious analog of \eqref{eq:tfd3} still holds.
+In the setting of covers, all $L$\-embeddings are canonical, and no auxiliary data need to be chosen, but the $L$\-groups that are involved are those of certain covers. Therefore, $\Delta_{III}$, while independent of any choices, has first variable coming from the double cover $S(F)_\pm$ of $S(F)$ that is the pull-back of $S(F)$ under the canonical double cover $H(F)_\pm \to H(F)$. With these provios, the obvious analog of \eqref{eq:tfd3} still holds.
 
 % this factor depends on the choice of $\chi$-data. This choice produces $L$\-embeddings $^LS \to {^LH}$ and $^LT \to {^LG}$. If we assume that $H_1=H$ and $\eta_1 : {^LH} \to {^LG}$ is an $L$\-embedding, then composing we obtain $L$\-embeddings $^LS \to {^LG}$ and $^LT \to {^LG}$. On the other hand we have the isomorphism $j : S \to T$ reviewed above, and it induces an $L$\-isomorphism $^LS \to {^LG}$. Composing again we now have two $L$\-embedings $^LS \to {^LG}$. They necessarily differ by an element of $H^1(W_\R,\hat S)$, which is the parameter of a character $\chi$ of $S(\R)$. Then $\Delta_{III}(\gamma,\delta)=\chi(\gamma)$. From this definition one sees the following property. If $\varphi : W_\R \to {^LS}$ is a the parameter of a character $\theta$ of $S(\R)$ and $\varphi' : W_\R \to {^LT}$ is the parameter of a character $\theta'$ of $T(\R)$, and if composing these parameters with $^LS \to {^LH} \to {^LG}$ and $^LT \to {^LG}$ we obtain the same parameter for $^LG$, then
 % \begin{equation} \label{eq:tfd3}
@@ -600,11 +600,73 @@ In this theorem we have chosen a Haar measure $dg$ on $G(\R)$, and a Haar measur
 	respectively.
 \end{rem}
 
+\subsection{Endoscopic lifting of distributions}
+
+In this subsection we continue to work with an arbitrary local field $F$ of characteristic zero. Let $(H,s,\mc{H},\eta)$ be an endoscopic datum of $G$. The transfer of orbital integrals given by Theorem \ref{thm:orbtrans} defines a dual transfer of distributions. Let $\mc{I}(G)$ denote the space of invariant distributions on $G(F)$. This space consists of linear functionals on $\mc{C}^\infty_c(G(F))$, with a certain continuity property in the case $F=\R$, and which are invariant under the conjugation action of $G(F)$. By a deep theorem of Harish-Chandra this invariance property is equivalent to the requirement that such a functional vanishes on any test function for which all regular semi-simple orbital integrals vanish. Let $\mc{S}(G) \subset \mc{I}(G)$ denote the subspace of \emph{stable} distributions, defined to be those that vanish on all test functions for which all stable regular semi-simple orbital integrals vanish.
+
+We have analogously the spaces $\mc{S}(H) \subset \mc{I}(H)$. But the transfer of functions doesn't involve $H(F)$. Rather, it involves either the canonical double cover $H(F)_\pm$, or a chosen $z$-extension $H_1(F)$. Therefore, we write $\mc{I}_\tx{gen}(H_\pm)$ for the space of $H(F)$-invariant (continuous when $F=\R$) linear functionals on the space $\mc{C}^\infty_{c,\tx{gen}}(H(F)_\pm)$ of genuine test functions on $H(F)_\pm$, and similarly $\mc{I}_\tx{gen}(H_1)$ for the space of $H(F)$-invariant (continuous when $F=\R$) linear functionals on the space $\mc{C}^\infty_{c,\tx{gen}}(H_1(F))$ of genuine test functions on $H_1(F)$.
+
+\begin{dfn} \label{dfn:stabtrans}
+The \emph{endoscopic lifting} is the linear map 
+\[ \tx{Lift} : \mc{S}_\tx{gen}(H_\pm) \to \mc{I}(G) \quad \tx{resp.}\quad \tx{Lift} : \mc{S}_\tx{gen}(H_1) \to \mc{I}(G)\] 
+defined by $\tx{Lift}(d)(f)=d(f^{H_\pm})$ resp. $\tx{Lift}(d)(f)=d(f^{H_1})$.
+\end{dfn}
+
+An invariant distribution can be given by integration against a locally integrable class function $\phi \in L^1_\tx{loc}(G(F))$, namely 
+\[ d_\phi(f) = \int_{G(F)_\tx{rs}} |D(x)|^{-1/2}\phi(x)f(x)dx. \]
+Here locally integrable means that $\phi$ is measurable on $G(F)$ and integrable on any compact subset of $G(F)$, and again $d_\phi$ depends on the choice of Haar measure $dx$. We say that the distribution $d_\phi$ is represented by $\phi$. We have inserted the factor $|D(x)|^{-1/2}$ as a means of normalization, following our earlier convention. Note that only the restriction of $\phi$ to $G(F)_\tx{rs}$ is relevant, since the complement of this set has measure zero.
+
+The distribution $d_\phi$ will be stable if and only if the function $\phi$ is stably invariant, i.e. stable on regular semi-simple conjugacy classes. If we replace $G(F)$ by $H(F)_\pm$ or $H_1(F)$, then we will be interested in functions that are locally integrable, stably invariant, and anti-genuine, meaning they transform by the inverse of the  character of $H(F)_\pm \to H(F)$ resp. $H_1(F) \to H(F)$; for the double cover $H(F)_\pm$ this is equivalent to genuine, since the central character has order $2$.
+
+We can now apply the Weyl integration formula and its stable analog to show that the endoscopic lifting of a stable distribution represented by a function is an invariant distribution that is again represented by a function, and moreover the two functions are related by an explicit formula.
+
+\begin{lem} \label{lem:equi}
+	Let $\phi^H$ be a stably-invariant locally integrable anti-genuine function on $H(F)_\pm$ resp. $H_1(F)$. Then 
+	\[ \tx{Lift}(d_{\phi^H}) = d_{\phi^G}, \]
+	where $\phi^G$ is the locally integrable class function on $G(F)$ given by the following formula
+	\[ \phi^G(\delta) = \sum_{\gamma \in H(F)_\tx{rs}/\tx{st} } \Delta(\dot\gamma,\delta) \phi^H(\dot\gamma). \]
+	\end{lem}
+	\begin{proof}
+	The proofs of the two cases $H(F)_\pm$ and $H_1(F)$ are almost identical, so we will only give the proof for $H(F)_\pm$.
+	
+	We have $d_{\phi^H}(f^{H_\pm}) = \int_{H(F)}|D^H(\gamma)|^{-1/2}\phi^H(\dot\gamma)f^{H_1}(\dot\gamma)d\gamma$, where $\dot\gamma \in H(F)_\pm$ is any preimage of $\gamma$. Note that, while the factors in the integrand depends on $\dot\gamma$, the dependence cancels out in the product, because both $\phi^H$ and $f^{H_\pm}$ are genuine.
+	
+	We apply the stable Weyl integration formula (Corollary \ref{cor:stabweyl}, but in the form of Remark \ref{rem:weyl1}) and use the stable invariance of $\phi^H$ to rewrite the above as
+	\[ \sum_{T_H \in \mc{ST}_H} \int_{T_H(F)_\tx{sr}/\Omega(T_H,H)(F)}\phi^H(\dot\gamma) SO_{\dot\gamma}(f^{H_\pm})d\gamma.\]
+	According to Theorem \ref{thm:orbtrans} this equals
+	\begin{equation} \label{eq:x1}
+	\sum_{T_H \in \mc{ST}_H} \int_{T_H(F)_\tx{sr}/\Omega(T_H,H)(F)}\phi^H(\dot\gamma)  \sum_\delta \Delta(\dot\gamma,\delta) O_\delta(f) d\gamma.
+	\end{equation}
+	We will now rework the indexing sets. Let $\mf{X}$ be the set of pairs $([[\gamma]],[\delta])$, where $[[\gamma]]$ is a stable class of strongly regular semi-simple elements of $H(F)$, $[\delta]$ is a rational class of strongly regular semi-simple elements of $G(F)$, and $\gamma$ and $\delta$ are related. Projecting onto the first coordinate provides a surjective map
+	\[ \mf{X} \to \bigcup_{T_H \in \mc{ST}_H} T_H(F)_\tx{sr}/\Omega(T_H,H)(F) \]
+	with finite fibers. Pulling back the measure on the target that is comprised of the various Haar measures on the tori $T_H(F)$, we obtain a measure on $\mf{X}$, and \eqref{eq:x1} becomes
+	\begin{equation} \label{eq:x2}
+	\int_{\mf{X}} \phi^H(\dot\gamma) \Delta(\dot\gamma,\delta) O_\delta(f) d([[\gamma]],[\delta]).
+	\end{equation}
+	On the other hand, projecting onto the second coordinate provides a surjective map
+	\[ \mf{X} \to \bigcup_{T \in \mc{T}_G} T(F)_\tx{sr}/\Omega_F(T,G) \]
+	and pulling back the measure on the target that is comprised of the various Haar measures on the tori $T(F)$, we obtain a measure on $\mf{X}$. Since the measures on the tori in $H$ and those on the tori in $G$ are synchronized as in Remark \ref{rem:measures}, the two measures on $\mf{X}$ agree. Therefore, we can rewrite \eqref{eq:x2} as 
+	\[ 
+	\sum_{T \in \mc{T}} \int_{T(F)_\tx{sr}/\Omega_F(T,G)}O_\delta(f) \sum_\gamma \Delta(\dot\gamma,\delta) \phi^H(\dot\gamma) d\delta,	
+	\] 
+	where now $\gamma$ runs over the set of stable classes of strongly regular semi-simple elements of $H(F)$. Applying the Weyl integration formula (Theorem \ref{thm:weyl}, in the form of Remark \ref{rem:weyl1}) we can rewrite this as 
+	\begin{equation} \label{eq:x3}
+	\int_{G(F)_\tx{sr}}f(\delta) |D^G(\delta)|^{-1/2}\sum_\gamma \Delta(\dot\gamma,\delta) \phi^H(\dot\gamma) d\delta,
+	\end{equation}
+	which is equal to $d_{\phi^G}(f)$ provided we define
+	\begin{equation} \label{eq:x4}
+		\phi^G(\delta) = \sum_\gamma \Delta(\dot\gamma,\delta) \phi^H(\dot\gamma).
+	\end{equation}
+	It remains to remark that this definition does indeed produce a locally integrable class function. The conjugation-invariance is clear from the corresponding property of the transfer factor. For the local integrability, it is enough to show that for any regular semi-simple $\delta$ there is an open neighborhood $U$ on which $\phi^G$ is integrable. This follows from the fact that there are only finitely many stable classes of elements of $H(F)$ that match $\delta$, and the local constancy of $\Delta(\dot\gamma,\delta)$. More precisely, let $\gamma_1,\dots,\gamma_n \in H(F)$ be representatives for the stable classes such that $\Delta(\dot\gamma,\delta) \neq 0$ and let $S_1,\dots,S_n$ be the centralizers of $\gamma_1,\dots,\gamma_n$. There is a unique admissible isomorphism $j_i : S \to S_i$ mapping $\delta$ to $\gamma_i$; here $S$ is the centralizer of $\delta$. Choosing $U$ small enough we can ensure that $j_1(\delta'),\dots,j_n(\delta')$ is a set of representatives for the stable classes that match $\delta'$, for all $\delta' \in U$. Shrinking $U$ further if required, the double cover $S_i(F)_\pm$ splits over $U_i=j_i(U \cap S(F))$, and \cite[Corollary 4.3.4]{KalHDC} shows that the function $\Delta(j_i(\delta'),\delta')$ is constant in $\delta' \in U$, where we have composed $j_i$ with an arbitrary splitting of the cover $S_i(F)_\pm$ over $U_i$. Now the local integrability of $\phi^G$ follows from that of $\phi^H$.
+\end{proof}
+	
+
+
 \subsection{Derivatives of class functions}
 
-In this section we will recall a result of Harish-Chandra (Proposition \ref{pro:diff}) about differentiating class functions on a semi-simple Lie group, which will play an important technical role in the proof of the endoscopic character identities.
+This section is specific to the base field $\R$. In the last section we discussed distributions that are representably by locally integrable class functions. The distributions that appear in the endoscopic character identities are of this form. We will now recall a result of Harish-Chandra (Proposition \ref{pro:diff}) about differentiating class functions on a semi-simple Lie group, which will play an important technical role in the proof of the endoscopic character identities.
 
-Let $G$ be a connected semi-simple Lie group and let $T \subset G$ be a Cartan subgroup. The main case of interest for us will be when $G$ is the group of $\R$-points of a connected semi-simple simply connected algebraic $\R$-group and $T$ is the group of $\R$-points of a maximal torus. Let $\mf{g}_0$ and $\mf{t}_0$ be the Lie algebras of $G$ and $T$ and let $\mf{g}=\mf{g}_0\otimes_\R\C$ and $\mf{t}=\mf{t}_0\otimes_\R\C$ be their complexifications. We denote by $G'$ the open subset of strongly regular semi-simple elements of $G$ and set $T'=T \cap G'$.
+For the duration of this section we switch notation and let $G$ be a connected semi-simple Lie group (rather than an algebraic $\R$-group) and let $T \subset G$ be a Cartan subgroup. The main case of interest for us will be when $G$ is the group of $\R$-points of a connected semi-simple simply connected algebraic $\R$-group and $T$ is the group of $\R$-points of a maximal torus. Let $\mf{g}_0$ and $\mf{t}_0$ be the Lie algebras of $G$ and $T$ and let $\mf{g}=\mf{g}_0\otimes_\R\C$ and $\mf{t}=\mf{t}_0\otimes_\R\C$ be their complexifications. We denote by $G'$ the open subset of strongly regular semi-simple elements of $G$ and set $T'=T \cap G'$.
 
 Recall the $\C$-algebra $\mc{D}(G)$ of differential operators on $G$. More generally, we have the $\C$-algebra $\mc{D}(V)$ for an open subset $V \subset G$. It is a subalgebra of the space $\tx{End}_\C(\mc{C}^\infty(V))$ defined as follows. If $U \subset V$ is an open subset contained in a local coordinate chart, then $\mc{D}(U)$ is the subalgebra of $\tx{End}_\C(\mc{C}^\infty(U))$ generated by the following two kinds of operators: multiplication by an element of $\mc{C}^\infty(U)$, and partial derivative with respect to a local coordinate. An element $D \in \tx{End}_\C(\mc{C}^\infty(V))$ lies in $\mc{D}(V)$ if there is an open cover of $V$ by open subsets $U$, each lying in a coordinate chart, such that $D$ maps $\mc{C}^\infty(U)$ to itself and the resulting element of $\tx{End}_\C(\mc{C}^\infty(U))$ lies in $\mc{D}(U)$, for all $U$ in that open cover. 
 
@@ -1245,45 +1307,7 @@ We now formulate an equivalent version of Theorem \ref{thm:main1} that involves 
 \end{enumerate}
 \end{thm}
 
-
-\begin{lem} \label{lem:equi}
-Theorem \ref{thm:main1} is equivalent to Theorem \ref{thm:main2}. In fact, this equivalence holds when $\R$ is replaced by any local field $F$.
-\end{lem}
-\begin{proof}
-The proofs of 1. and 2. are almost identical. We give the proof of 1. 
-
-We have $S\Theta_{\varphi_H}(f^{H_\pm}) = \int_{H(F)}|D^H(\gamma)|^{-1/2}S\Theta_{\varphi_H}(\dot\gamma)f^{H_1}(\dot\gamma)d\gamma$, where $\dot\gamma \in H(F)_\pm$ is any preimage of $\gamma$. Note that, while the factors in the integrand depends on $\dot\gamma$, the dependence cancels out in the product, because both $S\Theta_\varphi$ and $f^{H_\pm}$ are genuine.
-
-We apply the stable Weyl integration formula (Corollary \ref{cor:stabweyl}, but in the form of Remark \ref{rem:weyl1}) and use the stable invariance of $S\Theta_{\varphi_H}$ to rewrite the above as
-\[ \sum_{T_H \in \mc{ST}_H} \int_{T_H(F)_\tx{sr}/\Omega(T_H,H)(F)}S\Theta_{\varphi_H}(\dot\gamma) SO_{\dot\gamma}(f^{H_\pm})d\gamma.\]
-According to Theorem \ref{thm:orbtrans} this equals
-\begin{equation} \label{eq:x1}
-\sum_{T_H \in \mc{ST}_H} \int_{T_H(F)_\tx{sr}/\Omega(T_H,H)(F)}S\Theta_{\varphi_H}(\dot\gamma)  \sum_\delta \Delta(\dot\gamma,\delta) O_\delta(f) d\gamma.
-\end{equation}
-We will now rework the indexing sets. Let $\mf{X}$ be the set of pairs $([[\gamma]],[\delta])$, where $[[\gamma]]$ is a stable class of strongly regular semi-simple elements of $H(F)$, $[\delta]$ is a rational class of strongly regular semi-simple elements of $G(F)$, and $\gamma$ and $\delta$ are related. Projecting onto the first coordinate provides a surjective map
-\[ \mf{X} \to \bigcup_{T_H \in \mc{ST}_H} T_H(F)_\tx{sr}/\Omega(T_H,H)(F) \]
-with finite fibers. Pulling back the measure on the target that is comprised of the various Haar measures on the tori $T_H(F)$, we obtain a measure on $\mf{X}$, and \eqref{eq:x1} becomes
-\begin{equation} \label{eq:x2}
-\int_{\mf{X}} S\Theta_{\varphi_H}(\dot\gamma) \Delta(\dot\gamma,\delta) O_\delta(f) d([[\gamma]],[\delta]).
-\end{equation}
-On the other hand, projecting onto the second coordinate provides a surjective map
-\[ \mf{X} \to \bigcup_{T \in \mc{T}_G} T(F)_\tx{sr}/\Omega_F(T,G) \]
-and pulling back the measure on the target that is comprised of the various Haar measures on the tori $T(F)$, we obtain a measure on $\mf{X}$. Since the measures on the tori in $H$ and those on the tori in $G$ are synchronized as in Remark \ref{rem:measures}, the two measures on $\mf{X}$ agree. Therefore, we can rewrite \eqref{eq:x2} as 
-\[ 
-\sum_{T \in \mc{T}} \int_{T(F)_\tx{sr}/\Omega_F(T,G)}O_\delta(f) \sum_\gamma \Delta(\dot\gamma,\delta) S\Theta_{\varphi_H}(\dot\gamma) d\delta,	
-\] 
-where now $\gamma$ runs over the set of stable classes of strongly regular semi-simple elements of $H(F)$. Applying the Weyl integration formula (Theorem \ref{thm:weyl}, in the form of Remark \ref{rem:weyl1}) we can rewrite this as 
-\begin{equation} \label{eq:x3}
-\int_{G(F)_\tx{sr}}f(\delta) |D^G(\delta)|^{-1/2}\sum_\gamma \Delta(\dot\gamma,\delta) S\Theta_{\varphi_H}(\dot\gamma) d\delta.
-\end{equation}
-Now, if we assume the validity of Theorem \ref{thm:main1}, so that $S\Theta_{\varphi_H}(f^{H_\pm}) = \Theta_\varphi(f)$ we see that 
-\[ \int_{G(F)_\tx{sr}}f(\delta) \sum_\gamma \Delta(\dot\gamma,\delta) S\Theta_{\varphi_H}(\dot\gamma) |D^G(\delta)|^{-1/2}d\delta = \int_{G(F)_\tx{sr}}f(\delta) \Theta_\varphi(\delta)|D^G(\delta)|^{-1/2} d\delta \]
-and conclude that 
-\begin{equation} \label{eq:x4}
-\Theta_\varphi(\delta) = \sum_\gamma \Delta(\dot\gamma,\delta) S\Theta_{\varphi_H}(\dot\gamma),
-\end{equation}
-which is the statement of Theorem \ref{thm:main2}. Conversely, if we assume the validity of Theorem \ref{thm:main2} then plugging \eqref{eq:x4} into \eqref{eq:x3} we obtain the validity of Theorem \ref{thm:main1}.
-\end{proof}
+Lemma \ref{lem:equi} shows that Theorems \ref{thm:main1} and \ref{thm:main2} are equivalent. The next lemma reduces the proof further to the set of elliptic elements.
 
 \begin{lem} \label{lem:redell}
 If Theorem \ref{thm:main2} holds for all elliptic $\delta$, then it holds for all $\delta$.
