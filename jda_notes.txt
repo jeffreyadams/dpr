@@ -1,0 +1,31 @@
+page 1: eds looks plural
+
+introduction: the tense varies between "Shelstad defines" and "Shelstad defined". I'll leave it up to you to decide if this is an issue.
+
+I'm of the opinion that it is fine to split infinitives, and one should when this sounds better.
+
+bottom of page 4: Vogan introduced "pure inner forms" in [Vog93] - this is the p-adic case, as mentioned R was already in ABV. I added the phrase "for general fields". This isn't important, get rid of it if you want.
+
+I seem to remember that at some point you defined rigid inner forms using the condition that something be in the center of the derived group, and this restricted notion still maps onto all rational forms. Here we're using all of Z (which seems better to me). Do I have that right?
+
+Thank anyone besides Eric Opdam?
+
+Definition 2.7.2. I'm afraid I have to object to 1. In the literature "Discrete Series" means: embeds in L^2(G), or equivalently all matrix coefficients are in L^2. I believe this is due to Godemont. A good reference is
+
+Wolf, Representations on Partially Holomorphic Cohomology Spaces, in Representation theory and harmonic analysis on symmetric spaces, AMS Contemporary Math 714.
+
+According to that reference what is in 1 is precisely "relative discrete series" - note that the central character is unitary. 
+
+A natural condition on an irreducible representation is: matrix coefficients are square integrable modulo the center. Such a representation has a central character, not necessarily unitary. Does such a representation satisfy your definition 2? This comes down to: can we find a character \chi of G so that \pi\otimes\chi has unitary central character? I think this is true but I'm not sure.
+
+Theorem 2.7.4: I think you need to say "among irreducible tempered representations". For example in SO(2,1) the spherical principal series at rho is the sum (in the Grothendieck group) of the trivial representation and the unique discrete series. So on the compact torus these have the same formula up to sign; probably you can find a similar example where they agree exactly.
+
+Theorem 2.9.1: $\O(\delta,f)$ appears in 1, presumably this should be $\O_\delta(f)$.
+
+second paragraph of 2.11: "connected semi-simple algebraic" not "connected semisimple simply connected algebraic?
+
+
+
+
+
+
