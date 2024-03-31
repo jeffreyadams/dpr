@@ -46,19 +46,25 @@ J: second paragraph of 2.11: "connected semi-simple algebraic" not "connected se
 T: No, it does need to be simply connected (algebraically), otherwise it's R-points will not be connected in general.
 J: What I meant to say was we could assume "G is the real points of a connected algebraic group such that G(R) is connected". But forget it what's written now is better.
 
--------------------------------------------------------------------
 
-New comments
 
-I did some rewriting in Section 2.11. A mathematical point is that I got confused by HC's notation \Xi', which is not the regular points in
+J: I did some rewriting in Section 2.11. A mathematical point is that I got confused by HC's notation \Xi', which is not the regular points in
 \Xi. As a result in the formulation we had we could not take y=1. In fact you can take y=1, as you did.  See the red comment in the pdf.
 
-Also I decided that \tau had served its purpose, which was to make sure I didn't make a mistake, but at the end of the day it is better to suppress it.
+T: OK, I rewrote this part a bit and absorbed your red paragraph into the body of the text a few lines below.
 
-Some remaining todo's from the previous round: see two \warns:
+J: Also I decided that \tau had served its purpose, which was to make sure I didn't make a mistake, but at the end of the day it is better to suppress it.
+
+T: OK.
+
+J: Some remaining todo's from the previous round: see two \warns:
 
 1) Defining H-bar
 2) clarifying
+
+T: I defined H-bar. Not sure what needs to be clarified.
+
+
 
 Reminder for Jeff: 3 questions in Lemma 2.7.3 and its proof.
 
