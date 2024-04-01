@@ -358,26 +358,41 @@ Thus, we take $\mc{G}$ to be a real Lie group, $\mf{g}(\R)$ its Lie algebra, and
 One class of examples of this set-up arise as $\mc{G}=G(\R)$, where $G$ is a connected reductive $\R$-group. Another class of examples comes from the covers $G(\R)_x$ of such groups constructed in \cite{KalHDC} from characters $x : \bar\pi_1(G) \to \C^\times$. In both cases $\pi_0(Z(\mc{G}))$ is finite, so these groups are in  Harish-Chandra's class.
 
 \begin{dfn}
-	Let $\pi$ be an irreducible admissible representation of $\mc{G}$ (or, more generally, a finite direct sum of such).
+	Let $\pi$ be an admissible representation of $\mc{G}$.
 	\begin{enumerate}
 		\item $\pi$ is called \emph{square-integrable}, or \emph{in the discrete series}, if every matrix coefficient of $\pi$ is square-integrable, i.e. belongs to $L^2(\mc{G})$.
-  		\item $\pi$ is called \emph{relatively square-integrable}, or in the \emph{in the relative discrete series}, if the central character of $\pi$ is unitary and every matrix coefficient of $\pi$ is square-integrable modulo the center of $\mc{G}$, i.e. lies in $L^2(\mc{G}/Z(\mc{G}))$.
-  		\item $\pi$ is called essentially \emph{square-integrable}, or  \emph{in the essentially discrete series} (\emph{eds} for short), if there exists a character $\chi : \mc{G} \to \C^\times$ such that $\pi \otimes \chi$ is relatively square-integrable.
+  		\item $\pi$ is called \emph{relatively square-integrable}, or in the \emph{in the relative discrete series}, if $\pi$ is unitary and 
+                  every matrix coefficient of $\pi$ is square-integrable modulo the center of $\mc{G}$, i.e. lies in $L^2(\mc{G}/Z(\mc{G}))$.
+
+  		\item An irreducible representation $\pi$ is called  \emph{essentially square-integrable}, or  \emph{in the essentially discrete series} (\emph{eds} for short), if there exists a character $\chi : \mc{G} \to \C^\times$ such that $\pi \otimes \chi$ is relatively square-integrable.
 	\end{enumerate}
 \end{dfn}
 
 It is clear that an essentially square-integrable representation is relatively-square integrable, and a relatively square-integrable representation is square-integrable. When $Z(\mc{G})$ is not compact, a square-integrable representation cannot exist, so the concepts of relatively square-integrable and essentially square-integrable are the only ones that are available.
 
 \begin{lem}
-	Let $\pi$ be an irreducible (not necessarily unitary) representation of $\mc{G}$ on a Hilbert space \warn{do we need that restriction?}. Then $\pi$ is essentially square-integrable if and only its restriction to $\mc{G}^\natural$ (which is semi-simple and of finite length) is square-integrable.
+  Let $\pi$ be an irreducible admissible (not necessarily unitary) representation of $\mc{G}$.
+  Then $\pi$ is essentially square-integrable if and only its restriction to $\mc{G}^\natural$ (which is semi-simple and of finite length) is square-integrable.
 \end{lem}
 \begin{proof}
-	The restriction of $\pi$ to $\mc{G}^\natural \cdot Z(G)$ is semi-simple and of finite length \warn{Jeff: can you find a reference for that?}. Moreover, since $\pi$ has a central character, \warn{Jeff: Can you provide a reference for that?}, the restriction of $\pi$ to $\mc{G}^\natural$ is semi-simple and of finite length. If $\pi$ is assumed to be essentially square-integrable, then the restriction to $\mc{G}^\natural$ of its matrix coefficients lie in $L^2(\mc{G}^\natural)$. But these restrictions are the matrix coefficients of $\pi|_{\mc{G}^\natural}$.
-	
-	In the converse direction, we first treat the case that $\pi$ has a unitary central character. If $\pi|_{\mc{G}^\natural}$ is square-integrable, then the matrix coefficients of $\pi$ lie in $L^2(\mc{G}^\natural)$. They transform by a unitary character under $Z(\mc{G})$, so they lie in $L^2(\mc{G}^\natural \cdot Z(\mc{G})/Z(\mc{G}))$. But since $\mc{G}^\natural \cdot Z(\mc{G})$ is of finite index in $\mc{G}$, this implies that the matrix coefficients lie in $L^2(\mc{G}/Z(\mc{G}))$, hence that $\pi$ is relatively square-integrable.
+  First we prove that if $\pi$ is an irreducible representation then  $\pi|_{\mc{G}^{\natural}}$ is unitary if and only if $\pi\otimes\omega$ is unitary for some one-dimensional representation $\omega$.
+  If $\pi\otimes\omega$ is unitary then, 
+since  $\mc{G}^{\natural}$ is contained in the commutator subgroup,  $\omega$ is trivial when restricted to $\mc{G}^{\natural}$, so $\pi|_{\mc{G}^\natural}$ is unitary. For the other direction suppose $\pi|_{\mc{G}^{\natural}}$ is unitary. It suffices to show that any character $\chi : Z(\mc{G}) \to \R_{>0}$ extends to a character $\mc{G} \to \R_{>0}$:
+for then $\pi\otimes |\chi_\pi|^{-1}$ is unitary where $\chi_\pi$ is the central character of $\pi$.
 
-	Finally, it suffices to show that any character $\chi : Z(\mc{G}) \to \R_{>0}$ extends to a character $\mc{G} \to \R_{>0}$. Indeed, this would imply that any representation of $\mc{G}$ which has a central character $\omega : Z(\mc{G}) \to \C^\times$ can be twisted by a character of $\mc{G}$ to ensure that $\omega$ becomes unitary, namely by the extension of $|\omega| : Z(\mc{G}) \to \R_{>0}$. To show the claim we note that $Z(\mc{G}) \cap \mc{G}^\natural$ is a finite group, because the center of $G_\tx{sc}(\R)$ is finite. Hence $\chi$ is trivial on this restriction, and thus extends to a character of $\mc{G}^\natural \cdot Z(\mc{G})$, trivial on $\mc{G}^\natural$. Since $\R_{>0}$ is uniquely divisible and $\mc{G}^\natural \cdot Z(\mc{G})$ is of finite index in $\mc{G}$, this extension further extends to $\mc{G}$.
+To show the claim we note that $Z(\mc{G}) \cap \mc{G}^\natural$ is a finite group, because the center of $G_\tx{sc}(\R)$ is finite. Hence $\chi$ is trivial on this restriction, and thus extends to a character of $\mc{G}^\natural \cdot Z(\mc{G})$, trivial on $\mc{G}^\natural$. Since $\R_{>0}$ is uniquely divisible and $\mc{G}^\natural \cdot Z(\mc{G})$ is of finite index in $\mc{G}$, this extension further extends to $\mc{G}$.
+
+Suppose $\pi|_{\mc{G}^\natural}$ is square integrable. In particular this restriction is unitary, so by the previous discussion $\pi\otimes\omega$ is unitary for some $\omega$,
+so $\pi$ is in the relative discrete series. Conversely assume $\pi$ is essentially discrete series. After tensoring with a character we may assume $\pi$ is unitary. Since $\mc{G}^\natural Z(\mc{G})$ has finite index,
+the restriction to $\mc{G}^\natural Z(\mc{G})$ is   of finite length, unitary and therefore semisimple. These properties also hold upon restriction to $\mc{G}^\natural$
+since $ mc{G}$ is central. Furthermore the matrix coefficients of $\pi|_{\mc{G}^\natural}$ are the restrictions of the matrix coefficients of $\pi$, which are in $L^2(\mc{G}^\natural)$.
+
+
 \end{proof}
+
+\begin{rem}Some authors use say an irreducible representation $\pi$ (not necessarily unitary) is in the {\emph relative discrete series} if its matrix coefficients are in $L^2$ when restricted  to the commutator subgroup. By the Lemma (and its proof) this is  equivalent to being essentially discrete series.
+\end{rem}
+
 
 \begin{lem} \label{lem:ani}
 Assume that $G_\tx{ad}$ has an anisotropic maximal torus $S_\tx{ad}$. The preimage $\mc{S} \subset \mc{G}$ of $S_\tx{ad}(\R)$ equals $Z(\mc{G}) \cdot \mc{S}^\natural$, where $\mc{S}^\natural = \mc{S} \cap \mc{G}^\natural$. In particular, $\mc{S}$ is abelian.
