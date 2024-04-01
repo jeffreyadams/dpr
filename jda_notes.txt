@@ -63,10 +63,13 @@ J: Some remaining todo's from the previous round: see two \warns:
 2) clarifying
 
 T: I defined H-bar. Not sure what needs to be clarified.
-
+J: 2) got truncated. It was referring to the bijection between your and ABV rigid forms, and was addressed.
 
 
 Reminder for Jeff: 3 questions in Lemma 2.7.3 and its proof.
+
+-------------------------------------------------------------------
+I edited Definition 2.7.2 regarding eds etc. It is convenient to re-order the proof slightly to take care of the questions about restricting being semisimple, by tensoring with a character so everything is unitary. Also I think it is slightly better to allow reducible reps in 1 and 2 but only irreducible in 3. Finally any irreducible admissible representation has a central character, so that is the correct setting.
 
 
 
