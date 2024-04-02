@@ -407,7 +407,10 @@ Note also that $\pi|_\mc{H}$ is of finite-length. If it is unitary, then it is s
 
 Since $\mc{G}/\mc{H}$ is finite and $\R_{>0}$ is uniquely divisible, any continuous character $\chi : \mc{H} \to \R_{>0}$ extends uniquely to a continuous character $\mc{G} \to \R_{>0}$. Therefore, the existence of a character $\chi : \mc{H} \to \R_{>0}$ such that $\pi|_{\mc{H}} \otimes \chi$ is unitary is equivalent to the existence of a character $\chi : \mc{G} \to \R_{>0}$ such that $\pi \otimes \chi$ is unitary.
 
-These observations allow us to assume that $\mc{G}=\mc{G}^\natural \cdot Z(\mc{G})$. Since $\pi$ is irreducible and admissible, it has a central character $\omega : Z(\mc{G}) \to \C^\times$ \warn{ref}, so its restriction to $\mc{G}^\natural$ is still irreducible. If there is $\chi : \mc{G} \to \R_{>0}$ so that $\pi \otimes \chi$ is unitary, then $(\pi\otimes\chi)|_{\mc{G}^\natural}$ is still unitary, but $\chi$ has trivial restriction to $\mc{G}^\natural$ by Lemma \ref{lem:comm}, so $\pi|_{\mc{G}^\natural}$ is unitary. Conversely, assume that $\pi|_{\mc{G}^\natural}$ is unitary. Note that, since the center of $G_\tx{sc}(\R)$ is finite, $|\omega|$ restricts trivially to $Z(\mc{G}) \cap \mc{G}^\natural$, hence extends to $\mc{G}$, and $\pi\otimes|\omega|^{-1}$ is a unitary representation of $\mc{G}$.\hfill $\sslash$
+These observations allow us to assume that $\mc{G}=\mc{G}^\natural \cdot Z(\mc{G})$. Since $\pi$ is irreducible and admissible, by Dixmier's version of Schur's lemma
+\cite[Lemma N]{wallach}
+it has a central character
+$\omega : Z(\mc{G}) \to \C^\times$, so its restriction to $\mc{G}^\natural$ is still irreducible. If there is $\chi : \mc{G} \to \R_{>0}$ so that $\pi \otimes \chi$ is unitary, then $(\pi\otimes\chi)|_{\mc{G}^\natural}$ is still unitary, but $\chi$ has trivial restriction to $\mc{G}^\natural$ by Lemma \ref{lem:comm}, so $\pi|_{\mc{G}^\natural}$ is unitary. Conversely, assume that $\pi|_{\mc{G}^\natural}$ is unitary. Note that, since the center of $G_\tx{sc}(\R)$ is finite, $|\omega|$ restricts trivially to $Z(\mc{G}) \cap \mc{G}^\natural$, hence extends to $\mc{G}$, and $\pi\otimes|\omega|^{-1}$ is a unitary representation of $\mc{G}$.\hfill $\sslash$
 
 Suppose $\pi|_{\mc{G}^\natural}$ is square integrable. It is in particular unitary, so by above claim there is $\chi : \mc{G} \to \R_{>0}$ so that $\pi\otimes\chi$ is unitary. The matrix coefficients of $\pi|_{\mc{G}^\natural}$ are the restrictions of the matrix coefficients of $\pi$ to $\mc{G}^\natural$. It follows that the matrix coefficients of $\pi\otimes\chi$ lie in $L^2(\mc{G}^\natural/Z(\mc{G}^\natural))$. Since $\mc{G}^\natural/Z(\mc{G}^\natural)$ is of finite index in $\mc{G}/Z(\mc{G})$ we see that these matrix coefficients also lie in $L^2(\mc{G}/Z(\mc{G}))$, thus $\pi$ is essentially square-integrable.
 
@@ -1036,9 +1039,11 @@ Since we don't use this result we skip the proof, and refer the reader to a fort
 by the first author and Alexandre Afgoustidis.
 
 
-\subsection{An example with $\tx{SL}_2$}
+\subsection{The example of $\tx{SL}_2$}
 
-Set $G=\SL(2,\R)$. Let $\s(\C)=\{t_z\mid z\in\C\}$ where
+We illustrate the constructions of the previous section the case of $G=\SL(2,\R)$. 
+
+The complexified Lie algebra $\g$ is the space of $2x2$ complex matrices of trace $0$. Let $\s(\C)=\{t_z\mid z\in\C\}\subset \g$ where
 $$
 t_z=\begin{pmatrix}0&z\\-z&0
 \end{pmatrix}
@@ -1046,54 +1051,39 @@ $$
 Then $\s(\R)=\{t_x\mid x\in\R\}$.
 
 For $z\in \C$ define $\lambda_z\in \s(\C)^*$ by $\lambda_z(t_x)=xz$.
-The positive root is  $\alpha(t_z)=2iz$, i.e.
-$$
-\alpha=\lambda_{2i},\quad \rho=\lambda_i.
-$$
-and
-$$
-\ch\alpha=t_{-i}, \quad \ch\rho=t_{-i/2}
-$$
+The positive root can be taken to be   $\alpha(t_z)=2iz$, i.e.
+$\alpha=\lambda_{2i}$ so $\rho=\frac12\alpha=\lambda_i$. Also  $\ch\alpha=t_{-i}$, $\ch\rho=t_{-i/2}$.
 In particular
 $$
 \ch\rho(-i)=t_{-\frac 12}=\begin{pmatrix}0&-\frac 12\\\frac 12&0
 \end{pmatrix}
 $$
 
-Define $H_{\lambda}\in \s(\C)$ so that $\kappa(H_\lambda,t_x)=\lambda(t_x)$. Then $H_{\lambda_z}=t_{-\frac z8}$:
+The Killing form satisfies
 $$
-H_{\lambda_z}=t_{\frac{-z}8}=
-\begin{pmatrix}0&-\frac{z}8\\\frac{z}8&0
-\end{pmatrix}
+\kappa(t_x,t_y)=-8xy.
 $$
-Take $z=ik$, so
+Define $H_{\lambda}\in \s(\C)$ so that $\kappa(H_\lambda,t_x)=\lambda(t_x)$.
+Let $\pi(\lambda_{ik})$ be the discrete series representation with Harish-Chandra parameter $\lambda_{ik}$ $(k\in \Z_{\ne 0})$, so
 $$
-H_{\lambda_{ik}}=
+H_{\pi(\lambda_{ik})}=H_{\lambda_{ik}}=
 \begin{pmatrix}0&-\frac{ik}8\\\frac{-ik}8&0
 \end{pmatrix}
 $$
-
-Let $\pi(\lambda_{ik})$ be the discrete series representation with Harish-Chandra parameter $\lambda_{ik}$ $(k\in \Z_{\ne 0})$.
-If $\pi=\pi(\lambda)$ let $H_\pi=H_\lambda\in i\s(\R)^*$.
-
 For an $SL(2)$-triple we can take $\{X_\alpha,X_{-\alpha},t_{-i}\}$ where
 $$
 X_\alpha=\frac12\begin{pmatrix}1&i\\i&-1
 \end{pmatrix}, \quad X_{-\alpha}=\overline{X_\alpha}.
 $$
-The Killing form satisfies
-$$
-\kappa(t_x,t_y)=-8xy.
-$$
 
 
 
-Conjugating this by $\mathrm{diag}(x,\frac 1x)$ takes it to
+Conjugating $H_{\pi(\lambda_{ik})}$ by $\mathrm{diag}(x,\frac 1x)$ takes it to
 $\begin{pmatrix}0&-x^2\frac{ik}8\\\frac{ik}{x^2}&0
 \end{pmatrix}$,
-and taking the limit we see
+and taking the limit, by  by \cite[Theorem 1.2]{harris} we see
 $$
-\AC(G(\R)\cdot H_{\lambda_{ik}})=
+\WF(\pi(\lambda_{ik}))=\AC(G(\R)\cdot H_{\pi(\lambda_{ik}}))=
 \begin{cases}
   \R^+*\begin{pmatrix}0&-i\\0&0
   \end{pmatrix}&k>0\\
@@ -1101,17 +1091,7 @@ $$
   \end{pmatrix}&k<0\\
   \end{cases}
 $$
-Therefore
-$$
-\WF(\pi(\lambda_{ik}))
-=
-\begin{cases}
-  \R^+*\begin{pmatrix}0&-i\\0&0
-  \end{pmatrix}&k>0\\
-    \R^+*\begin{pmatrix}0&i\\0&0
-  \end{pmatrix}&k<0\\
-  \end{cases}
-$$
+Lemma \ref{lem:g2'} in this case simply amounts to the statement $\WF(\pi(\lambda_{ik}))=\WF(\pi(\lambda_{ik'}))$ if and only if $\mathrm{sgn}(k)=\mathrm{sgn}(k')$.
 
 Note that
 $$
@@ -1124,47 +1104,16 @@ and
 $$
 \K\cap i\g(\R)=
 \{\begin{pmatrix}0&-i\\iy&0
-\end{pmatrix}\mid y\in\R\}
-$$
-In particular
-$$
-\K\begin{pmatrix}0&-i\\0&0\end{pmatrix}\cap i\g(\R)\ni H_\pi=\begin{pmatrix}0&-\frac{ik}8\\\frac{ik}8&0\end{pmatrix}\quad (k>0)
+\end{pmatrix}\mid y\in\R\}\ni H_{\pi(\lambda_{ik})}=\begin{pmatrix}0&-\frac{ik}8\\\frac{ik}8&0\end{pmatrix}\quad (k>0).
 $$
 as required by Proposition \ref{p:whittaker}.
 Similarly
 $$
-\K\begin{pmatrix}0&i\\0&0\end{pmatrix}\cap i\g(\R)\ni H_\pi=\begin{pmatrix}0&-\frac{ik}8\\\frac{ik}8&0\end{pmatrix}\quad (k<0).
+\K\begin{pmatrix}0&i\\0&0\end{pmatrix}\cap i\g(\R)\ni H_{\pi(\lambda_{ik})}=\begin{pmatrix}0&-\frac{ik}8\\\frac{ik}8&0\end{pmatrix}\quad (k<0).
 $$
 
-Using Lemma \ref{lem:g2'} amounts to 
-$$
-\K(-iX)=\K\begin{pmatrix}0&-1\\0&0
-\end{pmatrix}\ni \ch\rho(-i)=
-\begin{pmatrix}
-  0&-\frac 12\\\frac 12&0
-\end{pmatrix}\quad (k>0)
-$$
-and
-$$
-\K(-iX)=\K\begin{pmatrix}0&1\\0&0
-\end{pmatrix}\ni \ch\rho(-i)=
-\begin{pmatrix}
-  0&\frac 12\\-\frac 12&0
-\end{pmatrix}\quad (k<0)
-$$
 
-Note that the coroot $\ch\alpha:\C^\times \rightarrow S$ is given by
-$$
-\ch\alpha(e^z)=\begin{pmatrix}\cos(z)&\sin(z)\\-\sin(z)&\cos(z)
-\end{pmatrix}
-$$
-or more algebraically
-$$
-\ch\alpha(z)=\begin{pmatrix}
-\frac{z+\frac 1z}2&\frac{z-\frac 1z}{2i}\\
--\frac{z-\frac 1z}{2i}&\frac{z+\frac 1z}2
-\end{pmatrix}.
-$$
+
 
 
 \section{Construction of $L$\-packet and internal structure} \label{sec:cons}
