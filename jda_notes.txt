@@ -73,3 +73,22 @@ I edited Definition 2.7.2 regarding eds etc. It is convenient to re-order the pr
 -------------------------------------------------------------------
 I put in a reference for Schur's Lemma and edited the SL(2,R) example section
 
+-------------------------------------------------------------------
+Further comments
+
+The terms elliptic, anistropic, and compact describing a torus are all used. I guess anisotropic is a property of an algebraic torus T. whereas compact refers to T(R). Furthermore T anisotropic => T(R) is compact (if and only if)? I'm not sure about elliptic: I think this is a property not just of the torus but the group it is in: elliptic means anisotropic modulo the center?
+
+My guess is you used each term precisely in the right place. I mainly want to check this is true, and suggest that (for real groups people) it is worth saying what these words mean.
+
+page 23: ^+ indicates inverse image in hat-bar-G. This is required for the \pi_0(Z...) terms as well as S_phi.
+
+page 25: G_{z_1} is defined in Section 2.2 (inner forms)? Remind the reader.b
+
+page 27 Question: is it true that \omega_F=N(T(F),G(F))/T(F)?
+
+In Section 2.11 \mathcal I(G) is the space of (conjugation) invariant distributions. In section 2.12 \mathcal I(G) denotes the left-invariant differential operators. I don't know if this is a potential source of confusion.
+
+End of section 4.1 beginning of section 4.2: "While this embedding is not \Gamma-equivariant..." occurs before Lemma 4.1.3, and
+"The natural embedding ... is not \Gamma-equivariant..." occurs again first line of 4.2. Not the end of the world.
+
+Section 4.5: ^L_G_x occurs in 3 places. I think it hasn't been defined. Should it be ^LG_{\pm}? I assume this x is not the same as the z_1 in section 2.9. This occurs again on page 51, in the proof of Lemma 5.2.2.
