@@ -80,7 +80,7 @@ The terms elliptic, anistropic, and compact describing a torus are all used. I g
 
 My guess is you used each term precisely in the right place. I mainly want to check this is true, and suggest that (for real groups people) it is worth saying what these words mean.
 
-page 23: ^+ indicates inverse image in hat-bar-G. This is required for the \pi_0(Z...) terms as well as S_phi.
+page 23: ^+ indicates inverse image in hat-bar-G. This is required for the \pi_0(Z...) terms as well as S_phi. I put this in, please double check what is there is correct (around last line of pg 22).
 
 page 25: G_{z_1} is defined in Section 2.2 (inner forms)? Remind the reader.b
 
