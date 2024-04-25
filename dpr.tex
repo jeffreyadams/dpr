@@ -891,14 +891,14 @@ $[(B,\eta_{\P,\Lambda})]$.
 
 \begin{lem} \label{lem:w1}
 \begin{enumerate}
-\item Fix a non-trivial unitary character $\Lambda$ of $\R$. The map $\P\mapsto \w_{\P,\Lambda}$ is a $G_\tx{ad}(\R)$-equivariant bijection from $G(\R)$-conjugacy classes of real pinnings to Whittaker data.
-\item The map $X \mapsto \w_X$ is a $G_\tx{ad}(\R)$-equivariant bijection from the set of $G(\R)$-conjugacy classes of regular nilpotent elements of $i\g(\R)$ to the set of Whittaker data of $G$.
-\item The map sending an $\R$-pinning $(T,B,\{X_\alpha\})$ to $X_-=\sum_\alpha X_{-\alpha}$, where the sum runs over the set of absolute $B$-simple roots, and $X_{-\alpha}$ satisfies $[X_\alpha,X_{-\alpha}]=H_\alpha$, is a $G_\tx{ad}(\R)$-equivariant bijection between the set of $G(\R)$-conjugacy classes of $\R$-pinnings and the set of $G(\R)$-conjugacy classes of regular nilpotent elements of $\mf{g}(\R)$.
+\item Fix a non-trivial unitary character $\Lambda$ of $\R$. The map $\P\mapsto \w_{\P,\Lambda}$ is a $\tx{Aut}(G)(\R)$-equivariant bijection from $G(\R)$-conjugacy classes of real pinnings to Whittaker data.
+\item The map $X \mapsto \w_X$ is a $\tx{Aut}(G)(\R)$-equivariant bijection from the set of $G(\R)$-conjugacy classes of regular nilpotent elements of $i\g(\R)$ to the set of Whittaker data of $G$.
+\item The map sending an $\R$-pinning $(T,B,\{X_\alpha\})$ to $X_-=\sum_\alpha X_{-\alpha}$, where the sum runs over the set of absolute $B$-simple roots, and $X_{-\alpha}$ satisfies $[X_\alpha,X_{-\alpha}]=H_\alpha$, is a $\tx{Aut}(G)(\R)$-equivariant bijection between the set of $G(\R)$-conjugacy classes of $\R$-pinnings and the set of $G(\R)$-conjugacy classes of regular nilpotent elements of $\mf{g}(\R)$.
 \item Set $\Lambda(x)=e^{ix}$. Then $\w_{\P,\Lambda}=\w_{\overline X}$, with $\overline X=iX_-$ and $X_-$ as in 3.
 \end{enumerate}
 \end{lem}
 \begin{proof}
-The $G_\tx{ad}(\R)$-equivariance of the maps in 1) and 2) is clear. We need to prove the bijectivity. The proof for 2) follows at once by combining 1), 3), and 4).
+The $\tx{Aut}(G)(\R)$-equivariance of the maps in 1), 2), 3) is clear. We need to prove the bijectivity. The proof for 2) follows at once by combining 1), 3), and 4).
 
 1) Since all Borel subgroups of $G(\R)$ are $G(\R)$-conjugate, fix a Borel subgroup $B$ defined over $\R$. Then the first statement is equivalent to:
 there is a bijection between the set of $B(\R)$-conjugacy classes of pairs $(T,\{X_\alpha\})$ such that $(T,B,\{X_\alpha\})$ is a real pinning, and the set of $B(\R)$-conjugacy classes of non-degenerate characters of $N(\R)$. Since all maximal tori are $N(\R)$\-conjugate, we may fix one such $T$. Then we are claiming that the map sending a $\Gamma$-stable collection $\{X_\alpha\}$ of simple root vectors to a non-degenerate unitary character of $N(\R)$ is bijective (it is evidently $T_\tx{ad}(\R)$-equivariant). With $\Lambda$ being fixed, the discussion above shows $\eta = \Lambda\circ\gamma$ establishes a bijection between unitary characters $\eta$ and homomorphisms $\gamma : N \to \mb{G}_a$ of algebraic $\R$-groups, and in turn $\gamma \mapsto d\gamma$ establishes a bijection from the latter to linear forms $d\gamma : \mf{n}(\R) \to \R$ that factor through the quotient $\mf{n}(\R)/[\mf{n},\mf{n}](\R)$. The condition $d\gamma(X_\alpha)=1$ finally determines a bijection between the set of such linear forms and the set of $\Gamma$-stable collections $\{X_\alpha\}$ of non-zero absolute simple root vectors.
