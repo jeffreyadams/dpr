@@ -217,7 +217,9 @@ Given an inner twist $\xi : G \to G_1$, the isomorphism $\xi$ induces an isomorp
 
 Let $F$ be a field and let $G$ be a connected reductive $F$-group. Let $\hat G$ be its dual group, defined over any base field, which we take to be $\C$, equipped with a $\Gamma$-action.
 
-Let $S$ be an $F$-torus. We recall from \cite[\S5.1]{KalRSP} that, given a $\Gamma$-stable $\hat G$-conjugacy class $\hat J$ of embeddings $\hat S \to \hat G$ whose images are maximal tori, there is an associated $\Gamma$-stable $G(F^s)$-conjugacy class $J$ of embeddings $S \to G$. To obtain $J$, we first assume that $G$ is quasi-splut. Fix $\Gamma$-stable Borel pairs $(\hat T,\hat B)$ and $(T,B)$ in $\hat G$ and $G$, respectively. Thus we have the identifications $X_*(T)=X^*(\hat T)$ and $\Omega(T,G)=\Omega(\hat T,\hat G)$ as $\Gamma$-modules. There is $\hat\jmath \in \hat J$ with image $\hat T$ and we obtain the isomorphism $X_*(T)=X^*(\hat T) \to X^*(\hat S)=X_*(S)$, hence an isomorphism $j : S_{F^s} \to T_{F^s}$. We let $J$ be the $G(F^s)$-conjugacy class of the composition of $j$ with the inclusion $T \to G$.
+Let $S$ be an $F$-torus. We recall from \cite[\S5.1]{KalRSP} that, given a $\Gamma$-stable $\hat G$-conjugacy class $\hat J$ of embeddings $\hat S \to \hat G$ whose images are maximal tori, there is an associated $\Gamma$-stable $G(F^s)$-conjugacy class $J$ of embeddings $S \to G$. 
+
+To obtain $J$, we first assume that $G$ is quasi-split. Fix $\Gamma$-stable Borel pairs $(\hat T,\hat B)$ and $(T,B)$ in $\hat G$ and $G$, respectively. Thus we have the identifications $X_*(T)=X^*(\hat T)$ and $\Omega(T,G)=\Omega(\hat T,\hat G)$ as $\Gamma$-modules. There is $\hat\jmath \in \hat J$ with image $\hat T$ and we obtain the isomorphism $X_*(T)=X^*(\hat T) \to X^*(\hat S)=X_*(S)$, hence an isomorphism $j : S_{F^s} \to T_{F^s}$. We let $J$ be the $G(F^s)$-conjugacy class of the composition of $j$ with the inclusion $T \to G$.
 
 For $\sigma \in \Gamma$ the embedding $\sigma(\hat\jmath\,)=\sigma_{\hat G}\circ \hat\jmath \circ \sigma_{\hat S}$ is $\hat G$-conjugate to $\hat\jmath$, but has the same image because $\hat T$ is $\Gamma$-stable, so there exists $w \in \Omega(\hat T,\hat G)$ such that $\sigma(\hat\jmath)=w\circ\hat\jmath$. By construction of $j$ we have $\sigma(j)=w\circ j$, using $\Omega(T,G)=\Omega(\hat T,\hat G)$, and conclude that $J$ is $\Gamma$-stable. Since all $\Gamma$-stable Borel pairs of $\hat G$ are conjugate under $\hat G^\Gamma$, and all $\Gamma$-stable Borel pairs of $G$ are conjugate under $G(F)$, the construction of $J$ does not depend on the choices of Borel pairs.
 
@@ -341,8 +343,8 @@ The setting that we will need here is one that encompasses the groups $G(\R)$, w
 Thus, we take $\mc{G}$ to be a real Lie group, $\mf{g}(\R)$ its Lie algebra, and $\mf{g}$ the complexification. We make the following assumptions:
 \begin{enumerate}
 	\item $\mf{g}$ is a complex reductive Lie algebra.
- 	\item If $G_\tx{ad}$ is the complex semi-simple adjoint group associated to the derived subalgebra $\mf{g}'$ of $\mf{g}$, then the action of $\mc{G}$ on $\mf{g}$ comes from a (necessarily unique) homomorphism $\mc{G} \to G_\tx{ad}(\R)$ of real Lie groups. Its kernel is equal to the center of $\mc{G}$.
-  	\item If $G_\tx{sc}$ is the complex semi-simple simply connected group associated to $\mf{g}'$, then the natural homomorphism $G_\tx{sc}(\R) \to G_\tx{ad}(\R)$ lifts (necessarily uniquely) to a homomorphism $G_\tx{sc}(\R) \to \mc{G}$ of Lie groups.
+ 	\item If $G_\tx{ad}$ is the complex connected semi-simple adjoint group associated to the derived subalgebra $\mf{g}'$ of $\mf{g}$, i.e. $G_\tx{ad}=\tx{Aut}(\mf{g}')^\circ$, then the action of $\mc{G}$ on $\mf{g}$ comes from a (necessarily unique) homomorphism $\mc{G} \to G_\tx{ad}(\R)$ of real Lie groups. Its kernel is equal to the center of $\mc{G}$.
+  	\item If $G_\tx{sc}$ is the complex connected semi-simple simply connected group associated to $\mf{g}'$, then the natural homomorphism $G_\tx{sc}(\R) \to G_\tx{ad}(\R)$ lifts (necessarily uniquely) to a homomorphism $G_\tx{sc}(\R) \to \mc{G}$ of Lie groups.
    	\item Let $\mc{G}^\natural$ be the image of $G_\tx{sc}(\R) \to \mc{G}$. Then $[\mc{G}^\natural \cdot Z(\mc{G}):\mc{G}] < \infty$.
 \end{enumerate}
 
@@ -362,7 +364,7 @@ Recall that, for any Lie group $\mc{H}$ one defines $[\mc{H},\mc{H}] \subset \mc
 
 \begin{lem} \label{lem:comm}
 	The group $\mc{G}^\natural$ is a connected semi-simple Lie group, and a closed Lie subgroup of $\mc{G}$. We have
-	\[ [\mc{G}^\natural,\mc{G}^\natural] = \mc{G}^\natural = [\mc{G},\mc{G}]. \]
+	\[ [\mc{G}^\natural,\mc{G}^\natural] = \mc{G}^\natural = [\mc{G},\mc{G}]\quad\tx{and}\quad Z(\mc{G}^\natural) = Z(\mc{G}) \cap \mc{G}^\natural. \]
 	The subgroup $\mc{G}^\natural \cdot Z(\mc{G})$ of $\mc{G}$ is an open and closed Lie subgroup.
 \end{lem}
 \begin{proof}
@@ -372,7 +374,9 @@ Recall that, for any Lie group $\mc{H}$ one defines $[\mc{H},\mc{H}] \subset \mc
 	
 	Moreover, the finiteness of the kernel of $G_\tx{sc}(\R) \to \mc{G}^\natural$ implies, via \cite[Chapter III, \S3, no. 2, Corollary 1]{BourLie1-3}, that the Lie algebra of $\mc{G}^\natural$ equals the Lie algebra of $G_\tx{sc}(\R)$, which is $\mf{g}'(\R)$. The latter is the derived subgalgebra of $\mf{g}(\R)$. It now follows from \cite[Chapter III, \S9, no. 2, Proposition 4]{BourLie1-3}, applied with $A=B=\mc{G}$ and $C=\mc{G}^\natural$, that $[\mc{G},\mc{G}]=\mc{G}^\natural$.
 
-	It remains to show that $\mc{G}^\natural$ is a closed Lie subgroup, and $\mc{G}^\natural \cdot Z(\mc{G})$ is an open and closed Lie subgroup. The latter is the image of the Lie group homomorphism $G_\tx{sc}(\R) \times Z(\mc{G}) \to \mc{G}$ given by composing the product operation on $\mc{G}$ with the homomorphism $G_\tx{sc}(\R) \to \mc{G}$ and the inclusion $Z(\mc{G}) \to \mc{G}$. This Lie group homomorphism induces an isomorphism on Lie algebras, via the decomposition $\mf{g}=\mf{g}' \oplus \mf{z}$, where $\mf{z}$ is the center of $\mf{g}$, and where we note that $\mf{z}(\R)$ is the center of $\mf{g}(\R)$ and also the Lie algebra of $Z(\mc{G})$, see \cite[Chapter III, \S9, no. 3, Proposition 9]{BourLie1-3}. Therefore $\mc{G}^\natural \cdot Z(\mc{G})$ contains an open neighborhood of the identity of $\mc{G}$, and is hence open in $\mc{G}$, and hence also closed. Since $G_\tx{sc}(\R) \to \mc{G}^\natural$ is a quotient map, a subset $U \subset \mc{G}^\natural$ is open if and only if its preimage $V$ in $G_\tx{sc}(\R)$ is open. Then $V \times Z(\mc{G})$ is open in $G_\tx{sc}(\R) \times Z(\mc{G})$, so its image $U'$ in $\mc{G}^\natural \cdot Z(\mc{G})$ is open. We have $U' \cap \mc{G}^\natural = U$. Since $\mc{G}^\natural \cdot Z(\mc{G})$ is open in $\mc{G}$ we see that $U'$ is open in $\mc{G}$, and conclude that $\mc{G}^\natural$ carries the subspace topology inherited from $\mc{G}$. According to \cite[Chapter III, \S6, no. 2, Proposition 2]{BourLie1-3}, both $\mc{G}^\natural$ and $\mc{G}^\natural \cdot Z(\mc{G})$ are closed Lie subgroups of $\mc{G}$.
+	Next we show that $\mc{G}^\natural$ is a closed Lie subgroup, and $\mc{G}^\natural \cdot Z(\mc{G})$ is an open and closed Lie subgroup. The latter is the image of the Lie group homomorphism $G_\tx{sc}(\R) \times Z(\mc{G}) \to \mc{G}$ given by composing the product operation on $\mc{G}$ with the homomorphism $G_\tx{sc}(\R) \to \mc{G}$ and the inclusion $Z(\mc{G}) \to \mc{G}$. This Lie group homomorphism induces an isomorphism on Lie algebras, via the decomposition $\mf{g}=\mf{g}' \oplus \mf{z}$, where $\mf{z}$ is the center of $\mf{g}$, and where we note that $\mf{z}(\R)$ is the center of $\mf{g}(\R)$ and also the Lie algebra of $Z(\mc{G})$, see \cite[Chapter III, \S9, no. 3, Proposition 9]{BourLie1-3}. Therefore $\mc{G}^\natural \cdot Z(\mc{G})$ contains an open neighborhood of the identity of $\mc{G}$, and is hence open in $\mc{G}$, and hence also closed. Since $G_\tx{sc}(\R) \to \mc{G}^\natural$ is a quotient map, a subset $U \subset \mc{G}^\natural$ is open if and only if its preimage $V$ in $G_\tx{sc}(\R)$ is open. Then $V \times Z(\mc{G})$ is open in $G_\tx{sc}(\R) \times Z(\mc{G})$, so its image $U'$ in $\mc{G}^\natural \cdot Z(\mc{G})$ is open. We have $U' \cap \mc{G}^\natural = U$. Since $\mc{G}^\natural \cdot Z(\mc{G})$ is open in $\mc{G}$ we see that $U'$ is open in $\mc{G}$, and conclude that $\mc{G}^\natural$ carries the subspace topology inherited from $\mc{G}$. According to \cite[Chapter III, \S6, no. 2, Proposition 2]{BourLie1-3}, both $\mc{G}^\natural$ and $\mc{G}^\natural \cdot Z(\mc{G})$ are closed Lie subgroups of $\mc{G}$.
+
+	Now we compute $Z(\mc{G}^\natural)$. This group is equal to the kernel of the action of $\mc{G}^\natural$ on the Lie algebra of $\mc{G}^\natural$, which is $\mf{g}'$. By assumption 2. above, this is the same as the kernel of $\mc{G}^\natural \to G_\tx{ad}(\R)$, which in turn equals $Z(\mc{G}) \cap \mc{G}^\natural$.
 \end{proof}
 
 \begin{dfn}
@@ -387,7 +391,7 @@ Recall that, for any Lie group $\mc{H}$ one defines $[\mc{H},\mc{H}] \subset \mc
 \end{dfn}
 
 \begin{rem}
-It is clear that an essentially square-integrable representation is relatively-square integrable, and a relatively square-integrable representation is square-integrable. When $Z(\mc{G})$ is not compact, a square-integrable representation cannot exist, so the concepts of relatively square-integrable and essentially square-integrable are the only ones that are available.
+It is clear that an essentially square-integrable representation is relatively square-integrable, and a relatively square-integrable representation is square-integrable. When $Z(\mc{G})$ is not compact, a square-integrable representation cannot exist, so the concepts of relatively square-integrable and essentially square-integrable are the only ones that are available.
 
 Some authors say that an irreducible representation $\pi$ (not necessarily unitary) is in the \emph{relative discrete series} if the restrictions of its matrix coefficients to the commutator subgroup are square-integrable. This commutator subgroup equals $\mc{G}^\natural$ by Lemma \ref{lem:comm}, so the next lemma shows that this is equivalent to our notion of essentially square-integrable.
 \end{rem}
@@ -402,13 +406,9 @@ The main part of the proof is contained in the following statement.
 
 \ul{Claim:} There exists a continuous group homomorphism $\chi : \mc{G} \to \R_{>0}$ such that $\pi\otimes\chi$ is unitary if and only if $\pi|_{\mc{G}^{\natural}}$ is a finite direct sum of irreducible unitary representations.
 
-\ul{Proof:} We begin by noticing that if $\mc{H} \subset \mc{G}$ is a normal subgroup of finite index, then $\pi$ is unitary if and only if $\pi|_\mc{H}$ is unitary -- one direction is trivial and the other follows from the fact that an $\mc{H}$-invariant scalar product on $\pi$ can be averaged over the finite group $\mc{G}/\mc{H}$ to produce a $\mc{G}$-invariant scalar product. 
+\ul{Proof:} We begin by noticing that the claimed statement is insensitive to replacing $\mc{G}$ by a finite index subgroup $\mc{H}$ that contains $\mc{G}^\natural$. First, the representation $\pi|_{\mc{G}^\natural}$ is unaffected by this change. Second, if there exists $\chi : \mc{G} \to \C^\times$ such that $\pi \otimes \chi$ is unitary, then $\pi|_\mc{H} \otimes \chi|_\mc{H} = (\pi\otimes\chi)|_\mc{H}$ is also unitary. Third, if there exists $\chi : \mc{H} \to \C^\times$ such that $\pi \otimes \chi|_\mc{H}$ is unitary, then the divisibility of $\R_{>0}$ implies that $\chi$ has a unique extension to $\mc{G}$, and now we can use the finiteness of $\mc{G}/\mc{H}$ to average any $\mc{H}$-invariant scalar product on $\pi\otimes\chi$ to obtain a $\mc{G}$-invariant scalar product.
 
-Note also that $\pi|_\mc{H}$ is of finite-length. If it is unitary, then it is semi-simple, thus a direct sum of finitely many irreducible unitary representations.
-
-Since $\mc{G}/\mc{H}$ is finite and $\R_{>0}$ is uniquely divisible, any continuous character $\chi : \mc{H} \to \R_{>0}$ extends uniquely to a continuous character $\mc{G} \to \R_{>0}$. Therefore, the existence of a character $\chi : \mc{H} \to \R_{>0}$ such that $\pi|_{\mc{H}} \otimes \chi$ is unitary is equivalent to the existence of a character $\chi : \mc{G} \to \R_{>0}$ such that $\pi \otimes \chi$ is unitary.
-
-These observations allow us to assume that $\mc{G}=\mc{G}^\natural \cdot Z(\mc{G})$. Since $\pi$ is irreducible and admissible, by Dixmier's version of Schur's lemma
+This observation allow us to assume that $\mc{G}=\mc{G}^\natural \cdot Z(\mc{G})$. Since $\pi$ is irreducible and admissible, by Dixmier's version of Schur's lemma
 \cite[Lemma 0.5.3]{wallach}
 it has a central character
 $\omega : Z(\mc{G}) \to \C^\times$, so its restriction to $\mc{G}^\natural$ is still irreducible. If there is $\chi : \mc{G} \to \R_{>0}$ so that $\pi \otimes \chi$ is unitary, then $(\pi\otimes\chi)|_{\mc{G}^\natural}$ is still unitary, but $\chi$ has trivial restriction to $\mc{G}^\natural$ by Lemma \ref{lem:comm}, so $\pi|_{\mc{G}^\natural}$ is unitary. Conversely, assume that $\pi|_{\mc{G}^\natural}$ is unitary. Note that, since the center of $G_\tx{sc}(\R)$ is finite, $|\omega|$ restricts trivially to $Z(\mc{G}) \cap \mc{G}^\natural$, hence extends to $\mc{G}$, and $\pi\otimes|\omega|^{-1}$ is a unitary representation of $\mc{G}$.\hfill $\sslash$
@@ -436,6 +436,10 @@ The set of eds representations of $\mc{G}$ is in bijection with the set of $\mc{
 \end{equation}
 Furthermore, $\Theta$ is supported on $Z(\mc{G})\cdot \mc{G}^\natural$.
 \end{thm}
+
+\begin{rem}
+	We want to clarify the terms ``anisotropic'', ``elliptic'', and ``compact'', for maximal tori. We call an algebraic $\R$-torus $S$ anisotropic if it contains no non-trivial split torus. This is equivalent to the action of complex conjugation on its character module being multiplication by $-1$. This is also equivalent to the real Lie group $S(\R)$ being compact. We call a maximal torus $S \subset G$ elliptic, is $S/Z(G)$ is anisotropic. 
+\end{rem}
 
 Before we give the proof we explain the notation. Due to the construction of the covers $S_\tx{sc}(\R)_\pm$ and $S_\tx{ad}(\R)_\pm$, the natural map $S_\tx{sc}(\R) \to S_\tx{ad}(\R)$ lifts naturally to a map $S_\tx{sc}(\R)_\pm \to S_\tx{ad}(\R)_\pm$, which leads to a lift of $S_\tx{sc}(\R) \to \mc{S}$ to a map $S_\tx{sc}(\R)_\pm \to \mc{S}_\pm$. But the cover $S_\tx{sc}(\R)_\pm$ splits canonically, because $\rho$ is divisible by $2$ in $X^*(S_\tx{sc})$. Therefore, we have a map $S_\tx{sc}(\R) \to \mc{S}_\pm$. Pulling back $\tau$ under this map produces a character $\tau_\tx{sc}$ of $S_\tx{sc}(\R)$. This character is algebraic since $S_\tx{sc}(\R)$ is compact, i.e. it is the restriction to $S_\tx{sc}(\R)$ of a (unique) element of  $X^*(S_\tx{sc})=\tx{Hom}_\tx{alg.grp}(S_\tx{sc}(\C),\C^\times)$. The regularity assumption on $\tau$ is that this element does not lie on any (absolute) root hyperplane. Note that this element of $X^*(S_\tx{sc})$ also coincides with the differential $d\tau_\tx{sc} : \tx{Lie}(S_\tx{sc})(\R) \to \tx{Lie}(\mb{S}^1)$ under the identifications $\tx{Lie}(S_\tx{sc})(\R)=[X_*(S_\tx{sc}) \otimes_\Z \C]^\Gamma = X_*(S_\tx{sc})\otimes_\Z i\R$ and $\tx{Lie}(\mb{S}^1)=i\R$. Hence $d\tau_\tx{sc}$ is a regular element of $X^*(S_\tx{sc})$, and specifies a Weyl chamber, i.e. a Borel $\C$-subgroup $B_\tau$ of $G_\tx{ad}$ containing $S_\tx{ad}$. Write $D_\tau$ in place of $D_{B_\tau}$ for the Weyl denominator \eqref{eq:weyldenom}. Since our convention (cf. \S\ref{sub:weyldenom}) is to normalize orbital integrals and characters by the absolute value of this denominator, we will only need $d_\tau=\tx{arg}D_\tau$. We compose $d_\tau$ with the map $\mc{S}_\pm \to S_\tx{ad}(\R)_\pm$. Both $\tau$ and $d_\tau$ are genuine functions of $\mc{S}_\pm$, so their quotient $\tau/d_\tau$ descends to $\mc{S}$.
 
@@ -475,9 +479,11 @@ Since $\pi^\natural$ is pulled back from $\mc{G}^\natural$ and the central chara
 
 \subsection{Endoscopic groups and double covers} \label{sub:covendo}
 
-For the next few sections we will work with an arbitrary local field $F$; the case $F=\R$ is one example. The notion of endoscopic data is introduced in \cite[\S1.2]{LS87}, and is a variation of the notion of endoscopic pairs or endoscopic triples discussed in \cite{Kot84} and \cite{Kot86}.
+For the next few sections we will work with an arbitrary local field $F$; the case $F=\R$ is one example. Let $G$ be a connected reductive $F$-group.
 
-It can be described equivalently as follows. An endoscopic datum for $G$ is a tuple $(H,s,\mc{H},\eta)$ consisting of
+The notion of endoscopic data is introduced in \cite[\S1.2]{LS87}, and is a variation of the notion of endoscopic pairs or endoscopic triples discussed in \cite{Kot84} and \cite{Kot86}. It can be described equivalently as follows. 
+
+An endoscopic datum for $G$ is a tuple $(H,s,\mc{H},\eta)$ consisting of
 \begin{enumerate}[label=(\arabic*)]
 	\item a quasi-split connected reductive group $H$,
 	\item an extension $1 \to \hat H \to \mc{H} \to \Gamma \to 1$ of topological groups,
@@ -495,10 +501,9 @@ The map $\eta$ produces a $\Gamma$-equivariant embedding $Z(\hat G) \to Z(\hat H
 
 An isomorphism $(H_1,s_1,\mc{H}_1,\eta_1) \to (H_2,s_2,\mc{H}_2,\eta_2)$ is an element $g \in \hat G$ that satisfies the following properties. First, $\tx{Ad}(g)\eta_1(\mc{H}_1)=\eta_2(\mc{H}_2)$. In particular, $\eta_2^{-1}\circ\tx{Ad}(g)\circ\eta_1$ is an $L$\-isomorphism $\mc{H}_1 \to \mc{H}_2$, and restricts to a $\Gamma$-equivariant isomorphism $Z(\hat H_1) \to Z(\hat H_2)$. The second condition is that the resulting isomorphism $\pi_0(Z(\hat H_1)/Z(\hat G)) \to \pi_0(Z(\hat H_2)/Z(\hat G))$ maps the coset of $s_1$ to the coset of $s_2$.
 
-In this paper we are working with pure (resp. rigid) inner twists, and this necessitates a slight refinement of the notion of endoscopic datum. A \emph{pure refined} endoscopic datum is one in which it is required that $s \in Z(\hat H)^\Gamma$ in point (3), and this eliminates the need for condition (d). An isomorphism of such data is required to map the coset of $s_1$ to the coset of $s_2$ under $\pi_0(Z(\hat H_1)^\Gamma) \to \pi_0(Z(\hat H_2)^\Gamma)$, without dividing by $Z(\hat G)$. A \emph{rigid refined} endoscopic datum replaces $s \in Z(\hat H)^\Gamma$ by $\dot s \in Z(\hat{\bar H} )^+$. An isomorphism of such data is required to map the coset of $\dot s_1$ to the coset of $\dot s_2$ under $\pi_0(Z(\hat{\bar H_1})^+) \to \pi_0(Z(\hat{ \bar H_2})^+)$. We recall here that $\hat{\bar G}$ is the universal cover (as a complex Lie group) of $\hat G$, and $\hat{\bar H}$ is the fiber product of $\hat H \to \hat G \from \hat{\bar G}$ and the superscript $+$ denotes the inverse image in $\hat{\bar G}.$
+In this paper we are working with pure (resp. rigid) inner twists, and this necessitates a slight refinement of the notion of endoscopic datum. A \emph{pure refined} endoscopic datum is one in which it is required that $s \in Z(\hat H)^\Gamma$ in point (3), and this eliminates the need for condition (d). An isomorphism of such data is required to map the coset of $s_1$ to the coset of $s_2$ under $\pi_0(Z(\hat H_1)^\Gamma) \to \pi_0(Z(\hat H_2)^\Gamma)$, without dividing by $Z(\hat G)$. A \emph{rigid refined} endoscopic datum replaces $s \in Z(\hat H)^\Gamma$ by $\dot s \in Z(\hat{\bar H} )^+$. An isomorphism of such data is required to map the coset of $\dot s_1$ to the coset of $\dot s_2$ under $\pi_0(Z(\hat{\bar H_1})^+) \to \pi_0(Z(\hat{ \bar H_2})^+)$. We recall here that $\hat{\bar G}$ is the universal cover (as a complex Lie group) of $\hat G$, and $\hat{\bar H}$ is the fiber product of $\hat H \to \hat G \from \hat{\bar G}$ and the superscript $+$ denotes the inverse image in $\hat{\bar H}.$
 
-Given an $L$\-parameter $\varphi : W_\R \to {^LG}$ and a semi-simple element $s \in S_\varphi$, where $S_\varphi=\tx{Cent}(\varphi,\hat G)$, one obtains a pure refined endoscopic datum as follows. Set $\hat H = \tx{Cent}(s,\hat G)^\circ$. The homomorphism  $\varphi : W_\R \to \tx{Cent}(s,\hat G) \to \tx{Out}(\hat H)$ factors through the projection $W_\R \to \Gamma$. There is a unique (up to isomorphism) quasi-split connected reductive $\R$-group $H$ with dual group $\hat H$ such that the homomorphism $\Gamma \to \tx{Out}(H)=\tx{Out}(\hat H)$ induced by the $\R$-structure of $H$ matches the one induced by $\varphi$. Set $\mc{H}=\hat H \cdot \varphi(W_\R)$, and let $\eta$ be the tautological inclusion $\mc{H} \to {^LG}$. In the rigid setting, the same construction works starting with $\dot s \in S_\varphi^+$.
-%, where $S_\varphi^+$ is the preimage in $\hat{\bar G}$ of $S_\varphi$.  
+Given an $L$\-parameter $\varphi : W_\R \to {^LG}$ and a semi-simple element $s \in S_\varphi$, where $S_\varphi=\tx{Cent}(\varphi,\hat G)$, one obtains a pure refined endoscopic datum as follows. Set $\hat H = \tx{Cent}(s,\hat G)^\circ$. The homomorphism  $\varphi : W_\R \to \tx{Cent}(s,\hat G) \to \tx{Out}(\hat H)$ factors through the projection $W_\R \to \Gamma$. There is a unique (up to isomorphism) quasi-split connected reductive $\R$-group $H$ with dual group $\hat H$ such that the homomorphism $\Gamma \to \tx{Out}(H)=\tx{Out}(\hat H)$ induced by the $\R$-structure of $H$ matches the one induced by $\varphi$. Set $\mc{H}=\hat H \cdot \varphi(W_\R)$, and let $\eta$ be the tautological inclusion $\mc{H} \to {^LG}$. In the rigid setting, the same construction works starting with $\dot s \in S_\varphi^+$, where $S_\varphi^+$ is the preimage in $\hat{\bar G}$ of $S_\varphi$.  
 
 By construction the parameter $\varphi$ takes values in $\mc{H}$. However, the extensions $\mc{H}$ and $^LH$ of $\Gamma$ by $\hat H$ need not be isomorphic, and even if they are, there is no natural isomorphism between them. Therefore, $\varphi$ is \emph{not} a parameter for $H$ in any natural way. There are two ways to remedy this situation.
 
@@ -508,7 +513,7 @@ An approach introduced in \cite{KalHDC} is to extend the theory of double covers
 
 \subsection{Transfer of orbital integrals} \label{sub:transfer}
 
-We continue with a local field $F$ (the main example for this note being $F=\R$) and an endoscopic datum $(H,s,\mc{H},\eta)$ for $G$. We shall further assume that $F$ has characteristic zero, because Theorem \ref{thm:orbtrans} below has so far been proved only under this assumption. In the pure setting we demand $s \in Z(\hat H)^\Gamma$, and in the rigid setting we demand $s \in Z(\hat{\bar H})^+$. We will review here the transfer of orbital integrals, which is dual to the transfer of characters that is the subject of this paper.
+We continue with a local field $F$ (the main example for this note being $F=\R$), a connected reductive $F$-group $G$, and an endoscopic datum $(H,s,\mc{H},\eta)$ for $G$. We shall further assume that $F$ has characteristic zero, because Theorem \ref{thm:orbtrans} below has so far been proved only under this assumption. In the pure setting we demand $s \in Z(\hat H)^\Gamma$, and in the rigid setting we demand $s \in Z(\hat{\bar H})^+$. We will review here the transfer of orbital integrals, which is dual to the transfer of characters that is the subject of this paper.
 
 As explained in \S\ref{sub:covendo}, in the classical setting order to formulate endoscopic transfer (both geometric and spectral), one has to make an arbitrary choice of a $z$-pair $(H_1,\eta_1)$, where $H_1 \to H$ is a surjective homomorphism of algebraic groups whose kernel is an induced torus, and $\eta_1 : \mc{H} \to {^LH_1}$ is an $L$\-embedding. 
 
@@ -518,13 +523,15 @@ The transfer of orbital integrals and characters between $G$ and $H$ is governed
 \[ \Delta : H_1(F)^\tx{sr} \times G(F)^\tx{sr} \to \C \]
 that depends on the $z$-pair datum, while in the setting of covers it is a function
 \[ \Delta : H(F)_\pm^\tx{sr} \times G(F)^\tx{sr} \to \C \]
-that is genuine in the first argument. In the classical case, it is given as the product
+that is genuine in the first argument. 
+
+In the classical case, it is given as the product
 \[ \epsilon \cdot \Delta_I^{-1}\Delta_{II}\Delta_{III_1}^{-1}\Delta_{III_2}. \]
 The individual factors are defined in \cite{LS87}, except for $\epsilon$, which is defined in the more general twisted setting in \cite[\S5.3]{KS99}, and $\Delta_{III_1}$, whose relative definition is given in \cite{LS87}, but whose absolute definition is given in \cite{KalECI} in the setting of pure inner forms, and in \cite{KalRI} in the setting of rigid inner forms. The inverses appear due to the conventions of \cite[(1.0.4)]{KS12}, which we will use in this paper. The term $\Delta_{IV}$ is missing because we have normalized orbital integrals and characters by the Weyl denominator. We will not review the construction of the individual pieces here, as it has been reviewed in various other places, such as \cite[\S3.5,\S4.2,\S4.3]{KalIMS}. The individual factors depend on auxiliary data, known as $a$-data and $\chi$-data. The total factor depends on a choice of Whittaker datum, and $z$-datum.
 
 In the case of covers, the transfer factor becomes the product
 \[ \epsilon \cdot \Delta_I^{-1} \cdot \Delta_{III}.\]
-The terms $\Delta_I$ and $\Delta_{III}$ are slightly different from the original ones, and are defined in \cite[\S4.3]{KalHDC}. Neither of them depends on auxiliary data, although they are defined on certain covers of tori, and one could argue that the elements of those covers count as auxiliary data.
+The terms $\Delta_I$ and $\Delta_{III}$ are slightly different from the original ones, and are defined in \cite[\S4.3]{KalHDC}. Neither of them depends on the auxiliary $a$-data and $\chi$-data, but they are defined on certain covers of tori, and one could argue that the elements of those covers count as auxiliary data. The product does not require a $z$-datum, but it does depend on a Whittaker datum.
 
 Recall the notation $O_\gamma(f)$ for normalized orbital integrals from \S\ref{sub:weyldenom}. We define the stable orbital integral
 \[ SO_\gamma(f) = \sum_{\gamma'} O_{\gamma'}(f), \]
@@ -557,13 +564,15 @@ The functions $f$ and $f^{H_\pm}$ are called \emph{matching}. The functions $f$ 
 	We note further that the normalization of orbital integrals we are using (\S\ref{sub:weyldenom}) cancels the normalization of the transfer factor we are using (it is missing the $\Delta_{IV}$ piece) and therefore the notion of matching functions of Definition \ref{dfn:matching} is the same as that obtained by using un-normalized orbital integrals and a transfer factor containing the $\Delta_{IV}$ piece.
 \end{rem}
 
-For the computations of this paper it would be useful to review some basic properties of the transfer factor. The first property concerns the behavior of $\Delta$ under stable conjugacy in the variables $\gamma$ and $\delta$. If $\dot\gamma$, resp. $\gamma_1$, is replaced by a stable conjugate, then the value of $\Delta$ doesn't change. On the other hand, if $\delta$ is replaced by a stable conjugate, the value of $\Delta$ changes in the following way:
+For the computations of this paper it would be useful to review some basic properties of the transfer factor. The first property concerns the behavior of $\Delta$ under stable conjugacy in the variables $\gamma$ and $\delta$. If $\dot\gamma$, resp. $\gamma_1$, is replaced by a stable conjugate, then the value of $\Delta$ doesn't change. 
+
+To speak about stably conjugacy in $\delta$, we need to be a bit more precise about the group $G$. In order to have a normalized transfer factor, one must realize $G$ as a pure (or rigid) inner form of its quasi-split form, thus fix a pure (or rigid) inner twist $(\xi,z) : G_0 \to G$, with $G_0$ quasi-split. It can be notationally convenient to write $\Delta(\dot\gamma,(z,\delta))$ in place of $\Delta(\dot\gamma,\delta)$ in order to record $z$. Then we have 
 \begin{equation} \label{eq:tfstab}
 	\Delta(\dot\gamma,(z_2,\delta_2)) = \Delta(\dot\gamma,(z_1,\delta_1)) \cdot \<\tx{inv}((z_1,\delta_1),(z_2,\delta_2)),\hat \jmath\,^{-1}(s)\>.
 \end{equation}
 This is in the setting of covers and we refer to \cite[Lemma 4.3.1]{KalHDC}. In the classical setting, where $\dot\gamma$ is replaced by $\gamma_1$, we refer to \cite[Definitions 4.2.7,4.3.11]{KalIMS}, or \cite[\S4.1]{LS87}.
 
-To explain this formula let us denote by $\gamma \in H(F)$ the image of $\dot\gamma$ resp. $\gamma_1$, and let $S \subset H$ be the centralizer of $\gamma \in H(F)$. Let $T \subset G_{z_1}$ be the centralizer of $\delta_1$ (see Section \ref{s:inner} for the definition of $G_{z+1}$). Using the discussion of \S\ref{sub:adm} we obtain from the inclusion $S \to H$ a $\Gamma$-stable $\hat H$-conjugacy class of embeddings $\hat S \to \hat H$. Composing this with the inclusion $\eta : \hat H \to \hat G$ we obtain a $\Gamma$-stable $\hat G$-conjugacy class of embeddings $\hat S \to \hat G$, hence conversely a $\Gamma$-stable $G(F^s)$-conjugacy class of embeddings $S \to G$. Among them, there is a unique one that maps $\gamma$ to $\delta_1$. It is automatically defined over $F$, and we call it $j$. Its dual-inverse $\hat\jmath^{-1}$ is an isomorphism $\hat S \to \hat T$. Composing with the canonical inclusion $Z(\hat H) \to \hat S$ we can use it to transport the element $s \in Z(\hat H)^\Gamma$ to $\hat T^\Gamma$, where it can be paired with elements of $H^1(F,T)$ by Tate-Nakayama duality. This is in the setting of pure inner twists, and the setting of rigid inner twists is analogous.
+To explain this formula let us denote by $\gamma \in H(F)$ the image of $\dot\gamma$ resp. $\gamma_1$, and let $S \subset H$ be the centralizer of $\gamma \in H(F)$. Let $T \subset G_{z_1}$ be the centralizer of $\delta_1$. Using the discussion of \S\ref{sub:adm} we obtain from the inclusion $S \to H$ a $\Gamma$-stable $\hat H$-conjugacy class of embeddings $\hat S \to \hat H$. Composing this with the inclusion $\eta : \hat H \to \hat G$ we obtain a $\Gamma$-stable $\hat G$-conjugacy class of embeddings $\hat S \to \hat G$, hence conversely a $\Gamma$-stable $G(F^s)$-conjugacy class of embeddings $S \to G$. Among them, there is a unique one that maps $\gamma$ to $\delta_1$. It is automatically defined over $F$, and we call it $j$. Its dual-inverse $\hat\jmath^{-1}$ is an isomorphism $\hat S \to \hat T$. Composing with the canonical inclusion $Z(\hat H) \to \hat S$ we can use it to transport the element $s \in Z(\hat H)^\Gamma$ to $\hat T^\Gamma$, where it can be paired with elements of $H^1(F,T)$ by Tate-Nakayama duality. This is in the setting of pure inner twists, and the setting of rigid inner twists is analogous.
 
 The second property is related to the definition of $\Delta_{III}$. We  first present an idealized situation. Assume that an $L$\-embedding $^LH \to {^LG}$ exists and has been fixed. Assume further that $L$\-embeddings $^LS \to {^LH}$ and $^LT \to {^LG}$ have been fixed. These always exist if we use the Weil-forms of the $L$\-groups, but are not unique. The isomorphism $j : S \to T$ from the previous paragraph induces an $L$\-isomorphism $^LS \to {^LT}$. We now have four maps that fit in a square, but this square has no reason to commute. More precisely, there does exist an $L$\-isomorphism $^LS \to {^LT}$ that does make the square commute, but it is not necessarily the one induced from $j$. Rather, it differs from it by multiplication by an element $a \in H^1(W_F,\hat S)$. This element is the $L$\-parameter of a character of $S(F)$, which we may denote by $\<a,-\>$. By definition
 \[ \Delta_{III}(\gamma,\delta)=\<a,\gamma\>. \]
@@ -740,9 +749,9 @@ We recall that any $X \in \mf{g}$ acts as a left-invariant differential operator
 \[ (Xf)(g) = \frac{d}{dt}\Big|_{t=0}f(g \cdot \exp(tX)). \]
 The resulting map $\tau : \mf{g} \to \mc{D}(G)$ of complex vector spaces takes the Lie bracket on $\mf{g}$ to the commutator bracket of the associative algebra $\mc{D}(G)$, and thus extends to a homomorphism of $\C$-algebras
 $\tau : \mc{U}(\mf{g}) \to \mc{D}(G)$.
-Let $\mc{I}(G) \subset \mc{D}(G)$ denote the subalgebra of left-invariant differential operators. Then $\tau$ is an isomorphism onto $\mc{I}(G)$:
+Let $\mc{D}_l(G) \subset \mc{D}(G)$ denote the subalgebra of left-invariant differential operators. Then $\tau$ is an isomorphism onto $\mc{D}_l(G)$:
 \[
-\tau : \mc{U}(\mf{g}) \overset\simeq\longrightarrow \mc{I}(G)\subset \mc{D}(G)
+\tau : \mc{U}(\mf{g}) \overset\simeq\longrightarrow \mc{D}_l(G)\subset \mc{D}(G)
 \]
 The restriction of $\tau$ to the center $\mc{Z}(\mf{g})$ of $\mc{U}(\mf{g})$ induces an isomorphism between $\mc{Z}(\mf{g})$ and the subalgebra of differential operators that are both left- and right-invariant.
 
@@ -760,7 +769,7 @@ Here is the result of Harish-Chandra which we need.
 
 This result is not stated in exactly  this form in the works of Harish-Chandra, so we give the proof, starting with some preliminaries.
 
-The first step is to recall that Harish-Chandra constructs in \cite[\S4]{HC_characters} a family of retractions $\mc{D}(G) \to \mc{I}(G)$ to the inclusion $\mc{I}(G) \to \mc{D}(G)$. This family is indexed by the set of points of $G$, and the retraction $\mc{D}(G) \to \mc{I}(G)$ associated to $y \in G$ is denoted by $D \mapsto D_y$. The left-invariant operator $D_y$ is called the ``local expression of $D$ at $y$'', and has the defining property that 
+The first step is to recall that Harish-Chandra constructs in \cite[\S4]{HC_characters} a family of retractions $\mc{D}(G) \to \mc{D}_l(G)$ to the inclusion $\mc{D}_l(G) \to \mc{D}(G)$. This family is indexed by the set of points of $G$, and the retraction $\mc{D}(G) \to \mc{D}_l(G)$ associated to $y \in G$ is denoted by $D \mapsto D_y$. The left-invariant operator $D_y$ is called the ``local expression of $D$ at $y$'', and has the defining property that 
 \begin{equation} \label{eq:diff1}
  (Df)(y) = (D_yf)(y)\quad(\forall f \in \mc{C}^\infty(G)).
 \end{equation}
@@ -815,7 +824,7 @@ Viewing $|\nu_a|$ as the operator of multiplication by this function,
 We can now combine the three steps outlined so far to prove Proposition \ref{pro:diff}.
 \begin{proof}[Proof of Proposition \ref{pro:diff}]
 Suppose $a\in T'$. Let $y=1\in U_T$ (cf. \eqref{e:UT}). Apply \eqref{eq:diff3} with $D=z$ 
-(recall we've identified $\mc{U}(\g)$ with $\mc{I}(\g)$ via $\tau$)
+(recall we've identified $\mc{U}(\g)$ with $\mc{D}_l(\g)$ via $\tau$)
 to conclude:
 \[
  (zf)(a) = \delta_a(z)_1(f)(a) =[L_{a^{-1}}\circ\delta_a(z)_1](f)(1)
@@ -1290,7 +1299,7 @@ If we denote by $(\mf{w},\mf{w'})$ the character of $H^1(W_\R,\hat G_\tx{sc} \to
 
 \subsection{The case of a cover of $G$} \label{sub:packetcover}
 
-We now consider $G$ quasi-split and a cover of $G(\R)$ coming from a character $x : \tilde\pi_1(G) \to \mu_n(\R)$ as in \cite{KalHDC}. This will be relevant for endoscopic groups $H$, where we will be working with $L$\-packets on the double cover $H(\R)_\pm$. It was shown in \cite[\S2.6]{KalHDC} that the local Langlands correspondence for such covers follows from the case of non-covers. We will give here an alternative approach that does not pass via reduction to non-covers, and instead works directly with the covers. This is possible due to the flexibility of Harish-Chandra's results on representation theory and harmonic analysis, as reviewed in \S\ref{sub:essds}.
+We now consider $G$ quasi-split and a cover $G(\R)_x$ of $G(\R)$ coming from a character $x : \tilde\pi_1(G) \to \mu_n(\R)$ as in \cite{KalHDC}. This will be relevant for endoscopic groups $H$, where we will be working with $L$\-packets on the double cover $H(\R)_\pm$. It was shown in \cite[\S2.6]{KalHDC} that the local Langlands correspondence for such covers follows from the case of non-covers. We will give here an alternative approach that does not pass via reduction to non-covers, and instead works directly with the covers. This is possible due to the flexibility of Harish-Chandra's results on representation theory and harmonic analysis, as reviewed in \S\ref{sub:essds}.
 
 The procedure is essentially the same as for the group $G(\R)$. We start with a discrete $L$\-parameter $\varphi : W_\R \to {^LG_x}$. By the same arguments as in \S\ref{sub:fac}, $\hat T = \tx{Cent}(\varphi(\C^\times),\hat G)$ is a maximal torus of $\hat G$, and the image of $\varphi$ lies in $N(\hat T,{^LG_x})$. The composition of $\varphi$ with the adjoint action $\tx{Ad}$ factors through $\Gamma$ and induces a $\Gamma$-structure on $\hat T$, which we call 
 $\hat S$. The $\hat G$-conjugacy class of the inclusion $\hat\jmath : \hat S \to \hat G$ is $\Gamma$-stable, hence leads again to the set $\mc{J}(F)$ of admissible embeddings of $S$ into pure (or rigid) inner forms of $G$.
@@ -1428,7 +1437,7 @@ This allows us to assume that $G$ is semi-simple and simply connected in what fo
 
 		To see boundedness, we note that for any fixed $\delta$, there are only finitely many $\dot\gamma$ with $\Delta(\dot\gamma,\delta) \neq 0$, and in fact their number is bounded by $|\Omega(T,G)|$. The values of the transfer factor are roots of unity (\cite[Lemma 4.3.3]{KalHDC}). The boundedness of the right-hand side now follows from the boundedness of $S\Theta_{\varphi'}$, the latter function being the analog of $\Theta_\varphi^{\mf{w},s}$ for the group $H$ and $s=1$.
 
-		To check the eigendistribution property for the function $\delta \mapsto \sum_\gamma \Delta(\dot\gamma,\delta)S\Theta_{\varphi'}(\dot\gamma)$ we fix $\delta$ and let $T \subset G$ be its centralizer. To apply a differential operator to this function at $\delta$, it is enough to consider the function in a neighborhood of $\delta$. Let $\gamma_1\dots,\gamma_n$ be representatives for the stable classes in $H(\R)$ that transfer to the stable class of $\delta$ and let $S_1,\dots,S_n \subset H$ be their centralizers. Let $j_i : T \to S_i$ be the unique admissible isomorphism with $j_i(\delta)=\gamma_i$. There is a connected open neighborhood $U \subset T(\R)$ of $\delta$ so that, for each $\delta' \in U$, $j_1(\delta'),\dots,j_n(\delta')$ is a set of representatives for the stable classes in $H(\R)$ that transfer to $\delta'$, and such that the double cover $S_i(\R)_x$ splits over $j_i(U)$. We let $U_i \subset S_i(\R)_x$ be an arbitrary choice of one of the two connected components of the preimage of $j_i(U)$ in $S_i(\R)_x$. Then $j_i$ lifts to a diffeomorphism $U \to U_i$, which we still call $j_i$. The restriction to $U$ of the function $\delta \mapsto \sum_\gamma \Delta(\dot\gamma,\delta)S\Theta_{\varphi'}(\dot\gamma)$ is now given by $\delta' \mapsto \sum_{i=1}^n \Delta(j_i(\delta'),\delta')S\Theta_{\varphi'}(j_i(\delta'))$. 
+		To check the eigendistribution property for the function $\delta \mapsto \sum_\gamma \Delta(\dot\gamma,\delta)S\Theta_{\varphi'}(\dot\gamma)$ we fix $\delta$ and let $T \subset G$ be its centralizer. To apply a differential operator to this function at $\delta$, it is enough to consider the function in a neighborhood of $\delta$. Let $\gamma_1\dots,\gamma_n$ be representatives for the stable classes in $H(\R)$ that transfer to the stable class of $\delta$ and let $S_1,\dots,S_n \subset H$ be their centralizers. Let $j_i : T \to S_i$ be the unique admissible isomorphism with $j_i(\delta)=\gamma_i$. There is a connected open neighborhood $U \subset T(\R)$ of $\delta$ so that, for each $\delta' \in U$, $j_1(\delta'),\dots,j_n(\delta')$ is a set of representatives for the stable classes in $H(\R)$ that transfer to $\delta'$, and such that the double cover $S_i(\R)_\pm$ splits over $j_i(U)$. We let $U_i \subset S_i(\R)_\pm$ be an arbitrary choice of one of the two connected components of the preimage of $j_i(U)$ in $S_i(\R)_\pm$. Then $j_i$ lifts to a diffeomorphism $U \to U_i$, which we still call $j_i$. The restriction to $U$ of the function $\delta \mapsto \sum_\gamma \Delta(\dot\gamma,\delta)S\Theta_{\varphi'}(\dot\gamma)$ is now given by $\delta' \mapsto \sum_{i=1}^n \Delta(j_i(\delta'),\delta')S\Theta_{\varphi'}(j_i(\delta'))$. 
 		
 		It will be enough to consider each summand individually. By \cite[Corollary 4.3.4]{KalHDC}, the function $\delta' \mapsto \Delta(j_i(\delta'),\delta')$ is locally constant, so after possibly shrinking $U$ we may assume that it is constant. Thus the summand under consideration becomes $\delta' \mapsto S\Theta_{\varphi'}(j_i(\delta'))$, a function defined on a connected open neighborhood $U$ in $G(\R)$ of the fixed strongly regular semi-simple element $\delta$.
 
@@ -1440,11 +1449,11 @@ This allows us to assume that $G$ is semi-simple and simply connected in what fo
 		\end{equation}
 		The admissible isomorphism $j_i : T \to S_i$ induces an isomorphism $S(\mf{t}) \to S(\mf{s}_i)$ which embeds $S(\mf{t})^{\Omega(T,G)}$ into $S(\mf{s}_i)^{\Omega(S_i,H)}$. We have
 		\begin{equation} \label{eq:e2}
-		\gamma(z) \cdot (S\Theta_{\varphi'}\circ j_i)|_{T(\R) \cap U} = (j_i(\gamma(z)) \cdot S\Theta_{\varphi'}|_{S_i(\R)_x \cap U_i}) \circ j_i.
+		\gamma(z) \cdot (S\Theta_{\varphi'}\circ j_i)|_{T(\R) \cap U} = (j_i(\gamma(z)) \cdot S\Theta_{\varphi'}|_{S_i(\R)_\pm \cap U_i}) \circ j_i.
 		\end{equation}
-		Let $\gamma_i : \mf{z}_H \to S(\mf{s}_i)^{\Omega(S_i,H)}$ be the Harish-Chandra isomorphism for $(H,S_i)$ and let $z_H \in \mf{z}_H$ be the preimage under $\gamma_i$ of $j_i(\gamma(z))$. We apply again Proposition \ref{pro:diff}, this time to the smooth class function $|D_{S_i}(-)|^{-1/2}S\Theta_{\varphi'}$ on $H(\R)_x$ to see
+		Let $\gamma_i : \mf{z}_H \to S(\mf{s}_i)^{\Omega(S_i,H)}$ be the Harish-Chandra isomorphism for $(H,S_i)$ and let $z_H \in \mf{z}_H$ be the preimage under $\gamma_i$ of $j_i(\gamma(z))$. We apply again Proposition \ref{pro:diff}, this time to the smooth class function $|D_{S_i}(-)|^{-1/2}S\Theta_{\varphi'}$ on $H(\R)_\pm$ to see
 		\begin{equation} \label{eq:e3}
-		j_i(\gamma(z)) \cdot S\Theta_{\varphi'}|_{S_i(\R)_x \cap U_i} = |D_{S_i}(-)|^{1/2}\cdot z_H \cdot (|D_{S_i}(-)|^{-1/2}S\Theta_{\varphi'})|_{S_i(\R)_x \cap U_i}.
+		j_i(\gamma(z)) \cdot S\Theta_{\varphi'}|_{S_i(\R)_\pm \cap U_i} = |D_{S_i}(-)|^{1/2}\cdot z_H \cdot (|D_{S_i}(-)|^{-1/2}S\Theta_{\varphi'})|_{S_i(\R)_\pm \cap U_i}.
 		\end{equation}
 		The eigenfunction property of $S\Theta_{\varphi'}$ gives
 		\begin{equation} \label{eq:e4}
