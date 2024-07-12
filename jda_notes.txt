@@ -1,0 +1,111 @@
+J: page 1: eds looks plural
+
+T: Not sure how to improve this.
+J: I meant to expand this to say that this explains why I changed the wording as I did, which successfully addressed my point.
+
+J: introduction: the tense varies between "Shelstad defines" and "Shelstad defined". I'll leave it up to you to decide if this is an issue.
+
+T: Ok, took care of it.
+
+J: I'm of the opinion that it is fine to split infinitives, and one should when this sounds better.
+
+T: I don't understand what this means. You are welcome to make any language changes you see fit.
+
+J: bottom of page 4: Vogan introduced "pure inner forms" in [Vog93] - this is the p-adic case, as mentioned R was already in ABV. I added the phrase "for general fields". This isn't important, get rid of it if you want.
+
+T: Thanks for pointing that out. I have kept it and slightly expanded this paragraph.
+
+J: I seem to remember that at some point you defined rigid inner forms using the condition that something be in the center of the derived group, and this restricted notion still maps onto all rational forms. Here we're using all of Z (which seems better to me). Do I have that right?
+
+T: Yes, the center of the derived subgroup is sufficient, and this is important for global applications. In the purely local setting it is a bit more natural to use the center of the entire group.
+
+J: Thank anyone besides Eric Opdam?
+
+T: Not sure, but thanking him is a great idea.
+
+
+J: Definition 2.7.2. I'm afraid I have to object to 1. In the literature "Discrete Series" means: embeds in L^2(G), or equivalently all matrix coefficients are in L^2. I believe this is due to Godemont. A good reference is "Wolf, Representations on Partially Holomorphic Cohomology Spaces, in Representation theory and harmonic analysis on symmetric spaces, AMS Contemporary Math 714." According to that reference what is in 1 is precisely "relative discrete series" - note that the central character is unitary. 
+
+T: Thanks, I have incorporated that.
+
+J: A natural condition on an irreducible representation is: matrix coefficients are square integrable modulo the center. Such a representation has a central character, not necessarily unitary. Does such a representation satisfy your definition 2? This comes down to: can we find a character \chi of G so that \pi\otimes\chi has unitary central character? I think this is true but I'm not sure.
+
+T: I don't know what it means for the matrix coefficients to be square-integrable modulo the center if the central character is not unitary. I have tried to give an equivalent formulation (as a new Lemma) that seems close to what you are saying. Have a look and tell me what you think. I have asked there for you to provide references for two well-known facts.
+
+J: Theorem 2.7.4: I think you need to say "among irreducible tempered representations". For example in SO(2,1) the spherical principal series at rho is the sum (in the Grothendieck group) of the trivial representation and the unique discrete series. So on the compact torus these have the same formula up to sign; probably you can find a similar example where they agree exactly.
+
+T: It looks like you have corrected this, thank you.
+
+
+J: Theorem 2.9.1: $\O(\delta,f)$ appears in 1, presumably this should be $\O_\delta(f)$.
+
+T: It seems you have corrected this, thank you.
+
+J: second paragraph of 2.11: "connected semi-simple algebraic" not "connected semisimple simply connected algebraic?
+
+T: No, it does need to be simply connected (algebraically), otherwise it's R-points will not be connected in general.
+J: What I meant to say was we could assume "G is the real points of a connected algebraic group such that G(R) is connected". But forget it what's written now is better.
+
+
+
+J: I did some rewriting in Section 2.11. A mathematical point is that I got confused by HC's notation \Xi', which is not the regular points in
+\Xi. As a result in the formulation we had we could not take y=1. In fact you can take y=1, as you did.  See the red comment in the pdf.
+
+T: OK, I rewrote this part a bit and absorbed your red paragraph into the body of the text a few lines below.
+
+J: Also I decided that \tau had served its purpose, which was to make sure I didn't make a mistake, but at the end of the day it is better to suppress it.
+
+T: OK.
+
+J: Some remaining todo's from the previous round: see two \warns:
+
+1) Defining H-bar
+2) clarifying
+
+T: I defined H-bar. Not sure what needs to be clarified.
+J: 2) got truncated. It was referring to the bijection between your and ABV rigid forms, and was addressed.
+
+
+Reminder for Jeff: 3 questions in Lemma 2.7.3 and its proof.
+
+-------------------------------------------------------------------
+J: I edited Definition 2.7.2 regarding eds etc. It is convenient to re-order the proof slightly to take care of the questions about restricting being semisimple, by tensoring with a character so everything is unitary. Also I think it is slightly better to allow reducible reps in 1 and 2 but only irreducible in 3. Finally any irreducible admissible representation has a central character, so that is the correct setting.
+
+T: I also slightly edited the proof of Lemma 2.7.4. As for Definition 2.7.3, should we require that the representation is finite-length? Otherwise, who do we know that a discrete-series representation is unitary (used in the proof of Lemma 2.7.4)?
+
+
+J: I put in a reference for Schur's Lemma and edited the SL(2,R) example section
+T: Ok, thanks!
+
+
+J: The terms elliptic, anistropic, and compact describing a torus are all used. I guess anisotropic is a property of an algebraic torus T. whereas compact refers to T(R). Furthermore T anisotropic => T(R) is compact (if and only if)? I'm not sure about elliptic: I think this is a property not just of the torus but the group it is in: elliptic means anisotropic modulo the center? My guess is you used each term precisely in the right place. I mainly want to check this is true, and suggest that (for real groups people) it is worth saying what these words mean.
+
+
+T: Yes, this is the terminology I have been using. I have added a remark (2.7.8)
+
+
+page 23: ^+ indicates inverse image in hat-bar-G. This is required for the \pi_0(Z...) terms as well as S_phi. I put this in, please double check what is there is correct (around last line of pg 22).
+
+T: Ok, it actually had to be hat-bar-H.
+
+J: page 25: G_{z_1} is defined in Section 2.2 (inner forms)? Remind the reader.b
+
+T: I inserted a paragraph beforehand.
+
+J: page 27 Question: is it true that \omega_F=N(T(F),G(F))/T(F)?
+
+T: This is the definition.
+
+J: In Section 2.11 \mathcal I(G) is the space of (conjugation) invariant distributions. In section 2.12 \mathcal I(G) denotes the left-invariant differential operators. I don't know if this is a potential source of confusion.
+
+T: I changed the latter to \mathcal{D}_l.
+
+
+J: End of section 4.1 beginning of section 4.2: "While this embedding is not \Gamma-equivariant..." occurs before Lemma 4.1.3, and
+"The natural embedding ... is not \Gamma-equivariant..." occurs again first line of 4.2. Not the end of the world.
+
+T: I think that's fine.
+
+J: Section 4.5: ^L_G_x occurs in 3 places. I think it hasn't been defined. Should it be ^LG_{\pm}? I assume this x is not the same as the z_1 in section 2.9. This occurs again on page 51, in the proof of Lemma 5.2.2.
+
+T: In Section 4.5 it should be G_x, and I have added this to the first line of this section. In Lemma 5.2.2 it should have been \pm, and I have now replaced it.
