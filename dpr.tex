@@ -1060,12 +1060,16 @@ Kostant showed \cite{Kos63} that the Kostant section meets every regular orbit i
 
 Suppose $X\in \g(\R)$ and $\O$ is a regular orbit in $\g(\C)$ which is defined over $\R$, i.e. stable under complex conjugation. Then the unique point in $\K(X)\cap \O$ is also stable under complex conjugation, i.e. contained in $\g(\R)$. The $G(\R)$-orbit of $\K(X)\cap \O$ depends only on the $G(\R)$-orbit of $X$.
 
+We shall now make an analogous construction for $\g^*$. It will use a choice of an isomorphism $\phi : \g \to \g^*$ of $\C$-vector spaces that is equivariant for the action of $G$ and of complex conjugation, but the result will be independent of it. Such an isomorphism exists, and specifying it is equivalent to specifying a non-degenerate bilinear form on $\g$ that is invariant under the actions of $G$ and complex conjugation. We can obtain the latter by taking the Killing form on the derived part of $\g$ and an arbitrary non-degenerate bilinear form on the center of $\g$.
 
+Assuming $\phi$ fixed, given a regular nilpotent element $X\in \g^*$ we define $\K(X)\subset \g^*$ as $\K(X) = \phi(\K(\phi^{-1}(X)))$. The rationality and uniqueness properties of $\K(X)$ are inherited from the analogous properties in the case of $\g$. 
 
-We need to define the Kostant section in $\g^*$. For this we choose a $G(\C)$-invariant non-degenerate bilinear form on $\g$, and
-for $X\in \g^*$ define $\K(X)\subset \g^*$ using the  resulting isomorphism $\g\simeq\g^*$. 
-Since $\K(X)$ (for $X\in \g$) contains the center, and the form is unique up to non-zero scalar on the derived algebra,
-it is clear that $\K(X)$ (for $X\in \g^*$) is well defined up to scalar.  
+To see that the choice of $\phi$ is irrelevant we decompose  $\g = \mf{z} \oplus \g_1 \oplus \dots \oplus \g_n$, where $\mf{z}$ is the center of $\g$ and $\g_i$ are the simple factors. This decomposition is canonical, up to permuting the $\g_i$.  The dual decomposes accordingly as $\g^*=\mf{z}^*\oplus \g_1^* \oplus \dots \oplus \g_n^*$, where $\mf{z}^*$ is the annihilator of $\mf{g}_1 \oplus \dots \oplus \mf{g}_n$, and also equal to the fixed point space for the coadjoint action of $G$, and $\mf{g}_i^*$ is the annihilator of $\mf{z} \oplus \mf{g}_1 \oplus \dots \oplus \mf{\hat  g}_i \oplus \dots \oplus \mf{g}_n$ (with ``hat'' signifying that we are omitting this summand), and also equal to the dual space of $\mf{g}_i$. The isomorphism $\phi$ breaks up as $\phi_\mf{z}\oplus\phi_1 \oplus \dots \oplus \phi_n$, where $\phi_\mf{z} : \mf{z} \to \mf{z}^*$ is an isomorphism of $\C$-vector spaces equivariant under complex conjugation, and $\phi_i : \g_i \to \g_i^*$ is an isomorphism of complex vector spaces equivariant under $G$ (equivalently, its simple piece $G_i$) and complex conjugation. Of these, $\phi_\mf{z}$ is arbitrary, while $\phi_i$ is uniquely determined up to a complex scalar. Now $X=X_1+\dots+X_n$ and $Y=Y_1+\dots+Y_n$ break up accordingly (neither has a central piece), and we have 
+\[ \K(\phi^{-1}(X)) = \mf{z} \oplus \bigoplus (\phi_i^{-1}(X_i)+\Cent_{\g_i}(\phi_i^{-1}(Y_i))),  \]
+hence
+\[ \K(X) = \mf{z}^* \oplus \bigoplus (X_i+\phi_i(\Cent_{\g_i}(\phi_i^{-1}(Y_i)))). \]
+But it is clear that the term $\phi_i(\Cent_{\g_i}(\phi_i^{-1}(Y_i))))$ does not change if we multiply $\phi_i$ by a scalar.
+
 
 
 \subsection{Generic eds representations} \label{sub:gen}
