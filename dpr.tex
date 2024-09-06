@@ -101,7 +101,7 @@ c(\Delta)\sum_{\pi \in \Pi_\varphi(G)}\<\pi,s\>\Theta_\pi(\delta) = \sum_\gamma 
 \end{equation}
 where $\gamma$ runs over the set of (representatives for) the stable conjugacy classes of strongly regular semi-simple elements of $H(\R)$, and $\Theta_\pi$ and $\Theta_\sigma$ are the Harish-Chandra character functions of the representations $\pi$ and $\sigma$, respectively. The proof of this identity is rather complicated due to the implicit nature of the functions $\pi \mapsto \<\pi,-\>$ and $\Delta$, and the constant $c(\Delta)$.
 
-In \cite{LS87}, Langlands and Shelstad succeeded in making the functions $\Delta$ explicit. More precisely, they explicitly defined such functions for all local fields of characteristic zero, in such a way that they satisfy a global product formula related to the stabilization of the Arthur-Selberg trace formula. These functions still remained ambiguous up to multiplication by a non-zero complex root of unity (of order $2$ over $\R$). In a subsequent paper \cite[Theorem 2.6.A]{LS90} they proved that these explicitly defined functions must coincide up to scalar with those implicitly defined by Shelstad earlier. This result was indirect and relied on Shelstad's identity \eqref{eq:s1}. This prompted Arthur to pose the question \cite{Art08} of rederiving Shelstad's identity \eqref{eq:s1} directly in terms of the factors of \cite{LS87}, and without using the arguments of \cite{LS90} and the implicit work of \cite{She82}. This was undertaken by Shelstad in her papers \cite{SheTE1} and \cite{SheTE2}. There she defined  explicitly the so called ``spectral transfer factors'' $\Delta(\sigma,\pi)$ and ``compatibility factors'' $\Delta(\sigma,\pi,\gamma,\delta)$, where $\sigma$ and $\pi$ are eds representations of $H(\R)$ and $G(\R)$ respectively, $\gamma \in H(\R)_\tx{sr}$, $\delta \in G(\R)_\tx{sr}$. The spectral transfer factor is, just like the geometric transfer factor $\Delta(\gamma,\delta)$, well-defined only up to a non-zero complex scalar multiple. The compatibility factor $\Delta(\sigma,\pi,\gamma,\delta)$ is canonical. Its purpose is to link the arbitrary choices for normalizations of geometric and spectral factors, by saying that a chosen normalization of $\Delta(\gamma,\delta)$ is compatible with a chosen normalization of $\Delta(\sigma,\pi)$ if the identity
+In \cite{LS87}, Langlands and Shelstad succeeded in making the functions $\Delta$ explicit. More precisely, they explicitly defined such functions for all local fields of characteristic zero, in such a way that they satisfy a global product formula related to the stabilization of the Arthur-Selberg trace formula. These functions still remained ambiguous up to multiplication by a non-zero complex root of unity (of order $2$ over $\R$). In a subsequent paper \cite[Theorem 2.6.A]{LS90} they proved that these explicitly defined functions must coincide up to scalar with those implicitly defined by Shelstad earlier. This result was indirect and relied on Shelstad's identity \eqref{eq:s1}. This prompted Arthur to pose the question \cite{Art08} of rederiving Shelstad's identity \eqref{eq:s1} directly in terms of the factors of \cite{LS87}, and without using the arguments of \cite{LS90} and the implicit work of \cite{She82}. This was undertaken by Shelstad in her papers \cite{SheTE1} and \cite{SheTE2}. There she explicitly  defined the so called ``spectral transfer factors'' $\Delta(\sigma,\pi)$ and ``compatibility factors'' $\Delta(\sigma,\pi,\gamma,\delta)$, where $\sigma$ and $\pi$ are eds representations of $H(\R)$ and $G(\R)$ respectively, $\gamma \in H(\R)_\tx{sr}$, $\delta \in G(\R)_\tx{sr}$. The spectral transfer factor is, just like the geometric transfer factor $\Delta(\gamma,\delta)$, well-defined only up to a non-zero complex scalar multiple. The compatibility factor $\Delta(\sigma,\pi,\gamma,\delta)$ is canonical. Its purpose is to link the arbitrary choices for normalizations of geometric and spectral factors, by saying that a chosen normalization of $\Delta(\gamma,\delta)$ is compatible with a chosen normalization of $\Delta(\sigma,\pi)$ if the identity
 \[ \Delta(\sigma,\pi)  = \Delta(\sigma,\pi,\gamma,\delta) \cdot \Delta(\gamma,\delta) \]
 holds for all possible $\sigma,\pi,\gamma,\delta$, see \cite[\S4]{SheTE2}. Just like the variable $\gamma$ matters only up to stable conjugacy, the variable $\sigma$ matters only up to $L$\-packets, so we may write $\Delta(\varphi',\pi)$ in place of $\Delta(\sigma,\pi)$ whenever $\sigma \in \Pi_{\varphi'}(H)$. With this notation, Shelstad proved the following modern version of her classical result
 \begin{equation} \label{eq:s2}
@@ -897,10 +897,7 @@ character of $N(\R)$ by
 \eta_X(\exp Y)=e^{X(Y)}\quad (Y\in\n(\R)).
 \] 
 Since all $\R$-Cartan subgroups of $B$ are $N(\R)$-conjugate,
-\cite[Theorem 19.2]{Bor91} this is independent of the choice of $T$. We define $\w_X$ to be the $G(\R)$-conjugacy class of $(B(\R),\eta_X)$. 
-
-
-
+\cite[Theorem 19.2]{Bor91} this is independent of the choice of $T$. We define $\w_X$ to be the $G(\R)$-conjugacy class of $(B,\eta_X)$. 
 
 The second construction starts with a character $\Lambda : \R \to \mb{S}^1$ and an $\R$-pinning $\P=(T,B,\{X_\alpha\})$ of $G$ (thus $T$ and $B$ are defined over $\R$, $X_\alpha \in \mf{g}_\alpha(\C)$ for each absolute $B$-simple root of $T$ in $G$, and the set $\{X_\alpha\}$ is permuted by complex conjugation).  
 Let $u_\alpha$ be the isomorphism of $\C$-groups taking $\mb{G}_a$ to $U_\alpha$ (it can be explicitly given as $u_\alpha(t)=\exp(t X_\alpha)$). 
@@ -1010,9 +1007,9 @@ Let $\overline B$ be the $T$-opposite Borel subgroup, and let $N,\overline N$ be
 
 Given $\P,\Lambda$ and $\kappa$ write $\Lambda(t)=e^{st}$ for some $s\in i\R$ and define
 $$
-X^-(P,\kappa,\Lambda)=s\sum_\alpha \kappa(X_{-\alpha},X_\alpha)X_{-\alpha}\in i\overline n(\R).
+X^-(P,\kappa,\Lambda)=s\sum_\alpha \kappa(X_{-\alpha},X_\alpha)^{-1}X_{-\alpha}\in i\overline n(\R).
 $$
-Here the sum is over the absolute $B$-simple roots, and $X_{-\alpha}$ satisfies $[X_{-\alpha},X_\alpha]=H_\alpha$.
+Here the sum is over the absolute $B$-simple roots, and as above $X_{-\alpha}$ satisfies $[X_{\alpha},X_{-\alpha}]=H_\alpha$.
 Then a straightforward calculation gives
 $$
 \eta_{\P,\Lambda}(\exp Y)=e^{\kappa(X^-(\P,\kappa,\Lambda),Y)}\quad (Y\in \n(\R)).
@@ -1216,10 +1213,10 @@ For the first statement by Lemma \ref{lem:g1} replace the condition on the Kosta
 By \cite[Proposition 3.9]{adams_afgoustidis_whittaker}, $\AC(\O_{d\tau})=\AC(\O_\lambda)$ and the result follows.
 
   This implies the if direction of the second statement. For the other direction see
-  See \cite[Lemma 3.13]{adams_afgoustidis_whittaker}.
+  See \cite[Corollary  3.12]{adams_afgoustidis_whittaker}.
 \end{proof}
 
-See \cite{adams_afgoustidis_whittaker} for details  in the case of $SL(2,\R)$.
+See \cite[Appendix]{adams_afgoustidis_whittaker} for details  in the case of $SL(2,\R)$.
 
 \begin{comment}
 \subsection{The example of $\tx{SL}_2$}
