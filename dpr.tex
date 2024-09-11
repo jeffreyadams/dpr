@@ -75,6 +75,9 @@
 \begin{mytitle} Discrete series $L$\-packets for real reductive groups \end{mytitle}
 \begin{center} Jeffrey Adams and Tasho Kaletha \end{center}
 
+{\let\thefootnote\relax\footnotetext{T.K. was supported in part by NSF grant DMS-2301507.}}
+
+
 \begin{abstract}
 We give a modern exposition of the construction, parameterization, and character relations for discrete series $L$\-packets of real reductive groups, which are fundamental results due to Langlands and Shelstad. This exposition incorporates recent developments not present in the original sources, such as normalized geometric transfer factors and the canonical double covers of tori and endoscopic groups, allowing for simpler statements and proofs. We also prove some new results, such as a simple criterion for detecting generic representations for a prescribed Whittaker datum, and an explicit formula for the factor $\Delta_I$ in terms of covers of tori.
 \end{abstract}
@@ -965,16 +968,16 @@ For surjectivity consider a regular nilpotent element
 $X_- \in \mf{g}(\R)$ and let $B^-$ be the unique Borel subgroup such
 that $X_-$ is contained in the Lie algebra of the unipotent radical
 $U^-$ of $B^-$. If we can find a maximal torus $T \subset B^-$ such
-that the decomposition of $X^-$ according to the root spaces for $T$
+that the decomposition of $X_-$ according to the root spaces for $T$
 has non-zero components only for the $B^-$-simple roots, then writing
-$X^-=\sum_\alpha X_{-\alpha}$ accordingly and setting
+$X_-=\sum_\alpha X_{-\alpha}$ accordingly and setting
 $X_\alpha \in \mf{g}_\alpha$ such that
 $[X_\alpha,X_{-\alpha}]=H_\alpha$ we obtain an $\R$-pinning
 $(T,B,\{X_\alpha\})$ giving rise to $X_-$, where $B$ is the
 $T$-opposite of $B^-$. In order to find such a $T$, we first choose an
 arbitrary maximal $\R$-torus $T \subset B^-$ and want to conjugate
 this torus under $U^-(\R)$ to obtain the desired torus. This is
-equivalent to conjugating $X^-$ under $U^-(\R)$ to achieve that its
+equivalent to conjugating $X_-$ under $U^-(\R)$ to achieve that its
 components for roots that are not $B^-$-simple are all zero. To see
 that this is possible, write $X_-=\sum_\alpha X_{-\alpha}$, where
 $\alpha$ runs over \emph{all} roots of $T$ in $B^-$, and set
@@ -1001,18 +1004,18 @@ In the literature Whittaker models are usually defined by a regular
 nilpotent orbit in $\g(\R)$ (not the dual). It is helpful to relate
 these formulations.
 
-To do so, fix a non-degenerate, $G(\R)$-invariant bilinear form $\kappa$ on $\g_\tx{der}(\R)$, and extend it by complex-linearity to 
-a $G(\C)$-invariant form on $\g_\tx{der}$, still denoted $\kappa$ (for example, we could take the Killing form). Suppose $T\subset B$ are a Cartan and Borel subgroup, both defined over $\R$. 
+To do so, fix a non-degenerate, $G(\R)$-invariant bilinear form $\kappa$ on $\g'(\R)=[\g,\g](\R)$, and extend it by complex-linearity to 
+a $G(\C)$-invariant form on $\g'$, still denoted $\kappa$ (for example, we could take the Killing form). Suppose $T\subset B$ are a Cartan and Borel subgroup, both defined over $\R$. 
 Let $\overline B$ be the $T$-opposite Borel subgroup, and let $N,\overline N$ be the nilpotent radicals of $B,\overline B$, respectively.
 
 Given $\P,\Lambda$ and $\kappa$ write $\Lambda(t)=e^{st}$ for some $s\in i\R$ and define
 $$
-X^-(P,\kappa,\Lambda)=s\sum_\alpha \kappa(X_{-\alpha},X_\alpha)^{-1}X_{-\alpha}\in i\overline n(\R).
+X_-(P,\kappa,\Lambda)=s\sum_\alpha \kappa(X_{-\alpha},X_\alpha)^{-1}X_{-\alpha}\in i\overline n(\R).
 $$
 Here the sum is over the absolute $B$-simple roots, and as above $X_{-\alpha}$ satisfies $[X_{\alpha},X_{-\alpha}]=H_\alpha$.
 Then a straightforward calculation gives
 $$
-\eta_{\P,\Lambda}(\exp Y)=e^{\kappa(X^-(\P,\kappa,\Lambda),Y)}\quad (Y\in \n(\R)).
+\eta_{\P,\Lambda}(\exp Y)=e^{\kappa(X_-(\P,\kappa,\Lambda),Y)}\quad (Y\in \n(\R)).
 $$
 Note that, in particular, the right hand side is independent of $\kappa$.
 
@@ -1022,7 +1025,7 @@ $$
 $$
 Then
 $$
-\eta_{\P,\Lambda}=\eta_{\phi_\kappa(X^-(\P,\kappa,\Lambda))}.
+\eta_{\P,\Lambda}=\eta_{\phi_\kappa(X_-(\P,\kappa,\Lambda))}.
 $$
 See \cite[Proof of Lemma 6.2.2]{KalRSP}.
 
