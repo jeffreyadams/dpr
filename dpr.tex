@@ -92,7 +92,7 @@ In this paper we give an exposition of these important results that is largely s
 
 Second, a number of developments over the ensuing years have enabled a simplified construction of the $L$\-packets and their internal structure, a more natural statement of the character identities, and a more direct approach to their proof. These developments include the introduction of pure and rigid inner forms and the resulting normalizations of transfer factors \cite{Vog93}, \cite{KalECI}, \cite{KalRI}, the introduction of double covers of tori and the recognition of the role they play in the classification of eds representations and the construction of their packets \cite{AV92}, \cite{AV16}, \cite{KalDC}, and the introduction of double covers of endoscopic groups, which alleviate the need for ad-hoc constructions and technical work-arounds in the considerations of endoscopy \cite{KalHDC}. 
 
-We utilize these developments to give a clean and direct account of the construction, internal structure, and character identities of discrete series $L$\-packets. This exposition is rather different from the classical literature and follows more closely the developments in the $p$-adic case such as \cite{KalRSP}, whose combination with double covers was hinted at in \cite{KalDC}. In particular, the statement of the character identities that we ultimately present and prove in this paper does not yet exist in the literature in this form. We do however additionally present an alternative statement, for which an indirect and more complicated proof was given in \cite{KalRI} based on the classical works of Langlands and Shelstad.
+We utilize these developments to give a clean and direct account of the construction, internal structure, and character identities of essentially discrete series $L$\-packets. This exposition is rather different from the classical literature and follows more closely the developments in the $p$-adic case such as \cite{KalRSP}, whose combination with double covers was hinted at in \cite{KalDC}. In particular, the statement of the character identities that we ultimately present and prove in this paper does not yet exist in the literature in this form. We do however additionally present an alternative statement, for which an indirect and more complicated proof was given in \cite{KalRI} based on the classical works of Langlands and Shelstad.
 
 To improve readability of the paper, we have kept the main arguments short and to the point: the construction and internal structure of $L$-packets is treated in \S\ref{sec:cons} in about 7 pages, and the endoscopic transfer in \S\ref{sec:endo} in about 10 pages. At the same time, we have included a somewhat lengthy discussion of relevant background material in \S\ref{sec:recoll}, as well as a discussion of genericity in \S\ref{sec:gen} containing results that do not yet appear in the literature.
 
@@ -173,7 +173,7 @@ We thank Eric Opdam for some helpful advice.
 
 \section{Recollections} \label{sec:recoll}
 
-\subsection{The $L$\-group}
+\subsection{The $L$\-group} \label{sub:l}
 
 We review the $L$\-group of a connected reductive group following \cite[\S2]{Vog93}.
 
@@ -272,13 +272,17 @@ The same discussion applies with pure inner forms replaced by rigid inner forms,
 \subsection{Weyl denominators} \label{sub:weyldenom}
 
 Let $G$ be a connected reductive $\R$-group and $T \subset G$ a maximal $\R$-torus. One can consider the function $T(\R) \to \R$ defined as
-\[ D_T(t) = D_T^G(t) = \textstyle\prod\limits_{\alpha \in R(T,G)} (1-\alpha(t)). \]
-An element $t \in T(\R)$ is called regular if $T$ is the identity component of its centralizer, and strongly regular if $T$ is its centralizer. In either case, $T$ is uniquely determined by $t$, and we can write $D_T(t)=D(t)$.
+\[ D_T(\gamma) = D_T^G(\gamma) = \textstyle\prod\limits_{\alpha \in R(T,G)} (1-\alpha(\gamma)). \]
+An element $\gamma \in T(\R)$ is called regular if $T$ is the identity component of its centralizer, and strongly regular if $T$ is its centralizer. In either case, $T$ is uniquely determined by $t$, and we can write $D_T(\gamma)=D(\gamma)$.
 
-In this paper we will normalize orbital integrals and characters by multiplying them by $|D(t)|^{1/2}$. Thus, for $t \in T(\R)$ strongly regular and $f \in \mc{C}_c^\infty(G(\R))$ we set
-\[ O_\gamma(f) = |D(t)|^{1/2}\int_{G(\R)/T(\R)} f(g\gamma g^{-1})dg/dt, \]
+In this paper we will normalize orbital integrals and characters by multiplying them by $|D(\gamma)|^{1/2}$. Thus, for $\gamma \in T(\R)$ strongly regular and $f \in \mc{C}_c^\infty(G(\R))$ we set
+\begin{equation} \label{eq:normorb}
+	O_\gamma(f) = |D(\gamma)|^{1/2}\int_{G(\R)/T(\R)} f(g\gamma g^{-1})dg/dt,
+\end{equation}
 while for $\pi$ admissible representation of $G(\R)$ we have the normalized character function $\Theta_\pi : G(\R)_\tx{sr} \to \C$ determined by
-\[ \tx{tr}(\pi(f)) = \Theta_\pi(f) = \int_{G(\R)_\tx{sr}} |D(g)|^{-1/2}\Theta_\pi(g)f(g)dg. \]
+\begin{equation} \label{eq:normchar}
+	\tx{tr}(\pi(f)) = \Theta_\pi(f) = \int_{G(\R)_\tx{sr}} |D(g)|^{-1/2}\Theta_\pi(g)f(g)dg. 
+\end{equation}
 This has the advantage that the functions $O_\gamma(f)$ and $\Theta_\pi(\gamma)$  remain bounded as $\gamma$ approaches singular elements in $T(\R)$.
 
 We note here that the distribution $f \mapsto O_\gamma(f)$ depends on the choice of measures $dg$ on $G(\R)$ and $dt$ on $T(\R)$, the distribution $f\mapsto \Theta_\pi(f)$ depends on $dg$, while the function $\gamma \mapsto \Theta_\pi(\gamma)$ does not depend on any choices.
@@ -521,9 +525,10 @@ Given an $L$\-parameter $\varphi : W_\R \to {^LG}$ and a semi-simple element $s 
 
 By construction the parameter $\varphi$ takes values in $\mc{H}$. However, the extensions $\mc{H}$ and $^LH$ of $\Gamma$ by $\hat H$ need not be isomorphic, and even if they are, there is no natural isomorphism between them. Therefore, $\varphi$ is \emph{not} a parameter for $H$ in any natural way. There are two ways to remedy this situation.
 
-The classical approach is to choose a $z$-extension $H_1 \to H$ and an $L$\-embedding $\mc{H} \to {^LH_1}$ that extends the natural embedding $\hat H \to \hat H_1$. These choices (which always exist, cf. \cite[\S2.2]{KS99}) are called a $z$-pair. They provide a parameter $\varphi_1$ for $H_1$.
+The classical approach is to choose a $z$-extension $H_1 \to H$ and an $L$\-embedding $\mc{H} \to {^LH_1}$ that extends the natural embedding $\hat H \to \hat H_1$. These choices (which always exist, cf. \cite[\S2.2]{KS99}) are called a $z$-pair. They provide a parameter $\varphi_1$ for $H_1$. Furthermore, they provide a character $\lambda : K(F) \to \C^\times$ of the kernel $K$ of the $z$-extension, discussed in \cite[\S2.2, page 23]{KS99}, and denoted by $\lambda_{H_1}$ there.
 
 An approach introduced in \cite{KalHDC} is to extend the theory of double covers of tori from \cite{KalDC} to the setting of quasi-split connected reductive groups. The datum $\mc{H}$ then leads to a \emph{canonical} double cover $H(F)_\pm$ of $H(F)$ and a \emph{canonical} isomorphism $^LH_\pm \to \mc{H}$. In this way, $\varphi$ naturally becomes a parameter for $H(F)_\pm$, and there are no choices involved. We will write $\varphi' : W_\R \to {^LH_\pm}$ for this parameter, so that $\varphi$ is the composition of $\varphi'$ with the natural isomorphism $^LH_\pm \to \mc{H}$ and the inclusion $\mc{H} \to {^LG}$.
+
 
 \subsection{Transfer of orbital integrals} \label{sub:transfer}
 
@@ -548,19 +553,25 @@ In the case of covers, the transfer factor becomes the product
 The terms $\Delta_I$ and $\Delta_{III}$ are slightly different from the original ones, and are defined in \cite[\S4.3]{KalHDC}. Neither of them depends on the auxiliary $a$-data and $\chi$-data, but they are defined on certain covers of tori, and one could argue that the elements of those covers count as auxiliary data. The product does not require a $z$-datum, but it does depend on a Whittaker datum.
 
 Recall the notation $O_\gamma(f)$ for normalized orbital integrals from \S\ref{sub:weyldenom}. We define the stable orbital integral
-\[ SO_\gamma(f) = \sum_{\gamma'} O_{\gamma'}(f), \]
+\begin{equation} \label{eq:so}
+	SO_\gamma(f) = \sum_{\gamma'} O_{\gamma'}(f),	
+\end{equation}
 where $\gamma'$ runs over a set of representatives for the $G(F)$-conjugacy classes of those elements that are stably conjugate, i.e. $G(F_s)$-conjugate, to $\gamma$.
 
-In the setting of covers, orbital integrals and stable orbital integrals are defined analogously, using the fact that every admissible isomorphism $T \to T'$ between maximal tori of $G$ maps $R(T,G)$ to $R(T',G)$ and hence lifts canonically to an isomorphism $T(F)_G \to T'(F)_G$. We apply this to the isomorphism induced by conjugation or stable conjugation. 
+We need to extend the definition of $O_\gamma(f)$ and $SO_\gamma(f)$ to the setting of the covers discussed in \cite{KalHDC}. This is very easy to do. Given a cover $G(F)_x$, an element $\dot\gamma \in G(F)_x$ is called strongly regular semi-simple if its image $\gamma \in G(F)$ is such. For any test function $f \in \mc{C}^\infty_c(G(F)_x)$ we define $O_{\dot\gamma}(f)$ as the integral of $f$ over the $G(F)_x$-conjugacy class of $\dot\gamma$, normalized by the Weyl denominator as in \ref{sub:weyldenom}. Note that the action of $G(F)_x$ on itself by conjugation factors through $G(F)$, and if $T \subset G$ is the centralizer of $\gamma$ then we have
+\[ O_{\dot\gamma}(f) = |D(\gamma)|^{1/2}\int_{G(\R)/T(\R)} f(g\dot \gamma g^{-1})dg/dt, \]
+in complete analogy with \eqref{eq:normorb}. To define $SO_{\dot\gamma}(f)$ we use the same identity \eqref{eq:so}, but we need to explain what it means for two strongly regular semi-simple elements $\dot\gamma_1,\dot\gamma_2$ of $G(F)_x$ to be stably conjugate. This we recall from \cite[\S3.8]{KalHDC}: there are two requirements. The first is that  their images $\gamma_1,\gamma_2 \in G(F)$ are stably conjugate. Then we have the admissible isomorphism $\eta_{\gamma_1,\gamma_2} : T_1 \to T_2$ between their centralizers that maps $\gamma_1$ to $\gamma_2$. This isomorphism lifts canonically to an isomorphism $T_1(F)_x \to T_2(F)_x$ between the preimages of $T_i(F)$ in $G(F)_x$, and we use $\eta_{\gamma_1,\gamma_2}$ to denote this lift. The second requirement is that $\eta_{\gamma_1,\gamma_2}(\dot\gamma_1)=\dot\gamma_2$.
 
-We now state the theorem asserting transfer of orbital integrals. In the case $F=\R$ it is a fundamental result of Shelstad, \cite{She82}, \cite{SheTE1}. In the case of $F/\Q_p$ it is a culmination of the work of many people, including Langlands and Shelstad \cite{LS87}, \cite{LS90}, Waldspurger \cite{Wal97}, \cite{Wal06ECC}, and Ngo \cite{Ngo10}. We state two versions, one using the cover $H(F)_\pm$ and one using a $z$-pair $(H_1,\eta_1)$. 
+We will be particularly interested in functions on $G(F)_x$ that are genuine or anti-genuine. More precisely, let $\epsilon \in \{\pm1\}$. An \emph{$\epsilon$-genuine} function on $G(F)_x$ is a function $f : G(F)_x \to \C$ such that $f(z\dot\gamma)=z^\epsilon \cdot f(\dot\gamma)$ for all $z \in \mu_n(\C) \subset G(F)_x$. We then say \emph{genuine} in place of $(+)$-genuine and \emph{anti-genuine} in place of $(-)$-genuine. We will also use this terminology when we are using a $z$-extension $G_1 \to G$ and we have fixed a character $\lambda$ on the kernel $K$ of this $z$-extension. Then the requirement will be $f(z\gamma_1)=\lambda(z)^\epsilon f(\gamma_1)$.
+
+We now state the theorem asserting transfer of orbital integrals. In the case $F=\R$ it is a fundamental result of Shelstad, \cite[\S3]{She82}, \cite[Theorem 5.2.1]{She83}, \cite[\S2.6]{LS90}, \cite[Theorem 14.3]{SheTE1}. In the case of $F/\Q_p$ it is a culmination of the work of many people, including Langlands and Shelstad \cite{LS87}, \cite{LS90}, Waldspurger \cite{Wal97}, \cite{Wal06ECC}, and Ngo \cite{Ngo10}. We state two versions, one using the cover $H(F)_\pm$ and one using a $z$-pair $(H_1,\eta_1)$. For the interpretation of this result in terms of $H(F)_\pm$, see \cite[Theorem 5.6.2]{KalHDC}.
 
 \begin{thm} \label{thm:orbtrans}
 Let $f \in \mc{C}_c^\infty(G(F))$.
 \begin{enumerate}
-	\item There exists a genuine function $f^{H_\pm} \in \mc{C}_c^\infty(H(F)_\pm)$ such that for all $\dot\gamma \in H(F)_\pm^\tx{sr}$
+	\item There exists an anti-genuine function $f^{H_\pm} \in \mc{C}_c^\infty(H(F)_\pm)$ such that for all $\dot\gamma \in H(F)_\pm^\tx{sr}$
 	\[ SO_{\dot\gamma}(f^{H_\pm}) = \sum_\delta \Delta(\dot\gamma,\delta) O_\delta(f). \]
-	\item Assume we have chosen a $z$-pair $(H_1,\eta_1)$. There exists a genuine function $f^{H_1} \in \mc{C}_c^\infty(H_1(F))$ such that for all $\gamma_1 \in H_1(F)^\tx{sr}$
+	\item Assume we have chosen a $z$-pair $(H_1,\eta_1)$. There exists an anti-genuine function $f^{H_1} \in \mc{C}_c^\infty(H_1(F))$ (with respect to the character $\lambda : K(F) \to \C^\times$) such that for all $\gamma_1 \in H_1(F)^\tx{sr}$
 	\[ SO_{\gamma_1}(f^{H_1}) = \sum_\delta \Delta(\gamma_1,\delta) O_\delta(f). \]
 \end{enumerate}
 
@@ -687,11 +698,33 @@ In this theorem we have chosen a Haar measure $dg$ on $G(\R)$, and a Haar measur
 	respectively.
 \end{rem}
 
-\subsection{Endoscopic lifting of distributions}
+\subsection{Endoscopic lifting of stable distributions} \label{sub:lifting}
 
-In this subsection we continue to work with an arbitrary local field $F$ of characteristic zero. Let $(H,s,\mc{H},\eta)$ be an endoscopic datum of $G$. The transfer of orbital integrals given by Theorem \ref{thm:orbtrans} defines a dual transfer of distributions. Let $\mc{I}(G)$ denote the space of invariant distributions on $G(F)$. This space consists of linear functionals on $\mc{C}^\infty_c(G(F))$, with a certain continuity property in the case $F=\R$, and which are invariant under the conjugation action of $G(F)$. By a deep theorem of Harish-Chandra this invariance property is equivalent to the requirement that such a functional vanishes on any test function for which all regular semi-simple orbital integrals vanish. Let $\mc{S}(G) \subset \mc{I}(G)$ denote the subspace of \emph{stable} distributions, defined to be those that vanish on all test functions for which all stable regular semi-simple orbital integrals vanish.
+In this subsection we continue to work with an arbitrary local field $F$ of characteristic zero. Let $(H,s,\mc{H},\eta)$ be an endoscopic datum of $G$. The transfer of orbital integrals given by Theorem \ref{thm:orbtrans} defines a dual transfer of distributions. Let $\mc{I}(G)$ denote the space of invariant distributions on $G(F)$. This space consists of linear functionals on $\mc{C}^\infty_c(G(F))$, with a certain continuity property in the case $F=\R$, and which are invariant under the conjugation action of $G(F)$. By a deep theorem of Harish-Chandra \textcolor{red}{ref} this invariance property is equivalent to the requirement that such a functional vanishes on any test function for which all regular semi-simple orbital integrals vanish. Let $\mc{S}(G) \subset \mc{I}(G)$ denote the subspace of \emph{stable} distributions, defined to be those that vanish on all test functions for which all stable regular semi-simple orbital integrals vanish.
 
-Analogously we have the spaces $\mc{S}(H) \subset \mc{I}(H)$. But the transfer of functions doesn't involve $H(F)$. Rather, it involves either the canonical double cover $H(F)_\pm$, or a chosen $z$-extension $H_1(F)$. Therefore, we write $\mc{I}_\tx{gen}(H_\pm)$ for the space of $H(F)$-invariant (continuous when $F=\R$) linear functionals on the space $\mc{C}^\infty_{c,\tx{gen}}(H(F)_\pm)$ of genuine test functions on $H(F)_\pm$, and similarly $\mc{I}_\tx{gen}(H_1)$ for the space of $H(F)$-invariant (continuous when $F=\R$) linear functionals on the space $\mc{C}^\infty_{c,\tx{gen}}(H_1(F))$ of genuine test functions on $H_1(F)$.
+Analogously we have the spaces $\mc{S}(H) \subset \mc{I}(H)$. But the transfer of orbital integtals doesn't involve $H(F)$. Rather, it involves either the canonical double cover $H(F)_\pm$, or a chosen $z$-extension $H_1(F)$. Therefore, we have to explain the notion of a stable genuine distribution on such covers. We write $\mc{I}_\tx{gen}(H_\pm)$ for the space of $H(F)$-invariant (continuous when $F=\R$) linear functionals on the space $\mc{C}^\infty_{c,\tx{gen}}(H(F)_\pm)$ of genuine test functions on $H(F)_\pm$, and similarly $\mc{I}_\tx{gen}(H_1)$ for the space of $H(F)$-invariant (continuous when $F=\R$) linear functionals on the space $\mc{C}^\infty_{c,\tx{gen}}(H_1(F))$ of genuine test functions on $H_1(F)$. To say when such a distribution is stable, we use the notion of stable conjugacy for strongly regular semi-simple elements of $G(F)_x$ from \S\ref{sub:transfer}. A function $\phi : G(F)_x^{sr} \to \C$ is called \emph{stably invariant} if $\phi(\dot\delta_1)=\phi(\dot\delta_2)$ whenever $\dot\delta_1,\dot\delta_2$ are stably conjugate. A distribution $d$ is called \emph{stably invariant} if $d(f)=0$ for any test function $f \in \mc{C}^\infty_c(G(F)_x)$ for which $SO_{\dot\delta}(f)=0$ for any strongly-regular semi-simple $\dot\delta \in G(F)_x$, where $SO_{\dot\delta}(f)=0$ is the integral of $f$ over the stable class of $\dot\delta$. Note that such a distribution vanishes in particular on all test functions $f$ for which $O_{\dot\gamma}(f)=0$, and is therefore an invariant distribution by Harish-Chandra's theorem. We shall write $\mc{S}_\tx{gen}(H_\pm) \subset \mc{I}_\tx{gen}(H_\pm)$ resp. $\mc{S}_\tx{gen}(H_1) \subset \mc{I}_\tx{gen}(H_1)$ for the subspace of stably invariant distributions.
+
+An invariant distribution can be given by integration against a locally integrable class function $\phi \in L^1_\tx{loc}(G(F))$, namely 
+\[ d_\phi(f) = \int_{G(F)_\tx{rs}} |D(x)|^{-1/2}\phi(x)f(x)dx. \]
+Here locally integrable means that $\phi$ is measurable on $G(F)$ and integrable on any compact subset of $G(F)$, and again $d_\phi$ depends on the choice of Haar measure $dx$. We say that the distribution $d_\phi$ is represented by $\phi$. We have inserted the factor $|D(x)|^{-1/2}$ as a means of normalization, following the convention made in \S\ref{sub:weyldenom} of normalizing orbital integrals and characters by the Weyl denominator. Note that only the restriction of $\phi$ to $G(F)_\tx{rs}$ is relevant, since the complement of this set has measure zero.
+
+
+\begin{lem} \label{lem:stabfun}
+	If the genuine invariant distribution $d$ is representable by the locally integrable conjugation-invaraint genuine function $\phi$, then $d$ is stably invariant if and only if $\phi$ is stably invariant.
+\end{lem}
+\begin{proof}
+	The stable Weyl integration formula (Corollary \ref{cor:stabweyl}) shows that 
+	\[ d(\phi) = \int_{G(F)} f(\dot g)\phi(\dot g)dg = \sum_T |\Omega(T,G)(F)|^{-1}\int_{T(F)_\tx{sr}}|D_T(\gamma)|^{1/2}SO_\gamma(f \cdot \phi)d\gamma.\]
+	If $\phi$ is stably invariant then the integral above becomes
+	\[ \int_{T(F)_\tx{sr}} |D_T(\gamma)|^{1/2}\phi(\dot\gamma)SO_{\dot\gamma}(f)d\gamma, \]
+	where $\dot\gamma$ is an arbitrary lift of $\gamma$, and we see that $d(f)=0$ whenever $SO_{\dot\gamma}(f)=0$ for all $\dot\gamma$. 
+	
+	Conversely, let $\gamma_1,\gamma_2 \in G(F)$ be stably conjugate strongly regular semi-simple elements. Let $T_1,T_2$ be their centralizers. We choose an open neighborhood $U_1$ of $\gamma_1$ in $T_1(F)$ such that no elements of $U_1$ are stably conjugate to $\gamma_1$ -- this is possibly because any two stably conjugate strongly regular elements of $T_1(F)$ are in the same orbit under the finite group $\Omega(T_1,G)(F)$. Let $U_2$ be the image of $U_1$ under the admissible isomorphism $\eta_{\gamma_1,\gamma_2}: T_1 \to T_2$ sending $\gamma_1$ to $\gamma_2$. Then the map $\xi_i : U_i \times G(F)/T_i(F) \to G(F)$ given by $(t,g) \mapsto gtg^{-1}$ is a diffeomorphism onto its image, which is an open and $G(F)$-conjugation invariant subset of $G(F)$. For any test function $f_1$ supported on the image of $\xi_1$ we define the test function $f_2$ supported on the image of $\xi_2$ by $f_2(gt_2g^{-1})=f_1(g\eta_{\gamma_1,\gamma_2}^{-1}(t_2)g^{-1})$. Then $f=f_1-f_2$ has the property $SO_{\dot\gamma}(f)=0$ for all $\gamma$, hence $d(f_1)=d(f_2)$. Letting $U_1$ shrink around $\gamma_1$ we see that $\phi(\dot\gamma_1)=\phi(\dot\gamma_2)$.
+\end{proof}
+
+
+
+We are now ready to discuss the notion of an endoscopic lifting of stable distributions.
 
 \begin{dfn} \label{dfn:stabtrans}
 The \emph{endoscopic lifting} is the linear map 
@@ -699,16 +732,12 @@ The \emph{endoscopic lifting} is the linear map
 defined by $\tx{Lift}(d)(f)=d(f^{H_\pm})$ resp. $\tx{Lift}(d)(f)=d(f^{H_1})$.
 \end{dfn}
 
-An invariant distribution can be given by integration against a locally integrable class function $\phi \in L^1_\tx{loc}(G(F))$, namely 
-\[ d_\phi(f) = \int_{G(F)_\tx{rs}} |D(x)|^{-1/2}\phi(x)f(x)dx. \]
-Here locally integrable means that $\phi$ is measurable on $G(F)$ and integrable on any compact subset of $G(F)$, and again $d_\phi$ depends on the choice of Haar measure $dx$. We say that the distribution $d_\phi$ is represented by $\phi$. We have inserted the factor $|D(x)|^{-1/2}$ as a means of normalization, following the convention made in \S\ref{sub:weyldenom} of normalizing orbital integrals and characters by the Weyl denominator. Note that only the restriction of $\phi$ to $G(F)_\tx{rs}$ is relevant, since the complement of this set has measure zero.
+Note that this definition requires $d$ to be a stable distribution, because the function $f^{H_\pm}$ resp. $f^{H_1}$ is not uniquely determined by $f$. Rather, only its stable orbital integrals at strongly regular semi-simple elements are determined (by Theorem \ref{thm:orbtrans}), so $d$ is only allowed to depend on its input test function through its stable strongly regular orbital integrals.
 
-The distribution $d_\phi$ will be stable if and only if the function $\phi$ is stably invariant, i.e. stable on regular semi-simple conjugacy classes. If we replace $G(F)$ by $H(F)_\pm$ or $H_1(F)$, then we will be interested in functions that are locally integrable, stably invariant, and anti-genuine, meaning they transform by the inverse of the  character of $H(F)_\pm \to H(F)$ resp. $H_1(F) \to H(F)$; for the double cover $H(F)_\pm$ this is equivalent to genuine, since the central character has order $2$.
-
-We can now apply the Weyl integration formula and its stable analog to show that the endoscopic lifting of a stable distribution represented by a function is an invariant distribution that is again represented by a function, and moreover the two functions are related by an explicit formula.
+We can apply the Weyl integration formula and its stable analog to show that the endoscopic lifting of a stable distribution represented by a function is an invariant distribution that is again represented by a function, and moreover the two functions are related by an explicit formula.
 
 \begin{lem} \label{lem:equi}
-	Let $\phi^H$ be a stably-invariant locally integrable anti-genuine function on $H(F)_\pm$ resp. $H_1(F)$. Then 
+	Let $\phi^H$ be a stably-invariant locally integrable genuine function on $H(F)_\pm$ resp. $H_1(F)$. Then 
 	\[ \tx{Lift}(d_{\phi^H}) = d_{\phi^G}, \]
 	where $\phi^G$ is the locally integrable class function on $G(F)$ given by the following formula
 	\[ \phi^G(\delta) = \sum_{\gamma \in H(F)_\tx{rs}/\tx{st} } \Delta(\dot\gamma,\delta) \phi^H(\dot\gamma). \]
@@ -716,7 +745,7 @@ We can now apply the Weyl integration formula and its stable analog to show that
 	\begin{proof}
 	The proofs of the two cases $H(F)_\pm$ and $H_1(F)$ are almost identical, so we will only give the proof for $H(F)_\pm$.
 	
-	We have $d_{\phi^H}(f^{H_\pm}) = \int_{H(F)}|D^H(\gamma)|^{-1/2}\phi^H(\dot\gamma)f^{H_1}(\dot\gamma)d\gamma$, where $\dot\gamma \in H(F)_\pm$ is any preimage of $\gamma$. Note that, while the factors in the integrand depends on $\dot\gamma$, the dependence cancels out in the product, because both $\phi^H$ and $f^{H_\pm}$ are genuine.
+	We have $d_{\phi^H}(f^{H_\pm}) = \int_{H(F)}|D^H(\gamma)|^{-1/2}\phi^H(\dot\gamma)f^{H_1}(\dot\gamma)d\gamma$, where $\dot\gamma \in H(F)_\pm$ is any preimage of $\gamma$. Note that, while the factors in the integrand depends on $\dot\gamma$, the dependence cancels out in the product, because $\phi^H$ is genuine and $f^{H_\pm}$ is anti-genuine.
 	
 	We apply the stable Weyl integration formula (Corollary \ref{cor:stabweyl}, but in the form of Remark \ref{rem:weyl1}) and use the stable invariance of $\phi^H$ to rewrite the above as
 	\[ \sum_{T_H \in \mc{ST}_H} \int_{T_H(F)_\tx{sr}/\Omega(T_H,H)(F)}\phi^H(\dot\gamma) SO_{\dot\gamma}(f^{H_\pm})d\gamma.\]
@@ -1398,7 +1427,7 @@ If $(S_1,\tau_1,\hat\jmath_1)$ and $(S_2,\tau_2,\hat\jmath_2)$ are two pairs obt
 % \end{cns}
 	
 
-\subsection{Construction of the $L$\-packet}
+\subsection{Construction of the $L$\-packet} \label{sub:cns}
 
 The natural embedding $\hat S \to \hat G$ is not $\Gamma$-equivariant, but its $\hat G$-conjugacy class is. From \S\ref{sub:adm} we obtain the category $\mc{J}$ of embeddings of $S$ into all pure (or rigid) inner forms of $G_0$.
 
@@ -1413,17 +1442,23 @@ We define the pure (resp rigid) compound $L$\-packet
 \[ \tilde\Pi_\varphi = \{(G,\xi,z,\pi_j)|(G,\xi,z,j) \in \mc{J}(F)\} \subset \tilde\Pi, \]
 \[ \Pi_\varphi=\tilde\Pi_\varphi/G_0(\C) \subset \Pi. \]
 For each pure (or rigid) inner twist $(G,\xi,z)$ of $G_0$, we define
-\[ \Pi_\varphi(G,\xi,z)=\{\pi | (G,\xi,z,\pi) \in \tilde\Pi_\varphi\}. \]
+\[ \Pi_\varphi(G,\xi)=\Pi_\varphi(G,\xi,z)=\{\pi | (G,\xi,z,\pi) \in \tilde\Pi_\varphi\}. \]
 \end{dfn}
 
 \begin{lem}
-The set of representations $\Pi_\varphi((G,\xi,z))$ equals $\{\pi_j|j \in J^G(\R)/G(\R))\}$. In particular, it is independent of $z$. It coincides with the set $\Pi_\varphi(G)$ constructed by Langlands in \cite[\S3]{Lan89}.
+The set of representations $\Pi_\varphi((G,\xi))$ equals $\{\pi_j|j \in J^G(\R)/G(\R))\}$. In particular, it is independent of $z$. It coincides with the set $\Pi_\varphi(G)$ constructed by Langlands in \cite[\S3]{Lan89}.
 \end{lem}
 \begin{proof}
 	As discussed in \S\ref{sub:adm}, the set of $(G,\xi,z,j) \in \mc{J}(\R)$ with fixed triple $(G,\xi,z)$ corresponds to $J^G(\R)$, in particular is independent of $z$. Since the images of the members of $J^G(\R)$ are elliptic maximal tori, and all such are conjugate under $G(\R)$, we can choose representatives of $J^G(\R)/G(\R)$ that all have the same image, call it $S' \subset G$. Then these representatives are a single orbit under $\Omega(S',G)$. In other words, if $\tau'$ is the transport of $\tau$ under one admissible embedding $j : S \to G$ with image $S'$, then all others make out the $\Omega(S',G)$-orbit of $\tau'$. Since we have specified the representations $\pi_j$ by their character values on regular elements of $S'(\R)$ in the same way as in \cite[\S3]{Lan89} or \cite[\S4]{AV16}.
 \end{proof}
 
-We have thus recovered the $L$\-packets constructed by Langlands. At the moment they do not depend on the datum $z$ in the triple $(G,\xi,z)$. This datum will play a role in the internal parameterization of these packets, to which we turn next.
+We have thus recovered the $L$\-packets constructed by Langlands. At the moment they do not depend on the datum $z$ in the triple $(G,\xi,z)$. This datum will play a role in the internal parameterization of these packets, to which we turn in a moment. They do however depend on $\xi$, as follows.
+
+\begin{rem} \label{rem:depxi}
+	In our construction of the compound $L$-packet we used the $L$-group $^LG$ of the quasi-split form $G_0$ and a parameter $\varphi : W_\R \to {^LG}$ to construct an $L$-packet $\Pi_\varphi((G,\xi))$ on each inner form $(G,\xi)$. If we keep $G$ fixed, but change $\xi$, the set of representations $\Pi_\varphi((G,\xi))$ may well change. For example, if $G=\tx{GL}_2$ and we use once $\xi=\tx{id}$ and another time $\xi$ being the unique non-trivial outer automorphism, then the unique member of $\Pi_\varphi((G,\xi))$ will change to its contragredient. \textcolor{red}{Jeff: I hope that not all discrete series reps for $\tx{GL}_2(\R)$ are self-dual.}
+	
+	We can also take a different point of view. If we momentarily write $^LG_0$ for the $L$-group of $G_0$ and $^LG$ for the $L$-group of $G$, the twist $\xi$ provides an identification $\tx{brd}(G_0) \to \tx{brd}(G)$, as discussed in \S\ref{sub:l}, and therefore an isomorphism $^LG_0 \to {^LG}$. If we now use $L$-parameters valued in $^LG$ rather than $^LG_0$, and we only care about the $L$-packet on $G$, rather than the compound $L$-packet, then the construction will be intrinsic to $G$ and will not depend on $\xi$. However, since the precise internal structure of $L$-packets requires the usage of the compound $L$-packet, we have adopted the point of view of \cite{ABV92} that the quasi-split form plays the central organizing role for all of its inner forms.
+\end{rem}
 
 \subsection{Internal structure of the compound packet} \label{sub:intstr}
 
@@ -1477,7 +1512,58 @@ Consider the Baer sum $S(\R)_{G,x}$ of the two double covers. We have the canoni
 
 For each $(G,\xi,z,j) \in \mc{J}(\R)$ we use $j$ to identify $S$ with a maximal torus of $G$. We can view $\tau$ as a genuine character of a double cover of $S(\R)_x$. Then Theorem \ref{thm:eds} provides a genuine eds representation $\pi_j$ of $G(\R)_x$ whose character restricted to $S(\R)_x$ is given by \eqref{eq:charfmla}. The definition of the $L$-packet and its internal structure are now done in the same way as in \S\ref{sub:fac} and \S\ref{sub:intstr}.
 
+\section{Stability} \label{sec:stab}
 
+Let $G$ be a connected reductive $\R$-group. If $G$ is not quasi-split we fix an inner twist $\xi : G_0 \to G$ to the quasi-split form $G_0$. If $G$ is quasi-split we further take a character $x : \bar\pi_1(G) \to \mu_n(\C)$, which we allow to be trivial, and consider the cover $G(\R)_x$ constructed in \cite{KalHDC}. 
+
+Let $^LG_x$ be the $L$-group of the cover $G(\R)_x$ and let $\varphi : W_\R \to {^LG_x}$ be a discrete parameter. We have constructed in \S\ref{sub:packetcover} the $L$-packet $\Pi_\varphi(G(\R)_x)$ of genuine discrete series representations of the cover $G(\R)_x$.
+
+
+When $x$ is trivial then the cover $G(\R)_x$ is split, i.e. equals $G(\R) \times \mu_n(\C)$. The set of (isomorphism classes of) genuine representations of $G(\R)_x$ is then canonically identified with the set of (isomorphism classes of) representations of $G(\R)$. Moreover, we have the identification $^LG_x={^LG}$ with the usual $L$-group recalled in \ref{sub:l}. The $L$-packet is then the one constructed in \S\ref{sub:cns}. We refer to Remark \ref{rem:depxi} for the role of $\xi$.
+
+
+
+
+\subsection{Statement of the theorem} 
+
+Define the virtual character 
+\begin{equation}
+	S\Theta_\varphi	:= \sum_{\pi \in \Pi_\varphi(G_x)} \dim(\iota_\mf{w}^{-1}(\pi))\Theta_\pi =  \sum_{\pi \in \Pi_\varphi(G_x)} \Theta_\pi,
+\end{equation}
+where $\Theta_\pi$ is the Harish-Chandra character of the representation $\pi$. In the first sum we are using the internal structure of the $L$-packet discussed in \S\ref{sub:intstr}. However, since the group $\pi_0(S_\varphi^+)$ is abelian, all its irreducible representations are 1-dimensional, from which we obtain the second formula for $S\Theta_\varphi$ which shows that it doesn't depend on this internal structure.
+
+This virtual character is a genuine invariant distribution on $G(\R)_x$ that is represented by a genuine conjugation-invariant function defined on the set of regular semi-simple elements of $G(\R)_x$. Recall that we defined the notion of stably invariant distributions in \S\ref{sub:lifting}.
+
+\begin{thm} \label{thm:stab}
+	The distribution $S\Theta_\varphi$ is stably invariant.
+\end{thm}
+
+The proof of this theorem, which is originally \cite[Lemma 5.2]{She79C}, will be given in the following subsections, first by reducing it to a more basic statement, and then giving two different proofs of that basic statement.
+
+\subsection{Reductions}
+
+Here we will reduce the proof of Theorem \ref{thm:stab} to the core case where $G$ is a simply connected semi-simple group and the cover $G(\R)_x$ is trivial, and to showing that the restriction of the function representing $S\Theta_\varphi$ to any maximal torus $T(\R)$ is invariant under the Weyl group $\Omega(T,M)(\R)$, where $M$ is the centralizer in $G$ of the maximal $\R$-split torus in $T$.
+
+To that end, Harish-Chandra has shown that the character of a discrete series representation is a distribution that is representable by a smooth locally integrable class function defined on the regular semi-simple elements of $G(F)_x$. The same then also holds for the virtual character $S\Theta_\varphi$. According to Lemma \ref{lem:stabfun} we need to show that this function takes equal values on stably conjugate elements.
+
+
+Recall from Theorem \ref{thm:eds} that the character of each eds representation, and hence also the virtual character $S\Theta_\varphi$, is supported on $Z(G(\R)_x) \cdot G(\R)_x^\natural$, with $G(\R)_x^\natural$ being the image of $G_\tx{sc}(\R) \to G(\R)_x$. Therefore it is enough to show that the pull-back of $S\Theta_\varphi$ to $G_\tx{sc}(\R)$ is stably invariant. But this pull-back is the version of $S\Theta_\varphi$ for the trivial cover of the group $G_\tx{sc}(\R)$ and the parameter obtain by composing $\varphi$ with the natural projection $^LG_x = \hat G \boxtimes_x \Gamma \to (\hat G/Z(\hat G)) \rtimes \Gamma = {^L(G_\tx{sc})}$. Moreover, two elements of $G_\tx{sc}(\R)$ are stably conjugate if and only if their images in $G(\R)_x$ are stably conjugate. This reduces the proof to the case that $G$ is semi-simple simply connected and the cover is trivial.
+
+It now remains to show that, given $\gamma_1,\gamma_2 \in G(\R)$ stably conjugate strongly regular semi-simple elements with centralizers $T_1$ and $T_2$, then there exists $w \in \Omega(T,M_1)(\R)$ such that $w\gamma_1$ is $G(\R)$-conjugate to $\gamma_2$, where $M_1$ is the centralizer of the maximal $\R$-split torus in $T_1$. To see this, let $g \in G(\C)$ be such that $g\gamma_1g^{-1}=\gamma_2$. Then $g^{-1}\sigma(g) \in T_1(\C)$ provides an element of $Z^1(\Gamma,T_1)$ whose image in $Z^1(\Gamma,G)$ is cohomologically trivial. Let $M$ be the centralizer of the maximal $\R$-split torus in $T_1$. Then $M$ is a Levi subgroup of $G$. The map $H^1(\Gamma,T_1) \to H^1(\Gamma,G)$ factors through $H^1(\Gamma,M)$, but the map $H^1(\Gamma,M) \to H^1(\Gamma,G)$ is injective \textcolor{red}{ref} and we conclude that there exists $h \in G(\R)$ such that $hg \in M(\C)$. Replacing $\gamma_2$ by $h\gamma_2h^{-1}$ we may thus assume that $g \in M(\C)$, hence $\gamma_2 \in M(\R)$. But now both $T_1$ and $T_2$ are maximal tori of $M$ whose preimages in the simply connected cover of $M$ are anisotropic, and thus their groups of $\R$-points are compact. It follows that $T_1$ and $T_2$ are conjugate under $M(\R)$: to see this, replace $M$ by its simply connected cover and choose two maximal compact subgroups $K_1,K_2$ of $M(\R)$, one containing $T_1(\R)$ and the other $T_2(\R)$. By conjugacy of maximal compact subgroups in connected semi-simple Lie groups we can find $m \in M(\R)$ that conjugates $K_1$ to $K_2$. Next, but conjugacy of maximal tori in connected compact Lie groups we can find $k \in K_1$ that conjugates $T_1$ to $T_2$.
+
+This completes the desired reduction of the proof of Theorem \ref{thm:stab}.
+
+
+\subsection{Proof 1}
+
+We will now assume that $G$ is semi-simple and simply connected, $\varphi : W_\R \to {^LG}$ is a discrete parameter, and show that the function representing $S\Theta_\varphi$, when restricted to a maximal torus $T \subset G$, is invariant under the Weyl group $\Omega(T,M)(\R)$, where $M$ is the centralizer of the maximal $\R$-split torus in $\R$.
+
+This function was studied by Harish-Chandra in \cite[\S24]{HCDSI}, where it is denoted by $\Theta_\lambda^*$. Indeed, as we have recalled in Theorem \ref{thm:eds}, each individual representation $\pi=\pi_\lambda \in \Pi_\varphi(G)$ is parameterized by a regular point $\lambda \in \tx{Lie}^*(S)/\Omega_\R(S,G)$, where $S \subset G$ is an arbitrarily chosen anisotropic maximal torus, and its character $\Theta_\pi$ is the unique invariant eigendistribution that is bounded on $G(\R)$ and whose restriction to $S(\R)$ is given by the formula $\sum_{w \in \Omega_\R(S,G)} d_\lambda(\gamma^w)^{-1}e^\lambda(\gamma^w)$. Harish-Chandra writes this slightly differently, using the fact that $d_\lambda(\gamma^w)=\epsilon(w)d_\lambda(\gamma^w)$, namely as $d_\lambda(\gamma)^{-1}\sum_{w \in \Omega_\R(S,G)} \epsilon(w)e^\lambda(\gamma^w)$. Now the $L$-packet $\Pi_\varphi(G)$ consists of the representations $\pi_{w\lambda}$ as $w$ is running over the coset space $\Omega_\R(S,G) \lmod \Omega(S,G)$. Therefore the distribution $S\Theta_\varphi$ is the unique invariant eigendistribution which is bounded on $G(\R)$ and whose restriction to $S(\R)$ is given by $d_\lambda(\gamma)^{-1}\sum_{w \in \Omega(S,G)} \epsilon(w)e^\lambda(\gamma^w)$. This is indeed the distribution $\Theta_\lambda^*$ studied in \cite[\S24]{HCDSI}.
+
+While it is evident that this function is stable under $\Omega(S,G)(\R)=\Omega(S,G)$, we need to show that its restriction to any maximal torus $T \subset G$ is stable under $\Omega(T,M)(\R)$. This is shown in \cite[\S24]{HCDSI}, where however it is not explicitly stated. Thankfully, it is explicitly stated, and the detailes of the proof are given, in the survey article of Varadarajan, namely \cite[\S3.6, Theorem 1]{Varadarajan73}. We just need to note that the ``imaginary Weyl group'', denoted by $W_I(\mf{l})$ in that reference, is equal to the Weyl group $\Omega(T,M)(\R)$ we are using here. Indeed, the imaginary roots in $R(T,G)$ are precisely the roots in the subsystem $R(T,M)$, because a root $\alpha \in R(T,G)$ is imaginary by definition if and only if $\sigma(\alpha)=-\alpha$, but this is equivalent to requiring that it restricts trivially to the maximal $\R$-split torus in $S$, thus to being in $R(T,M)$. Therefore, the Weyl group $\Omega(T,M)$ is precisely the subgroup of $\Omega(T,G)$ generated by reflections along imaginary roots. Each such reflection acts on $T$ as an $\R$-automorphism, so we have $\Omega(T,M)(\R)=\Omega(T,M)(\C)$.
+
+
+\subsection{Proof 2}
 
 \section{Endoscopic character identities} \label{sec:endo}
 
