@@ -1,0 +1,12 @@
+Thank you for the manuscript
+
+   Discrete series L-packets for real reductive groups
+   by Jeffrey Adams and Tasho Kaletha
+
+submitted to Essential Number Theory. The article has been praised by a number of readers for its utility to the community, its timeliness, and attentive exposition. We have obtained three full referee reports (attached), and we would be very interested in seeing a revision that addresses the comments of the referees. 
+
+Let me mention, in addition, two remarks: in report_Y_on_v1.pdf you will see a request that some material in section 2 be moved or removed. We think you can disregard that request, as we see value in having the extensive preliminary section introduce all the material in an ordered fashion. (This is in-keeping with the ENT style, even if the referee is likely more familiar with the traditions of standard journals.)
+
+A second remark came from a different reader, and is echoed by one of the referee reports. A reader mentioned to the board "This is about the paper being "largely self contained".  Anyone reading this really has to have a solid understanding of Harish-Chandra's parametrization of the discrete series.  This point is perhaps most clearly illustrated in the proof of Theorem 2.7.7 where the authors refer to the "celebrated result of Harish-Chandra", point to [HC65a], and then reference the result in a form that is close, but not quite exactly the same, as HC's original. Said differently, the paper may be expository and essentially self-contained to the authors, but perhaps not to a truly wide audience." Taking this into account, and also a comment in a referee report, maybe it would be possible to include a remark somewhere which mentions some pre-requisites, if this is appropriate. It might be that some sections require fewer pre-requisites than others, and if so it could be useful to mention this explicitly to readers. I leave it to you whether you think this is an actionable comment that would increase the ultimate utility of the article. 
+
+Finally, we know that the ENT referee process is thorough; this is because of our goal of increasing the immediate impact of ENT papers. Thus we thank you in advance for processing all the remarks from all three reports. 
