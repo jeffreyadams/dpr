@@ -1214,10 +1214,10 @@ $\O_\R \cap t_n^{-1}(\K(X))(\R)=\O_\R \cap G(\R)\cdot(t_n^{-1}(\K(X))(\R))=
 
 For the other direction, suppose $\K(X)$ meets $\mathcal \O_\R$.
 This means there is an $SL(2)$-triple $(X,H,Y)$, and an element $Z\in \Cent_\g(Y)$ such that $W=X+Z \in \O_\R$. 
-By \cite{Kostant59}, the centralizer  $\mathrm{Cent}_{\g}(Y)$ is abelian; furthermore there exists a Cartan subalgebra $\mathfrak{h} \subset \g$, and a positive system $\Delta$ for the roots of $\mathfrak{h}$ in $\g$, such that $E$ is contained in the sum of $\Delta$-positive root spaces, while $\mathrm{Cent}_{\g}(F)$ is contained in the sum of $\Delta$-negative roots.  Therefore, if we set $h(t) = \exp(tH)$ for $t \in \R_+$, then 
+By \cite{Kostant59}, the centralizer  $\mathrm{Cent}_{\g}(Y)$ is abelian; furthermore there exists a Cartan subalgebra $\mathfrak{h} \subset \g$, and a positive system $\Delta$ for the roots of $\mathfrak{h}$ in $\g$, such that $X$ is contained in the sum of $\Delta$-positive root spaces, while $\mathrm{Cent}_{\g}(Y)$ is contained in the sum of $\Delta$-negative roots.  Therefore, if we set $h(t) = \exp(tH)$ for $t \in \R_+$, then 
 \[\begin{cases} \mathrm{Ad}(h(t)) \cdot F \longrightarrow 0 & \text{as $t \to +\infty$, while} \\
- \mathrm{Ad}(h(t)) \cdot E = f(t) E & \text{ with $f(t) >0$ and $f(t)\to +\infty$ as $t \to \infty$.}\end{cases}\]
-Set $Y(t) = \mathrm{Ad}(h(t)) Y$; then $f(t) \left[ E + Y(t) \right] = \mathrm{Ad}(h(t)) W$ lies on the orbit~$\O$. Thus there exists a continuous path in $\R^+ \cdot \O_\R$ with $E=X$ as a limit point; by definition this means $X \in \AC(\O_\R)$.
+ \mathrm{Ad}(h(t)) \cdot X = f(t) X & \text{ with $f(t) >0$ and $f(t)\to +\infty$ as $t \to \infty$.}\end{cases}\]
+Set $Y(t) = \mathrm{Ad}(h(t)) Y$; then $f(t) \left[ X + Y(t) \right] = \mathrm{Ad}(h(t)) W$ lies on the orbit~$\O$. Thus there exists a continuous path in $\R^+ \cdot \O_\R$ with $X$ as a limit point; by definition this means $X \in \AC(\O_\R)$.
 \end{proof}
 
 For a closely related result see \cite[Proposition 3.5]{fm}.
@@ -1250,13 +1250,18 @@ without changing $\pi_2$, and we conclude $\pi=\pi_2$.
 %\warn{Uniqueness isn't so easy. There is a reference: \cite[Lemma 14.14]{ABV92}. If you want to include a proof, I think the best one uses the associated variety argument, which was deleted as not needed but could be put back. Then: the associated variety of a discrete series is well known (reference...) to be a single orbit, so by the bijection the same holds for the Whittaker model}
 \end{proof}
 
+
 \begin{cor}
 	Let $\pi$ be an eds representation. There exists precisely one Whittaker model $\mf{w}$ for which $\pi$ is $\mf{w}$-generic.
 \end{cor}
+We remark that the analogous statement for $p$-adic groups is false, as can already be seen in the example of $G=\tx{SL}_2$, which for $p\neq 2$ has four Whittaker data and each regular supercuspidal representation is generic for exactly two of them.
+
+
 \begin{proof}
 	Let $(S,\tau)$ be the Harish-Chandra parameter of $\pi$.
  If $\w_1,\w_2$ are two Whittaker models for which $\pi$ is generic, let $w \in \Omega_\R(S_\tx{ad},G_\tx{ad})$ be an element s.t. $w\w_1=\w_2$ by Lemmas \ref{lem:g1} and \ref{lem:g2}. Proposition \ref{p:whittaker} shows that the $G(\R)$-orbits of $\tau$ and $w\tau$ meet the same Kostant section (associated to $\w_2$.) These $G(\R)$-orbits must then be equal. Modifying $w$ by an element of $\Omega_\R(S,G)$ we see that $\tau=w\tau$. By regularity of $H_\pi$ this shows $w=1$, but then $\w_2=w\w_1=\w_1$.
 \end{proof}
+
 
 We now mention  a slight strengthening of Proposition \ref{p:whittaker}. 
 
@@ -1394,7 +1399,7 @@ Choose any representative $\varphi$ within the conjugacy class $[\varphi]$.
 \begin{proof}[Proof of Lemma \ref{lem:icreg}]
 (1) We consider $^LG = \hat G \rtimes \Gamma$ as a disconnected algebraic group. Let $A \subset {^LG}$ denote the Zariski closure of the image of $\varphi$ and let $B \subset A$ denote the Zariski closure of $\varphi(\C^\times)$; the latter lies in $\hat G$. 
 
-We claim that $A$ consists of semi-simple elements. Since $A^2 \subset B$ it is enough to show that $B$ consists of semi-simple elements. This is equivalent to showing that the adjoint action of $B$ on the Lie algebra of $\hat G$ is semi-simple. Thus consider $\tx{Ad} : \hat G \to \tx{GL}(\mf{\hat g})$. The subgroup $\varphi(\C^\times)$ of $\hat G$ consists of elements which commute with each other, and are semi-simple elements by definition of $\varphi$, cf. \cite[\S8]{BorCor}. Therefore their actions on $\mf{\hat g}$ can be simultaneously diagonalized, i.e. their images in $\tx{GL}(\mf{\hat g})$ lie in a common torus. The preimage of this torus in $\hat G$ is a closed subgroup consisting of commuting semi-simple elements and contains $B$, proving the claim.
+We claim that $A$ consists of semi-simple elements. Since $x^2 \in B$ for $x \in A$, it is enough to show that $B$ consists of semi-simple elements. This is equivalent to showing that the adjoint action of $B$ on the Lie algebra of $\hat G$ is semi-simple. Thus consider $\tx{Ad} : \hat G \to \tx{GL}(\mf{\hat g})$. The subgroup $\varphi(\C^\times)$ of $\hat G$ consists of elements which commute with each other, and are semi-simple elements by definition of $\varphi$, cf. \cite[\S8]{BorCor}. Therefore their actions on $\mf{\hat g}$ can be simultaneously diagonalized, i.e. their images in $\tx{GL}(\mf{\hat g})$ lie in a common torus. The preimage of this torus in $\hat G$ is a closed subgroup consisting of commuting semi-simple elements and contains $B$, proving the claim.
 
 Now $B$ is normal in $A$ of index $2$, $B/B^\circ$ is a finite abelian group, and $B^\circ$ is a connected abelian algebraic groups consisting of semi-simple elements, hence a torus. We conclude that $A$ is supersolvable according to \cite[Definition 5.14]{SS70}, and \cite[Theorem 5.16]{SS70} implies that $A$ normalizes a maximal torus $\hat T \subset \hat G$.
 
@@ -1632,7 +1637,7 @@ where $(\mf{w}',\mf{w})$ is the character of $\pi_0(S_\varphi)$ defined in \S\re
 
 
 
-The following is the main theorem of this article. It is a fundamental result of Shelstad \cite{She82}, \cite{SheTE2}, \cite{SheTE3}.
+The following is the main theorem of this article. It is a fundamental result of Shelstad \cite{She82}, \cite{SheTE3}, \cite{SheTE2}.
 \begin{thm} \label{thm:main1}
 Let $f \in \mc{C}^\infty_c(G(\R))$ be a test function.
 \begin{enumerate}
@@ -1671,9 +1676,9 @@ If Theorem \ref{thm:main2} holds for all elliptic $\delta$, then it holds for al
 
   Again the proofs of 1. and 2. are essentially the same.
 
-  \underline{Step 1:} Let $G(\R)^\natural$ be the image of $G_\tx{sc}(\R) \to G(\R)$. Both sides are supported on $Z_G(\R) \cdot G(\R)^\natural$, and transform by the same character of $Z_G(\R)$. 
+  \underline{Step 1:} Let $G(\R)^\natural$ be the image of $G_\tx{sc}(\R) \to G(\R)$. Both sides of the identity of Theorem \ref{thm:main2} are supported on $Z_G(\R) \cdot G(\R)^\natural$, and transform by the same character of $Z_G(\R)$. 
 
-  \begin{proof}
+  \begin{proof}[Proof of Step 1]
 	Letting $Z_G(\R)$ act on the elliptic maximal torus of $G$ by multiplication, the assumption that the identity of Theorem \ref{thm:main2} holds for elliptic elements implies that both sides of that identity transform under the same character of $Z_G(\R)$. It thus remains to prove the support condition.	
 	
 	Theorem \ref{thm:eds} shows that the character of an eds representation of $G(\R)$ is supported on $Z_G(\R) \cdot G(\R)^\natural$. It follows that the function $\Theta_\varphi^{\mf{w},s}$ is supported on $Z_G(\R) \cdot G(\R)^\natural$. In the same way, we see that the function $S\Theta_{\varphi_\pm}$ is supported on $Z_{H(\R)_\pm} \cdot H(\R)_\pm^\natural$, where $H(\R)_\pm^\natural$ is the image of the natural splitting $H_\tx{sc}(\R) \to H(\R)_\pm$.
@@ -1698,9 +1703,9 @@ The same argument applies to the right-hand side of the identity of Theorem \ref
 This allows us to assume that $G$ is semi-simple and simply connected in what follows, and hence apply the results of \cite{HCDSI}.
 
 
-  \underline{Step 2}: Both sides are invariant eigendistributions, with the same infinitesimal character, whose values on the regular set are bounded.  
+  \underline{Step 2}: Both sides of the identity of Theorem \ref{thm:main2} are invariant eigendistributions, with the same infinitesimal character, whose values on the regular set are bounded.  
 
-	\begin{proof}
+	\begin{proof}[Proof of Step 2]
 		% We recall here that a \emph{distribution} is a linear functional $T : \mc{C}^\infty_c(G(\R)) \to \C$, continuous for the topology on $\mc{C}^\infty_c(G(\R))$ for which a sequence $f_n$ converges to $f$ if the domains of all $f_n$ and $f$ are contained in a fixed compact subset $\Omega$ and $f_n \to f$ uniformly on $\Omega$ together with all derivatives. 
 		%
 		% The distribution $T$ is called \emph{tempered} (see \cite[8.5.1]{WallachRed1}), if it extends to a continuos functional on the Harish-Chandra-Schwartz space $\mc{C}(G(\R))$. This is the space consisting of those smooth functions $f : G(\R) \to \C$ for which the seminorms
@@ -1766,7 +1771,7 @@ This allows us to assume that $G$ is semi-simple and simply connected in what fo
 
 
 
-	\underline{Step 3:} We have shown that both sides of the identity of Theorem \ref{thm:main2} are invariant functions on $G(\R)_\tx{sr}$, transform under the same character of $\mf{z}$, and are bounded (having already been normalized). We are assuming that they take equal values on all elliptic elements. Therefore \cite[Lemma 44]{HCDSI} implies that they are equal.
+	\underline{Step 3: Completion of proof of Lemma \ref{lem:redell}:} We have shown that both sides of the identity of Theorem \ref{thm:main2} are invariant functions on $G(\R)_\tx{sr}$, transform under the same character of $\mf{z}$, and are bounded (having already been normalized). We are assuming that they take equal values on all elliptic elements. Therefore \cite[Lemma 44]{HCDSI} implies that they are equal. This completes the proof of Lemma \ref{lem:redell}.
 \end{proof}
 
 \subsection{The left hand side}
@@ -1831,14 +1836,14 @@ where we recall that the term $\Delta_{IV}$ is missing because we are working wi
 \] 
 \end{lem}
 \begin{proof}
-This is the property \eqref{eq:tfd3} that was reviewed in an idelized situation. We say here a few more words about the actual situation in the setting of double covers. We have the commutative diagram
+This is the property \eqref{eq:tfd3} that was reviewed in an idealized situation. We say here a few more words about the actual situation in the setting of double covers. We have the commutative diagram
 \[ \xymatrix{
 	&^LS_{H,\pm}\ar[dd]_a\ar[r]&^LH_\pm\ar[dd]\\
 	W_\R\ar[ru]^{\varphi^H_S}\ar@/^4pc/[rru]_-{\varphi^H}\ar[rd]_{\varphi_S}\ar@/_4pc/[rrd]_-{\varphi}\\
 	&^LS_\pm\ar[r]&^LG,
 }
 \]
-Here $^LS_\pm$ is the $L$\-group of the double cover $S(\R)_\pm$ and the bottom horizontal map is the canonical $L$\-embedding. We have written $^LS_{H,\pm}$ for the $L$\-group of the double cover of $S_H(\R)$ obtained as the Baer sum of the canonical double cover $S_H(\R)_H$ coming from $R(S_H,H) \subset X^*(S_H)$ and the double cover $S_H(\R)_\pm$ that is the preimage of $S_H(\R)$ in the double cover $H(\R)_\pm \to H(\R)$. The top horizontal map is the canonical $L$\-embedding of the $L$\-group of $S_H(\R)_H$ into $^LH$, which remains an $L$\-embedding after passing to the $\pm$-covers. The right vertical map is the canonical $L$\-embedding $^LH_\pm \to {^LG}$. The map $a$ is the unique map making the square, hence also the triangle, commute. It is the paremter of a genuine character of the double cover of $S(\R)$ obtained as the Baer sum of $S_H(\R)_H$, $S_H(\R)_\pm$, and $S(\R)_\pm$, where we have identified $S_H$ with $S$. This Baer sum is the same as for $S_H(\R)_\pm$ and $S(\R)_{G/H}$. 
+Here $^LS_\pm$ is the $L$\-group of the double cover $S(\R)_\pm$ and the bottom horizontal map is the canonical $L$\-embedding. We have written $^LS_{H,\pm}$ for the $L$\-group of the double cover of $S_H(\R)$ obtained as the Baer sum of the canonical double cover $S_H(\R)_H$ coming from $R(S_H,H) \subset X^*(S_H)$ and the double cover $S_H(\R)_\pm$ that is the preimage of $S_H(\R)$ in the double cover $H(\R)_\pm \to H(\R)$. The top horizontal map is the canonical $L$\-embedding of the $L$\-group of $S_H(\R)_H$ into $^LH$, which remains an $L$\-embedding after passing to the $\pm$-covers. The right vertical map is the canonical $L$\-embedding $^LH_\pm \to {^LG}$. The map $a$ is the unique map making the square, hence also the triangle, commute. It is the parameter of a genuine character of the double cover of $S(\R)$ obtained as the Baer sum of $S_H(\R)_H$, $S_H(\R)_\pm$, and $S(\R)_\pm$, where we have identified $S_H$ with $S$. This Baer sum is the same as for $S_H(\R)_\pm$ and $S(\R)_{G/H}$. 
 \end{proof}
 
 
