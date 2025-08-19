@@ -1139,23 +1139,23 @@ $\phi : \g \to \g^*$ of $\C$-vector spaces that is
 equivariant for the
 action of $G$ and of the Galois group.
 Then for a regular nilpotent element $X\in \g^*$ define
-$\K(X)\subset \g^*$ as $\K(X) = \phi(\K(\phi^{-1}(X)))$. The
+$\K^*(X)\subset \g^*$ as $\K^*(X) = \phi(\K(\phi^{-1}(X)))$. The
 rationality and uniqueness properties of $\K(X)$ are inherited from
 the analogous properties in the case of $\g$. 
 
 Choosing the isomorphism $\phi$ is equivalent to choosing a non-degenerate, $G$
 and Galois invariant, bilinear form on $\g$. For example we can use any
 extension of the Killing form on the derived algebra by a non-degenerate bilinear form on the
-center. In fact we claim the definition of $\K(X)$ is independent of
+center. In fact we claim the definition of $\K^*(X)$ is independent of
 the choice as we now show.
 
 Decompose  $\g = \mf{z} \oplus \g_1 \oplus \dots \oplus \g_n$, where $\mf{z}$ is the center of $\g$ and $\g_i$ are the simple factors. This decomposition is canonical, up to permuting the $\g_i$.  The dual decomposes accordingly as $\g^*=\mf{z}^*\oplus \g_1^* \oplus \dots \oplus \g_n^*$, where $\mf{z}^*$ is the annihilator of $\mf{g}_1 \oplus \dots \oplus \mf{g}_n$, and also equal to the fixed point space for the coadjoint action of $G$, and $\mf{g}_i^*$ is the annihilator of $\mf{z} \oplus \mf{g}_1 \oplus \dots \oplus \mf{\hat  g}_i \oplus \dots \oplus \mf{g}_n$ (with ``hat'' signifying that we are omitting this summand), and also equal to the dual space of $\mf{g}_i$. The isomorphism $\phi$ breaks up as $\phi_\mf{z}\oplus\phi_1 \oplus \dots \oplus \phi_n$, where $\phi_\mf{z} : \mf{z} \to \mf{z}^*$ is an isomorphism of $\C$-vector spaces equivariant under complex conjugation, and $\phi_i : \g_i \to \g_i^*$ is an isomorphism of complex vector spaces equivariant under $G$ (equivalently, its simple piece $G_i$) and complex conjugation. Of these, $\phi_\mf{z}$ is arbitrary, while $\phi_i$ is uniquely determined up to a non-zero real scalar. Now $X=X_1+\dots+X_n$ and $Y=Y_1+\dots+Y_n$ break up accordingly (neither has a central piece), and we have 
 \[ \K(\phi^{-1}(X)) = \mf{z} \oplus \bigoplus (\phi_i^{-1}(X_i)+\Cent_{\g_i}(\phi_i^{-1}(Y_i))),  \]
 hence
-\[ \K(X) = \mf{z}^* \oplus \bigoplus (X_i+\phi_i(\Cent_{\g_i}(\phi_i^{-1}(Y_i)))). \]
+\[ \K^*(X) = \mf{z}^* \oplus \bigoplus (X_i+\phi_i(\Cent_{\g_i}(\phi_i^{-1}(Y_i)))). \]
 But it is clear that the term $\phi_i(\Cent_{\g_i}(\phi_i^{-1}(Y_i)))$ does not change if we multiply $\phi_i$ by a non-zero scalar.
 
-Note in particular that if we decompose $\mf{g}=\mf{z} \oplus \mf{g}'$ and analogously $\mf{g}^*=\mf{z}^* \oplus (\mf{g}')^*$, with $\mf{g}'=[\g,\g]$, then a regular nilpotent element $X \in \g$ lies in $\g'$ and $\K(X)=\mf{z}\oplus \K(X)'$ with $\K(X)'=\K(X) \cap \mf{g}'$, and dually a regular nilpotent element $X \in \g^*$ lies in $(\g')^*$ and $\K(X)=\mf{z}^* \oplus \K(X)'$ with $\K(X)'=\K(X) \cap (\mf{g}')^*$.
+Note in particular that if we decompose $\mf{g}=\mf{z} \oplus \mf{g}'$ and analogously $\mf{g}^*=\mf{z}^* \oplus (\mf{g}')^*$, with $\mf{g}'=[\g,\g]$, then a regular nilpotent element $X \in \g$ lies in $\g'$ and $\K(X)=\mf{z}\oplus \K(X)'$ with $\K(X)'=\K(X) \cap \mf{g}'$, and dually a regular nilpotent element $X \in \g^*$ lies in $(\g')^*$ and $\K^*(X)=\mf{z}^* \oplus \K^*(X)'$ with $\K^*(X)'=\K^*(X) \cap (\mf{g}')^*$.
 
 \subsection{Generic essentially discrete series representations} \label{sub:gen}
 
@@ -1167,15 +1167,15 @@ Suppose $\w=[(B,\eta)]$ is a Whittaker datum. We say that a representation $\pi$
 	It is clear from the definition that $\pi$ is $\mf{w}$-generic if and only if its restriction to $G_\tx{sc}(\R)$ is so. We could therefore immediately restrict to the case where $G$ is semi-simple and simply connected. We will not do this in order to make referencing this section easier. But notice that this observation allows one to treat all groups discussed in \S\ref{sub:essds}.
 \end{rem}
 
-Suppose $\pi$ is an irreducible eds representation and let $(S,\tau)$ be its Harish-Chandra parameter as in Remark  \ref{rem:hcpar}, and write $d\tau=d\tau_\mf{z}+d\tau' \in \mf{z}^* \oplus i\mf{g}^*(\R) \subset \g^*$ accordingly. Let $\O_\pi \subset \mf{z}^* \oplus i\mf{g}'(\R)^* \subset \mf{g}^*$ be the $G(\R)$-orbit of $d\tau$, and $\O_\pi' \subset i\g'(\R)^*$ be the $G(\R)$-orbit of $d\tau'$. Given a regular nilpotent element $X\in i\g(\R)^*$ we have the Kostant section $\K(X) = \mf{z}^* \oplus \K(X)'$ defined in \S\ref{s:kostant}. The purpose of this subsection is to prove the following result.
+Suppose $\pi$ is an irreducible eds representation and let $(S,\tau)$ be its Harish-Chandra parameter as in Remark  \ref{rem:hcpar}, and write $d\tau=d\tau_\mf{z}+d\tau' \in \mf{z}^* \oplus i\mf{g}^*(\R) \subset \g^*$ accordingly. Let $\O_\pi \subset \mf{z}^* \oplus i\mf{g}'(\R)^* \subset \mf{g}^*$ be the $G(\R)$-orbit of $d\tau$, and $\O_\pi' \subset i\g'(\R)^*$ be the $G(\R)$-orbit of $d\tau'$. Given a regular nilpotent element $X\in i\g(\R)^*$ we have the Kostant section $\K^*(X) = \mf{z}^* \oplus \K^*(X)'$ defined in \S\ref{s:kostant}. The purpose of this subsection is to prove the following result.
 
 \begin{pro}
   \label{p:whittaker}
 Suppose $\pi$ is an eds representation and $X\in i\g(\R)^*$ is a regular nilpotent element. The following are equivalent
 \begin{enumerate}
 	\item $\pi$ is $\w_X$-generic;
- 	\item $\O_\pi$ meets $\K(X)$;
-  	\item $\O_\pi'$ meets $\K(X)'$.
+ 	\item $\O_\pi$ meets $\K^*(X)$;
+  	\item $\O_\pi'$ meets $\K^*(X)'$.
 \end{enumerate}
 \end{pro}
 
@@ -1188,7 +1188,7 @@ This is a closed cone.
 
 \begin{lem} \label{lem:g1}
   Let $\epsilon \in \{1,-1,i,-i\}$. Let $\O_\R\subset \mf{z}^* \oplus \epsilon\g'(\R)^* \subset \g^*$ be a regular $G(\R)$-orbit and $X\in \epsilon\g(\R)^*$ be a regular nilpotent element.
-Then  $X\in \AC(\O_\R)$ if and only if $\K(X)$ meets $\O_\R$.
+Then  $X\in \AC(\O_\R)$ if and only if $\K^*(X)$ meets $\O_\R$.
 \end{lem}
 
 \begin{proof}
@@ -1224,7 +1224,7 @@ For a closely related result see \cite[Proposition 3.5]{fm}.
   
 \begin{proof}[Proof of Proposition \ref{p:whittaker}]
 
-Since $\K(X)=\mf{z}^* \oplus \K(X)'$ and $\O_\pi = d\tau_\mf{z} + \O_\pi'$, the equivalence of 2. and 3. is clear.
+Since $\K^*(X)=\mf{z}^* \oplus \K^*(X)'$ and $\O_\pi = d\tau_\mf{z} + \O_\pi'$, the equivalence of 2. and 3. is clear.
 
 Suppose $\pi$ is $\w_X$-generic.
 We define the wave-front set $\WF(\pi)$ as in \cite[Section 3]{matumoto}. By definition this is a subset of $i\g(\R)^*$ consisting of nilpotent elements,
@@ -1232,7 +1232,7 @@ so it is a finite union of nilpotent orbits.
 
 By \cite[Theorem A]{matumoto}  $X\in \WF(\pi)$. 
 Furthermore  by \cite[Theorem 1.2]{harris} $\WF(\pi)=\AC(\O_\pi)$.
-Therefore  $X\in \AC(\O)$, so  $\K(X)$ meets $\O_\pi$ by 
+Therefore  $X\in \AC(\O)$, so  $\K^*(X)$ meets $\O_\pi$ by 
 Lemma \ref{lem:g1}.
 
 For the opposite implication consider the Harish-Chandra parameter $(S,\tau)$ of $\pi$. Recall that $\Omega(S,G)$ acts on $S$ by $\R$-automorphisms, due to the ellipticity of $S$. Applying an element of $\Omega(S,G)$ to $\tau$ we obtain $\tau_1$ with the property that the element $H_1 \in i\mf{s}(\R)$ corresponding to $d\tau_1$ under $\kappa$ lies in a Weyl chamber whose simple roots are non-compact (such Weyl chambers exist). By \cite[Theorem 6.2(a,f)]{Vog78} the corresponding representation $\pi_1$ is generic with respect to some Whittaker datum. By Lemmas \ref{lem:g1} and \ref{lem:g2} we can apply an element of $\Omega_\R(S_\tx{ad},G_\tx{ad})$ to $\tau_1$ to obtain $\tau_2$, such that the corresponding $\pi_2$ is $\w_X$-generic. By construction there is $n \in N(S,G)(\C)$ such that $\tau_2=\tx{Ad}(n)\tau$.
@@ -1264,13 +1264,13 @@ We now mention  a slight strengthening of Proposition \ref{p:whittaker}.
 \begin{enumerate}
 \item Suppose $\pi=\pi(S,\tau)$ is a generic eds representation and $X\in i\g(\R)^*$ is a regular nilpotent element.
 Then $\pi$ is $\w_X$-generic if and only if
-$\K(X)$ meets $G(\R)\cdot\lambda$ where $\lambda\in \mf{z} \oplus i\s'(\R)^*$ is any element in the same Weyl chamber as $d\tau$.
+$\K^*(X)$ meets $G(\R)\cdot\lambda$ where $\lambda\in \mf{z} \oplus i\s'(\R)^*$ is any element in the same Weyl chamber as $d\tau$.
 \item Suppose $\pi_1=\pi(S,\tau_1)$ and $\pi_2=\pi(S,\tau_2)$ are eds representations and $\w_1,\w_2$ are Whittaker data, such that $\pi_i$ is $\w_i$-generic. Then $\w_1=\w_2$ if and only if $d\tau_1$ and $d\tau_2$ are in the same Weyl chamber. 
 \end{enumerate}
 \end{lem}
 
 \begin{proof}
-(1) Let $\O_\lambda = G(\R) \cdot \lambda$. According to Proposition \ref{p:whittaker}, we need to show that $\O_\lambda$ meets $\K(X)$ if and only if $\O_\pi$ meets $\K(X)$. Applying Lemma \ref{lem:g1} we see that we need to show the equivalence of $X \in \AC(\O_\pi)$ and $X \in \AC(\O_\lambda)$. This latter equivalence follows from \cite[Proposition 3.9]{adams_afgoustidis_whittaker}, which asserts that $\AC(\O_\pi)=\AC(\O_\lambda)$.
+(1) Let $\O_\lambda = G(\R) \cdot \lambda$. According to Proposition \ref{p:whittaker}, we need to show that $\O_\lambda$ meets $\K^*(X)$ if and only if $\O_\pi$ meets $\K^*(X)$. Applying Lemma \ref{lem:g1} we see that we need to show the equivalence of $X \in \AC(\O_\pi)$ and $X \in \AC(\O_\lambda)$. This latter equivalence follows from \cite[Proposition 3.9]{adams_afgoustidis_whittaker}, which asserts that $\AC(\O_\pi)=\AC(\O_\lambda)$.
 
 (2)  The if direction follows from (1). For the other direction see \cite[Corollary  3.12]{adams_afgoustidis_whittaker}.
 \end{proof}
@@ -1496,7 +1496,7 @@ Recall from Lemma \ref{lem:simtrans} that the abelian group $H^1(\R,S)$ in the p
 The set $\Pi_\varphi(G_0,1,1)$ contains a unique $\mf{w}$-generic member.
 \end{lem}
 \begin{proof}
-By Lemma \ref{lem:w1} we have $\mf{w}=\mf{w}_X$ for some regular nilpotent $X \in i\mf{g}^*(\R)$. Proposition \ref{p:whittaker} states that implies that $\pi_j$ is $\mf{w}$-generic if and only if $dj(d\tau) \in \mf{g}^*$ meets the  Kostant section $\K(X)$. But as $j$ varies over $J^{G_0}(\R)/G_0(\R)$, the element $dj(d\tau)$ varies over the $G_0(\R)$-classes in a fixed stable class. Therefore, $dj(d\tau)$ meets any Kostant section for precisely one $j \in J^{G_0}(\R)/G_0(\R)$. At the same time, $j \mapsto \pi_j$ is a bijection from $j \in J^{G_0}(\R)/G_0(\R)$ to $\Pi_\varphi(G_0,1,1)$ by construction of the latter.
+By Lemma \ref{lem:w1} we have $\mf{w}=\mf{w}_X$ for some regular nilpotent $X \in i\mf{g}^*(\R)$. Proposition \ref{p:whittaker} states that implies that $\pi_j$ is $\mf{w}$-generic if and only if $dj(d\tau) \in \mf{g}^*$ meets the  Kostant section $\K^*(X)$. But as $j$ varies over $J^{G_0}(\R)/G_0(\R)$, the element $dj(d\tau)$ varies over the $G_0(\R)$-classes in a fixed stable class. Therefore, $dj(d\tau)$ meets any Kostant section for precisely one $j \in J^{G_0}(\R)/G_0(\R)$. At the same time, $j \mapsto \pi_j$ is a bijection from $j \in J^{G_0}(\R)/G_0(\R)$ to $\Pi_\varphi(G_0,1,1)$ by construction of the latter.
 \end{proof}
 
 Taking the unique $\mf{w}$-generic member of $\Pi(G_0,1,1) \subset \Pi_\varphi$, provided by Lemma \ref{lem:uniqgen}, as a base-point, the simply-transitive action turns into the bijection from 
@@ -1864,7 +1864,7 @@ we shall use the exponential map $\tx{Lie}(S_\mf{w})(\R) \to S_\mf{w}(\R)_{\pm\p
 We first evaluate the left hand side. By definition $\Delta_{I}(\dot\gamma_0,\dot\delta_0)$ is given by pairing the invariant $\tx{inv}(\ddot\delta_0,\mc{P})$ with the endoscopic element, see \cite[\S 4.1, \S4.3]{KalHDC}. It will be enough to show that $\tx{inv}(\ddot\delta_0,\mc{P})=0$. By \cite[Lemma 4.1.4]{KalHDC} we have $\tx{inv}(\ddot\delta_0,\mc{P})=\tx{inv}(-irH_\mf{w},\mc{P})$ provided $r$ is small enough.
 
 
-Write $\mc{P}=(T_0,B_0,\{X_\alpha\})$, which, together with $\Lambda(x)=e^{ix}$, produces the chosen Whittaker datum $\mf{w}$. According to Lemma \ref{lem:w1}(3), if we define $X \in \mf{n}(\R)^*$ by $X(Y) = \sum_\alpha [Y_\alpha,X_{-\alpha}]/H_\alpha$, then $\mf{w}=\mf{w}_{iX}$. Proposition \ref{p:whittaker} implies that $d\tau'$ is $G(\R)$-conjugate to an element of $\K(iX)'$, and hence $H_\mf{w}$ is $G(\R)$-conjugate to an element of $\K(iX_\kappa)'$, where $X_\kappa \in \mf{g}'(\R)$ is the element such that $\kappa(X_\kappa,Y)=X(Y)$ for all $Y \in \mf{g}$. We can compute $X_\kappa$ as the element of $i\mf{\bar n}(\R)$ given by
+Write $\mc{P}=(T_0,B_0,\{X_\alpha\})$, which, together with $\Lambda(x)=e^{ix}$, produces the chosen Whittaker datum $\mf{w}$. According to Lemma \ref{lem:w1}(3), if we define $X \in \mf{n}(\R)^*$ by $X(Y) = \sum_\alpha [Y_\alpha,X_{-\alpha}]/H_\alpha$, then $\mf{w}=\mf{w}_{iX}$. Proposition \ref{p:whittaker} implies that $d\tau'$ is $G(\R)$-conjugate to an element of $\K^*(iX)'$, and hence $H_\mf{w}$ is $G(\R)$-conjugate to an element of $\K(iX_\kappa)'$, where $X_\kappa \in \mf{g}'(\R)$ is the element such that $\kappa(X_\kappa,Y)=X(Y)$ for all $Y \in \mf{g}$. We can compute $X_\kappa$ as the element of $i\mf{\bar n}(\R)$ given by
 \[ X_\kappa = \sum_\alpha \frac{\kappa(\alpha,\alpha)}{2} X_{-\alpha}. \]
 Therefore, $-irH_\mf{w}$ is $G(\R)$-conjugate to the Kostant section $\K(rX_\kappa)$, which means that $\tx{inv}(-irH_\mf{w},\mc{P}_\kappa)=0$, where $\mc{P}_\kappa$ is the pinning $(T_0,B_0,\{r_\alpha X_\alpha\})$ with $r_\alpha = \tfrac{r}{2}\kappa(\alpha,\alpha)$. It is well-known that $\kappa(\alpha,\alpha)$ is a positive rational number, see \cite[\S8.5]{Humphreys80}, and that the assignment $\alpha \to r_\alpha$ is invariant under complex conjugation. Therefore the unique element  $t \in T_{0,\tx{ad}}(\R)$ such that $\alpha(t)=r_\alpha$ for all $B_0$-simple roots $\alpha$ lies in the identity component $T_{0,\tx{ad}}(\R)^\circ$ of $T_{0,\tx{ad}}(\R)$. The isogeny $T_{0,\tx{sc}} \to T_{0,\tx{ad}}$ induces a surjective map $T_{0,\tx{sc}}(\R)^\circ \to T_{0,\tx{ad}}(\R)^\circ$, so the element $t$ lifts to $T_{0,\tx{sc}}(\R)$. Thus the pinnings $\mc{P}$ and $\mc{P}_\kappa$ are $G(\R)$-conjugate. According to \cite[Lemma 4.1.4]{KalHDC} we have $\tx{inv}(-irH_\mf{w},\mc{P})=\tx{inv}(-irH_\mf{w},\mc{P}_\kappa)=0$, and conclude that $\tx{inv}(\ddot\delta_0,\mc{P})$ as desired.
 
@@ -1939,7 +1939,7 @@ The splitting invariant $\lambda$ of $S$ computed in terms of $(-\rho_\mf{w})$-b
 \begin{proof}
 Let $(S_\mf{w},\tau_\mf{w})$ be the Harish-Chandra parameter of the generic member of $\Pi_\varphi(G_0,1,1)$, as in Remark \ref{rem:hcpar}, and write $d\tau_\mf{w}=d\tau_\mf{z}+d\tau' \in \mf{z}^* \oplus i\mf{s}'(\R)^*$, where $\mf{s}=\tx{Lie}(S_\mf{w})$, $\mf{s}'=\mf{s} \cap [\mf{g},\mf{g}]$. Let $H_\mf{w} \in i\mf{s}'(\R)$ be the element determined by $\kappa(H_\mf{w},-)=\<d\tau_\mf{w},-\>$ with respect to the Killing form $\kappa$ on $\mf{g}'=[\g,\g]$. Write $\mc{P}=(T_0,B_0,\{X_\alpha\})$.
 
-If we define $X \in \mf{n}(\R)^*$ by $X(Y) = \sum_\alpha [Y_\alpha,X_{-\alpha}]/H_\alpha$, then Lemma \ref{lem:w1}(3) shows that $\mf{w}=\mf{w}_{iX}$. Proposition \ref{p:whittaker} implies that $d\tau'$ is $G(\R)$-conjugate to an element of $\K(iX)'$, and hence $H_\mf{w}$ is $G(\R)$-conjugate to an element of $\K(iX_\kappa)'$, where $X_\kappa \in \mf{g}'(\R)$ is the element such that $\kappa(X_\kappa,Y)=X(Y)$ for all $Y \in \mf{g}$. We can compute $X_\kappa$ as the element of $i\mf{\bar n}(\R)$ given by
+If we define $X \in \mf{n}(\R)^*$ by $X(Y) = \sum_\alpha [Y_\alpha,X_{-\alpha}]/H_\alpha$, then Lemma \ref{lem:w1}(3) shows that $\mf{w}=\mf{w}_{iX}$. Proposition \ref{p:whittaker} implies that $d\tau'$ is $G(\R)$-conjugate to an element of $\K^*(iX)'$, and hence $H_\mf{w}$ is $G(\R)$-conjugate to an element of $\K(iX_\kappa)'$, where $X_\kappa \in \mf{g}'(\R)$ is the element such that $\kappa(X_\kappa,Y)=X(Y)$ for all $Y \in \mf{g}$. We can compute $X_\kappa$ as the element of $i\mf{\bar n}(\R)$ given by
 \[ X_\kappa = \sum_\alpha \frac{\kappa(\alpha,\alpha)}{2} X_{-\alpha}. \]
 Therefore, $-iH_\mf{w}$ is $G(\R)$-conjugate to the Kostant section $\K(X_\kappa)$. According to \cite[Theorem 5.1]{Kot99} the splitting invariant computed in terms of the $a$-data $d\alpha(-iH_\mf{w})$ and the pinning $\mc{P}_\kappa=(T_0,B_0,\{r_\alpha X_\alpha\})$, where $r_\alpha = \tfrac{r}{2}\kappa(\alpha,\alpha)$, is trivial.
 
