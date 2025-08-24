@@ -721,9 +721,9 @@ In this theorem we have chosen a Haar measure $dg$ on $G(F)$, and a Haar measure
 
 \subsection{Endoscopic lifting of stable distributions} \label{sub:lifting}
 
-In this subsection we continue to work with an arbitrary local field $F$ of characteristic zero. Let $(H,s,\mc{H},\eta)$ be an endoscopic datum of $G$. The transfer of orbital integrals given by Theorem \ref{thm:orbtrans} defines a dual transfer of distributions. Let $\mc{I}(G)$ denote the space of invariant distributions on $G(F)$. This space consists of linear functionals on $\mc{C}^\infty_c(G(F))$, with a certain continuity property in the case $F=\R$, and which are invariant under the conjugation action of $G(F)$. By a deep theorem of Harish-Chandra \textcolor{red}{ref}
-%I couldn't find a reference for this
- this invariance property is equivalent to the requirement that such a functional vanishes on any test function for which all regular semi-simple orbital integrals vanish. Let $\mc{S}(G) \subset \mc{I}(G)$ denote the subspace of \emph{stable} distributions, defined to be those that vanish on all test functions for which all stable regular semi-simple orbital integrals vanish.
+In this subsection we continue to work with an arbitrary local field $F$ of characteristic zero. Let $(H,s,\mc{H},\eta)$ be an endoscopic datum of $G$. The transfer of orbital integrals given by Theorem \ref{thm:orbtrans} defines a dual transfer of distributions. Let $\mc{I}(G)$ denote the space of invariant distributions on $G(F)$. This space consists of linear functionals on $\mc{C}^\infty_c(G(F))$, with a certain continuity property in the case $F=\R$, and which are invariant under the conjugation action of $G(F)$. By a deep theorem of Harish
+-Chandra \cite[Theorem 27.5]{Kot05}
+this invariance property is equivalent to the requirement that such a functional vanishes on any test function for which all regular semi-simple orbital integrals vanish. Let $\mc{S}(G) \subset \mc{I}(G)$ denote the subspace of \emph{stable} distributions, defined to be those that vanish on all test functions for which all stable regular semi-simple orbital integrals vanish.
 
 Analogously we have the spaces $\mc{S}(H) \subset \mc{I}(H)$. But the transfer of orbital integtals doesn't involve $H(F)$. Rather, it involves either the canonical double cover $H(F)_\pm$, or a chosen $z$-extension $H_1(F)$. Therefore, we have to explain the notion of a stable genuine distribution on such covers. We write $\mc{I}_\tx{gen}(H_\pm)$ for the space of $H(F)$-invariant (continuous when $F=\R$) linear functionals on the space $\mc{C}^\infty_{c,\tx{gen}}(H(F)_\pm)$ of genuine test functions on $H(F)_\pm$, and similarly $\mc{I}_\tx{gen}(H_1)$ for the space of $H(F)$-invariant (continuous when $F=\R$) linear functionals on the space $\mc{C}^\infty_{c,\tx{gen}}(H_1(F))$ of genuine test functions on $H_1(F)$. To say when such a distribution is stable, we use the notion of stable conjugacy for strongly regular semi-simple elements of $G(F)_x$ from \S\ref{sub:transfer}. A function $\phi : G(F)_x^{sr} \to \C$ is called \emph{stably invariant} if $\phi(\dot\delta_1)=\phi(\dot\delta_2)$ whenever $\dot\delta_1,\dot\delta_2$ are stably conjugate. A distribution $d$ is called \emph{stably invariant} if $d(f)=0$ for any test function $f \in \mc{C}^\infty_c(G(F)_x)$ for which $SO_{\dot\delta}(f)=0$ for any strongly-regular semi-simple $\dot\delta \in G(F)_x$, where $SO_{\dot\delta}(f)=0$ is the integral of $f$ over the stable class of $\dot\delta$. Note that such a distribution vanishes in particular on all test functions $f$ for which $O_{\dot\gamma}(f)=0$, and is therefore an invariant distribution by Harish-Chandra's theorem. We shall write $\mc{S}_\tx{gen}(H_\pm) \subset \mc{I}_\tx{gen}(H_\pm)$ resp. $\mc{S}_\tx{gen}(H_1) \subset \mc{I}_\tx{gen}(H_1)$ for the subspace of stably invariant distributions.
 
@@ -1275,7 +1275,15 @@ $\K^*(X)$ meets $G(\R)\cdot\lambda$ where $\lambda\in \mf{z} \oplus i\s'(\R)^*$ 
 \end{lem}
 
 \begin{proof}
-(1) Let $\O_\lambda = G(\R) \cdot \lambda$. According to Proposition \ref{p:whittaker}, we need to show that $\O_\lambda$ meets $\K^*(X)$ if and only if $\O_\pi$ meets $\K^*(X)$. Applying Lemma \ref{lem:g1} we see that we need to show the equivalence of $X \in \AC(\O_\pi)$ and $X \in \AC(\O_\lambda)$. This latter equivalence follows from \cite[Proposition 3.9]{adams_afgoustidis_whittaker}, which asserts that $\AC(\O_\pi)=\AC(\O_\lambda)$.
+
+(1) Let $\O_\lambda = G(\R) \cdot \lambda$ and recall $\O_\pi=G(\R)\cdot d\tau$.  According to Proposition
+\ref{p:whittaker}, we need to show that $\O_\lambda$ meets $\K^*(X)$
+if and only if $\O_{d\tau}$ meets $\K^*(X)$. Applying Lemma \ref{lem:g1}
+we see that we need to show the equivalence of $X \in \AC(\O_\lambda)$
+and $X \in \AC(\O_{d\tau})$. This follows since $\lambda,d\tau$ are in the same Weyl chamber and the fact
+\cite[Proposition 3.9]{adams_afgoustidis_whittaker}
+that $\AC(\O_\lambda)$ only depends on the Weyl chamber of $\lambda$.
+%What we written before was correct; I've modified the wording slightly to make the argument clearer
 
 (2)  The if direction follows from (1). For the other direction see \cite[Corollary  3.12]{adams_afgoustidis_whittaker}.
 \end{proof}
