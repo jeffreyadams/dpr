@@ -1,4 +1,41 @@
-(1) I don't understand this comment. If the question is about the uniqueness of Shelstad's first construction of the transfer factor, then the answer is that it is unique up to multiplication by -1, i.e. the pair of functions {\Delta,-\Delta} is unique.
+\documentclass{article}
+\usepackage {amsmath, amsfonts, amssymb, mathrsfs, amsthm, sectsty,hyphenat,enumitem,calc,url,color,array,tabu, stmaryrd, mathdots,comment}
+%\usepackage{showlabels}
+\usepackage{palatino}
+\usepackage{comment}
+\usepackage[all]{xy}
+\usepackage[nottoc]{tocbibind}
+\usepackage[toc,page]{appendix}
+\usepackage{tocloft}
+
+\renewcommand{\-}{\hyp{}}
+
+\renewcommand\cftsecafterpnum{\vskip2pt}
+\renewcommand\cftsubsecafterpnum{\vskip2pt}
+
+\setlength{\parindent}{0pt} \setlength{\parskip}{10pt plus 2pt minus 1pt}
+\topmargin=-0.5in \headheight=0in \headsep=0.25in \textheight=9.1in
+\footskip=0.75in
+
+%\input{"Users/kaletha/Work/TexMain/macros.tex"}
+%\input{"C:/Users/Tasho/Documents/Dropbox/Work/TexMain/macros.tex"}
+\input{macros.tex}
+
+
+
+\sectionfont{\center\sc\normalsize}
+\subsectionfont{\bf\normalsize}
+
+\numberwithin{equation}{section}
+
+\newcommand{\warn}[1]{{\leavevmode\color{red}[#1]}}
+
+\begin{document}
+
+
+We are grateful to the referee for their careful reading and their comments and suggestions. We have implemented most of their requests. For the remaining few, our answers are below.
+
+(1) I don't understand this comment. If the question is about the uniqueness of Shelstad's first construction of the transfer factor, then the answer is that it is unique up to multiplication by -1, i.e. the pair of functions ${\Delta,-\Delta}$ is unique.
 
 (2) No. $\bar z_\sigma$ denotes the value of the 1-cocycle $\bar z$ at $\sigma$, which is what is needed.
 
@@ -14,3 +51,5 @@
 (36) This is done 7 lines above the definition.
 
 (41) I do not see the notation $G_x(\R)$ anywhere.
+
+\end{document}
